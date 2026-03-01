@@ -9,25 +9,28 @@
 ══════════════════════════════════════════ */
 :root {
   /* Colores principales */
-  --ts-blue:      #0F5BA7;
+  --ts-blue: #0F5BA7;
   --ts-blue-dark: #0A4580;
   --ts-blue-deep: #083266;
-  --ts-gold:      #F5A623;
-  --ts-gold-hov:  #D9911A;
-  --ts-white:     #FFFFFF;
-  --ts-gray-bg:   #F5F5F5;
-  --ts-gray:      #999999;
+  --ts-gold: #F5A623;
+  --ts-gold-hov: #D9911A;
+  --ts-white: #FFFFFF;
+  --ts-gray-bg: #F5F5F5;
+  --ts-gray: #999999;
   --ts-gray-dark: #333333;
   --ts-gray-line: #E0E0E0;
 
   /* Colores de servicio específicos */
-  --ts-red:       #C0392B;   /* Mercancías Peligrosas */
-  --ts-red-soft:  #E74C3C;   /* Mercancías Peligrosas — hover */
-  --ts-teal:      #0D7377;   /* ITR — transporte internacional */
+  --ts-red: #C0392B;
+  /* Mercancías Peligrosas */
+  --ts-red-soft: #E74C3C;
+  /* Mercancías Peligrosas — hover */
+  --ts-teal: #0D7377;
+  /* ITR — transporte internacional */
 
   /* Tipografía */
   --font-display: 'Barlow Condensed', sans-serif;
-  --font-body:    'Nunito Sans', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
 }
 
 /* ══════════════════════════════════════════
@@ -855,9 +858,20 @@ header {
   flex-shrink: 0;
 }
 
-.btn-waze   { background: #33CCFF; color: #fff; }
-.btn-gmaps  { background: #4285F4; color: #fff; }
-.btn-moovit { background: #F7971C; color: #fff; }
+.btn-waze {
+  background: #33CCFF;
+  color: #fff;
+}
+
+.btn-gmaps {
+  background: #4285F4;
+  color: #fff;
+}
+
+.btn-moovit {
+  background: #F7971C;
+  color: #fff;
+}
 
 /* ══════════════════════════════════════════
    10. TARJETA DE SERVICIO (svc-card)
@@ -1602,19 +1616,34 @@ footer {
    17. KEYFRAMES / ANIMACIONES
 ══════════════════════════════════════════ */
 @keyframes waPulse {
-  0%   { transform: scale(1);    opacity: .7; }
-  100% { transform: scale(1.75); opacity: 0;  }
+  0% {
+    transform: scale(1);
+    opacity: .7;
+  }
+
+  100% {
+    transform: scale(1.75);
+    opacity: 0;
+  }
 }
 
 @keyframes waIn {
-  from { opacity: 0; transform: scale(.7) translateY(10px); }
-  to   { opacity: 1; transform: scale(1) translateY(0);      }
+  from {
+    opacity: 0;
+    transform: scale(.7) translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 /* ══════════════════════════════════════════
    18. RESPONSIVE — TABLET (≤ 1024px)
 ══════════════════════════════════════════ */
 @media (max-width: 1024px) {
+
   /* Hero sucursal: columna única */
   .hero-layout {
     grid-template-columns: 1fr;
@@ -1657,6 +1686,7 @@ footer {
    19. RESPONSIVE — MÓVIL (≤ 768px)
 ══════════════════════════════════════════ */
 @media (max-width: 768px) {
+
   /* Header: ocultar nav links */
   header {
     padding: 0 16px;

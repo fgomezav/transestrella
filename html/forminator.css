@@ -1,0 +1,409 @@
+/*
+ * forminator.css — Transportadora Estrella
+ * Estilos personalizados para los formularios Forminator
+ * Agregar en: WordPress › Apariencia › Personalizar › CSS adicional
+ * — o cargar como archivo en el theme / plugin de estilos
+ *
+ * Formularios cubiertos:
+ *   #536  Cotización de carga (homepage CTA + página Contáctanos)
+ *   Agregar más IDs siguiendo el mismo patrón al final del archivo
+ * ─────────────────────────────────────────────────────────────────
+ */
+
+/* ═══════════════════════════════════════════════════════════
+   VARIABLES — coinciden con el design system del theme
+═══════════════════════════════════════════════════════════ */
+
+:root {
+  --ts-blue:       #0F5BA7;
+  --ts-blue-deep:  #083266;
+  --ts-gold:       #F5A623;
+  --ts-gold-hov:   #D9911A;
+  --font-display:  'Barlow Condensed', sans-serif;
+  --font-body:     'Nunito Sans', sans-serif;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   BASE — reset y tipografía del form
+═══════════════════════════════════════════════════════════ */
+
+.forminator-custom-form {
+  font-family: var(--font-body) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   FILAS Y COLUMNAS
+═══════════════════════════════════════════════════════════ */
+
+.forminator-custom-form .forminator-row {
+  margin-bottom: 0 !important;
+  gap: 12px !important;
+}
+
+.forminator-custom-form .forminator-col {
+  padding: 0 0 14px 0 !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   LABELS
+═══════════════════════════════════════════════════════════ */
+
+.forminator-custom-form .forminator-label {
+  font-family: var(--font-display) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: .1em !important;
+  text-transform: uppercase !important;
+  color: rgba(255, 255, 255, .55) !important;
+  margin-bottom: 7px !important;
+  display: block !important;
+}
+
+.forminator-custom-form .forminator-required {
+  color: var(--ts-gold) !important;
+  margin-left: 2px;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   INPUTS Y TEXTAREA
+═══════════════════════════════════════════════════════════ */
+
+.forminator-custom-form .forminator-input,
+.forminator-custom-form .forminator-textarea {
+  background:  rgba(255, 255, 255, .06) !important;
+  border:      1px solid rgba(255, 255, 255, .15) !important;
+  border-radius: 6px !important;
+  color:       #ffffff !important;
+  font-family: var(--font-body) !important;
+  font-size:   14px !important;
+  padding:     11px 14px !important;
+  width:       100% !important;
+  transition:  border-color .18s, background .18s !important;
+  outline:     none !important;
+  box-shadow:  none !important;
+  -webkit-appearance: none !important;
+}
+
+.forminator-custom-form .forminator-input::placeholder,
+.forminator-custom-form .forminator-textarea::placeholder {
+  color: rgba(255, 255, 255, .25) !important;
+}
+
+.forminator-custom-form .forminator-input:focus,
+.forminator-custom-form .forminator-textarea:focus {
+  border-color: rgba(245, 166, 35, .55) !important;
+  background:   rgba(255, 255, 255, .09) !important;
+  box-shadow:   0 0 0 3px rgba(245, 166, 35, .08) !important;
+}
+
+.forminator-custom-form .forminator-textarea {
+  resize:     vertical !important;
+  min-height: 120px !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   SELECTS — nativo
+═══════════════════════════════════════════════════════════ */
+
+.forminator-custom-form .forminator-select--field {
+  background:    rgba(255, 255, 255, .06) !important;
+  border:        1px solid rgba(255, 255, 255, .15) !important;
+  border-radius: 6px !important;
+  color:         #ffffff !important;
+  font-family:   var(--font-body) !important;
+  font-size:     14px !important;
+  height:        42px !important;
+  padding:       0 38px 0 14px !important;
+  width:         100% !important;
+  -webkit-appearance: none !important;
+  appearance:    none !important;
+  cursor:        pointer !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.4)' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  background-repeat:   no-repeat !important;
+  background-position: right 14px center !important;
+}
+
+.forminator-custom-form .forminator-select--field:focus {
+  border-color: rgba(245, 166, 35, .55) !important;
+  box-shadow:   0 0 0 3px rgba(245, 166, 35, .08) !important;
+  outline:      none !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   SELECT2 — dropdown personalizado
+═══════════════════════════════════════════════════════════ */
+
+/* Contenedor y caja de selección */
+.forminator-custom-form .select2-container .select2-selection--single {
+  background:    rgba(255, 255, 255, .06) !important;
+  border:        1px solid rgba(255, 255, 255, .15) !important;
+  border-radius: 6px !important;
+  height:        42px !important;
+}
+
+.forminator-custom-form .select2-container--open .select2-selection--single {
+  border-color: rgba(245, 166, 35, .55) !important;
+  box-shadow:   0 0 0 3px rgba(245, 166, 35, .08) !important;
+}
+
+/* Texto seleccionado */
+.forminator-custom-form
+  .select2-container .select2-selection--single
+  .select2-selection__rendered {
+  color:       #ffffff !important;
+  font-family: var(--font-body) !important;
+  font-size:   14px !important;
+  line-height: 42px !important;
+  padding-left: 14px !important;
+  padding-right: 36px !important;
+}
+
+/* Flecha nativa de select2 — ocultar, usamos la del background-image */
+.forminator-custom-form
+  .select2-container .select2-selection--single
+  .select2-selection__arrow {
+  display: none !important;
+}
+
+/* Dropdown panel */
+.select2-dropdown {
+  background:    #0d3060 !important;
+  border:        1px solid rgba(255, 255, 255, .15) !important;
+  border-radius: 6px !important;
+  box-shadow:    0 8px 24px rgba(0, 0, 0, .3) !important;
+}
+
+/* Opciones */
+.select2-results__option {
+  font-family: var(--font-body) !important;
+  font-size:   14px !important;
+  color:       rgba(255, 255, 255, .75) !important;
+  padding:     10px 14px !important;
+}
+
+.select2-results__option--highlighted {
+  background: rgba(245, 166, 35, .15) !important;
+  color:      #ffffff !important;
+}
+
+.select2-results__option[aria-selected="true"] {
+  background: rgba(15, 91, 167, .3) !important;
+  color:      #ffffff !important;
+}
+
+/* Buscador interno (si está habilitado) */
+.select2-search--dropdown .select2-search__field {
+  background:    rgba(255, 255, 255, .08) !important;
+  border:        1px solid rgba(255, 255, 255, .15) !important;
+  border-radius: 4px !important;
+  color:         #fff !important;
+  font-family:   var(--font-body) !important;
+  font-size:     13px !important;
+  padding:       7px 10px !important;
+  outline:       none !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   GRUPO REPETIDOR (Información del servicio)
+═══════════════════════════════════════════════════════════ */
+
+.forminator-custom-form .forminator-repeater-label {
+  font-family:     var(--font-display) !important;
+  font-size:       13px !important;
+  font-weight:     700 !important;
+  letter-spacing:  .12em !important;
+  text-transform:  uppercase !important;
+  color:           rgba(255, 255, 255, .35) !important;
+  margin-bottom:   14px !important;
+  display:         block !important;
+  padding-top:     4px !important;
+}
+
+.forminator-custom-form .forminator-field-group {
+  border-top:  1px solid rgba(255, 255, 255, .08) !important;
+  padding-top: 16px !important;
+  margin-top:  4px !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   BOTÓN DE ENVÍO
+═══════════════════════════════════════════════════════════ */
+
+.forminator-custom-form .forminator-button-submit {
+  background:      var(--ts-gold) !important;
+  color:           #ffffff !important;
+  font-family:     var(--font-display) !important;
+  font-size:       15px !important;
+  font-weight:     700 !important;
+  letter-spacing:  .08em !important;
+  text-transform:  uppercase !important;
+  border:          none !important;
+  border-radius:   5px !important;
+  padding:         14px 28px !important;
+  width:           100% !important;
+  cursor:          pointer !important;
+  transition:      background .18s !important;
+  box-shadow:      none !important;
+}
+
+.forminator-custom-form .forminator-button-submit:hover {
+  background: var(--ts-gold-hov) !important;
+}
+
+.forminator-custom-form .forminator-button-submit:disabled {
+  opacity: .6 !important;
+  cursor:  not-allowed !important;
+}
+
+.forminator-custom-form .forminator-row-last {
+  margin-top:     4px !important;
+  padding-bottom: 0 !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   MENSAJES DE RESPUESTA — éxito y error
+═══════════════════════════════════════════════════════════ */
+
+.forminator-custom-form .forminator-response-message {
+  font-family:   var(--font-body) !important;
+  font-size:     14px !important;
+  border-radius: 7px !important;
+  padding:       12px 16px !important;
+  margin-bottom: 16px !important;
+}
+
+.forminator-custom-form .forminator-response-message.forminator-success {
+  background: rgba(37, 211, 102, .10) !important;
+  border:     1px solid rgba(37, 211, 102, .25) !important;
+  color:      #25D366 !important;
+}
+
+.forminator-custom-form .forminator-response-message.forminator-error {
+  background: rgba(220, 60, 60, .08) !important;
+  border:     1px solid rgba(220, 60, 60, .22) !important;
+  color:      #ff7b7b !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   ERRORES DE CAMPO
+═══════════════════════════════════════════════════════════ */
+
+.forminator-custom-form .forminator-input.forminator-has_error,
+.forminator-custom-form .forminator-textarea.forminator-has_error,
+.forminator-custom-form .forminator-select--field.forminator-has_error {
+  border-color: rgba(220, 60, 60, .55) !important;
+}
+
+.forminator-custom-form .forminator-error-message {
+  font-size:  11px !important;
+  color:      #ff7b7b !important;
+  margin-top: 4px !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   SPINNER DE CARGA
+═══════════════════════════════════════════════════════════ */
+
+.forminator-custom-form .forminator-spinner {
+  border-color:     rgba(255, 255, 255, .2) !important;
+  border-top-color: var(--ts-gold) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   CAPTCHA Y HONEYPOT — ocultar elementos de interfaz
+═══════════════════════════════════════════════════════════ */
+
+.forminator-custom-form .grecaptcha-badge {
+  visibility: hidden !important;
+}
+
+.forminator-custom-form label.forminator-hidden {
+  display: none !important;
+}
+
+.forminator-custom-form .forminator-row.forminator-hidden {
+  display: none !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   FORMULARIO DE SUSCRIPCIÓN (fondo claro)
+   Aplica cuando el form está sobre fondo blanco o gris
+   Agregar la clase .forminator-light al wrapper del shortcode
+═══════════════════════════════════════════════════════════ */
+
+.forminator-light .forminator-custom-form .forminator-label {
+  color: #555555 !important;
+}
+
+.forminator-light .forminator-custom-form .forminator-input,
+.forminator-light .forminator-custom-form .forminator-textarea,
+.forminator-light .forminator-custom-form .forminator-select--field {
+  background:  #ffffff !important;
+  border:      1px solid #e0e0e0 !important;
+  color:       #333333 !important;
+}
+
+.forminator-light .forminator-custom-form .forminator-input::placeholder,
+.forminator-light .forminator-custom-form .forminator-textarea::placeholder {
+  color: #aaaaaa !important;
+}
+
+.forminator-light .forminator-custom-form .forminator-input:focus,
+.forminator-light .forminator-custom-form .forminator-textarea:focus {
+  border-color: rgba(15, 91, 167, .5) !important;
+  box-shadow:   0 0 0 3px rgba(15, 91, 167, .06) !important;
+}
+
+.forminator-light .forminator-custom-form .forminator-select--field {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999999' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+}
+
+.forminator-light .forminator-custom-form .forminator-repeater-label {
+  color: #999999 !important;
+}
+
+.forminator-light .forminator-custom-form .forminator-field-group {
+  border-top-color: #e0e0e0 !important;
+}
+
+.forminator-light .select2-dropdown {
+  background:  #ffffff !important;
+  border:      1px solid #e0e0e0 !important;
+  box-shadow:  0 8px 24px rgba(0, 0, 0, .1) !important;
+}
+
+.forminator-light .select2-results__option {
+  color: #333333 !important;
+}
+
+.forminator-light .select2-results__option--highlighted {
+  background: rgba(15, 91, 167, .08) !important;
+  color:      var(--ts-blue) !important;
+}
+
+.forminator-light
+  .forminator-custom-form
+  .select2-container .select2-selection--single {
+  background:  #ffffff !important;
+  border:      1px solid #e0e0e0 !important;
+}
+
+.forminator-light
+  .forminator-custom-form
+  .select2-container .select2-selection--single
+  .select2-selection__rendered {
+  color: #333333 !important;
+}

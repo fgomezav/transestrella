@@ -1231,7 +1231,7 @@ get_header();
           </svg>
           <span>Sede Principal</span>
         </div>
-        <h2>Medellín</h2>
+        <h2><a href="/sucursales/sucursal-medellin/" style="color:inherit; text-decoration:none;">Medellín</a></h2>
         <div class="region">Antioquia · Corredor Andino</div>
         <div class="contact-list">
           <div class="contact-item">
@@ -1285,6 +1285,9 @@ get_header();
           </div>
         </div>
         <div class="main-branch-btns">
+          <a href="/sucursales/sucursal-medellin/" class="btn-primary" style="font-size:13px;padding:12px 20px;">
+            Ver Sede Principal →
+          </a>
           <a href="https://waze.com/ul?q=Calle+64+%2356-60+Medellin" target="_blank" class="btn-waze">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
               <circle cx="12" cy="11" r="8" />
@@ -1358,7 +1361,7 @@ get_header();
             </div>
           </div>
           <div class="branch-card-body">
-            <div class="branch-city">Bogotá</div>
+            <div class="branch-city"><a href="/sucursales/sucursal-bogota/" style="color:inherit; text-decoration:none;">Bogotá</a></div>
             <div class="branch-dept">Cundinamarca · Corredor Andino</div>
             <div class="branch-contacts">
               <div class="branch-contact-row">
@@ -1377,6 +1380,7 @@ get_header();
               </div>
             </div>
             <div class="branch-map-links">
+              <a href="/sucursales/sucursal-bogota/" class="branch-map-link" style="background:var(--ts-blue);color:#fff;">Ver Sucursal</a>
               <a href="https://waze.com/ul?q=Av+Troncal+de+Occidente+18-76+Bogota" target="_blank"
                 class="branch-map-link bml-waze">Waze</a>
               <a href="https://maps.google.com/?q=Av+Troncal+de+Occidente+18-76+Bogota" target="_blank"
@@ -1396,7 +1400,7 @@ get_header();
             </div>
           </div>
           <div class="branch-card-body">
-            <div class="branch-city">Buga</div>
+            <div class="branch-city"><a href="/sucursales/sucursal-buga/" style="color:inherit; text-decoration:none;">Buga</a></div>
             <div class="branch-dept">Valle del Cauca · Corredor Andino</div>
             <div class="branch-contacts">
               <div class="branch-contact-row">
@@ -1415,6 +1419,7 @@ get_header();
               </div>
             </div>
             <div class="branch-map-links">
+              <a href="/sucursales/sucursal-buga/" class="branch-map-link" style="background:var(--ts-blue);color:#fff;">Ver Sucursal</a>
               <a href="https://waze.com/ul?q=Carrera+12A+6Sur-94+Buga+Colombia" target="_blank"
                 class="branch-map-link bml-waze">Waze</a>
               <a href="https://maps.google.com/?q=Cra+12A+6Sur-94+Buga+Colombia" target="_blank"
@@ -1447,7 +1452,7 @@ get_header();
             </div>
           </div>
           <div class="branch-card-body">
-            <div class="branch-city">Cali</div>
+            <div class="branch-city"><a href="/sucursales/sucursal-cali/" style="color:inherit; text-decoration:none;">Cali</a></div>
             <div class="branch-dept">Valle del Cauca · Corredor Pacífico</div>
             <div class="branch-contacts">
               <div class="branch-contact-row">
@@ -1466,6 +1471,7 @@ get_header();
               </div>
             </div>
             <div class="branch-map-links">
+              <a href="/sucursales/sucursal-cali/" class="branch-map-link" style="background:var(--ts-blue);color:#fff;">Ver Sucursal</a>
               <a href="https://waze.com/ul?q=Cencar+Cali+Colombia" target="_blank"
                 class="branch-map-link bml-waze">Waze</a>
               <a href="https://maps.google.com/?q=Cencar+Bloque+A3+Cali+Colombia" target="_blank"
@@ -1485,7 +1491,7 @@ get_header();
             </div>
           </div>
           <div class="branch-card-body">
-            <div class="branch-city">Buenaventura</div>
+            <div class="branch-city"><a href="/sucursales/sucursal-buenaventura/" style="color:inherit; text-decoration:none;">Buenaventura</a></div>
             <div class="branch-dept">Valle del Cauca · Puerto Pacífico</div>
             <div class="branch-contacts">
               <div class="branch-contact-row">
@@ -1504,6 +1510,7 @@ get_header();
               </div>
             </div>
             <div class="branch-map-links">
+              <a href="/sucursales/sucursal-buenaventura/" class="branch-map-link" style="background:var(--ts-blue);color:#fff;">Ver Sucursal</a>
               <a href="https://waze.com/ul?q=Calle+7B+4-52+Buenaventura+Colombia" target="_blank"
                 class="branch-map-link bml-waze">Waze</a>
               <a href="https://maps.google.com/?q=Calle+7B+4-52+Buenaventura+Colombia" target="_blank"
@@ -1536,7 +1543,7 @@ get_header();
             </div>
           </div>
           <div class="branch-card-body">
-            <div class="branch-city">Barranquilla</div>
+            <div class="branch-city"><a href="/sucursales/sucursal-barranquilla/" style="color:inherit; text-decoration:none;">Barranquilla</a></div>
             <div class="branch-dept">Atlántico · Corredor Caribe</div>
             <div class="branch-contacts">
               <div class="branch-contact-row">
@@ -1555,6 +1562,7 @@ get_header();
               </div>
             </div>
             <div class="branch-map-links">
+              <a href="/sucursales/sucursal-barranquilla/" class="branch-map-link" style="background:var(--ts-blue);color:#fff;">Ver Sucursal</a>
               <a href="https://waze.com/ul?q=Carrera+28+38-345+Barranquilla" target="_blank"
                 class="branch-map-link bml-waze">Waze</a>
               <a href="https://maps.google.com/?q=Cra+28+38-345+Barranquilla+Colombia" target="_blank"
@@ -1574,7 +1582,7 @@ get_header();
             </div>
           </div>
           <div class="branch-card-body">
-            <div class="branch-city">Cartagena</div>
+            <div class="branch-city"><a href="/sucursales/sucursal-cartagena/" style="color:inherit; text-decoration:none;">Cartagena</a></div>
             <div class="branch-dept">Bolívar · Puerto Caribe</div>
             <div class="branch-contacts">
               <div class="branch-contact-row">
@@ -1593,6 +1601,7 @@ get_header();
               </div>
             </div>
             <div class="branch-map-links">
+              <a href="/sucursales/sucursal-cartagena/" class="branch-map-link" style="background:var(--ts-blue);color:#fff;">Ver Sucursal</a>
               <a href="https://waze.com/ul?q=Diagonal+21+45A-11+Cartagena" target="_blank"
                 class="branch-map-link bml-waze">Waze</a>
               <a href="https://maps.google.com/?q=Diagonal+21+45A-11+Cartagena+Colombia" target="_blank"
@@ -1625,7 +1634,7 @@ get_header();
             </div>
           </div>
           <div class="branch-card-body">
-            <div class="branch-city">Manizales</div>
+            <div class="branch-city"><a href="/sucursales/sucursal-manizales/" style="color:inherit; text-decoration:none;">Manizales</a></div>
             <div class="branch-dept">Caldas · Eje Cafetero</div>
             <div class="branch-contacts">
               <div class="branch-contact-row">
@@ -1644,6 +1653,7 @@ get_header();
               </div>
             </div>
             <div class="branch-map-links">
+              <a href="/sucursales/sucursal-manizales/" class="branch-map-link" style="background:var(--ts-blue);color:#fff;">Ver Sucursal</a>
               <a href="https://waze.com/ul?q=Calle+110+34A-75+Manizales+Colombia" target="_blank"
                 class="branch-map-link bml-waze">Waze</a>
               <a href="https://maps.google.com/?q=Calle+110+34A-75+Manizales+Colombia" target="_blank"

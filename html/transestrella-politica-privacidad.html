@@ -8,173 +8,444 @@
 <link rel="canonical" href="https://transestrella.com/politica-privacidad/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 <style>
-:root{
-  --ts-blue:#0F5BA7;--ts-blue-dark:#0A4580;--ts-blue-deep:#083266;
-  --ts-gold:#F5A623;--ts-white:#FFFFFF;--ts-gray-bg:#F5F5F5;
-  --ts-gray:#999999;--ts-gray-dark:#333333;--ts-gray-line:#E0E0E0;
-  --font-display:'Barlow Condensed',sans-serif;--font-body:'Nunito Sans',sans-serif;
+/* ── SCROLL SUAVE ── */
+html { scroll-behavior: smooth; }
+
+/* ── HERO — overrides (compacto para páginas legales) ── */
+/* El global tiene min-height:92vh;display:flex — lo reemplazamos */
+.hero {
+  min-height: auto;
+  display: block;
+  padding: 52px 40px 48px;
+  border-bottom: 1px solid rgba(255,255,255,.06);
 }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth;}
-body{font-family:var(--font-body);font-size:16px;line-height:1.6;color:#333;background:#fff;}
-
-/* NAV */
-header{position:sticky;top:0;background:rgba(8,50,102,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.07);z-index:100;padding:0 40px;}
-.nav-inner{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px;}
-.nav-logo{font-family:var(--font-display);font-size:21px;font-weight:800;color:#fff;display:flex;align-items:center;gap:9px;letter-spacing:.02em;text-decoration:none;}
-.nav-logo span{color:var(--ts-gold);}
-.nav-star{width:30px;height:30px;background:var(--ts-gold);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);}
-.nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
-.nav-links a{font-family:var(--font-display);font-size:13px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.82);text-decoration:none;}
-.nav-links a:hover{color:var(--ts-gold);}
-.nav-cta{background:var(--ts-gold)!important;color:#fff!important;padding:9px 20px;border-radius:4px;}
-
-/* HERO — compacto para páginas legales */
-.hero{background:var(--ts-blue-deep);padding:52px 40px 48px;position:relative;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.06);}
-.hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:48px 48px;}
-.hero-glow{position:absolute;top:-40%;right:-5%;width:45%;height:160%;background:radial-gradient(ellipse,rgba(15,91,167,.18) 0%,transparent 65%);pointer-events:none;}
-.hero-inner{max-width:1240px;margin:0 auto;position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:40px;}
-.breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:16px;flex-wrap:wrap;}
-.breadcrumb a{font-family:var(--font-display);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);text-decoration:none;}
-.breadcrumb a:hover{color:var(--ts-gold);}
-.breadcrumb-sep{color:rgba(255,255,255,.2);}
-.breadcrumb span{font-family:var(--font-display);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ts-gold);}
-.hero-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ts-gold);margin-bottom:12px;}
-.hero-tag::before{content:'';width:28px;height:2px;background:var(--ts-gold);}
-.hero h1{font-family:var(--font-display);font-size:clamp(36px,4.5vw,56px);font-weight:800;line-height:.95;text-transform:uppercase;color:#fff;letter-spacing:.01em;margin-bottom:10px;}
-.hero-sub{font-size:14px;color:rgba(255,255,255,.45);line-height:1.65;max-width:480px;}
-/* Meta legal */
-.hero-meta{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);}
-.hero-meta-item{display:flex;align-items:center;gap:7px;font-size:12px;color:rgba(255,255,255,.38);}
-.hero-meta-item svg{width:13px;height:13px;stroke:rgba(255,255,255,.3);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
-/* Escudo */
-.hero-shield{flex-shrink:0;}
-.shield-wrap{width:80px;height:80px;background:rgba(245,166,35,.08);border:1px solid rgba(245,166,35,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;}
-.shield-wrap svg{width:36px;height:36px;stroke:var(--ts-gold);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}
-
-/* LAYOUT PRINCIPAL */
-.page-layout{max-width:1240px;margin:0 auto;padding:56px 40px 88px;display:grid;grid-template-columns:240px 1fr;gap:64px;align-items:start;}
-
-/* SIDEBAR — índice */
-.policy-sidebar{position:sticky;top:84px;}
-.toc-box{background:var(--ts-gray-bg);border-radius:12px;padding:20px 18px;border:1px solid var(--ts-gray-line);}
-.toc-title{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ts-gray);margin-bottom:14px;}
-.toc-list{list-style:none;display:flex;flex-direction:column;}
-.toc-list li{border-bottom:1px solid var(--ts-gray-line);}
-.toc-list li:last-child{border-bottom:none;}
-.toc-list a{display:flex;align-items:flex-start;gap:8px;font-size:13px;font-weight:600;color:#555;text-decoration:none;padding:9px 4px;line-height:1.35;transition:color .15s;}
-.toc-list a:hover{color:var(--ts-blue);}
-.toc-num{font-family:var(--font-display);font-size:11px;font-weight:800;color:var(--ts-gold);flex-shrink:0;margin-top:1px;}
-
-/* Legal pills */
-.legal-pills{display:flex;flex-direction:column;gap:8px;margin-top:18px;}
-.legal-pill{display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:7px;border:1px solid var(--ts-gray-line);background:#fff;text-decoration:none;transition:border-color .18s;}
-.legal-pill:hover{border-color:var(--ts-blue);}
-.legal-pill-icon{width:22px;height:22px;background:#EEF3FA;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.legal-pill-icon svg{width:11px;height:11px;stroke:var(--ts-blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
-.legal-pill span{font-size:12px;font-weight:600;color:#555;line-height:1.3;}
-.legal-pill.active{border-color:var(--ts-blue);background:#EEF3FA;}
-.legal-pill.active span{color:var(--ts-blue);}
-
-/* CONTENIDO LEGAL */
-.policy-content{min-width:0;}
-
-/* Intro destacada */
-.policy-intro{background:#EEF3FA;border-radius:12px;padding:28px 28px;margin-bottom:40px;border:1px solid rgba(15,91,167,.1);}
-.policy-intro p{font-size:15px;color:#333;line-height:1.85;}
-.policy-intro strong{color:var(--ts-blue);font-weight:700;}
-
-/* Secciones */
-.policy-section{margin-bottom:44px;padding-bottom:44px;border-bottom:1px solid var(--ts-gray-line);}
-.policy-section:last-of-type{border-bottom:none;margin-bottom:0;padding-bottom:0;}
-
-.section-header{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px;}
-.section-num{width:36px;height:36px;background:var(--ts-blue-deep);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
-.section-num span{font-family:var(--font-display);font-size:14px;font-weight:800;color:var(--ts-gold);}
-.section-title{font-family:var(--font-display);font-size:clamp(18px,2vw,24px);font-weight:800;text-transform:uppercase;color:#333;line-height:1.1;}
-
-.policy-content p{font-size:15px;color:#333;line-height:1.85;margin-bottom:16px;}
-.policy-content p:last-child{margin-bottom:0;}
-.policy-content strong{font-weight:700;color:#111;}
-.policy-content a{color:var(--ts-blue);text-decoration:underline;text-underline-offset:3px;}
-
-/* Callout de contacto */
-.contact-callout{background:var(--ts-gray-bg);border-radius:10px;padding:20px 22px;margin:18px 0;border:1px solid var(--ts-gray-line);}
-.contact-callout-row{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px;}
-.contact-callout-row:last-child{margin-bottom:0;}
-.cc-icon{width:30px;height:30px;background:#fff;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid var(--ts-gray-line);}
-.cc-icon svg{width:13px;height:13px;stroke:var(--ts-blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
-.cc-label{font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ts-gray);margin-bottom:2px;}
-.cc-val{font-size:14px;font-weight:600;color:#333;}
-.cc-val a{color:var(--ts-blue);text-decoration:none;}
-
-/* Derechos del titular */
-.rights-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px;}
-.right-item{display:flex;align-items:flex-start;gap:10px;background:var(--ts-gray-bg);border-radius:8px;padding:12px 14px;border:1px solid var(--ts-gray-line);}
-.right-dot{width:8px;height:8px;background:var(--ts-gold);border-radius:50%;flex-shrink:0;margin-top:5px;}
-.right-text{font-size:13px;color:#333;line-height:1.55;}
-.right-text strong{display:block;font-family:var(--font-display);font-size:13px;font-weight:800;text-transform:uppercase;color:var(--ts-blue);margin-bottom:2px;}
-
-/* Ley badge */
-.ley-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(15,91,167,.07);border:1px solid rgba(15,91,167,.18);border-radius:6px;padding:8px 14px;margin-top:14px;}
-.ley-badge svg{width:14px;height:14px;stroke:var(--ts-blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
-.ley-badge span{font-family:var(--font-display);font-size:12px;font-weight:700;color:var(--ts-blue);letter-spacing:.04em;}
-
-/* Última actualización */
-.last-update{display:flex;align-items:center;gap:8px;margin-top:36px;padding:14px 18px;background:var(--ts-gray-bg);border-radius:8px;border:1px solid var(--ts-gray-line);}
-.last-update svg{width:14px;height:14px;stroke:var(--ts-gray);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
-.last-update span{font-size:12px;color:var(--ts-gray);}
-.last-update strong{color:#555;}
-
-/* FOOTER */
-footer{background:#041C3D;padding:60px 40px 28px;}
-.footer-inner{max-width:1240px;margin:0 auto;}
-.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:28px;}
-.footer-brand p{font-size:14px;color:rgba(255,255,255,.38);line-height:1.75;margin-top:12px;max-width:270px;}
-.footer-certs{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
-.footer-cert{font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.38);border:1px solid rgba(255,255,255,.09);padding:3px 8px;border-radius:3px;}
-.footer-col-title{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--ts-gold);margin-bottom:16px;}
-.footer-links{list-style:none;display:flex;flex-direction:column;gap:9px;}
-.footer-links a{font-size:14px;color:rgba(255,255,255,.43);text-decoration:none;}
-.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
-.footer-copy{font-size:13px;color:rgba(255,255,255,.22);}
-.footer-legal{display:flex;gap:20px;flex-wrap:wrap;}
-.footer-legal a{font-size:13px;color:rgba(255,255,255,.22);text-decoration:none;}
-.footer-legal a.active{color:var(--ts-gold);}
-
-/* WA */
-.wa-float{position:fixed;bottom:26px;right:26px;z-index:999;display:flex;flex-direction:column;align-items:flex-end;gap:9px;}
-.wa-bubble{background:#fff;border-radius:9px;padding:10px 14px;box-shadow:0 4px 18px rgba(0,0,0,.13);font-size:12px;color:#333;max-width:190px;line-height:1.4;position:relative;animation:waIn .4s ease 1.6s both;}
-.wa-bubble strong{display:block;color:#075E54;font-size:13px;margin-bottom:1px;}
-.wa-bubble::after{content:'';position:absolute;bottom:-7px;right:18px;border-left:7px solid transparent;border-top:7px solid #fff;}
-.wa-btn{width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,.38);text-decoration:none;position:relative;animation:waIn .4s ease 1s both;}
-.wa-btn::before{content:'';position:absolute;width:58px;height:58px;border-radius:50%;background:rgba(37,211,102,.28);animation:waPulse 2.2s ease-out infinite;}
-.wa-btn svg{width:28px;height:28px;fill:#fff;position:relative;z-index:1;}
-@keyframes waPulse{0%{transform:scale(1);opacity:.7;}100%{transform:scale(1.75);opacity:0;}}
-@keyframes waIn{from{opacity:0;transform:scale(.7) translateY(10px);}to{opacity:1;transform:scale(1) translateY(0);}}
-
-/* RESPONSIVE */
-@media(max-width:1024px){
-  .page-layout{grid-template-columns:1fr;gap:40px;}
-  .policy-sidebar{position:static;}
-  .toc-box{display:none;}
-  .footer-top{grid-template-columns:1fr 1fr;}
-  .rights-grid{grid-template-columns:1fr;}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+  background-size: 48px 48px;
 }
-@media(max-width:768px){
-  header{padding:0 16px;}.nav-links{display:none;}
-  .hero{padding:40px 20px 36px;}
-  .hero-inner{flex-direction:column;align-items:flex-start;}
-  .hero-shield{display:none;}
-  .page-layout{padding:40px 20px 60px;}
-  footer{padding:44px 20px 22px;}.footer-top{grid-template-columns:1fr;}
-  .footer-bottom{flex-direction:column;text-align:center;}
-  .wa-float{bottom:14px;right:14px;}
+.hero-glow {
+  position: absolute;
+  top: -40%;
+  right: -5%;
+  width: 45%;
+  height: 160%;
+  background: radial-gradient(ellipse, rgba(15,91,167,.18) 0%, transparent 65%);
+  pointer-events: none;
 }
-@media(max-width:480px){
-  .wa-bubble{display:none;}
-  .rights-grid{grid-template-columns:1fr;}
+/* Layout interno del hero: texto + escudo */
+.hero-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.breadcrumb { margin-bottom: 16px; }
+
+/* Etiqueta de tipo de documento encima del H1 */
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ts-gold);
+  margin-bottom: 12px;
+}
+.hero-tag::before {
+  content: '';
+  width: 28px;
+  height: 2px;
+  background: var(--ts-gold);
+}
+
+/* H1 más compacto que el hero de servicios */
+.hero h1 {
+  font-size: clamp(36px, 4.5vw, 56px);
+  line-height: .95;
+  margin-bottom: 10px;
+}
+.hero-sub {
+  font-size: 14px;
+  color: rgba(255,255,255,.45);
+  line-height: 1.65;
+  max-width: 480px;
+}
+
+/* Meta legal bajo el subtítulo */
+.hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.hero-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  color: rgba(255,255,255,.38);
+}
+.hero-meta-item svg {
+  width: 13px;
+  height: 13px;
+  stroke: rgba(255,255,255,.3);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Escudo decorativo a la derecha del hero */
+.hero-shield { flex-shrink: 0; }
+.shield-wrap {
+  width: 80px;
+  height: 80px;
+  background: rgba(245,166,35,.08);
+  border: 1px solid rgba(245,166,35,.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shield-wrap svg {
+  width: 36px;
+  height: 36px;
+  stroke: var(--ts-gold);
+  fill: none;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ── LAYOUT PRINCIPAL: sidebar (índice) + contenido ── */
+.page-layout {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 56px 40px 88px;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ── SIDEBAR — índice de secciones ── */
+.policy-sidebar { position: sticky; top: 84px; }
+
+.toc-box {
+  background: var(--ts-gray-bg);
+  border-radius: 12px;
+  padding: 20px 18px;
+  border: 1px solid var(--ts-gray-line);
+}
+.toc-title {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--ts-gray);
+  margin-bottom: 14px;
+}
+.toc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.toc-list li { border-bottom: 1px solid var(--ts-gray-line); }
+.toc-list li:last-child { border-bottom: none; }
+.toc-list a {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  text-decoration: none;
+  padding: 9px 4px;
+  line-height: 1.35;
+  transition: color .15s;
+}
+.toc-list a:hover { color: var(--ts-blue); }
+.toc-num {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--ts-gold);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Pastillas de documentos legales relacionados */
+.legal-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+.legal-pills .toc-title { margin-bottom: 8px; }
+.legal-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 7px;
+  border: 1px solid var(--ts-gray-line);
+  background: #fff;
+  text-decoration: none;
+  transition: border-color .18s;
+}
+.legal-pill:hover { border-color: var(--ts-blue); }
+.legal-pill-icon {
+  width: 22px;
+  height: 22px;
+  background: #EEF3FA;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.legal-pill-icon svg {
+  width: 11px;
+  height: 11px;
+  stroke: var(--ts-blue);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.legal-pill span { font-size: 12px; font-weight: 600; color: #555; line-height: 1.3; }
+.legal-pill.active { border-color: var(--ts-blue); background: #EEF3FA; }
+.legal-pill.active span { color: var(--ts-blue); }
+
+/* ── CONTENIDO LEGAL ── */
+.policy-content { min-width: 0; }
+
+/* Recuadro de introducción */
+.policy-intro {
+  background: #EEF3FA;
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(15,91,167,.1);
+}
+.policy-intro p { font-size: 15px; color: #333; line-height: 1.85; }
+.policy-intro strong { color: var(--ts-blue); font-weight: 700; }
+
+/* Secciones numeradas */
+.policy-section {
+  margin-bottom: 44px;
+  padding-bottom: 44px;
+  border-bottom: 1px solid var(--ts-gray-line);
+}
+.policy-section:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.section-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.section-num {
+  width: 36px;
+  height: 36px;
+  background: var(--ts-blue-deep);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.section-num span {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--ts-gold);
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #333;
+  line-height: 1.1;
+}
+
+/* Tipografía del cuerpo legal */
+.policy-content p { font-size: 15px; color: #333; line-height: 1.85; margin-bottom: 16px; }
+.policy-content p:last-child { margin-bottom: 0; }
+.policy-content strong { font-weight: 700; color: #111; }
+.policy-content a { color: var(--ts-blue); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Callout de datos de contacto */
+.contact-callout {
+  background: var(--ts-gray-bg);
+  border-radius: 10px;
+  padding: 20px 22px;
+  margin: 18px 0;
+  border: 1px solid var(--ts-gray-line);
+}
+.contact-callout-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.contact-callout-row:last-child { margin-bottom: 0; }
+.cc-icon {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid var(--ts-gray-line);
+}
+.cc-icon svg {
+  width: 13px;
+  height: 13px;
+  stroke: var(--ts-blue);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.cc-label {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ts-gray);
+  margin-bottom: 2px;
+}
+.cc-val { font-size: 14px; font-weight: 600; color: #333; }
+.cc-val a { color: var(--ts-blue); text-decoration: none; }
+
+/* Grid de derechos / finalidades */
+.rights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 14px;
+}
+.right-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--ts-gray-bg);
+  border-radius: 8px;
+  padding: 12px 14px;
+  border: 1px solid var(--ts-gray-line);
+}
+.right-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--ts-gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+.right-text { font-size: 13px; color: #333; line-height: 1.55; }
+.right-text strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--ts-blue);
+  margin-bottom: 2px;
+}
+
+/* Badge de normativa */
+.ley-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15,91,167,.07);
+  border: 1px solid rgba(15,91,167,.18);
+  border-radius: 6px;
+  padding: 8px 14px;
+  margin-top: 14px;
+}
+.ley-badge svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--ts-blue);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+.ley-badge span {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ts-blue);
+  letter-spacing: .04em;
+}
+
+/* Barra de última actualización */
+.last-update {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 36px;
+  padding: 14px 18px;
+  background: var(--ts-gray-bg);
+  border-radius: 8px;
+  border: 1px solid var(--ts-gray-line);
+}
+.last-update svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--ts-gray);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+.last-update span { font-size: 12px; color: var(--ts-gray); }
+.last-update strong { color: #555; }
+
+/* Enlace activo en footer */
+.footer-legal a.active { color: var(--ts-gold); }
+.footer-links a.active { color: var(--ts-gold); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .page-layout { grid-template-columns: 1fr; gap: 40px; }
+  .policy-sidebar { position: static; }
+  .toc-box { display: none; }
+  .rights-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .hero { padding: 40px 20px 36px; }
+  .hero-inner { flex-direction: column; align-items: flex-start; }
+  .hero-shield { display: none; }
+  .page-layout { padding: 40px 20px 60px; }
 }
 </style>
 </head>
@@ -245,8 +516,8 @@ footer{background:#041C3D;padding:60px 40px 28px;}
       </ul>
     </div>
 
-    <div class="legal-pills" style="margin-top:16px;">
-      <div class="toc-title" style="font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ts-gray);margin-bottom:8px;">Documentos legales</div>
+    <div class="legal-pills">
+      <div class="toc-title">Documentos legales</div>
       <a href="/politica-privacidad/" class="legal-pill active">
         <div class="legal-pill-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <span>Política de Privacidad</span>
@@ -394,13 +665,13 @@ footer{background:#041C3D;padding:60px 40px 28px;}
           <div class="right-dot"></div>
           <div class="right-text"><strong>Revocación</strong>Revocar la autorización otorgada para el tratamiento de sus datos personales.</div>
         </div>
-        <div class="right-item" style="grid-column:1 / -1;">
+        <div class="right-item" style="grid-column: 1 / -1;">
           <div class="right-dot"></div>
           <div class="right-text"><strong>Reclamo por infracción</strong>Presentar quejas ante Transportadora Estrella S.A.S. o ante la Superintendencia de Industria y Comercio (SIC) por incumplimientos a la normativa de protección de datos.</div>
         </div>
       </div>
 
-      <p style="margin-top:20px;">Para ejercer cualquiera de estos derechos, el Titular debe enviar un escrito a:</p>
+      <p style="margin-top: 20px;">Para ejercer cualquiera de estos derechos, el Titular debe enviar un escrito a:</p>
       <div class="contact-callout">
         <div class="contact-callout-row">
           <div class="cc-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
@@ -433,7 +704,7 @@ footer{background:#041C3D;padding:60px 40px 28px;}
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="/" class="nav-logo"><div class="nav-star"></div>TRANS<span style="color:var(--ts-gold);">ESTRELLA</span></a>
+        <a href="/" class="nav-logo"><div class="nav-star"></div>TRANS<span>ESTRELLA</span></a>
         <p>Empresa de transporte de carga masiva y semi masiva terrestre en Colombia. Más de 30 años conectando empresas con todo el territorio nacional.</p>
         <div class="footer-certs">
           <span class="footer-cert">ISO 9001</span>
@@ -462,7 +733,7 @@ footer{background:#041C3D;padding:60px 40px 28px;}
       <div>
         <div class="footer-col-title">Legal</div>
         <ul class="footer-links">
-          <li><a href="/politica-privacidad/" style="color:var(--ts-gold);">Política de Privacidad</a></li>
+          <li><a href="/politica-privacidad/" class="active">Política de Privacidad</a></li>
           <li><a href="/politica-de-tratamiento-de-datos/">Política de Tratamiento de Datos</a></li>
           <li><a href="/politica-integrada/">Política Integrada</a></li>
         </ul>

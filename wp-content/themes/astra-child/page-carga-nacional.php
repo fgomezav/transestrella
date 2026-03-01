@@ -1625,42 +1625,75 @@ get_header();
       <div class="features-header">
         <div class="eyebrow center">Lo que nos distingue</div>
         <h2>Características del <span>Servicio Nacional</span></h2>
-        <p>Cuatro pilares que garantizan la eficiencia y confiabilidad de cada operación.</p>
+        <p>Cuatro pilares que garantizan la eficiencia y confiabilidad de cada operación de transporte de carga masiva
+          en Colombia.</p>
       </div>
       <div class="features-grid">
         <div class="feat-card">
-          <div class="feat-icon"><svg viewBox="0 0 24 24">
+          <div class="feat-icon">
+            <svg viewBox="0 0 24 24">
               <path d="M12 2L2 7l10 5 10-5-10-5z" />
               <path d="M2 17l10 5 10-5" />
               <path d="M2 12l10 5 10-5" />
-            </svg></div>
-          <h4>Flexibilidad</h4>
-          <p>Ajustes en rutas y horarios de acuerdo a las exigencias específicas de cada cliente.</p>
+            </svg>
+          </div>
+          <h4>Flexibilidad y Accesibilidad</h4>
+          <p>Ajustes en rutas y horarios de acuerdo a las exigencias específicas de cada cliente, con capacidad de
+            respuesta ante cambios imprevistos.</p>
+          <ul>
+            <li>Rutas personalizadas por cliente</li>
+            <li>Reprogramación ágil</li>
+            <li>Horarios flexibles de recolección</li>
+          </ul>
         </div>
         <div class="feat-card">
-          <div class="feat-icon"><svg viewBox="0 0 24 24">
+          <div class="feat-icon">
+            <svg viewBox="0 0 24 24">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
               <polyline points="9 12 11 14 15 10" />
-            </svg></div>
-          <h4>Seguridad</h4>
-          <p>Medidas integrales para proteger su mercancía con monitoreo en tiempo real.</p>
+            </svg>
+          </div>
+          <h4>Seguridad y Trazabilidad</h4>
+          <p>Medidas integrales para proteger su mercancía en todo momento, con monitoreo en tiempo real y respuesta
+            rápida ante cualquier eventualidad.</p>
+          <ul>
+            <li>GPS en tiempo real</li>
+            <li>Cámaras de seguridad en flota</li>
+            <li>Alertas automáticas</li>
+          </ul>
         </div>
         <div class="feat-card">
-          <div class="feat-icon"><svg viewBox="0 0 24 24">
+          <div class="feat-icon">
+            <svg viewBox="0 0 24 24">
               <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
               <line x1="8" y1="21" x2="16" y2="21" />
               <line x1="12" y1="17" x2="12" y2="21" />
-            </svg></div>
-          <h4>Tecnología</h4>
-          <p>Herramientas digitales que optimizan el proceso logístico y el seguimiento.</p>
+            </svg>
+          </div>
+          <h4>Tecnología e Innovación</h4>
+          <p>Herramientas digitales que optimizan el proceso logístico: software de gestión de flota, análisis de datos
+            y aplicaciones de seguimiento en tiempo real.</p>
+          <ul>
+            <li>Software de gestión de flota</li>
+            <li>Big data para optimización de rutas</li>
+            <li>Portal de seguimiento para clientes</li>
+          </ul>
         </div>
         <div class="feat-card">
-          <div class="feat-icon"><svg viewBox="0 0 24 24">
+          <div class="feat-icon">
+            <svg viewBox="0 0 24 24">
               <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
               <line x1="4" y1="22" x2="4" y2="15" />
-            </svg></div>
-          <h4>Sostenibilidad</h4>
-          <p>Alternativas responsables para reducir el impacto ambiental de cada operación.</p>
+            </svg>
+          </div>
+          <h4>Sostenibilidad Ambiental</h4>
+          <p>Alternativas responsables para reducir el impacto ambiental de cada operación, con optimización de rutas
+            para maximizar la eficiencia en consumo.</p>
+          <ul>
+            <li>Optimización de rutas eficientes</li>
+            <li>Técnicas de manejo sostenible</li>
+            <li>Reducción de emisiones</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -2067,13 +2100,14 @@ get_header();
           </div>
         </div>
         <?php
-            // Intentar cargar el formulario Forminator por defecto "Cotizador Express" u otro si existe.
-            // Actualmente ponemos un placeholder claro en caso de que no haya o falle
-            $form_shortcode = '[forminator_form id="1272"]'; // Asegúrate de cambiar el ID si no corresponde
-            if ( shortcode_exists( 'forminator_form' ) ) {
-              echo do_shortcode( $form_shortcode );
-            } else {
-          ?>
+// Intentar cargar el formulario Forminator por defecto "Cotizador Express" u otro si existe.
+// Actualmente ponemos un placeholder claro en caso de que no haya o falle
+$form_shortcode = '[forminator_form id="1272"]'; // Asegúrate de cambiar el ID si no corresponde
+if (shortcode_exists('forminator_form')) {
+  echo do_shortcode($form_shortcode);
+}
+else {
+?>
         <div class="forminator-placeholder">
           <svg viewBox="0 0 24 24">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
@@ -2085,7 +2119,8 @@ get_header();
           <p>Formulario de Cotización</p>
           <span>El formulario se cargará aquí vía WP Forminator<br>(Compruebe que el plugin está activo)</span>
         </div>
-        <?php } ?>
+        <?php
+}?>
         <a href="https://wa.me/576045273300" class="form-wa">
           <svg viewBox="0 0 24 24">
             <path
@@ -2114,6 +2149,6 @@ get_header();
   </a>
 </div>
 
-<?php 
+<?php
 get_footer();
 ?>

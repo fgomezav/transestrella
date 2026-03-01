@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preguntas Frecuentes — Transportadora Estrella</title>
+<meta name="description" content="Respuestas a las preguntas más frecuentes sobre transporte de carga masiva en Colombia: servicios, cotización, cobertura, flota y normativa. Transportadora Estrella.">
+<link rel="canonical" href="https://transestrella.com/preguntas-frecuentes/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ts-blue:#0F5BA7;--ts-blue-dark:#0A4580;--ts-blue-deep:#083266;
+  --ts-gold:#F5A623;--ts-white:#FFFFFF;--ts-gray-bg:#F5F5F5;
+  --ts-gray:#999999;--ts-gray-dark:#333333;--ts-gray-line:#E0E0E0;
+  --font-display:'Barlow Condensed',sans-serif;--font-body:'Nunito Sans',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth;}
+body{font-family:var(--font-body);font-size:16px;line-height:1.6;color:#333;background:#fff;}
+
+/* ── NAV ── */
+header{position:sticky;top:0;background:rgba(8,50,102,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.07);z-index:100;padding:0 40px;}
+.nav-inner{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px;}
+.nav-logo{font-family:var(--font-display);font-size:21px;font-weight:800;color:#fff;display:flex;align-items:center;gap:9px;letter-spacing:.02em;text-decoration:none;}
+.nav-logo span{color:var(--ts-gold);}
+.nav-star{width:30px;height:30px;background:var(--ts-gold);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
+.nav-links a{font-family:var(--font-display);font-size:13px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.82);text-decoration:none;}
+.nav-links a:hover{color:var(--ts-gold);}
+.nav-cta{background:var(--ts-gold)!important;color:#fff!important;padding:9px 20px;border-radius:4px;}
+
+/* ── HERO ── */
+.hero{background:var(--ts-blue-deep);padding:60px 40px 52px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:48px 48px;}
+.hero-glow{position:absolute;top:-30%;right:-5%;width:50%;height:150%;background:radial-gradient(ellipse,rgba(15,91,167,.2) 0%,transparent 65%);pointer-events:none;}
+.hero-inner{max-width:1240px;margin:0 auto;position:relative;z-index:2;}
+.breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:18px;flex-wrap:wrap;}
+.breadcrumb a{font-family:var(--font-display);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);text-decoration:none;}
+.breadcrumb a:hover{color:var(--ts-gold);}
+.breadcrumb-sep{color:rgba(255,255,255,.2);}
+.breadcrumb span{font-family:var(--font-display);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ts-gold);}
+.hero-grid{display:grid;grid-template-columns:1fr 380px;gap:56px;align-items:center;}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-display);font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ts-gold);margin-bottom:14px;}
+.eyebrow::before{content:'';width:34px;height:2px;background:var(--ts-gold);}
+.hero h1{font-family:var(--font-display);font-size:clamp(44px,5.5vw,68px);font-weight:800;line-height:.92;text-transform:uppercase;color:#fff;letter-spacing:.01em;margin-bottom:14px;}
+.hero h1 em{color:var(--ts-gold);font-style:normal;}
+.hero-desc{font-size:16px;color:rgba(255,255,255,.52);line-height:1.75;max-width:500px;}
+
+/* Caja de stats rápidas */
+.hero-stats-box{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px 22px;display:flex;flex-direction:column;gap:16px;}
+.hstat{display:flex;align-items:center;gap:14px;}
+.hstat-icon{width:38px;height:38px;background:rgba(245,166,35,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(245,166,35,.18);}
+.hstat-icon svg{width:18px;height:18px;stroke:var(--ts-gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.hstat-num{font-family:var(--font-display);font-size:26px;font-weight:800;color:#fff;line-height:1;}
+.hstat-lbl{font-size:12px;color:rgba(255,255,255,.38);margin-top:1px;}
+.hstat-divider{border:none;border-top:1px solid rgba(255,255,255,.08);}
+
+/* ── FILTROS DE CATEGORÍA ── */
+.cat-bar{background:#fff;border-bottom:1px solid var(--ts-gray-line);position:sticky;top:68px;z-index:90;padding:0 40px;}
+.cat-bar-inner{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none;}
+.cat-bar-inner::-webkit-scrollbar{display:none;}
+.cat-btn{font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ts-gray);padding:16px 18px;border:none;background:none;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:color .18s,border-color .18s;}
+.cat-btn:hover{color:var(--ts-blue);}
+.cat-btn.active{color:var(--ts-blue);border-bottom-color:var(--ts-gold);}
+
+/* ── LAYOUT PRINCIPAL ── */
+.page-layout{max-width:1240px;margin:0 auto;padding:56px 40px 88px;display:grid;grid-template-columns:1fr 300px;gap:64px;align-items:start;}
+
+/* ── GRUPOS DE PREGUNTAS ── */
+.faq-groups{display:flex;flex-direction:column;gap:48px;}
+
+.faq-group-header{display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:14px;border-bottom:2px solid var(--ts-gold);}
+.faq-group-icon{width:40px;height:40px;background:rgba(245,166,35,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(245,166,35,.2);}
+.faq-group-icon svg{width:20px;height:20px;stroke:var(--ts-gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.faq-group-title{font-family:var(--font-display);font-size:clamp(20px,2.2vw,26px);font-weight:800;text-transform:uppercase;color:#333;line-height:1;}
+.faq-count{font-family:var(--font-display);font-size:11px;font-weight:700;color:var(--ts-gray);letter-spacing:.08em;margin-left:auto;}
+
+/* Accordion */
+.faq-item{border:1px solid var(--ts-gray-line);border-radius:10px;overflow:hidden;margin-bottom:10px;transition:border-color .2s;}
+.faq-item.open{border-color:rgba(15,91,167,.25);}
+.faq-q{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;cursor:pointer;background:#fff;transition:background .18s;}
+.faq-q:hover{background:var(--ts-gray-bg);}
+.faq-item.open .faq-q{background:#EEF3FA;}
+.faq-q-text{font-family:var(--font-display);font-size:17px;font-weight:700;color:#333;text-transform:uppercase;line-height:1.15;letter-spacing:.01em;}
+.faq-item.open .faq-q-text{color:var(--ts-blue);}
+.faq-chevron{width:28px;height:28px;border-radius:50%;background:var(--ts-gray-bg);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid var(--ts-gray-line);transition:transform .25s,background .18s;}
+.faq-item.open .faq-chevron{transform:rotate(180deg);background:var(--ts-blue);border-color:var(--ts-blue);}
+.faq-chevron svg{width:12px;height:12px;stroke:#999;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+.faq-item.open .faq-chevron svg{stroke:#fff;}
+
+.faq-a{display:none;padding:0 20px 20px;background:#fff;}
+.faq-item.open .faq-a{display:block;}
+.faq-a p{font-size:15px;color:#333;line-height:1.82;margin-bottom:12px;}
+.faq-a p:last-of-type{margin-bottom:0;}
+
+/* Links dentro de respuestas — el núcleo del interlinking */
+.faq-a a.internal{color:var(--ts-blue);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(15,91,167,.3);padding-bottom:1px;transition:border-color .15s,color .15s;}
+.faq-a a.internal:hover{color:var(--ts-blue-dark);border-bottom-color:var(--ts-blue);}
+
+/* Pill de servicio dentro de respuesta */
+.svc-pill{display:inline-flex;align-items:center;gap:7px;background:#EEF3FA;border:1px solid rgba(15,91,167,.18);border-radius:5px;padding:6px 12px;margin:10px 6px 0 0;text-decoration:none;transition:background .18s,border-color .18s;}
+.svc-pill:hover{background:var(--ts-blue);border-color:var(--ts-blue);}
+.svc-pill:hover span{color:#fff;}
+.svc-pill:hover svg{stroke:#fff;}
+.svc-pill svg{width:13px;height:13px;stroke:var(--ts-blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
+.svc-pill span{font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ts-blue);}
+
+/* Pill de sucursal dentro de respuesta */
+.branch-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(245,166,35,.07);border:1px solid rgba(245,166,35,.25);border-radius:5px;padding:5px 11px;margin:8px 6px 0 0;text-decoration:none;transition:background .18s;}
+.branch-pill:hover{background:var(--ts-gold);}
+.branch-pill:hover span{color:#fff;}
+.branch-pill svg{width:11px;height:11px;stroke:var(--ts-gold);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
+.branch-pill:hover svg{stroke:#fff;}
+.branch-pill span{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#b37a10;}
+.branch-pill:hover span{color:#fff;}
+
+/* Callout de nota dentro de respuesta */
+.faq-note{background:#EEF3FA;border-left:3px solid var(--ts-blue);border-radius:0 7px 7px 0;padding:12px 16px;margin:14px 0 0;font-size:14px;color:#333;line-height:1.7;}
+.faq-note strong{color:var(--ts-blue);font-weight:700;}
+
+/* ── SIDEBAR ── */
+.faq-sidebar{position:sticky;top:120px;display:flex;flex-direction:column;gap:20px;}
+
+/* Servicios relacionados */
+.sidebar-section{background:var(--ts-gray-bg);border-radius:12px;padding:20px 18px;border:1px solid var(--ts-gray-line);}
+.sidebar-section-title{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ts-gray);margin-bottom:14px;}
+
+.svc-card-sm{display:flex;align-items:center;gap:12px;padding:12px 12px;background:#fff;border-radius:8px;border:1px solid var(--ts-gray-line);text-decoration:none;margin-bottom:8px;transition:border-color .18s,box-shadow .18s;}
+.svc-card-sm:last-child{margin-bottom:0;}
+.svc-card-sm:hover{border-color:var(--ts-blue);box-shadow:0 4px 12px rgba(8,50,102,.07);}
+.svc-card-icon{width:34px;height:34px;background:#EEF3FA;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(15,91,167,.1);}
+.svc-card-icon svg{width:15px;height:15px;stroke:var(--ts-blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.svc-card-name{font-family:var(--font-display);font-size:14px;font-weight:800;text-transform:uppercase;color:#333;line-height:1.1;}
+.svc-card-sub{font-size:11px;color:var(--ts-gray);margin-top:1px;}
+.svc-card-arrow{margin-left:auto;width:18px;height:18px;background:var(--ts-gray-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.svc-card-arrow svg{width:9px;height:9px;stroke:var(--ts-gray);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+.svc-card-sm:hover .svc-card-arrow{background:var(--ts-blue);}
+.svc-card-sm:hover .svc-card-arrow svg{stroke:#fff;}
+
+/* Sucursales rápidas */
+.branch-list{display:flex;flex-direction:column;gap:6px;}
+.branch-item{display:flex;align-items:center;gap:9px;padding:9px 10px;background:#fff;border-radius:7px;border:1px solid var(--ts-gray-line);text-decoration:none;transition:border-color .18s;}
+.branch-item:hover{border-color:var(--ts-gold);}
+.branch-dot{width:7px;height:7px;background:var(--ts-gold);border-radius:50%;flex-shrink:0;}
+.branch-item-name{font-family:var(--font-display);font-size:13px;font-weight:700;text-transform:uppercase;color:#333;flex:1;}
+.branch-item-phone{font-size:11px;color:var(--ts-gray);}
+.branch-item.main .branch-dot{background:var(--ts-blue);}
+.branch-item.main .branch-item-name{color:var(--ts-blue);}
+
+/* CTA sidebar */
+.sidebar-cta{background:var(--ts-blue-deep);border-radius:12px;padding:22px 18px;}
+.sidebar-cta h3{font-family:var(--font-display);font-size:20px;font-weight:800;text-transform:uppercase;color:#fff;line-height:1.05;margin-bottom:8px;}
+.sidebar-cta h3 span{color:var(--ts-gold);}
+.sidebar-cta p{font-size:13px;color:rgba(255,255,255,.48);line-height:1.6;margin-bottom:16px;}
+.sidebar-cta-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;background:var(--ts-gold);color:#fff;font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;border-radius:6px;text-decoration:none;transition:background .18s;}
+.sidebar-cta-btn:hover{background:#D9911A;}
+
+/* ── INTERLINKING SERVICIOS (sección intermedia) ── */
+.services-interlink{background:var(--ts-gray-bg);padding:52px 40px;border-top:1px solid var(--ts-gray-line);}
+.si-inner{max-width:1240px;margin:0 auto;}
+.si-header{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px;}
+.si-header h2{font-family:var(--font-display);font-size:clamp(24px,3vw,36px);font-weight:800;text-transform:uppercase;color:#333;line-height:1.0;}
+.si-header h2 span{color:var(--ts-gold);}
+.si-header a{font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ts-blue);text-decoration:none;white-space:nowrap;}
+.si-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.si-card{background:#fff;border-radius:10px;border:1px solid var(--ts-gray-line);overflow:hidden;text-decoration:none;transition:transform .2s,box-shadow .2s;}
+.si-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(8,50,102,.1);}
+.si-card-img{height:130px;background:var(--ts-blue-deep);overflow:hidden;position:relative;}
+.si-card-img img{width:100%;height:100%;object-fit:cover;opacity:.75;display:block;transition:opacity .25s;}
+.si-card:hover .si-card-img img{opacity:1;}
+.si-card-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,50,102,.5),transparent 60%);}
+.si-card-tag{position:absolute;bottom:10px;left:10px;font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--ts-gold);border-radius:3px;padding:3px 8px;}
+.si-card-body{padding:16px 14px;}
+.si-card-name{font-family:var(--font-display);font-size:17px;font-weight:800;text-transform:uppercase;color:#333;line-height:1.1;margin-bottom:5px;}
+.si-card-desc{font-size:12px;color:var(--ts-gray);line-height:1.55;}
+
+/* ── INTERLINKING SUCURSALES ── */
+.branches-interlink{background:#fff;padding:52px 40px;border-top:1px solid var(--ts-gray-line);}
+.bi-inner{max-width:1240px;margin:0 auto;}
+.bi-header{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:24px;}
+.bi-header h2{font-family:var(--font-display);font-size:clamp(24px,3vw,36px);font-weight:800;text-transform:uppercase;color:#333;line-height:1.0;}
+.bi-header h2 span{color:var(--ts-gold);}
+.bi-header a{font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ts-blue);text-decoration:none;white-space:nowrap;}
+.bi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.bi-card{padding:16px 14px;border:1px solid var(--ts-gray-line);border-radius:9px;text-decoration:none;transition:border-color .18s,box-shadow .18s;}
+.bi-card:hover{border-color:var(--ts-gold);box-shadow:0 5px 16px rgba(245,166,35,.08);}
+.bi-card.main{border-color:var(--ts-gold);background:rgba(245,166,35,.03);}
+.bi-city{font-family:var(--font-display);font-size:18px;font-weight:800;text-transform:uppercase;color:#333;margin-bottom:4px;}
+.bi-card.main .bi-city{color:var(--ts-blue);}
+.bi-addr{font-size:12px;color:var(--ts-gray);line-height:1.45;margin-bottom:5px;}
+.bi-phone{font-size:13px;font-weight:600;color:var(--ts-blue);}
+.bi-main-tag{font-size:10px;font-weight:700;color:var(--ts-gold);text-transform:uppercase;letter-spacing:.08em;margin-top:5px;}
+
+/* ── CTA FINAL ── */
+.cta{background:var(--ts-blue-deep);padding:64px 40px;position:relative;overflow:hidden;}
+.cta::before{content:'';position:absolute;top:-40%;left:-8%;width:55%;height:180%;background:radial-gradient(ellipse,rgba(15,91,167,.2) 0%,transparent 68%);}
+.cta-inner{max-width:1240px;margin:0 auto;text-align:center;position:relative;z-index:2;}
+.cta h2{font-family:var(--font-display);font-size:clamp(28px,4vw,48px);font-weight:800;text-transform:uppercase;color:#fff;line-height:1.0;margin-bottom:12px;margin-top:10px;}
+.cta h2 span{color:var(--ts-gold);}
+.cta p{font-size:16px;color:rgba(255,255,255,.52);line-height:1.75;max-width:540px;margin:0 auto 28px;}
+.cta-btns{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;padding:15px 34px;background:var(--ts-gold);color:#fff;font-family:var(--font-display);font-size:15px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;border-radius:4px;text-decoration:none;}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;padding:15px 34px;background:transparent;color:#fff;font-family:var(--font-display);font-size:15px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;border-radius:4px;text-decoration:none;border:2px solid rgba(255,255,255,.28);}
+
+/* ── FOOTER ── */
+footer{background:#041C3D;padding:60px 40px 28px;}
+.footer-inner{max-width:1240px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:28px;}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.38);line-height:1.75;margin-top:12px;max-width:270px;}
+.footer-certs{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
+.footer-cert{font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.38);border:1px solid rgba(255,255,255,.09);padding:3px 8px;border-radius:3px;}
+.footer-col-title{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--ts-gold);margin-bottom:16px;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,.43);text-decoration:none;}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer-copy{font-size:13px;color:rgba(255,255,255,.22);}
+.footer-legal{display:flex;gap:20px;flex-wrap:wrap;}
+.footer-legal a{font-size:13px;color:rgba(255,255,255,.22);text-decoration:none;}
+
+/* WA */
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:999;display:flex;flex-direction:column;align-items:flex-end;gap:9px;}
+.wa-bubble{background:#fff;border-radius:9px;padding:10px 14px;box-shadow:0 4px 18px rgba(0,0,0,.13);font-size:12px;color:#333;max-width:190px;line-height:1.4;position:relative;}
+.wa-bubble strong{display:block;color:#075E54;font-size:13px;margin-bottom:1px;}
+.wa-bubble::after{content:'';position:absolute;bottom:-7px;right:18px;border-left:7px solid transparent;border-top:7px solid #fff;}
+.wa-btn{width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,.38);text-decoration:none;position:relative;}
+.wa-btn::before{content:'';position:absolute;width:58px;height:58px;border-radius:50%;background:rgba(37,211,102,.28);animation:waPulse 2.2s ease-out infinite;}
+.wa-btn svg{width:28px;height:28px;fill:#fff;position:relative;z-index:1;}
+@keyframes waPulse{0%{transform:scale(1);opacity:.7;}100%{transform:scale(1.75);opacity:0;}}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero-grid{grid-template-columns:1fr;}
+  .hero-stats-box{display:none;}
+  .page-layout{grid-template-columns:1fr;gap:40px;}
+  .faq-sidebar{position:static;}
+  .si-grid{grid-template-columns:repeat(2,1fr);}
+  .bi-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-top{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+  header{padding:0 16px;}.nav-links{display:none;}
+  .hero,.services-interlink,.branches-interlink,.cta{padding-left:20px;padding-right:20px;}
+  .hero{padding-top:44px;padding-bottom:40px;}
+  .cat-bar{padding:0 16px;}
+  .page-layout{padding:36px 20px 64px;}
+  .si-grid{grid-template-columns:1fr 1fr;}
+  .bi-grid{grid-template-columns:1fr 1fr;}
+  footer{padding:44px 20px 22px;}.footer-top{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;text-align:center;}
+  .wa-float{bottom:14px;right:14px;}
+}
+@media(max-width:480px){
+  .si-grid,.bi-grid{grid-template-columns:1fr;}
+  .wa-bubble{display:none;}
+  .cta-btns{flex-direction:column;align-items:stretch;}
+  .cta-btns a{justify-content:center;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><div class="nav-star"></div>TRANS<span>ESTRELLA</span></a>
+    <ul class="nav-links">
+      <li><a href="/nosotros/">Nosotros</a></li>
+      <li><a href="/servicios/">Servicios</a></li>
+      <li><a href="/sucursales/">Sucursales</a></li>
+      <li><a href="/blog/category/comunicados/">Comunicados</a></li>
+      <li><a href="/blog/">Noticias</a></li>
+      <li><a href="/contactanos/" class="nav-cta">Cotizar Ahora</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span class="breadcrumb-sep">›</span>
+      <span>Preguntas Frecuentes</span>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Centro de ayuda</div>
+        <h1>Preguntas<em>Frecuentes</em></h1>
+        <p class="hero-desc">Todo lo que necesita saber sobre nuestros servicios de transporte de carga masiva en Colombia. Si no encuentra su respuesta, escríbanos por WhatsApp o llame a la sucursal más cercana.</p>
+      </div>
+      <div class="hero-stats-box">
+        <div class="hstat">
+          <div class="hstat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <div><div class="hstat-num">20+</div><div class="hstat-lbl">Preguntas resueltas</div></div>
+        </div>
+        <hr class="hstat-divider">
+        <div class="hstat">
+          <div class="hstat-icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <div><div class="hstat-num">4</div><div class="hstat-lbl">Servicios especializados</div></div>
+        </div>
+        <hr class="hstat-divider">
+        <div class="hstat">
+          <div class="hstat-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="hstat-num">8</div><div class="hstat-lbl">Sucursales en Colombia</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTROS -->
+<nav class="cat-bar">
+  <div class="cat-bar-inner">
+    <button class="cat-btn active">Todos</button>
+    <button class="cat-btn">Servicios y cobertura</button>
+    <button class="cat-btn">Cotización y tarifas</button>
+    <button class="cat-btn">Flota y seguimiento</button>
+    <button class="cat-btn">Normativa</button>
+    <button class="cat-btn">Sucursales</button>
+  </div>
+</nav>
+
+<!-- LAYOUT -->
+<div class="page-layout">
+
+  <!-- PREGUNTAS -->
+  <main>
+    <div class="faq-groups">
+
+      <!-- GRUPO 1: SERVICIOS Y COBERTURA -->
+      <div class="faq-group" id="servicios">
+        <div class="faq-group-header">
+          <div class="faq-group-icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <div class="faq-group-title">Servicios y Cobertura</div>
+          <span class="faq-count">5 preguntas</span>
+        </div>
+
+        <div class="faq-item open">
+          <div class="faq-q">
+            <span class="faq-q-text">¿Qué tipos de carga transporta Transportadora Estrella?</span>
+            <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="faq-a">
+            <p>Nos especializamos en <strong>carga masiva y semi masiva terrestre</strong> a nivel nacional. Esto incluye materias primas industriales, productos agrícoles a granel, materiales de construcción, mercancías generales de alto volumen y mercancías peligrosas bajo normativa vigente.</p>
+            <p>No gestionamos paquetería ni envíos individuales. Si su operación requiere mover grandes volúmenes con regularidad, somos su aliado ideal.</p>
+            <div style="margin-top:14px;display:flex;flex-wrap:wrap;">
+              <a href="/servicios/transporte-de-carga-terrestre-nacional/" class="svc-pill"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><span>Carga Nacional</span></a>
+              <a href="/servicios/transporte-urbano-de-mercancias/" class="svc-pill"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Transporte Urbano</span></a>
+              <a href="/servicios/transporte-de-carga-peligrosa/" class="svc-pill"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><span>Carga Peligrosa</span></a>
+              <a href="/servicios/itr/" class="svc-pill"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>ITR Internacional</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span class="faq-q-text">¿Cubren todo el territorio nacional?</span>
+            <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="faq-a">
+            <p>Sí. Contamos con cobertura en todo el territorio colombiano gracias a nuestra red de <strong>8 sucursales estratégicamente ubicadas</strong> en los principales corredores logísticos del país: Medellín, Bogotá, Cali, Barranquilla, Cartagena, Buenaventura, Buga y Manizales.</p>
+            <p>Esta presencia nos permite reducir tiempos de tránsito y ofrecer atención local especializada en cada región. Visite la <a href="/sucursales/" class="internal">página de sucursales</a> para conocer la oficina más cercana a su empresa.</p>
+            <div style="margin-top:12px;display:flex;flex-wrap:wrap;">
+              <a href="/sucursales/medellin/" class="branch-pill"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Medellín</span></a>
+              <a href="/sucursales/bogota/" class="branch-pill"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Bogotá</span></a>
+              <a href="/sucursales/cali/" class="branch-pill"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cali</span></a>
+              <a href="/sucursales/buenaventura/" class="branch-pill"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Buenaventura</span></a>
+              <a href="/sucursales/" class="branch-pill"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Ver todas →</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span class="faq-q-text">¿Hacen transporte hacia los puertos de Buenaventura y Cartagena?</span>
+            <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="faq-a">
+            <p>Sí. A través de nuestro servicio de <a href="/servicios/itr/" class="internal">ITR — Importación y Exportación</a>, movilizamos carga desde y hacia los puertos de <strong>Buenaventura</strong> y <strong>Cartagena</strong>, los dos principales puertos marítimos de Colombia.</p>
+            <p>Contamos con presencia directa en ambas ciudades. Nuestra <a href="/sucursales/buenaventura/" class="internal">sucursal de Buenaventura</a> (Calle 7B N.° 4–52) y nuestra <a href="/sucursales/cartagena/" class="internal">sucursal de Cartagena</a> (Diagonal 21 N.° 45A–11) coordinan directamente las operaciones portuarias con aliados estratégicos certificados BASC.</p>
+            <div class="faq-note"><strong>Nota:</strong> Para operaciones de comercio exterior, la certificación BASC de nuestra flota es obligatoria para el acceso a las terminales portuarias. <a href="/blog/que-es-certificacion-basc/" class="internal">Conozca qué es BASC y por qué es clave para su operación.</a></div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span class="faq-q-text">¿Transportan mercancías peligrosas?</span>
+            <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="faq-a">
+            <p>Sí. Contamos con un servicio especializado de <a href="/servicios/transporte-de-carga-peligrosa/" class="internal">transporte de mercancías peligrosas</a> bajo la normativa colombiana vigente, incluyendo el Decreto 1609 de 2002 y sus actualizaciones.</p>
+            <p>Nuestra flota certificada incluye vehículos tipo cisterna y unidades adaptadas con los protocolos de seguridad requeridos: señalización NFPA, hojas de seguridad (SDS), equipos de emergencia y conductores entrenados en manejo de materiales peligrosos.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span class="faq-q-text">¿Hacen distribución urbana en las ciudades principales?</span>
+            <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="faq-a">
+            <p>Sí. Nuestro servicio de <a href="/servicios/transporte-urbano-de-mercancias/" class="internal">transporte urbano de mercancías</a> opera en las principales ciudades del país, adaptado al modelo logístico específico de cada cliente. Coordinamos rutas, horarios y protocolos de entrega según las restricciones de circulación de cada municipio.</p>
+            <p>Para distribución urbana en ciudades como Medellín, Bogotá, Cali o Barranquilla, contáctese directamente con la <a href="/sucursales/" class="internal">sucursal de su ciudad</a> para recibir una propuesta adaptada a su operación.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRUPO 2: COTIZACIÓN Y TARIFAS -->
+      <div class="faq-group" id="cotizacion">
+        <div class="faq-group-header">
+          <div class="faq-group-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <div class="faq-group-title">Cotización y Tarifas</div>
+          <span class="faq-count">4 preguntas</span>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span class="faq-q-text">¿Cómo solicito una cotización?</span>
+            <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="faq-a">
+            <p>Puede solicitar una cotización por tres vías:</p>
+            <p><strong>1. Formulario web:</strong> Complete el formulario en nuestra <a href="/contactanos/" class="internal">página de contacto</a> con los detalles de su carga (origen, destino, tipo de mercancía, peso y frecuencia). Le respondemos en menos de 24 horas hábiles.</p>
+            <p><strong>2. WhatsApp:</strong> Escríbanos directamente al +57 604 527 3300 para una respuesta inmediata.</p>
+            <p><strong>3. Sucursal:</strong> Llame o visita personalmente la <a href="/sucursales/" class="internal">sucursal más cercana</a> a su empresa para atención personalizada.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span class="faq-q-text">¿Qué información necesito para pedir una cotización?</span>
+            <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="faq-a">
+            <p>Para preparar una cotización precisa necesitamos:</p>
+            <p><strong>Ciudad de origen</strong> y <strong>ciudad de destino</strong> del despacho. <strong>Tipo de mercancía</strong> (descripción del producto y si aplica clasificación de peligrosidad). <strong>Peso o volumen</strong> aproximado. <strong>Frecuencia</strong> de los envíos (único, semanal, mensual). Y si la operación involucra puertos, indicar si es importación o exportación para activar el servicio de <a href="/servicios/itr/" class="internal">ITR</a>.</p>
+            <div class="faq-note">Cuanto más detalle nos proporcione, más ajustada será la tarifa. Para operaciones recurrentes de alto volumen ofrecemos condiciones comerciales especiales.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span class="faq-q-text">¿En cuánto tiempo recibo respuesta a mi cotización?</span>
+            <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="faq-a">
+            <p>Las solicitudes enviadas por el formulario web de <a href="/contactanos/" class="internal">Contáctanos</a> reciben respuesta en <strong>menos de 24 horas hábiles</strong>. Las solicitudes por WhatsApp o llamada directa a una <a href="/sucursales/" class="internal">sucursal</a> son atendidas en tiempo real durante el horario de atención (lunes a viernes 8:00 a.m. – 6:00 p.m., sábados 8:00 a.m. – 1:00 p.m.).</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span class="faq-q-text">¿Tienen tarifas especiales para clientes con operaciones frecuentes?</span>
+            <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="faq-a">
+            <p>Sí. Para empresas con operaciones de carga masiva regulares (semanal, quincenal o mensual) diseñamos <strong>acuerdos comerciales a medida</strong> que incluyen tarifas preferenciales, prioridad de despacho y un ejecutivo de cuenta dedicado.</p>
+            <p>Para iniciar esta conversación, comuníquese con la <a href="/sucursales/" class="internal">sucursal de su ciudad</a> o escríbanos a <a href="mailto:servicioalcliente@transestrella.com" class="internal">servicioalcliente@transestrella.com</a>.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRUPO 3: FLOTA Y SEGUIMIENTO -->
+      <div class="faq-group" id="flota">
+        <div class="faq-group-header">
+          <div class="faq-group-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <div class="faq-group-title">Flota y Seguimiento</div>
+          <span class="faq-count">4 preguntas</span>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span class="faq-q-text">¿Qué tipos de vehículos tiene disponibles?</span>
+            <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="faq-a">
+            <p>Contamos con flota propia diversificada para adaptarnos a cada tipo de operación:</p>
+            <p><strong>Turbos</strong> para distribución urbana y carga de menor volumen. <strong>Camiones</strong> con carrocería para carga semi masiva intermedia. <strong>Volcos</strong> autodescargables para granel (arena, grava, carbón). <strong>Patinetas</strong> (tractocamión + semirremolque plano) para carga masiva de gran volumen. <strong>Tractocamiones con cisterna</strong> para líquidos y mercancías peligrosas. Y unidades adaptadas para contenedores en operaciones de <a href="/servicios/itr/" class="internal">comercio exterior ITR</a>.</p>
+            <p>Todos los vehículos cuentan con GPS y mantenimiento preventivo riguroso.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span class="faq-q-text">¿Puedo rastrear mi carga en tiempo real?</span>
+            <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="faq-a">
+            <p>Sí. Toda nuestra flota opera con <strong>sistema de monitoreo vehicular GPS 24/7</strong>. Como cliente puede consultar en cualquier momento la ubicación y el estado de su carga en tránsito a través del ejecutivo de cuenta asignado a su operación.</p>
+            <p>Para operaciones críticas o de alto valor, contáctese con la <a href="/sucursales/" class="internal">sucursal de su ciudad</a> para conocer las opciones de acceso directo al sistema de seguimiento.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span class="faq-q-text">¿La flota es propia o de terceros?</span>
+            <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="faq-a">
+            <p>Contamos con <strong>flota propia certificada</strong> como base de nuestra operación, lo que nos permite garantizar los estándares de calidad, seguridad y trazabilidad que exigen nuestras certificaciones <strong>ISO 9001</strong> e <strong>BASC</strong>.</p>
+            <p>En temporadas de alta demanda o para operaciones de gran escala, complementamos con aliados de transporte debidamente habilitados ante el <strong>Ministerio de Transporte</strong> y registrados en el <strong>RNDC</strong>.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span class="faq-q-text">¿Qué pasa si ocurre un inconveniente con mi carga en ruta?</span>
+            <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="faq-a">
+            <p>Nuestro centro de monitoreo opera las <strong>24 horas, los 7 días de la semana</strong>. Ante cualquier novedad en ruta (accidente, cierre vial, retraso), el equipo de operaciones activa de inmediato el protocolo de contingencia e informa al cliente.</p>
+            <p>Adicionalmente, puede comunicarse directamente con la <a href="/sucursales/" class="internal">sucursal de origen o destino</a> de su despacho para recibir atención personalizada.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRUPO 4: NORMATIVA -->
+      <div class="faq-group" id="normativa">
+        <div class="faq-group-header">
+          <div class="faq-group-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <div class="faq-group-title">Normativa y Certificaciones</div>
+          <span class="faq-count">4 preguntas</span>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span class="faq-q-text">¿Qué certificaciones tiene Transportadora Estrella?</span>
+            <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="faq-a">
+            <p>Operamos con las tres certificaciones más relevantes del sector logístico colombiano:</p>
+            <p><strong>ISO 9001 — ICONTEC (SC6003-1):</strong> Sistema de gestión de calidad que garantiza el mejoramiento continuo de nuestros procesos. <strong>Certificación BASC:</strong> Business Alliance for Secure Commerce, obligatoria para operar en las terminales portuarias de Colombia. <strong>Vigilados por SuperTransporte:</strong> Empresa habilitada, inspeccionada y regulada por la Superintendencia de Transporte.</p>
+            <p>También somos miembros activos de <strong>Colfecar</strong>, <strong>Defencarga</strong> y <strong>Agrem</strong>.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span class="faq-q-text">¿Qué es el RNDC y cómo les afecta?</span>
+            <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="faq-a">
+            <p>El <strong>Registro Nacional de Despachos de Carga (RNDC)</strong> es la plataforma del Ministerio de Transporte que registra y valida todos los despachos de carga terrestre en Colombia. Operamos con cumplimiento pleno del RNDC, incluyendo la facturación electrónica obligatoria para el transporte de carga vigente desde 2025.</p>
+            <p>Como cliente generador de carga, también tiene obligaciones ante el RNDC. Le recomendamos leer nuestro comunicado sobre <a href="/blog/obligaciones-del-generador-de-carga/" class="internal">obligaciones del generador de carga en el RNDC</a> para estar al día con la normativa.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span class="faq-q-text">¿Qué documentos se exigen para el transporte de carga peligrosa?</span>
+            <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="faq-a">
+            <p>Para el <a href="/servicios/transporte-de-carga-peligrosa/" class="internal">transporte de mercancías peligrosas</a> bajo el Decreto 1609 de 2002, se requieren entre otros: Manifiesto de carga, Hoja de seguridad (SDS/MSDS) del producto, Plan de contingencia vigente, Tarjeta de emergencia, Licencia de tránsito especial (según aplique) y Certificado de entrenamiento del conductor.</p>
+            <p>Nuestro equipo gestiona y verifica toda la documentación antes de cada despacho. Contáctenos para conocer los requisitos específicos de su mercancía.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span class="faq-q-text">¿Cómo impacta el Decreto 1017 de 2025 a mi operación?</span>
+            <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="faq-a">
+            <p>El Decreto 1017 de 2025 establece nuevos parámetros para los <strong>tiempos logísticos en el transporte de carga terrestre</strong>, afectando los tiempos de cargue, descargue y espera en planta. Incumplir estos tiempos genera recargos para el generador de carga.</p>
+            <p>Le recomendamos leer nuestro <a href="/blog/decreto-1017-2025-tiempos-logisticos-transporte/" class="internal">comunicado completo sobre el Decreto 1017</a> para entender el impacto concreto en su cadena logística. Para consultas específicas, contacte la <a href="/sucursales/" class="internal">sucursal más cercana</a>.</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /faq-groups -->
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="faq-sidebar">
+
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Nuestros Servicios</div>
+      <a href="/servicios/transporte-de-carga-terrestre-nacional/" class="svc-card-sm">
+        <div class="svc-card-icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div>
+          <div class="svc-card-name">Carga Nacional</div>
+          <div class="svc-card-sub">Cobertura total Colombia</div>
+        </div>
+        <div class="svc-card-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
+      </a>
+      <a href="/servicios/transporte-urbano-de-mercancias/" class="svc-card-sm">
+        <div class="svc-card-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+        <div>
+          <div class="svc-card-name">Transporte Urbano</div>
+          <div class="svc-card-sub">Distribución en ciudades</div>
+        </div>
+        <div class="svc-card-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
+      </a>
+      <a href="/servicios/transporte-de-carga-peligrosa/" class="svc-card-sm">
+        <div class="svc-card-icon"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <div>
+          <div class="svc-card-name">Carga Peligrosa</div>
+          <div class="svc-card-sub">Bajo normativa vigente</div>
+        </div>
+        <div class="svc-card-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
+      </a>
+      <a href="/servicios/itr/" class="svc-card-sm">
+        <div class="svc-card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <div>
+          <div class="svc-card-name">ITR Internacional</div>
+          <div class="svc-card-sub">Puertos Buenaventura · Cartagena</div>
+        </div>
+        <div class="svc-card-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
+      </a>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Sucursales</div>
+      <div class="branch-list">
+        <a href="/sucursales/medellin/" class="branch-item main">
+          <div class="branch-dot"></div>
+          <div class="branch-item-name">Medellín</div>
+          <div class="branch-item-phone">604 527 3300</div>
+        </a>
+        <a href="/sucursales/bogota/" class="branch-item">
+          <div class="branch-dot"></div>
+          <div class="branch-item-name">Bogotá</div>
+          <div class="branch-item-phone">312 826 5078</div>
+        </a>
+        <a href="/sucursales/cali/" class="branch-item">
+          <div class="branch-dot"></div>
+          <div class="branch-item-name">Cali</div>
+          <div class="branch-item-phone">310 369 5787</div>
+        </a>
+        <a href="/sucursales/barranquilla/" class="branch-item">
+          <div class="branch-dot"></div>
+          <div class="branch-item-name">Barranquilla</div>
+          <div class="branch-item-phone">310 442 7076</div>
+        </a>
+        <a href="/sucursales/cartagena/" class="branch-item">
+          <div class="branch-dot"></div>
+          <div class="branch-item-name">Cartagena</div>
+          <div class="branch-item-phone">314 772 8740</div>
+        </a>
+        <a href="/sucursales/buenaventura/" class="branch-item">
+          <div class="branch-dot"></div>
+          <div class="branch-item-name">Buenaventura</div>
+          <div class="branch-item-phone">313 659 7359</div>
+        </a>
+        <a href="/sucursales/" class="branch-item" style="border-style:dashed;justify-content:center;">
+          <div class="branch-item-name" style="text-align:center;color:var(--ts-blue);">Ver Buga y Manizales →</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <h3>¿No encontró<br>su <span>Respuesta?</span></h3>
+      <p>Nuestro equipo está disponible para resolver cualquier duda sobre su operación logística.</p>
+      <a href="/contactanos/" class="sidebar-cta-btn">Contactar ahora →</a>
+    </div>
+
+  </aside>
+</div>
+
+<!-- INTERLINKING SERVICIOS -->
+<section class="services-interlink">
+  <div class="si-inner">
+    <div class="si-header">
+      <h2>Explore Nuestros <span>Servicios</span></h2>
+      <a href="/servicios/">Ver todos los servicios →</a>
+    </div>
+    <div class="si-grid">
+      <a href="/servicios/transporte-de-carga-terrestre-nacional/" class="si-card">
+        <div class="si-card-img">
+          <img src="https://transestrella.com/wp-content/uploads/2025/04/transportadora-estrella-nuestra-flota-transporte-de-carga-pesada-1.jpeg" alt="Transporte de carga nacional Colombia" loading="lazy">
+          <div class="si-card-ov"></div>
+          <div class="si-card-tag">Nacional</div>
+        </div>
+        <div class="si-card-body">
+          <div class="si-card-name">Carga Terrestre Nacional</div>
+          <div class="si-card-desc">Cobertura total en Colombia. GPS 24/7 en toda la flota.</div>
+        </div>
+      </a>
+      <a href="/servicios/transporte-urbano-de-mercancias/" class="si-card">
+        <div class="si-card-img">
+          <img src="https://transestrella.com/wp-content/uploads/2025/06/camio-urbano-de-transporte.webp" alt="Transporte urbano de mercancías" loading="lazy">
+          <div class="si-card-ov"></div>
+          <div class="si-card-tag">Urbano</div>
+        </div>
+        <div class="si-card-body">
+          <div class="si-card-name">Transporte Urbano</div>
+          <div class="si-card-desc">Distribución adaptada al modelo logístico de cada cliente.</div>
+        </div>
+      </a>
+      <a href="/servicios/transporte-de-carga-peligrosa/" class="si-card">
+        <div class="si-card-img">
+          <img src="https://transestrella.com/wp-content/uploads/2025/06/camion-cisterna.webp" alt="Transporte de carga peligrosa" loading="lazy">
+          <div class="si-card-ov"></div>
+          <div class="si-card-tag">Especializado</div>
+        </div>
+        <div class="si-card-body">
+          <div class="si-card-name">Mercancías Peligrosas</div>
+          <div class="si-card-desc">Protocolos certificados bajo normativa colombiana vigente.</div>
+        </div>
+      </a>
+      <a href="/servicios/itr/" class="si-card">
+        <div class="si-card-img">
+          <img src="https://transestrella.com/wp-content/uploads/2025/08/transporte-de-contenedores.jpg" alt="ITR importación exportación Colombia" loading="lazy">
+          <div class="si-card-ov"></div>
+          <div class="si-card-tag">Internacional</div>
+        </div>
+        <div class="si-card-body">
+          <div class="si-card-name">ITR Internacional</div>
+          <div class="si-card-desc">Importación y exportación. Puertos Buenaventura y Cartagena.</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- INTERLINKING SUCURSALES -->
+<section class="branches-interlink">
+  <div class="bi-inner">
+    <div class="bi-header">
+      <h2>Atención Local en las <span>8 Sucursales</span></h2>
+      <a href="/sucursales/">Ver todas las sucursales →</a>
+    </div>
+    <div class="bi-grid">
+      <a href="/sucursales/medellin/" class="bi-card main">
+        <div class="bi-city">Medellín</div>
+        <div class="bi-addr">Calle 64 #56-60, La Candelaria</div>
+        <div class="bi-phone">PBX (604) 527 3300</div>
+        <div class="bi-main-tag">★ Sede Principal</div>
+      </a>
+      <a href="/sucursales/bogota/" class="bi-card">
+        <div class="bi-city">Bogotá</div>
+        <div class="bi-addr">Av. Troncal de Occidente No. 18-76 Of. 301</div>
+        <div class="bi-phone">312 826 5078</div>
+      </a>
+      <a href="/sucursales/cali/" class="bi-card">
+        <div class="bi-city">Cali</div>
+        <div class="bi-addr">Bloque A3 Oficina 104, Cencar 1 piso</div>
+        <div class="bi-phone">310 369 5787</div>
+      </a>
+      <a href="/sucursales/barranquilla/" class="bi-card">
+        <div class="bi-city">Barranquilla</div>
+        <div class="bi-addr">Cra. 28 #38-345 Av. Circunvalar</div>
+        <div class="bi-phone">310 442 7076</div>
+      </a>
+      <a href="/sucursales/cartagena/" class="bi-card">
+        <div class="bi-city">Cartagena</div>
+        <div class="bi-addr">Diagonal 21 N.° 45A–11, Av. El Bosque</div>
+        <div class="bi-phone">314 772 8740</div>
+      </a>
+      <a href="/sucursales/buenaventura/" class="bi-card">
+        <div class="bi-city">Buenaventura</div>
+        <div class="bi-addr">Calle 7B N.° 4–52 Piso 2</div>
+        <div class="bi-phone">313 659 7359</div>
+      </a>
+      <a href="/sucursales/buga/" class="bi-card">
+        <div class="bi-city">Buga</div>
+        <div class="bi-addr">Cra. 12A N.° 6Sur–94</div>
+        <div class="bi-phone">313 655 3232</div>
+      </a>
+      <a href="/sucursales/manizales/" class="bi-card">
+        <div class="bi-city">Manizales</div>
+        <div class="bi-addr">Calle 110 N.° 34A–75</div>
+        <div class="bi-phone">310 369 5787</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    <div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-display);font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ts-gold);margin-bottom:14px;"><span style="width:34px;height:2px;background:var(--ts-gold);display:block;"></span>Hablemos hoy</div>
+    <h2>¿Listo para Optimizar su<br><span>Operación Logística?</span></h2>
+    <p>Más de 30 años conectando empresas con Colombia. Cuéntenos su necesidad y le diseñamos la solución de transporte de carga masiva ideal para su empresa.</p>
+    <div class="cta-btns">
+      <a href="/contactanos/" class="btn-primary">Solicitar cotización →</a>
+      <a href="/sucursales/" class="btn-outline">Encontrar mi sucursal</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo"><div class="nav-star"></div>TRANS<span style="color:var(--ts-gold);">ESTRELLA</span></a>
+        <p>Empresa de transporte de carga masiva y semi masiva terrestre en Colombia. Más de 30 años conectando empresas con todo el territorio nacional.</p>
+        <div class="footer-certs">
+          <span class="footer-cert">ISO 9001</span>
+          <span class="footer-cert">BASC</span>
+          <span class="footer-cert">SuperTransporte</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Servicios</div>
+        <ul class="footer-links">
+          <li><a href="/servicios/transporte-de-carga-terrestre-nacional/">Carga Terrestre Nacional</a></li>
+          <li><a href="/servicios/transporte-urbano-de-mercancias/">Transporte Urbano</a></li>
+          <li><a href="/servicios/transporte-de-carga-peligrosa/">Mercancías Peligrosas</a></li>
+          <li><a href="/servicios/itr/">ITR Internacional</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Sucursales</div>
+        <ul class="footer-links">
+          <li><a href="/sucursales/medellin/">Medellín (Principal)</a></li>
+          <li><a href="/sucursales/bogota/">Bogotá</a></li>
+          <li><a href="/sucursales/cali/">Cali</a></li>
+          <li><a href="/sucursales/barranquilla/">Barranquilla</a></li>
+          <li><a href="/sucursales/">Ver todas →</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Empresa</div>
+        <ul class="footer-links">
+          <li><a href="/nosotros/">Nosotros</a></li>
+          <li><a href="/blog/category/comunicados/">Comunicados</a></li>
+          <li><a href="/contactanos/">Contáctanos</a></li>
+          <li><a href="/preguntas-frecuentes/" style="color:var(--ts-gold);">Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Transportadora Estrella S.A.S. — Todos los derechos reservados.</div>
+      <div class="footer-legal">
+        <a href="/politica-privacidad/">Política de Privacidad</a>
+        <a href="/politica-de-tratamiento-de-datos/">Tratamiento de Datos</a>
+        <a href="/politica-integrada/">Política Integrada</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="wa-float">
+  <div class="wa-bubble">
+    <strong>¿Tiene alguna duda?</strong>
+    Escríbanos, respondemos de inmediato.
+  </div>
+  <a href="https://wa.me/576045273300" target="_blank" class="wa-btn">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.524 5.847L.057 23.992l6.304-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.012-1.375l-.36-.214-3.733.979 1-3.642-.235-.374A9.791 9.791 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+  </a>
+</div>
+
+<script>
+// Accordion toggle
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>

@@ -1,11 +1,17 @@
 <?php
 /**
  * Template Name: Nosotros
+ *
+ * Plantilla para la página Quiénes Somos.
  */
 
 get_header();
 ?>
+
 <style>
+/* ── HERO — imagen de fondo específica ── */
+.page-hero-bg{background-image:url('https://transestrella.com/wp-content/uploads/2025/04/transportadora-estrella-nuestra-flota-transporte-de-carga-pesada-1.jpeg');}
+
 /* ── QUIÉNES SOMOS ── */
 .about{padding:96px 40px;background:#FFFFFF;}
 .about-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
@@ -52,7 +58,7 @@ get_header();
 .valor-name{font-family:var(--font-display);font-size:15px;font-weight:800;text-transform:uppercase;color:#333333;letter-spacing:.04em;}
 .valor-desc{font-size:13px;color:#333333;line-height:1.6;}
 
-/* ── FLOTA (grid) ── */
+/* ── FLOTA ── */
 .fleet{padding:88px 40px;background:#FFFFFF;}
 .fleet-inner{max-width:1240px;margin:0 auto;}
 .fleet-header{display:grid;grid-template-columns:1fr auto;align-items:end;gap:20px;margin-bottom:48px;}
@@ -85,8 +91,6 @@ get_header();
 .cert-logo-fallback svg{width:32px;height:32px;stroke:var(--ts-blue);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
 .cert-card h3{font-family:var(--font-display);font-size:21px;font-weight:800;text-transform:uppercase;color:#333333;margin-bottom:8px;}
 .cert-card p{font-size:14px;color:#333333;line-height:1.65;}
-.supertransporte-badge{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-size:18px;font-weight:800;color:#2B8A3E;letter-spacing:.04em;}
-.supertransporte-badge svg{width:36px;height:36px;}
 .agrem-section{border-top:1px solid var(--ts-gray-line);padding-top:44px;}
 .agrem-label{font-family:var(--font-display);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ts-gray);text-align:center;margin-bottom:24px;}
 .agrem-logos{display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;}
@@ -107,12 +111,12 @@ get_header();
 .partner-name{font-family:var(--font-display);font-size:13px;font-weight:700;text-transform:uppercase;color:#333333;letter-spacing:.04em;}
 .partner-type{font-size:12px;color:var(--ts-gray);}
 
-/* ── CTA overrides (nosotros usa layout centrado y selectors .cta-inner h2/p) ── */
-.cta-inner{max-width:900px;margin:0 auto;text-align:center;position:relative;z-index:2;}
+/* ── CTA — CONFÍE SU CARGA (fila única centrada, distinto al layout de 2 columnas de style.css) ── */
+.cta-inner{display:block;max-width:900px;margin:0 auto;text-align:center;position:relative;z-index:2;}
 .cta-inner h2{font-family:var(--font-display);font-size:clamp(30px,4vw,52px);font-weight:800;text-transform:uppercase;color:#FFFFFF;line-height:1.0;margin-bottom:16px;margin-top:12px;}
 .cta-inner h2 span{color:var(--ts-gold);}
 .cta-inner p{font-size:17px;color:rgba(255,255,255,.6);line-height:1.75;max-width:580px;margin:0 auto 40px;}
-.cta-contacts{display:flex;align-items:center;justify-content:center;gap:44px;flex-wrap:wrap;padding-top:40px;border-top:1px solid rgba(255,255,255,.09);}
+.cta-contacts{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:44px;flex-wrap:wrap;padding-top:40px;border-top:1px solid rgba(255,255,255,.09);}
 
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){
@@ -135,6 +139,7 @@ get_header();
   .certs-grid{grid-template-columns:1fr;}
   .partners{padding:60px 20px;}
   .partners-grid{grid-template-columns:repeat(2,1fr);}
+  .cta-contacts{flex-direction:column;gap:20px;}
 }
 @media(max-width:480px){
   .about-stat-grid{grid-template-columns:1fr 1fr;}
@@ -142,6 +147,7 @@ get_header();
   .partners-grid{grid-template-columns:1fr 1fr;}
 }
 </style>
+
 <!-- ══════════════════════════════════════════
      HERO INTERIOR
 ══════════════════════════════════════════ -->
@@ -151,7 +157,7 @@ get_header();
   <div class="page-hero-line"></div>
   <div class="page-hero-content">
     <div class="breadcrumb">
-      <a href="/">Inicio</a>
+      <a href="<?php echo home_url('/'); ?>">Inicio</a>
       <span class="breadcrumb-sep">›</span>
       <span>Nosotros</span>
     </div>
@@ -171,7 +177,7 @@ get_header();
       <p>Somos una empresa con una trayectoria de más de 30 años dedicada a la prestación del servicio de transporte de carga masiva y semi masiva vía terrestre a nivel nacional, convirtiéndonos en un aliado estratégico para cumplir las exigencias y expectativas de nuestros clientes.</p>
       <p>Nuestro origen se remonta a 1980, cuando Manuel Ángel Tabares Agudelo inició actividades como transportador independiente. En 2002 la empresa se constituyó como sociedad anónima y adoptó el nombre de <strong>Transportadora Estrella S.A.S.</strong>, iniciando una nueva etapa de crecimiento y modernización basada en la calidad, la seguridad y el mejoramiento continuo.</p>
       <p>Hoy operamos con flota propia diversificada, sistema de seguimiento vehicular 24/7, y estamos presentes en los 8 corredores logísticos más estratégicos del país.</p>
-      <a href="/contactanos/" class="btn-primary">Cotizar Carga →</a>
+      <a href="<?php echo home_url('/contactanos/'); ?>" class="btn-primary">Cotizar Carga →</a>
     </div>
     <div class="about-visual">
       <div class="about-stat-grid">
@@ -275,7 +281,7 @@ get_header();
         <h2>Vehículos para <span>Cada Operación</span></h2>
         <p>Contamos con diferentes tipos de vehículos para cada clase de carga, con mantenimiento preventivo riguroso y seguimiento GPS 24/7.</p>
       </div>
-      <a href="/servicios/" class="btn-outline-blue">Ver Servicios →</a>
+      <a href="<?php echo home_url('/servicios/'); ?>" class="btn-outline-blue">Ver Servicios →</a>
     </div>
     <div class="fleet-grid">
       <div class="fleet-card">
@@ -409,8 +415,8 @@ get_header();
     <h2>Confíe su Carga a <span>30 Años de Experiencia</span></h2>
     <p>Estamos listos para gestionar sus operaciones de carga masiva y semi masiva en todo el territorio colombiano. Diseñamos la solución logística ideal para su empresa.</p>
     <div class="cta-btns">
-      <a href="/contactanos/" class="btn-primary">Solicitar Cotización →</a>
-      <a href="/servicios/" class="btn-outline-white">Ver Nuestros Servicios</a>
+      <a href="<?php echo home_url('/contactanos/'); ?>" class="btn-primary">Solicitar Cotización →</a>
+      <a href="<?php echo home_url('/servicios/'); ?>" class="btn-outline-white">Ver Nuestros Servicios</a>
     </div>
     <div class="cta-contacts">
       <div class="cta-contact">
@@ -419,7 +425,7 @@ get_header();
         </div>
         <div>
           <div class="cta-c-label">Línea Nacional</div>
-          <div class="cta-c-val">+57 310 4244591</div>
+          <div class="cta-c-val">+57 604 527 3300</div>
         </div>
       </div>
       <div class="cta-contact">
@@ -428,7 +434,7 @@ get_header();
         </div>
         <div>
           <div class="cta-c-label">Correo Electrónico</div>
-          <div class="cta-c-val"><a href="mailto:servicioalcliente@transestrella.com" style="color:inherit;text-decoration:none;">servicioalcliente@transestrella.com</a></div>
+          <div class="cta-c-val">servicioalcliente@transestrella.com</div>
         </div>
       </div>
       <div class="cta-contact">
@@ -444,5 +450,4 @@ get_header();
   </div>
 </section>
 
-<?php
-get_footer();
+<?php get_footer(); ?>

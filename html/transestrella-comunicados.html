@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comunicados — Transportadora Estrella</title>
+<meta name="description" content="Comunicados oficiales de Transportadora Estrella sobre normativa, regulación y novedades del sector logístico y de transporte de carga en Colombia.">
+<link rel="canonical" href="https://transestrella.com/blog/category/comunicados/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ts-blue:#0F5BA7;--ts-blue-dark:#0A4580;--ts-blue-deep:#083266;
+  --ts-gold:#F5A623;--ts-white:#FFFFFF;--ts-gray-bg:#F5F5F5;
+  --ts-gray:#999999;--ts-gray-dark:#333333;--ts-gray-line:#E0E0E0;
+  --font-display:'Barlow Condensed',sans-serif;--font-body:'Nunito Sans',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-font-smoothing:antialiased;}
+body{font-family:var(--font-body);font-size:16px;line-height:1.6;color:#333;background:#fff;}
+
+/* NAV */
+header{position:sticky;top:0;background:rgba(8,50,102,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.07);z-index:100;padding:0 40px;}
+.nav-inner{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px;}
+.nav-logo{font-family:var(--font-display);font-size:21px;font-weight:800;color:#fff;display:flex;align-items:center;gap:9px;letter-spacing:.02em;text-decoration:none;}
+.nav-logo span{color:var(--ts-gold);}
+.nav-star{width:30px;height:30px;background:var(--ts-gold);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
+.nav-links a{font-family:var(--font-display);font-size:13px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.82);text-decoration:none;}
+.nav-links a:hover,.nav-links a.active{color:var(--ts-gold);}
+.nav-cta{background:var(--ts-gold)!important;color:#fff!important;padding:9px 20px;border-radius:4px;}
+
+/* ── HERO ── */
+.hero{background:var(--ts-blue-deep);padding:72px 40px 60px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:48px 48px;}
+.hero-glow{position:absolute;top:-20%;right:-5%;width:50%;height:130%;background:radial-gradient(ellipse,rgba(15,91,167,.2) 0%,transparent 65%);pointer-events:none;}
+.hero-inner{max-width:1240px;margin:0 auto;position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;align-items:end;gap:40px;}
+.breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:20px;flex-wrap:wrap;}
+.breadcrumb a{font-family:var(--font-display);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);text-decoration:none;}
+.breadcrumb a:hover{color:var(--ts-gold);}
+.breadcrumb-sep{color:rgba(255,255,255,.2);}
+.breadcrumb span{font-family:var(--font-display);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ts-gold);}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-display);font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ts-gold);margin-bottom:14px;}
+.eyebrow::before{content:'';width:34px;height:2px;background:var(--ts-gold);}
+.hero h1{font-family:var(--font-display);font-size:clamp(44px,6vw,72px);font-weight:800;line-height:.9;text-transform:uppercase;color:#fff;letter-spacing:.01em;margin-bottom:14px;}
+.hero h1 em{color:var(--ts-gold);font-style:normal;}
+.hero-desc{font-size:16px;color:rgba(255,255,255,.52);line-height:1.75;max-width:500px;}
+
+/* Sello institucional */
+.hero-seal{display:flex;flex-direction:column;align-items:center;gap:10px;flex-shrink:0;}
+.seal-ring{width:96px;height:96px;border-radius:50%;border:2px solid rgba(245,166,35,.3);display:flex;align-items:center;justify-content:center;position:relative;}
+.seal-ring::before{content:'';position:absolute;inset:6px;border-radius:50%;border:1px solid rgba(245,166,35,.15);}
+.seal-ring svg{width:40px;height:40px;stroke:var(--ts-gold);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}
+.seal-label{font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);text-align:center;}
+
+/* ── BARRA DE ESTADÍSTICAS ── */
+.stats-bar{background:rgba(255,255,255,.04);border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);}
+.stats-bar-inner{max-width:1240px;margin:0 auto;padding:0 40px;display:flex;align-items:center;gap:0;}
+.stat-item{flex:1;padding:18px 0;display:flex;align-items:center;gap:12px;border-right:1px solid rgba(255,255,255,.07);}
+.stat-item:last-child{border-right:none;}
+.stat-icon{width:32px;height:32px;background:rgba(245,166,35,.1);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.stat-icon svg{width:15px;height:15px;stroke:var(--ts-gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.stat-num{font-family:var(--font-display);font-size:22px;font-weight:800;color:#fff;line-height:1;}
+.stat-lbl{font-size:11px;color:rgba(255,255,255,.38);line-height:1.3;margin-top:2px;}
+
+/* ── DESTACADO ── */
+.featured{padding:56px 40px 0;background:#fff;}
+.featured-inner{max-width:1240px;margin:0 auto;}
+.section-label{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ts-gray);margin-bottom:20px;}
+.section-label::after{content:'';flex:1;height:1px;background:var(--ts-gray-line);}
+
+.featured-card{display:grid;grid-template-columns:420px 1fr;border-radius:14px;overflow:hidden;border:1px solid var(--ts-gray-line);text-decoration:none;transition:box-shadow .22s;}
+.featured-card:hover{box-shadow:0 16px 40px rgba(8,50,102,.1);}
+
+.featured-img{position:relative;background:var(--ts-blue-deep);overflow:hidden;}
+.featured-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s;}
+.featured-card:hover .featured-img img{transform:scale(1.04);}
+.feat-badge{position:absolute;top:16px;left:16px;background:var(--ts-blue-deep);color:#fff;font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:3px;border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;gap:6px;}
+.feat-badge::before{content:'';width:5px;height:5px;background:var(--ts-gold);border-radius:50%;}
+
+.featured-body{padding:40px 36px;display:flex;flex-direction:column;justify-content:center;background:#fff;}
+.com-date-block{display:flex;align-items:center;gap:8px;margin-bottom:16px;}
+.com-date-icon{width:28px;height:28px;background:#EEF3FA;border-radius:5px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.com-date-icon svg{width:13px;height:13px;stroke:var(--ts-blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.com-date{font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--ts-blue);letter-spacing:.04em;}
+.featured-body h2{font-family:var(--font-display);font-size:clamp(22px,2.4vw,30px);font-weight:800;text-transform:uppercase;color:#333;line-height:1.05;margin-bottom:12px;}
+.featured-body p{font-size:15px;color:#333;line-height:1.8;margin-bottom:24px;}
+.read-more{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ts-blue);}
+.read-more svg{width:14px;height:14px;stroke:var(--ts-blue);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s;}
+.featured-card:hover .read-more svg{transform:translateX(4px);}
+
+/* ── LISTA DE COMUNICADOS ── */
+.comunicados{padding:40px 40px 88px;background:#fff;}
+.comunicados-inner{max-width:1240px;margin:0 auto;}
+
+.com-list{display:flex;flex-direction:column;gap:0;}
+
+.com-card{display:grid;grid-template-columns:200px 1fr;align-items:stretch;border:1px solid var(--ts-gray-line);border-radius:10px;overflow:hidden;text-decoration:none;margin-bottom:14px;transition:border-color .2s,box-shadow .2s;}
+.com-card:hover{border-color:rgba(15,91,167,.25);box-shadow:0 6px 20px rgba(8,50,102,.07);}
+
+.com-img{position:relative;background:var(--ts-blue-deep);overflow:hidden;}
+.com-img img{width:100%;height:100%;object-fit:cover;display:block;opacity:.8;transition:opacity .25s;}
+.com-card:hover .com-img img{opacity:1;}
+.com-img-ov{position:absolute;inset:0;background:linear-gradient(to right,rgba(8,50,102,.2),transparent);}
+
+.com-body{padding:22px 26px;display:flex;flex-direction:column;justify-content:center;background:#fff;}
+.com-meta{display:flex;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap;}
+.com-type{font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--ts-blue);border-radius:3px;padding:3px 9px;}
+.com-type.normativa{background:#2D7DD2;}
+.com-type.operativo{background:#3A7D44;}
+.com-type.urgente{background:#c0392b;}
+.com-date-sm{font-size:12px;color:var(--ts-gray);display:flex;align-items:center;gap:5px;}
+.com-date-sm svg{width:11px;height:11px;stroke:var(--ts-gray);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.com-body h3{font-family:var(--font-display);font-size:clamp(17px,2vw,21px);font-weight:800;text-transform:uppercase;color:#333;line-height:1.1;margin-bottom:8px;}
+.com-body p{font-size:13px;color:#333;line-height:1.7;margin-bottom:14px;}
+.com-link{display:inline-flex;align-items:center;gap:5px;font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ts-blue);}
+.com-link svg{width:12px;height:12px;stroke:var(--ts-blue);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:transform .18s;}
+.com-card:hover .com-link svg{transform:translateX(3px);}
+
+/* ── SUSCRIPCIÓN ── */
+.subscribe{background:var(--ts-gray-bg);padding:64px 40px;border-top:1px solid var(--ts-gray-line);}
+.subscribe-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.sub-text h2{font-family:var(--font-display);font-size:clamp(26px,3vw,38px);font-weight:800;text-transform:uppercase;color:#333;line-height:1.0;margin-bottom:10px;margin-top:10px;}
+.sub-text h2 span{color:var(--ts-gold);}
+.sub-text p{font-size:15px;color:#333;line-height:1.75;}
+.sub-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+.sub-chip{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ts-blue);background:#EEF3FA;border:1px solid rgba(15,91,167,.15);border-radius:20px;padding:5px 12px;}
+
+.sub-form{background:#fff;border-radius:12px;padding:28px 24px;border:1px solid var(--ts-gray-line);}
+.sub-form h3{font-family:var(--font-display);font-size:18px;font-weight:800;text-transform:uppercase;color:#333;margin-bottom:6px;}
+.sub-form p{font-size:13px;color:var(--ts-gray);margin-bottom:18px;}
+.forminator-ph{background:var(--ts-gray-bg);border:2px dashed var(--ts-gray-line);border-radius:8px;padding:28px 20px;text-align:center;}
+.forminator-ph svg{width:28px;height:28px;stroke:var(--ts-gray-line);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin:0 auto 8px;display:block;}
+.forminator-ph p{font-family:var(--font-display);font-size:12px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#ccc;}
+.forminator-ph span{font-size:11px;color:#ccc;display:block;margin-top:3px;}
+
+/* ── FOOTER ── */
+footer{background:#041C3D;padding:60px 40px 28px;}
+.footer-inner{max-width:1240px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:28px;}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.38);line-height:1.75;margin-top:12px;max-width:270px;}
+.footer-certs{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
+.footer-cert{font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.38);border:1px solid rgba(255,255,255,.09);padding:3px 8px;border-radius:3px;}
+.footer-col-title{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--ts-gold);margin-bottom:16px;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,.43);text-decoration:none;}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer-copy{font-size:13px;color:rgba(255,255,255,.22);}
+.footer-legal{display:flex;gap:20px;flex-wrap:wrap;}
+.footer-legal a{font-size:13px;color:rgba(255,255,255,.22);text-decoration:none;}
+
+/* WA */
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:999;display:flex;flex-direction:column;align-items:flex-end;gap:9px;}
+.wa-bubble{background:#fff;border-radius:9px;padding:10px 14px;box-shadow:0 4px 18px rgba(0,0,0,.13);font-size:12px;color:#333;max-width:190px;line-height:1.4;position:relative;animation:waIn .4s ease 1.6s both;}
+.wa-bubble strong{display:block;color:#075E54;font-size:13px;margin-bottom:1px;}
+.wa-bubble::after{content:'';position:absolute;bottom:-7px;right:18px;border-left:7px solid transparent;border-top:7px solid #fff;}
+.wa-btn{width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,.38);text-decoration:none;position:relative;animation:waIn .4s ease 1s both;}
+.wa-btn::before{content:'';position:absolute;width:58px;height:58px;border-radius:50%;background:rgba(37,211,102,.28);animation:waPulse 2.2s ease-out infinite;}
+.wa-btn svg{width:28px;height:28px;fill:#fff;position:relative;z-index:1;}
+@keyframes waPulse{0%{transform:scale(1);opacity:.7;}100%{transform:scale(1.75);opacity:0;}}
+@keyframes waIn{from{opacity:0;transform:scale(.7) translateY(10px);}to{opacity:1;transform:scale(1) translateY(0);}}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;}.hero-seal{display:none;}
+  .featured-card{grid-template-columns:1fr;}
+  .featured-img{min-height:240px;}
+  .subscribe-inner{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+  .stats-bar-inner{flex-wrap:wrap;}
+  .stat-item{min-width:45%;border-right:none;border-bottom:1px solid rgba(255,255,255,.07);}
+}
+@media(max-width:768px){
+  header{padding:0 16px;}.nav-links{display:none;}
+  .hero,.featured,.comunicados,.subscribe{padding-left:20px;padding-right:20px;}
+  .hero{padding-top:48px;padding-bottom:40px;}
+  .featured{padding-top:40px;}
+  .comunicados{padding-bottom:60px;}
+  .com-card{grid-template-columns:1fr;}
+  .com-img{min-height:160px;}
+  footer{padding:44px 20px 22px;}.footer-top{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;text-align:center;}
+  .stats-bar-inner{padding:0 20px;}
+}
+@media(max-width:480px){
+  .wa-bubble{display:none;}
+  .hero h1{font-size:42px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><div class="nav-star"></div>TRANS<span>ESTRELLA</span></a>
+    <ul class="nav-links">
+      <li><a href="/nosotros/">Nosotros</a></li>
+      <li><a href="/servicios/">Servicios</a></li>
+      <li><a href="/sucursales/">Sucursales</a></li>
+      <li><a href="/blog/category/comunicados/" class="active">Comunicados</a></li>
+      <li><a href="/blog/">Noticias</a></li>
+      <li><a href="/contactanos/" class="nav-cta">Cotizar Ahora</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="breadcrumb">
+        <a href="/">Inicio</a><span class="breadcrumb-sep">›</span>
+        <span>Comunicados</span>
+      </div>
+      <div class="eyebrow">Transportadora Estrella · Oficial</div>
+      <h1>Comunicados<em>Institucionales</em></h1>
+      <p class="hero-desc">Información oficial sobre normativa, regulaciones del sector y novedades operativas que afectan el transporte de carga masiva en Colombia. Manténgase al día con los cambios que impactan su operación logística.</p>
+    </div>
+    <div class="hero-seal">
+      <div class="seal-ring">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      </div>
+      <div class="seal-label">Comunicados<br>Oficiales</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div style="background:var(--ts-blue-deep);border-top:1px solid rgba(255,255,255,.07);">
+  <div class="stats-bar-inner" style="max-width:1240px;margin:0 auto;padding:0 40px;display:flex;">
+    <div class="stat-item" style="padding:16px 32px 16px 0;">
+      <div class="stat-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+      <div><div class="stat-num">4</div><div class="stat-lbl">Comunicados publicados</div></div>
+    </div>
+    <div class="stat-item" style="padding:16px 32px;border-right:1px solid rgba(255,255,255,.07);">
+      <div class="stat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+      <div><div class="stat-num">2025–2026</div><div class="stat-lbl">Período cubierto</div></div>
+    </div>
+    <div class="stat-item" style="padding:16px 32px;border-right:1px solid rgba(255,255,255,.07);">
+      <div class="stat-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div><div class="stat-num">RNDC · SPIA · Decreto</div><div class="stat-lbl">Temas regulatorios</div></div>
+    </div>
+    <div class="stat-item" style="padding:16px 0 16px 32px;">
+      <div class="stat-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+      <div><div class="stat-num">Suscríbase</div><div class="stat-lbl">Reciba alertas por correo</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- COMUNICADO DESTACADO -->
+<section class="featured">
+  <div class="featured-inner">
+    <div class="section-label">Comunicado más reciente</div>
+    <a href="https://transestrella.com/blog/decreto-1017-2025-tiempos-logisticos-transporte/" class="featured-card">
+      <div class="featured-img">
+        <img src="https://transestrella.com/wp-content/uploads/2025/12/comunicado-de-prensa-decreto-1017-1-621x1024.jpeg" alt="Decreto 1017 de 2025 tiempos logísticos transporte de carga Colombia" loading="eager">
+        <div class="feat-badge">Normativa · Decreto</div>
+      </div>
+      <div class="featured-body">
+        <div class="com-date-block">
+          <div class="com-date-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+          <div class="com-date">16 de diciembre de 2025</div>
+        </div>
+        <h2>Decreto 1017 de 2025: Nueva Regulación de Tiempos Logísticos en el Transporte de Carga</h2>
+        <p>El sector del transporte de carga en Colombia enfrenta una transformación significativa con la implementación del Decreto 1017 de 2025, que establece nuevos parámetros para los tiempos logísticos en operaciones terrestres. Conozca el impacto directo para su empresa.</p>
+        <span class="read-more">Leer comunicado completo <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- LISTA DE COMUNICADOS -->
+<section class="comunicados">
+  <div class="comunicados-inner">
+    <div class="section-label">Todos los comunicados</div>
+    <div class="com-list">
+
+      <a href="https://transestrella.com/blog/obligaciones-remitente-carga-guia-colombia/" class="com-card">
+        <div class="com-img">
+          <img src="https://transestrella.com/wp-content/uploads/2025/10/obligaciones-remitente-carga-2025-1024x683.jpg" alt="Obligaciones del remitente de carga transporte terrestre Colombia 2025" loading="lazy">
+          <div class="com-img-ov"></div>
+        </div>
+        <div class="com-body">
+          <div class="com-meta">
+            <span class="com-type normativa">Normativa</span>
+            <span class="com-date-sm">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              31 de octubre de 2025
+            </span>
+          </div>
+          <h3>Obligaciones del Remitente de Carga: Guía Completa 2025</h3>
+          <p>Conozca las 9 obligaciones fundamentales que debe cumplir como remitente de carga en Colombia bajo la normativa vigente. Información esencial para generadores de carga masiva.</p>
+          <span class="com-link">Leer comunicado <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </div>
+      </a>
+
+      <a href="https://transestrella.com/blog/escasez-citas-puerto-aguadulce-octubre-2025/" class="com-card">
+        <div class="com-img">
+          <img src="https://transestrella.com/wp-content/uploads/2025/10/escasez-puerto-1024x559.png" alt="Escasez de citas Puerto Aguadulce SPIA Buenaventura octubre 2025" loading="lazy">
+          <div class="com-img-ov"></div>
+        </div>
+        <div class="com-body">
+          <div class="com-meta">
+            <span class="com-type operativo">Operativo</span>
+            <span class="com-date-sm">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              27 de octubre de 2025
+            </span>
+          </div>
+          <h3>Persiste la Escasez de Citas en el Puerto de Aguadulce (SPIA) — Actualización 27 oct 2025</h3>
+          <p>El puerto de Aguadulce continúa presentando dificultades para la asignación de citas, afectando operaciones de retiro y devolución de contenedores en Buenaventura.</p>
+          <span class="com-link">Leer comunicado <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </div>
+      </a>
+
+      <a href="https://transestrella.com/blog/obligaciones-del-generador-de-carga/" class="com-card">
+        <div class="com-img">
+          <img src="https://transestrella.com/wp-content/uploads/2025/07/obligaciones-generador-de-carga-1024x559.png" alt="Obligaciones generador de carga RNDC facturación electrónica 2025" loading="lazy">
+          <div class="com-img-ov"></div>
+        </div>
+        <div class="com-body">
+          <div class="com-meta">
+            <span class="com-type normativa">Normativa · RNDC</span>
+            <span class="com-date-sm">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              1 de julio de 2025
+            </span>
+          </div>
+          <h3>Obligaciones del Generador de Carga en el Registro Nacional de Despachos — RNDC</h3>
+          <p>Facturación electrónica obligatoria para el transporte de carga. Todo lo que debe saber sobre las nuevas obligaciones del RNDC 2025 y su impacto en su operación.</p>
+          <span class="com-link">Leer comunicado <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- SUSCRIPCIÓN -->
+<section class="subscribe">
+  <div class="subscribe-inner">
+    <div class="sub-text">
+      <div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-display);font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ts-gold);margin-bottom:14px;">
+        <span style="width:34px;height:2px;background:var(--ts-gold);display:block;"></span>
+        Alertas regulatorias
+      </div>
+      <h2>Reciba los Comunicados<br><span>Antes que Nadie</span></h2>
+      <p>Los cambios normativos en el transporte de carga pueden afectar su operación de un día para otro. Suscríbase y reciba nuestros comunicados directamente en su correo.</p>
+      <div class="sub-chips">
+        <span class="sub-chip">Decretos y resoluciones</span>
+        <span class="sub-chip">Alertas de puertos</span>
+        <span class="sub-chip">RNDC y DIAN</span>
+        <span class="sub-chip">Novedades operativas</span>
+      </div>
+    </div>
+    <div class="sub-form">
+      <h3>Suscribirse a Comunicados</h3>
+      <p>Sin spam. Solo alertas cuando hay novedades que impactan su operación.</p>
+      <div class="forminator-ph">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <p>Formulario Forminator</p>
+        <span>[forminator_form id="XX"] · Suscripción comunicados</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo"><div class="nav-star"></div>TRANS<span style="color:var(--ts-gold);">ESTRELLA</span></a>
+        <p>Empresa de transporte de carga masiva y semi masiva terrestre en Colombia. Más de 30 años conectando empresas con todo el territorio nacional.</p>
+        <div class="footer-certs">
+          <span class="footer-cert">ISO 9001</span>
+          <span class="footer-cert">BASC</span>
+          <span class="footer-cert">SuperTransporte</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Servicios</div>
+        <ul class="footer-links">
+          <li><a href="/servicios/transporte-de-carga-terrestre-nacional/">Carga Terrestre Nacional</a></li>
+          <li><a href="/servicios/transporte-urbano-de-mercancias/">Transporte Urbano</a></li>
+          <li><a href="/servicios/transporte-de-carga-peligrosa/">Mercancías Peligrosas</a></li>
+          <li><a href="/servicios/itr/">ITR Internacional</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Publicaciones</div>
+        <ul class="footer-links">
+          <li><a href="/blog/category/comunicados/">Comunicados</a></li>
+          <li><a href="/blog/categoria/normativa/">Normativa y Regulación</a></li>
+          <li><a href="/blog/categoria/logistica/">Logística Terrestre</a></li>
+          <li><a href="/blog/categoria/comercio-exterior/">Comercio Exterior</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Empresa</div>
+        <ul class="footer-links">
+          <li><a href="/nosotros/">Nosotros</a></li>
+          <li><a href="/sucursales/">Sucursales</a></li>
+          <li><a href="/contactanos/">Contáctanos</a></li>
+          <li><a href="/preguntas-frecuentes/">Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Transportadora Estrella S.A.S. — Todos los derechos reservados.</div>
+      <div class="footer-legal">
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Tratamiento de Datos</a>
+        <a href="#">Política Integrada</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="wa-float">
+  <div class="wa-bubble">
+    <strong>¿Necesita cotizar?</strong>
+    Escríbanos, respondemos de inmediato.
+  </div>
+  <a href="https://wa.me/576045273300" target="_blank" class="wa-btn">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.524 5.847L.057 23.992l6.304-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.012-1.375l-.36-.214-3.733.979 1-3.642-.235-.374A9.791 9.791 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+  </a>
+</div>
+
+</body>
+</html>

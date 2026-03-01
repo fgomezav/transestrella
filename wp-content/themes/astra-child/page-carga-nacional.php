@@ -1627,18 +1627,22 @@ get_header();
         <div class="eyebrow">El servicio</div>
         <h2>El Aliado Logístico que <span>Colombia Necesita</span></h2>
         <p>El transporte terrestre de carga nacional es esencial para la economía colombiana. Facilita la distribución
-          de mercancías entre regiones, apoya el comercio interno y conecta la producción industrial.</p>
+          de mercancías entre regiones, apoya el comercio interno y conecta la producción industrial con los mercados de
+          consumo en todo el país.</p>
         <p>Transportadora Estrella, con más de 30 años de experiencia, se destaca en este ámbito como aliado estratégico
-          de empresas que manejan carga masiva, semi masiva y maquinaria pesada.</p>
+          de empresas que manejan carga masiva, semi masiva y maquinaria pesada. Conocemos cada corredor logístico, cada
+          ruta crítica y cada particularidad operativa del territorio colombiano.</p>
+        <p>Nuestro servicio conecta eficientemente todas las regiones con un parque automotor propio, personal altamente
+          capacitado y sistemas de seguimiento vehicular que operan las 24 horas, los 7 días de la semana.</p>
       </div>
       <div class="intro-visual">
         <div class="intro-img">
           <img src="https://transestrella.com/wp-content/uploads/2025/04/transportadora-estrella-carga-volco.jpeg"
-            alt="Flota Transportadora Estrella" loading="lazy">
+            alt="Flota Transportadora Estrella — camiones y volcos carga masiva nacional" loading="lazy">
         </div>
         <div class="intro-quote">
-          <p>"Si la materia prima no para, es porque la <span>Transportadora Estrella S.A.S.</span> nunca se detiene."
-          </p>
+          <p>"Si la materia prima no para, es porque la <span>Transportadora Estrella S.A.S.</span> nunca se detiene.
+            Así se fabrica el éxito."</p>
           <cite>Jaime Andrés Giraldo — Gerente, ICO FORMAS</cite>
         </div>
       </div>

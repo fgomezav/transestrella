@@ -1,0 +1,525 @@
+<?php
+/**
+ * Template Name: Sucursal Manizales
+ * Template Post Type: page
+ */
+
+get_header(); ?>
+
+<style>
+/* 
+  Estilos compartidos de las sucursales cargados desde /wp-content/themes/astra-child/sucursal.css.
+  Los estilos core (variables, header, footer, etc.) ya están en /styles.css de forma global. 
+*/
+<?php echo file_get_contents( get_stylesheet_directory() . '/sucursal.css' ); ?>
+</style>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-line"></div>
+  <div class="hero-content">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span class="breadcrumb-sep">›</span>
+      <a href="/sucursales/">Sucursales</a><span class="breadcrumb-sep">›</span>
+      <span>Manizales</span>
+    </div>
+    <div class="hero-layout">
+      <div class="hero-left">
+        <div class="sede-tag">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Sucursal Manizales · Eje Cafetero · Caldas</span>
+        </div>
+        <h1>Transporte de Carga<em>en Manizales</em></h1>
+        <p>Transportadora Estrella opera en Manizales como puerta de entrada al Eje Cafetero — el corredor que articula Caldas, Risaralda y Quindío con los principales mercados del país. Desde nuestra sucursal atendemos la agroindustria del café, las industrias de Pereira y Armenia, y el flujo de carga entre el occidente colombiano, Medellín y Bogotá.</p>
+        <div class="corredor-chips">
+          <div class="corredor-chip"><div class="corredor-chip-dot"></div><span>Caldas</span></div>
+          <div class="corredor-chip"><div class="corredor-chip-dot"></div><span>Risaralda</span></div>
+          <div class="corredor-chip"><div class="corredor-chip-dot"></div><span>Quindío</span></div>
+          <div class="corredor-chip"><div class="corredor-chip-dot"></div><span>Norte del Valle</span></div>
+          <div class="corredor-chip"><div class="corredor-chip-dot"></div><span>Corredor Medellín–Cali</span></div>
+        </div>
+      </div>
+      <div class="hcc">
+        <div class="hcc-title">Contacto Directo — Manizales</div>
+        <div class="hcc-items">
+          <div class="hcc-item">
+            <div class="hcc-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div>
+              <div class="hcc-label">Dirección</div>
+              <div class="hcc-val">Calle 110 N.° 34A–75<br>Manizales, Caldas</div>
+            </div>
+          </div>
+          <div class="hcc-item">
+            <div class="hcc-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6z"/></svg></div>
+            <div>
+              <div class="hcc-label">Teléfono</div>
+              <div class="hcc-val"><a href="tel:+573103695787">310 369 5787</a></div>
+            </div>
+          </div>
+          <div class="hcc-item">
+            <div class="hcc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div>
+              <div class="hcc-label">Horario</div>
+              <div class="hcc-val">Lun–Vie 8am–6pm<br>Sáb 8am–1pm</div>
+            </div>
+          </div>
+        </div>
+        <div class="hcc-btns">
+          <a href="https://wa.me/573103695787?text=Hola%2C%20quiero%20cotizar%20transporte%20de%20carga%20en%20Manizales%20Eje%20Cafetero" target="_blank" class="hcc-btn hcc-btn-wa">
+            <svg viewBox="0 0 24 24" fill="white" width="14" height="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.524 5.847L.057 23.992l6.304-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.012-1.375l-.36-.214-3.733.979 1-3.642-.235-.374A9.791 9.791 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+            Escribir por WhatsApp
+          </a>
+          <a href="tel:+573103695787" class="hcc-btn hcc-btn-tel">
+            <svg viewBox="0 0 24 24" stroke="white" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6z"/></svg>
+            Llamar Ahora
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA -->
+<section class="map-section">
+  <div class="map-section-inner">
+    <div class="map-embed">
+      <div style="text-align:center;">
+        <div class="map-pin-big"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <p>Mapa Google Maps</p>
+        <span>Calle 110 N.° 34A–75, Manizales</span>
+      </div>
+      <div class="map-note">Insertar iframe Google Maps · Divi Code Module</div>
+    </div>
+    <div class="map-side">
+      <div class="map-side-title">Información de Contacto</div>
+      <div class="map-detail-list">
+        <div class="map-detail">
+          <div class="map-detail-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div>
+            <div class="map-detail-label">Dirección</div>
+            <div class="map-detail-val">Calle 110 N.° 34A–75<br>Manizales, Caldas</div>
+          </div>
+        </div>
+        <div class="map-detail">
+          <div class="map-detail-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6z"/></svg></div>
+          <div>
+            <div class="map-detail-label">Teléfono</div>
+            <div class="map-detail-val"><a href="tel:+573103695787">310 369 5787</a></div>
+          </div>
+        </div>
+        <div class="map-detail">
+          <div class="map-detail-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div>
+            <div class="map-detail-label">Correo</div>
+            <div class="map-detail-val"><a href="mailto:servicioalcliente@transestrella.com">servicioalcliente@transestrella.com</a></div>
+          </div>
+        </div>
+        <div class="map-detail">
+          <div class="map-detail-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div>
+            <div class="map-detail-label">Horario</div>
+            <div class="map-detail-val">Lun–Vie 8:00am–6:00pm<br>Sáb 8:00am–1:00pm</div>
+          </div>
+        </div>
+      </div>
+      <div class="map-nav-btns">
+        <a href="https://waze.com/ul?q=Calle+110+34A-75+Manizales+Caldas" target="_blank" class="map-nav-btn btn-waze">
+          <svg viewBox="0 0 24 24" fill="white" width="15" height="15"><circle cx="12" cy="11" r="7"/><circle cx="9.5" cy="10" r="1.2"/><circle cx="14.5" cy="10" r="1.2"/></svg>
+          Cómo llegar en Waze
+        </a>
+        <a href="https://maps.google.com/?q=Calle+110+34A-75+Manizales+Caldas+Colombia" target="_blank" class="map-nav-btn btn-gmaps">
+          <svg viewBox="0 0 24 24" fill="white" width="15" height="15"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Abrir en Google Maps
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEO INTRO -->
+<section class="seo-intro">
+  <div class="seo-intro-inner">
+    <div class="seo-intro-text">
+      <div class="eyebrow">Empresa de transporte en Manizales</div>
+      <h2>Transporte de Carga Masiva en <span>Manizales y el Eje Cafetero</span></h2>
+      <p>Manizales es la capital del departamento de Caldas y una de las tres ciudades que conforman el Eje Cafetero — junto a Pereira y Armenia — uno de los corredores industriales y agroindustriales más dinámicos de Colombia. Nuestra sucursal en Manizales fue establecida para atender directamente las necesidades logísticas de las empresas del Triángulo del Café: caficultores, trilladoras, exportadores de café, empresas del sector alimentos y la creciente industria manufacturera del Eje.</p>
+      <p>Geográficamente, Manizales ocupa una posición privilegiada en el eje logístico norte–sur: se ubica a 200 km de Medellín, a 296 km de Bogotá y a 200 km de Cali, lo que la convierte en un nodo natural de tránsito de carga entre los tres principales centros económicos del país. Nuestra presencia en Manizales, combinada con la sede principal en Medellín, permite ofrecer cobertura directa sobre todo el corredor cafetero sin intermediarios.</p>
+      <p>Con más de 30 años de experiencia, certificaciones ISO 9001, BASC y la vigilancia de SuperTransporte, Transportadora Estrella ofrece a las empresas del Eje Cafetero un aliado logístico con estándares nacionales e internacionales, flota propia certificada y seguimiento GPS 24/7 en cada operación.</p>
+    </div>
+    <div class="seo-adv-grid">
+      <div class="seo-adv-card">
+        <div class="seo-adv-icon"><svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div>
+        <div class="seo-adv-body">
+          <h4>Nodo entre Medellín, Bogotá y Cali</h4>
+          <p>Manizales está equidistante de los tres grandes centros del país. Nuestra sucursal facilita que empresas del Eje Cafetero conecten con clientes en cualquiera de los tres mercados sin hacer escala adicional ni cambiar de operador logístico.</p>
+        </div>
+      </div>
+      <div class="seo-adv-card">
+        <div class="seo-adv-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+        <div class="seo-adv-body">
+          <h4>Especialistas en el Corredor Cafetero</h4>
+          <p>Conocemos las rutas de montaña del Eje: Alto de Minas, La Línea, Cañón del Cauca. Nuestra flota está preparada para los retos técnicos de estas vías — pendientes, curvas y condiciones climáticas — con conductores con experiencia específica en el corredor.</p>
+        </div>
+      </div>
+      <div class="seo-adv-card">
+        <div class="seo-adv-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div class="seo-adv-body">
+          <h4>Red con Sede Principal en Medellín</h4>
+          <p>La cercanía entre Manizales y Medellín (200 km, ≈3 horas) nos permite coordinar operaciones combinadas entre las dos ciudades con la coordinación directa de la sede principal — un respaldo difícil de igualar por operadores regionales del Eje.</p>
+        </div>
+      </div>
+      <div class="seo-adv-card">
+        <div class="seo-adv-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+        <div class="seo-adv-body">
+          <h4>BASC e ISO 9001 en el Eje Cafetero</h4>
+          <p>Para exportadores de café y empresas que operan con clientes internacionales, nuestras certificaciones BASC e ISO 9001 son garantía de trazabilidad, seguridad en la cadena logística y cumplimiento de los estándares exigidos por las certificadoras de comercio exterior.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COBERTURA EJE CAFETERO -->
+<section class="cobertura">
+  <div class="cobertura-inner">
+    <div class="cobertura-header">
+      <div class="eyebrow center">Cobertura regional</div>
+      <h3>Cubrimos los Tres Departamentos del <span>Eje Cafetero</span></h3>
+      <p>Desde Manizales atendemos directamente empresas en Caldas, Risaralda y Quindío, con conexión a la red nacional de Transportadora Estrella.</p>
+    </div>
+    <div class="cobertura-grid">
+      <div class="cob-card">
+        <div class="cob-dpto">Caldas</div>
+        <div class="cob-ciudad-principal">Manizales</div>
+        <div class="cob-ciudades">Villamaría · La Dorada · Chinchiná · Palestina · Neira · Aguadas · Salamina · Anserma · Riosucio</div>
+      </div>
+      <div class="cob-card">
+        <div class="cob-dpto">Risaralda</div>
+        <div class="cob-ciudad-principal">Pereira</div>
+        <div class="cob-ciudades">Dosquebradas · Santa Rosa de Cabal · La Virginia · Cartago · Marsella · Belén de Umbría · Quinchía</div>
+      </div>
+      <div class="cob-card">
+        <div class="cob-dpto">Quindío</div>
+        <div class="cob-ciudad-principal">Armenia</div>
+        <div class="cob-ciudades">Montenegro · La Tebaida · Calarcá · Quimbaya · Circasia · Filandia · Salento · Génova</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIPOS DE CARGA -->
+<section class="cargo-types">
+  <div class="cargo-types-inner">
+    <div class="cargo-types-header">
+      <div class="eyebrow">Qué transportamos</div>
+      <h2>Carga Masiva que Movilizamos desde <span>Manizales y el Eje Cafetero</span></h2>
+      <p>Atendemos la agroindustria cafetera, la industria de alimentos, manufactura liviana y el sector de la construcción en los tres departamentos del Eje Cafetero. Especialistas en las rutas de montaña del occidente colombiano.</p>
+    </div>
+    <div class="cargo-grid">
+      <div class="cargo-card">
+        <div class="cargo-card-num">01</div>
+        <h3>Café Verde y Pergamino</h3>
+        <p>Transporte de café en grano — café pergamino húmedo, café pergamino seco y café verde trillado — desde fincas, centros de acopio y trilladoras del Eje Cafetero hacia puertos y clientes nacionales. Manejo especializado que protege la calidad del grano.</p>
+        <a href="/servicios/transporte-de-carga-terrestre-nacional/" class="cargo-card-link">Ver servicio →</a>
+      </div>
+      <div class="cargo-card">
+        <div class="cargo-card-num">02</div>
+        <h3>Alimentos Procesados e Industria</h3>
+        <p>Distribución de productos de consumo masivo, alimentos procesados y materias primas de las empresas del Eje Cafetero hacia distribuidores, supermercados y clientes en Medellín, Bogotá, Cali y otras ciudades del país con flota propia y GPS 24/7.</p>
+        <a href="/servicios/transporte-de-carga-terrestre-nacional/" class="cargo-card-link">Ver servicio →</a>
+      </div>
+      <div class="cargo-card">
+        <div class="cargo-card-num">03</div>
+        <h3>Materiales de Construcción</h3>
+        <p>Transporte de cemento, agregados pétreos, prefabricados y materiales de obra para los proyectos de vivienda e infraestructura en Manizales, Pereira, Armenia y los municipios del Triángulo del Café. Volcos y plataformas propias.</p>
+        <a href="/servicios/transporte-de-carga-terrestre-nacional/" class="cargo-card-link">Ver servicio →</a>
+      </div>
+      <div class="cargo-card">
+        <div class="cargo-card-num">04</div>
+        <h3>Insumos Agrícolas y Agroquímicos</h3>
+        <p>Transporte de fertilizantes, agroquímicos e insumos agrícolas desde bodegas y distribuidores hacia los cultivos de café y otros productos del Eje Cafetero, bajo los protocolos del Decreto 1609 y con conductores certificados para manejo de carga peligrosa.</p>
+        <a href="/servicios/transporte-de-carga-peligrosa/" class="cargo-card-link">Ver servicio →</a>
+      </div>
+      <div class="cargo-card">
+        <div class="cargo-card-num">05</div>
+        <h3>Tránsito en el Corredor Medellín–Cali</h3>
+        <p>Manizales está sobre la ruta que conecta Medellín con el sur del país. Coordinamos carga en tránsito desde Antioquia hacia el Valle del Cauca y viceversa, con Manizales como punto de escala y control intermedio en el corredor.</p>
+        <a href="/servicios/transporte-de-carga-terrestre-nacional/" class="cargo-card-link">Ver servicio →</a>
+      </div>
+      <div class="cargo-card">
+        <div class="cargo-card-num">06</div>
+        <h3>Exportación de Café por Puerto</h3>
+        <p>Coordinación de carga de café verde de exportación desde las trilladoras del Eje Cafetero hacia los puertos de Buenaventura o Cartagena, con enlace directo a nuestras sucursales en ambos puertos y trazabilidad BASC en toda la cadena.</p>
+        <a href="/servicios/itr/" class="cargo-card-link">Ver servicio →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="services">
+  <div class="services-inner">
+    <div class="services-header">
+      <div class="eyebrow center">Portafolio completo</div>
+      <h2>Servicios Disponibles <span>en Manizales</span></h2>
+      <p>Todos los servicios de Transportadora Estrella se contratan desde nuestra sucursal en Manizales para operar en el Eje Cafetero y toda Colombia.</p>
+    </div>
+    <div class="services-grid">
+      <a href="/servicios/transporte-de-carga-terrestre-nacional/" class="svc-card">
+        <div class="svc-img">
+          <img src="https://transestrella.com/wp-content/uploads/2025/04/transportadora-estrella-nuestra-flota-transporte-de-carga-pesada-1.jpeg" alt="Transporte de carga terrestre nacional desde Manizales Eje Cafetero Caldas" loading="lazy">
+          <div class="svc-img-ov"></div><div class="svc-tag-label">Nacional</div>
+        </div>
+        <div class="svc-body">
+          <h4>Carga Terrestre Nacional</h4>
+          <p>Carga masiva desde Manizales hacia Medellín, Bogotá, Cali y todo el país.</p>
+          <div class="svc-link">Ver servicio →</div>
+        </div>
+      </a>
+      <a href="/servicios/transporte-urbano-de-mercancias/" class="svc-card">
+        <div class="svc-img">
+          <img src="https://transestrella.com/wp-content/uploads/2025/06/camio-urbano-de-transporte.webp" alt="Transporte urbano Manizales Pereira Armenia Eje Cafetero" loading="lazy">
+          <div class="svc-img-ov"></div><div class="svc-tag-label">Urbano</div>
+        </div>
+        <div class="svc-body">
+          <h4>Transporte Urbano</h4>
+          <p>Distribución en Manizales, Pereira, Armenia y municipios del Eje.</p>
+          <div class="svc-link">Ver servicio →</div>
+        </div>
+      </a>
+      <a href="/servicios/transporte-de-carga-peligrosa/" class="svc-card">
+        <div class="svc-img">
+          <img src="https://transestrella.com/wp-content/uploads/2025/06/camion-cisterna.webp" alt="Transporte agroquímicos insumos agrícolas Eje Cafetero Decreto 1609" loading="lazy">
+          <div class="svc-img-ov"></div><div class="svc-tag-label">Especializado</div>
+        </div>
+        <div class="svc-body">
+          <h4>Mercancías Peligrosas</h4>
+          <p>Agroquímicos e insumos agrícolas del sector cafetero. Decreto 1609.</p>
+          <div class="svc-link">Ver servicio →</div>
+        </div>
+      </a>
+      <a href="/servicios/itr/" class="svc-card">
+        <div class="svc-img">
+          <img src="https://transestrella.com/wp-content/uploads/2025/08/transporte-de-contenedores.jpg" alt="Exportación café verde Buenaventura Cartagena desde Manizales ITR" loading="lazy">
+          <div class="svc-img-ov"></div><div class="svc-tag-label">Internacional</div>
+        </div>
+        <div class="svc-body">
+          <h4>ITR — Import / Export</h4>
+          <p>Café de exportación a Buenaventura y Cartagena. BASC en toda la ruta.</p>
+          <div class="svc-link">Ver servicio →</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FLOTA -->
+<section class="fleet-strip">
+  <div class="fleet-strip-inner">
+    <div class="fleet-strip-header">
+      <h3>Flota Propia <span>en Manizales</span></h3>
+      <a href="/servicios/" style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ts-gray);text-decoration:none;">Ver todos los servicios →</a>
+    </div>
+    <div class="fleet-chips">
+      <div class="fleet-chip">
+        <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <div><div class="fleet-chip-name">Turbos</div><div class="fleet-chip-desc">Distribución local · Manizales y municipios</div></div>
+      </div>
+      <div class="fleet-chip">
+        <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <div><div class="fleet-chip-name">Camiones</div><div class="fleet-chip-desc">Café · alimentos · agroindustria</div></div>
+      </div>
+      <div class="fleet-chip">
+        <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <div><div class="fleet-chip-name">Volcos</div><div class="fleet-chip-desc">Graneles · materiales de construcción</div></div>
+      </div>
+      <div class="fleet-chip">
+        <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <div><div class="fleet-chip-name">Patinetas</div><div class="fleet-chip-desc">Carga masiva · corredor nacional</div></div>
+      </div>
+      <div class="fleet-chip">
+        <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <div><div class="fleet-chip-name">Tractocamiones</div><div class="fleet-chip-desc">Máxima capacidad · exportación café</div></div>
+      </div>
+      <div class="fleet-chip">
+        <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        <div><div class="fleet-chip-name">Cisternas</div><div class="fleet-chip-desc">Agroquímicos · insumos líquidos</div></div>
+      </div>
+    </div>
+    <p class="fleet-note">Toda la flota cuenta con GPS activo 24/7 · Mantenimiento preventivo certificado · Conductores con experiencia en rutas de montaña del Eje Cafetero</p>
+  </div>
+</section>
+
+<!-- CÓMO LLEGAR -->
+<section class="directions">
+  <div class="directions-inner">
+    <div class="directions-text">
+      <div class="eyebrow">Cómo llegar</div>
+      <h2>Acceso a Nuestra <span>Oficina en Manizales</span></h2>
+      <div class="directions-modes">
+        <div class="dir-mode">
+          <div class="dir-mode-header">
+            <div class="dir-mode-icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+            <div class="dir-mode-title">En Vehículo Particular</div>
+          </div>
+          <p>La Calle 110 está en la zona norte de Manizales, sector de Milán y La Enea — área empresarial con fácil acceso desde la Avenida Santander o la Autopista del Café. Referencia: sector norte cerca de la salida hacia Medellín. Parqueadero disponible en el edificio.</p>
+        </div>
+        <div class="dir-mode">
+          <div class="dir-mode-header">
+            <div class="dir-mode-icon"><svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div>
+            <div class="dir-mode-title">Desde Medellín o Bogotá</div>
+          </div>
+          <p>Desde Medellín: 200 km por la Autopista del Café (≈3 horas). Desde Bogotá: 296 km por la ruta Bogotá–Honda–Manizales (≈4.5 horas). Empresas de buses ofrecen frecuencias diarias desde ambas ciudades al Terminal de Transportes de Manizales.</p>
+        </div>
+        <div class="dir-mode">
+          <div class="dir-mode-header">
+            <div class="dir-mode-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <div class="dir-mode-title">En Bus o Cable Aéreo</div>
+          </div>
+          <p>Desde el Terminal de Transportes de Manizales, tomar bus urbano hacia el norte de la ciudad (sector La Enea / Milán) o taxi con destino a la Calle 110 con Carrera 34A. El Cable Aéreo de Manizales es referencia conocida en el sector norte de la ciudad.</p>
+        </div>
+      </div>
+    </div>
+    <div class="landmarks">
+      <div class="landmark-card">
+        <div class="landmark-icon"><svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div>
+        <div class="landmark-body">
+          <h5>Salida Norte hacia Medellín</h5>
+          <p>Nuestra oficina está en la zona norte de Manizales, sobre la vía que conecta con la Autopista del Café hacia Medellín y Pereira. Excelente acceso para empresas que mueven carga en el corredor Medellín–Eje Cafetero.</p>
+        </div>
+      </div>
+      <div class="landmark-card">
+        <div class="landmark-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+        <div class="landmark-body">
+          <h5>Zona Empresarial La Enea</h5>
+          <p>La Calle 110 está en el corredor empresarial norte de Manizales. El sector concentra bodegas, empresas de logística y acceso directo a vías de carga — ideal para coordinar operaciones sin necesidad de circular por el centro de la ciudad.</p>
+        </div>
+      </div>
+      <div class="landmark-card">
+        <div class="landmark-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div class="landmark-body">
+          <h5>Distancias desde Manizales</h5>
+          <p>Medellín 200 km · Bogotá 296 km · Cali 200 km · Pereira 60 km · Armenia 90 km. Manizales es el vértice geográfico del triángulo que conecta los tres principales mercados del país.</p>
+        </div>
+      </div>
+      <div class="landmark-card">
+        <div class="landmark-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="landmark-body">
+          <h5>Visitas Comerciales</h5>
+          <p>Lunes a viernes 8:00am–6:00pm · Sábados 8:00am–1:00pm. Llame al 310 369 5787 para agendar reuniones en nuestra oficina o visitas a sus instalaciones en el Eje Cafetero.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OTRAS SUCURSALES -->
+<section class="other-branches">
+  <div class="other-branches-inner">
+    <div class="other-branches-header">
+      <h3>Otras Sucursales en Colombia</h3>
+      <a href="/sucursales/" class="btn-outline-blue">Ver todas →</a>
+    </div>
+    <div class="ob-grid">
+      <a href="/sucursales/medellin/" class="ob-card">
+        <div class="ob-city">Medellín</div>
+        <div class="ob-dept">Antioquia · Sede Principal</div>
+        <div class="ob-addr">Calle 64 #56-60, La Candelaria</div>
+        <div class="ob-phone">PBX (604) 527 3300</div>
+      </a>
+      <a href="/sucursales/bogota/" class="ob-card">
+        <div class="ob-city">Bogotá</div>
+        <div class="ob-dept">Cundinamarca</div>
+        <div class="ob-addr">Av. Troncal de Occidente No. 18-76</div>
+        <div class="ob-phone">312 826 5078</div>
+      </a>
+      <a href="/sucursales/cali/" class="ob-card">
+        <div class="ob-city">Cali</div>
+        <div class="ob-dept">Valle del Cauca</div>
+        <div class="ob-addr">Bloque A3 Oficina 104, Cencar</div>
+        <div class="ob-phone">310 369 5787</div>
+      </a>
+      <a href="/sucursales/buga/" class="ob-card">
+        <div class="ob-city">Buga</div>
+        <div class="ob-dept">Valle del Cauca</div>
+        <div class="ob-addr">Cra. 12A N.° 6Sur–94</div>
+        <div class="ob-phone">313 655 3232</div>
+      </a>
+      <a href="/sucursales/buenaventura/" class="ob-card">
+        <div class="ob-city">Buenaventura</div>
+        <div class="ob-dept">Valle del Cauca</div>
+        <div class="ob-addr">Calle 7B N.° 4–52 Piso 2</div>
+        <div class="ob-phone">313 659 7359</div>
+      </a>
+      <a href="/sucursales/barranquilla/" class="ob-card">
+        <div class="ob-city">Barranquilla</div>
+        <div class="ob-dept">Atlántico</div>
+        <div class="ob-addr">Cra. 28 #38-345 Av. Circunvalar</div>
+        <div class="ob-phone">310 442 7076</div>
+      </a>
+      <a href="/sucursales/cartagena/" class="ob-card">
+        <div class="ob-city">Cartagena</div>
+        <div class="ob-dept">Bolívar</div>
+        <div class="ob-addr">Diagonal 21 N.° 45A–11, Av. El Bosque</div>
+        <div class="ob-phone">314 772 8740</div>
+      </a>
+      <a href="/sucursales/" class="ob-card" style="background:#EEF3FA;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:100px;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C8D0DC" stroke-width="1.5" stroke-linecap="round" style="margin-bottom:7px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#C8D0DC;">Ver todas las sucursales</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="eyebrow" style="margin-bottom:12px;">Hablemos hoy</div>
+      <h2>Cotice su Transporte de Carga <span>en el Eje Cafetero</span></h2>
+      <p>Cuéntenos el tipo de carga, la ruta y el volumen. El equipo de nuestra sucursal en Manizales le diseña la solución logística para el Eje Cafetero y le responde en menos de 24 horas hábiles.</p>
+      <div class="cta-contact-list">
+        <div class="cta-contact">
+          <div class="cta-c-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6z"/></svg></div>
+          <div>
+            <div class="cta-c-label">Teléfono Manizales</div>
+            <div class="cta-c-val"><a href="tel:+573103695787">310 369 5787</a></div>
+          </div>
+        </div>
+        <div class="cta-contact">
+          <div class="cta-c-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div>
+            <div class="cta-c-label">Correo</div>
+            <div class="cta-c-val">servicioalcliente@transestrella.com</div>
+          </div>
+        </div>
+        <div class="cta-contact">
+          <div class="cta-c-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <div class="cta-c-label">Dirección</div>
+            <div class="cta-c-val">Calle 110 N.° 34A–75, Manizales</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-box">
+      <h3>Solicitar Cotización — Manizales</h3>
+      <p class="form-box-sub">Le respondemos desde nuestra sucursal en Manizales en menos de 24 horas hábiles.</p>
+      <div class="forminator-placeholder">
+        <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        <p>Formulario Forminator</p>
+        <span>[forminator_form id="XX"]</span>
+      </div>
+      <a href="https://wa.me/573103695787?text=Hola%2C%20quiero%20cotizar%20transporte%20de%20carga%20en%20Manizales%20Eje%20Cafetero" target="_blank" class="form-wa">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.524 5.847L.057 23.992l6.304-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.012-1.375l-.36-.214-3.733.979 1-3.642-.235-.374A9.791 9.791 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+        <span class="form-wa-text">¿Respuesta inmediata? WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<?php get_footer(); ?>

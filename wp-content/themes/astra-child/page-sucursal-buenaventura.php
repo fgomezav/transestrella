@@ -1,72 +1,20 @@
-<!DOCTYPE html>
-<html lang="es">
+<?php
+/**
+ * Template Name: Sucursal Buenaventura
+ * Template Post Type: page
+ */
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transporte de Carga en Buenaventura — Transportadora Estrella · Sucursal Buenaventura</title>
-  <meta name="description"
-    content="Empresa de transporte de carga masiva en Buenaventura y el corredor al Puerto Pacífico. Flota propia, GPS 24/7, BASC e ISO 9001. Calle 7B N.° 4–52 Piso 2. Tel: 313 659 7359. Importación y exportación.">
-  <link rel="canonical" href="https://transestrella.com/sucursales/buenaventura/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Nunito+Sans:wght@300;400;600;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="sucursal.css">
+get_header(); ?>
 
-  <!-- Schema.org LocalBusiness -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MovingCompany",
-  "name": "Transportadora Estrella — Sucursal Buenaventura",
-  "image": "https://transestrella.com/wp-content/uploads/2025/08/transporte-de-contenedores.jpg",
-  "url": "https://transestrella.com/sucursales/buenaventura/",
-  "telephone": "+573136597359",
-  "email": "servicioalcliente@transestrella.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Calle 7B N.° 4–52 Piso 2",
-    "addressLocality": "Buenaventura",
-    "addressRegion": "Valle del Cauca",
-    "addressCountry": "CO"
-  },
-  "openingHoursSpecification": [
-    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"18:00"},
-    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"07:00","closes":"13:00"}
-  ],
-  "priceRange":"$$",
-  "areaServed":["Buenaventura","Valle del Cauca","Colombia"],
-  "parentOrganization":{
-    "@type":"Organization",
-    "name":"Transportadora Estrella S.A.S.",
-    "url":"https://transestrella.com"
-  }
-}
-</script>
+<style>
+/* 
+  Estilos compartidos de las sucursales cargados desde /wp-content/themes/astra-child/sucursal.css.
+  Los estilos core (variables, header, footer, etc.) ya están en /styles.css de forma global. 
+*/
+<?php echo file_get_contents( get_stylesheet_directory() . '/sucursal.css' ); ?>
+</style>
 
-
-</head>
-
-<body>
-
-  <header>
-    <div class="nav-inner">
-      <a href="/" class="nav-logo">
-        <div class="nav-star"></div>TRANS<span>ESTRELLA</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="/nosotros/">Nosotros</a></li>
-        <li><a href="/servicios/">Servicios</a></li>
-        <li><a href="/sucursales/" class="active">Sucursales</a></li>
-        <li><a href="/blog/">Blog</a></li>
-        <li><a href="/contactanos/" class="nav-cta">Cotizar Ahora</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <!-- HERO -->
+<!-- HERO -->
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
@@ -871,77 +819,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a href="/" class="nav-logo">
-            <div class="nav-star"></div>TRANS<span style="color:var(--ts-gold);">ESTRELLA</span>
-          </a>
-          <p>Empresa de transporte de carga masiva y semi masiva terrestre en Colombia. Más de 30 años conectando
-            empresas con todo el territorio nacional.</p>
-          <div class="footer-certs">
-            <span class="footer-cert">ISO 9001</span>
-            <span class="footer-cert">BASC</span>
-            <span class="footer-cert">SuperTransporte</span>
-          </div>
-        </div>
-        <div>
-          <div class="footer-col-title">Servicios</div>
-          <ul class="footer-links">
-            <li><a href="/servicios/transporte-de-carga-terrestre-nacional/">Carga Terrestre Nacional</a></li>
-            <li><a href="/servicios/transporte-urbano-de-mercancias/">Transporte Urbano</a></li>
-            <li><a href="/servicios/transporte-de-carga-peligrosa/">Mercancías Peligrosas</a></li>
-            <li><a href="/servicios/itr/">ITR Internacional</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer-col-title">Sucursales</div>
-          <ul class="footer-links">
-            <li><a href="/sucursales/medellin/">Medellín (Sede Principal)</a></li>
-            <li><a href="/sucursales/cali/">Cali</a></li>
-            <li><a href="/sucursales/buga/">Buga</a></li>
-            <li><a href="/sucursales/buenaventura/">Buenaventura</a></li>
-            <li><a href="/sucursales/">Ver todas →</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer-col-title">Empresa</div>
-          <ul class="footer-links">
-            <li><a href="/nosotros/">Nosotros</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/contactanos/">Contáctanos</a></li>
-            <li><a href="/preguntas-frecuentes/">Preguntas Frecuentes</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="footer-copy">© 2026 Transportadora Estrella S.A.S. — Todos los derechos reservados.</div>
-        <div class="footer-legal">
-          <a href="#">Política de Privacidad</a>
-          <a href="#">Tratamiento de Datos</a>
-          <a href="#">Política Integrada</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  
 
-  <div class="wa-float">
-    <div class="wa-bubble">
-      <strong>Sucursal Buenaventura</strong>
-      313 659 7359
-    </div>
-    <a href="https://wa.me/573136597359" target="_blank" class="wa-btn">
-      <svg viewBox="0 0 24 24">
-        <path
-          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
-        <path
-          d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.524 5.847L.057 23.992l6.304-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.012-1.375l-.36-.214-3.733.979 1-3.642-.235-.374A9.791 9.791 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z" />
-      </svg>
-    </a>
-  </div>
-
-</body>
-
-</html>
+<?php get_footer(); ?>

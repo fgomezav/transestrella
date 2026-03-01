@@ -184,3 +184,71 @@
   .hero-left h1{font-size:36px;}
   .cargo-grid,.services-grid,.ob-grid{grid-template-columns:1fr;}
 }
+
+/* ── PUERTO BADGE & HERO CHIPS (Buenaventura specific) ── */
+.puerto-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(245,166,35,.08);border:1px solid rgba(245,166,35,.22);border-radius:6px;padding:10px 16px;margin-bottom:24px;}
+.puerto-badge-icon{width:36px;height:36px;background:rgba(245,166,35,.12);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.puerto-badge-icon svg{width:18px;height:18px;stroke:var(--ts-gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.puerto-badge-text{font-family:var(--font-display);font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ts-gold);line-height:1.3;}
+.puerto-badge-sub{font-size:11px;color:rgba(245,166,35,.55);letter-spacing:.06em;text-transform:uppercase;}
+
+.hero-chips{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;}
+.hero-chip{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:8px 14px;}
+.hero-chip-num{font-family:var(--font-display);font-size:20px;font-weight:800;color:var(--ts-gold);line-height:1;}
+.hero-chip-label{font-size:11px;color:rgba(255,255,255,.45);line-height:1.3;}
+
+/* ── BANNER PUERTO ── */
+.puerto-banner{background:var(--ts-blue);padding:22px 40px;}
+.puerto-banner-inner{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.pb-item{display:flex;align-items:center;gap:12px;}
+.pb-icon{width:38px;height:38px;background:rgba(255,255,255,.1);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.pb-icon svg{width:16px;height:16px;stroke:var(--ts-gold);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.pb-text-label{font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:rgba(255,255,255,.45);}
+.pb-text-val{font-family:var(--font-display);font-size:15px;font-weight:800;color:#fff;line-height:1.1;}
+.pb-divider{width:1px;height:36px;background:rgba(255,255,255,.12);}
+
+/* ── TERMINALES ── */
+.terminales{padding:56px 40px;background:var(--ts-gray-bg);}
+.terminales-inner{max-width:1240px;margin:0 auto;}
+.terminales-header{text-align:center;margin-bottom:36px;}
+.terminales-header h3{font-family:var(--font-display);font-size:clamp(22px,2.5vw,32px);font-weight:800;text-transform:uppercase;color:#333;margin-top:10px;}
+.terminales-header h3 span{color:var(--ts-gold);}
+.terminales-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.terminal-card{background:#fff;border-radius:10px;padding:20px 18px;border:1px solid var(--ts-gray-line);transition:border-color .2s,box-shadow .2s;}
+.terminal-card:hover{border-color:var(--ts-blue);box-shadow:0 6px 16px rgba(8,50,102,.07);}
+.terminal-tag{display:inline-block;font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ts-blue);background:#EEF3FA;border-radius:3px;padding:3px 8px;margin-bottom:10px;}
+.terminal-name{font-family:var(--font-display);font-size:17px;font-weight:800;text-transform:uppercase;color:#333;margin-bottom:5px;line-height:1.1;}
+.terminal-desc{font-size:12px;color:#333;line-height:1.55;}
+
+/* ── CORREDOR CHIPS (Manizales specific) ── */
+.corredor-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px;}
+.corredor-chip{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:6px 12px;}
+.corredor-chip span{font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.65);}
+.corredor-chip-dot{width:6px;height:6px;border-radius:50%;background:var(--ts-gold);flex-shrink:0;}
+
+/* ── COBERTURA EJE CAFETERO ── */
+.cobertura{padding:56px 40px;background:var(--ts-blue-deep);position:relative;overflow:hidden;}
+.cobertura::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:52px 52px;}
+.cobertura-inner{max-width:1240px;margin:0 auto;position:relative;z-index:2;}
+.cobertura-header{text-align:center;margin-bottom:36px;}
+.cobertura-header h3{font-family:var(--font-display);font-size:clamp(22px,2.5vw,32px);font-weight:800;text-transform:uppercase;color:#fff;margin-top:10px;}
+.cobertura-header h3 span{color:var(--ts-gold);}
+.cobertura-header p{font-size:15px;color:rgba(255,255,255,.45);max-width:480px;margin:10px auto 0;}
+.cobertura-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.cob-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:20px 18px;transition:border-color .2s;}
+.cob-card:hover{border-color:rgba(245,166,35,.3);}
+.cob-dpto{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ts-gold);margin-bottom:6px;}
+.cob-ciudad-principal{font-family:var(--font-display);font-size:20px;font-weight:800;text-transform:uppercase;color:#fff;margin-bottom:4px;}
+.cob-ciudades{font-size:12px;color:rgba(255,255,255,.42);line-height:1.6;}
+
+/* ── RESPONSIVE OVERRIDES (Manizales specific components) ── */
+@media(max-width:1024px){
+  .cobertura-grid{grid-template-columns:1fr;}
+}
+@media(max-width:768px){
+  .cobertura{padding:48px 20px;}
+  .cobertura-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){
+  .cobertura-grid{grid-template-columns:1fr;}
+}

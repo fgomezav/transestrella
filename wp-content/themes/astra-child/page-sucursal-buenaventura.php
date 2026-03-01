@@ -695,43 +695,43 @@ get_header(); ?>
         <a href="/sucursales/" class="btn-outline-blue">Ver todas →</a>
       </div>
       <div class="ob-grid">
-        <a href="/sucursales/medellin/" class="ob-card">
+        <a href="/sucursales/sucursal-medellin/" class="ob-card">
           <div class="ob-city">Medellín</div>
           <div class="ob-dept">Antioquia · Sede Principal</div>
           <div class="ob-addr">Calle 64 #56-60, La Candelaria</div>
           <div class="ob-phone">PBX (604) 527 3300</div>
         </a>
-        <a href="/sucursales/cali/" class="ob-card">
+        <a href="/sucursales/sucursal-cali/" class="ob-card">
           <div class="ob-city">Cali</div>
           <div class="ob-dept">Valle del Cauca</div>
           <div class="ob-addr">Bloque A3 Oficina 104, Cencar</div>
           <div class="ob-phone">310 369 5787</div>
         </a>
-        <a href="/sucursales/buga/" class="ob-card">
+        <a href="/sucursales/sucursal-buga/" class="ob-card">
           <div class="ob-city">Buga</div>
           <div class="ob-dept">Valle del Cauca</div>
           <div class="ob-addr">Cra. 12A N.° 6Sur–94</div>
           <div class="ob-phone">313 655 3232</div>
         </a>
-        <a href="/sucursales/bogota/" class="ob-card">
+        <a href="/sucursales/sucursal-bogota/" class="ob-card">
           <div class="ob-city">Bogotá</div>
           <div class="ob-dept">Cundinamarca</div>
           <div class="ob-addr">Av. Troncal de Occidente No. 18-76</div>
           <div class="ob-phone">312 826 5078</div>
         </a>
-        <a href="/sucursales/barranquilla/" class="ob-card">
+        <a href="/sucursales/sucursal-barranquilla/" class="ob-card">
           <div class="ob-city">Barranquilla</div>
           <div class="ob-dept">Atlántico</div>
           <div class="ob-addr">Cra. 28 #38-345 Av. Circunvalar</div>
           <div class="ob-phone">310 442 7076</div>
         </a>
-        <a href="/sucursales/cartagena/" class="ob-card">
+        <a href="/sucursales/sucursal-cartagena/" class="ob-card">
           <div class="ob-city">Cartagena</div>
           <div class="ob-dept">Bolívar</div>
           <div class="ob-addr">Diagonal 21 N.° 45A–11, Av. El Bosque</div>
           <div class="ob-phone">314 772 8740</div>
         </a>
-        <a href="/sucursales/manizales/" class="ob-card">
+        <a href="/sucursales/sucursal-manizales/" class="ob-card">
           <div class="ob-city">Manizales</div>
           <div class="ob-dept">Caldas</div>
           <div class="ob-addr">Calle 110 N.° 34A–75</div>

@@ -423,7 +423,7 @@ get_header(); ?>
       <a href="/sucursales/" class="btn-outline-blue">Ver todas →</a>
     </div>
     <div class="ob-grid">
-      <a href="/sucursales/medellin/" class="ob-card">
+      <a href="/sucursales/sucursal-medellin/" class="ob-card">
         <div class="ob-city">Medellín</div>
         <div class="ob-dept">Antioquia · Sede Principal</div>
         <div class="ob-addr">Calle 64 #56-60, La Candelaria</div>

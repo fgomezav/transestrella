@@ -658,28 +658,26 @@ get_header();
         </a>
         <a href="<?php echo esc_url(home_url('/servicios/transporte-de-contenedores/')); ?>" class="other-card">
           <div class="other-card-img">
-            <img
-              src="https://transestrella.com/wp-content/uploads/2025/04/transportadora-estrella-puerto-contenedores-1024x645.webp"
-              alt="Transporte de contenedores — puertos Colombia" loading="lazy">
+            <img src="https://transestrella.com/wp-content/uploads/2025/06/camion-cisterna.webp"
+              alt="Transporte mercancías peligrosas — Transportadora Estrella" loading="lazy">
           </div>
           <div class="other-card-body">
-            <div class="other-tag">Puertos DTA/OTM</div>
-            <h4>Transporte de Contenedores</h4>
-            <p>Movimiento seguro desde y hacia los principales puertos de Colombia.</p>
+            <div class="other-tag">Especializado</div>
+            <h4>Transporte de Mercancías Peligrosas</h4>
+            <p>Personal certificado y flota especializada bajo normativa ADR.</p>
             <div class="other-link">Ver servicio →</div>
           </div>
         </a>
         <a href="<?php echo esc_url(home_url('/servicios/')); ?>" class="other-card">
           <div class="other-card-img">
-            <img
-              src="https://transestrella.com/wp-content/uploads/2025/04/transportadora-estrella-nuestra-flota-transporte-de-carga-pesada-1-1024x576.jpeg"
-              alt="Logística y flota de Transportadora Estrella" loading="lazy">
+            <img src="https://transestrella.com/wp-content/uploads/2025/08/transporte-de-contenedores.jpg"
+              alt="ITR transporte internacional — Transportadora Estrella" loading="lazy">
           </div>
           <div class="other-card-body">
-            <div class="other-tag">Soluciones</div>
-            <h4>Logística Integral</h4>
-            <p>Conozca todas nuestras soluciones logísticas diseñadas a su medida.</p>
-            <div class="other-link">Ver todos →</div>
+            <div class="other-tag">Internacional</div>
+            <h4>ITR — Importación y Exportación</h4>
+            <p>Desde los puertos de Buenaventura y Cartagena al mundo.</p>
+            <div class="other-link">Ver servicio →</div>
           </div>
         </a>
       </div>
@@ -716,7 +714,9 @@ get_header();
             </div>
             <div>
               <div class="cta-c-label">Correo Electrónico</div>
-              <div class="cta-c-val">servicioalcliente@transestrella.com</div>
+              <div class="cta-c-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                  data-cfemail="83f0e6f1f5eae0eaece2efe0efeae6edf7e6c3f7f1e2edf0e6f0f7f1e6efefe2ade0ecee">[email&#160;protected]</a>
+              </div>
             </div>
           </div>
           <div class="cta-contact">
@@ -748,23 +748,14 @@ get_header();
               ni envíos individuales.</div>
           </div>
         </div>
-        <?php
-$form_shortcode = '[forminator_form id="1272"]'; // Asegúrate de cambiar el ID si no corresponde
-if (shortcode_exists('forminator_form')) {
-  echo do_shortcode($form_shortcode);
-}
-else {
-?>
         <div class="forminator-placeholder">
           <svg viewBox="0 0 24 24">
             <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
             <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
           </svg>
           <p>Formulario Forminator</p>
-          <span>[forminator_form id="1272"]</span>
+          <span>[forminator_form id="XX"]</span>
         </div>
-        <?php
-}?>
         <a href="https://wa.me/576045273300?text=Hola%2C%20necesito%20cotizar%20transporte%20de%20carga%20nacional"
           target="_blank" class="form-wa">
           <svg viewBox="0 0 24 24">

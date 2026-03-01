@@ -1,0 +1,64 @@
+0000.001 () Opened log file at time: Wed, 11 Feb 2026 16:41:36 +0000 on http://transestrella.test
+0000.002 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.26.1 WP: 6.9.1 PHP: 8.4.17 (fpm-fcgi, Darwin Fabs-MaC.local 25.2.0 Darwin Kernel Version 25.2.0: Tue Nov 18 21:09:40 PST 2025; root:xnu-12377.61.12~1/RELEASE_ARM64_T6000 arm64) MySQL: 5.7.39 (max packet size=33554432) WPLANG: es_CO Server: nginx/1.25.4 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 6.3M | 8M) multisite: N openssl: OpenSSL 3.6.0 1 Oct 2025 mcrypt: N LANG:  WP Proxy: disabled ZipArchive::addFile: Y
+0000.002 () Free space on disk containing Updraft's temporary directory: 20357.3 MB
+0000.004 () Restore setup, now closing connection and starting restore over AJAX.
+0000.001 () Opened log file at time: Wed, 11 Feb 2026 16:41:36 +0000 on http://transestrella.test
+0000.001 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.26.1 WP: 6.9.1 PHP: 8.4.17 (fpm-fcgi, Darwin Fabs-MaC.local 25.2.0 Darwin Kernel Version 25.2.0: Tue Nov 18 21:09:40 PST 2025; root:xnu-12377.61.12~1/RELEASE_ARM64_T6000 arm64) MySQL: 5.7.39 (max packet size=33554432) WPLANG: es_CO Server: nginx/1.25.4 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 3.8M | 4M) multisite: N openssl: OpenSSL 3.6.0 1 Oct 2025 mcrypt: N LANG:  WP Proxy: disabled ZipArchive::addFile: Y
+0000.001 () Free space on disk containing Updraft's temporary directory: 20355.6 MB
+0000.002 () Ensuring WP_Filesystem is setup for a restore
+0000.002 () WP_Filesystem is setup and ready for a restore
+0000.004 () Restore job started. Entities to restore: plugins, themes, uploads, others. Restore options: {"updraft_encryptionphrase":"","updraft_restorer_wpcore_includewpconfig":false,"updraft_incremental_restore_point":-1}
+0000.005 () PHP event: code E_WARNING: mkdir(): File exists (line 558, wp-admin/includes/class-wp-filesystem-direct.php)
+0000.007 () Entity: plugins
+0000.007 () restore_backup(backup_file=backup_2026-02-09-1438_Transportadora_Estrella_29f1907b0a0b-plugins.zip, type=plugins, info=a:3:{s:4:"path";s:68:"/Users/fgomezav/workspace/bitbucket/transestrella/wp-content/plugins";s:11:"description";s:18:"Plugins (/plugins)";s:20:"singular_description";s:6:"Plugin";}, last_one=)
+0000.007 () Descomprimiendo el respaldo... (backup_2026-02-09-1438_Transportadora_Estrella_29f1907b0a0b-plugins.zip, 25.8 MB)
+0000.008 () Unzipping backup_2026-02-09-1438_Transportadora_Estrella_29f1907b0a0b-plugins.zip to /Users/fgomezav/workspace/bitbucket/transestrella/wp-content/upgrade/dba22af2/ using UpdraftPlus_ZipArchive, starting index 0
+0000.490 () Unzip progress: 1184 out of 7458 files (28 B, plugins/eps-301-redirects/css/index.php)
+0000.661 () Unzip progress: 2185 out of 7458 files (23.6 MB, plugins/updraftplus/vendor/phpseclib/phpseclib/phpseclib/Crypt/Hash.php)
+0000.785 () Unzip progress: 3186 out of 7458 files (30 MB, plugins/wordpress-seo/src/user-meta/framework/additional-contactmethods/tumblr.php)
+0000.927 () Unzip progress: 4187 out of 7458 files (41.5 MB, plugins/forminator/admin/views/dashboard/widgets/widget-resume.php)
+0001.086 () Unzip progress: 5188 out of 7458 files (69.4 MB, plugins/forminator/addons/pro/googlesheet/lib/external/vendor-prefixed/guzzlehttp/promises/src/Utils.php)
+0001.236 () Unzip progress: 6189 out of 7458 files (73.9 MB, plugins/forminator/addons/pro/mailerlite/class-forminator-addon-mailerlite.php)
+0001.389 () Unzip progress: 7190 out of 7458 files (87 MB, plugins/easy-wp-smtp/src/WPMailInitiator.php)
+0001.438 () Unzip progress: 7458 out of 7458 files (89.2 MB, plugins/easy-wp-smtp/uninstall.php)
+0001.440 () Moving old data: filesystem method / updraft_dir is potentially possible
+0001.440 () Moving old data: can potentially use wp_filesystem method / -old
+0001.440 () Quitando de en medio los datos antiguos...
+0001.653 () Top-level entities being moved: index.php, akismet, updraftplus, hello.php
+0001.655 () Moviendo el respaldo desempaquetado a su lugar...
+0002.453 () Top-level entities being moved: index.php, akismet, forminator, eps-301-redirects, updraftplus, easy-wp-smtp, wordpress-seo, wp-headers-and-footers
+0002.455 () Limpiando basura...
+0002.458 () Entity: themes
+0002.458 () restore_backup(backup_file=backup_2026-02-09-1438_Transportadora_Estrella_29f1907b0a0b-themes.zip, type=themes, info=a:3:{s:4:"path";s:67:"/Users/fgomezav/workspace/bitbucket/transestrella/wp-content/themes";s:11:"description";s:15:"Temas (/themes)";s:20:"singular_description";s:5:"Theme";}, last_one=)
+0002.458 () Descomprimiendo el respaldo... (backup_2026-02-09-1438_Transportadora_Estrella_29f1907b0a0b-themes.zip, 36.6 MB)
+0002.458 () Unzipping backup_2026-02-09-1438_Transportadora_Estrella_29f1907b0a0b-themes.zip to /Users/fgomezav/workspace/bitbucket/transestrella/wp-content/upgrade/53c5f1f3/ using UpdraftPlus_ZipArchive, starting index 0
+0002.758 () Unzip progress: 1002 out of 3322 files (13.3 MB, themes/astra/inc/assets/images/ai-logo.svg)
+0002.934 () Unzip progress: 2003 out of 3322 files (37.2 MB, themes/Divi/includes/builder/feature/dynamic-assets/assets/css/video_player_cpt.css)
+0003.160 () Unzip progress: 3004 out of 3322 files (82.8 MB, themes/Divi/core/admin/fonts/fontawesome/fa-solid-900.ttf)
+0003.228 () Unzip progress: 3322 out of 3322 files (97.8 MB, themes/twentytwentyfive/styles/06-morning.json)
+0003.229 () Moving old data: filesystem method / updraft_dir is potentially possible
+0003.229 () Moving old data: can potentially use wp_filesystem method / -old
+0003.229 () Quitando de en medio los datos antiguos...
+0003.321 () Top-level entities being moved: index.php, twentytwentyfive, twentytwentyfour, twentytwentytwo, twentytwentythree
+0003.322 () Moviendo el respaldo desempaquetado a su lugar...
+0003.666 () Top-level entities being moved: index.php, twentytwentyfive, Divi-Child, twentytwentyfour, Divi, twentytwentythree, astra
+0003.667 () Limpiando basura...
+0003.669 () Entity: uploads
+0003.669 () restore_backup(backup_file=backup_2026-02-09-1438_Transportadora_Estrella_29f1907b0a0b-uploads.zip, type=uploads, info=a:2:{s:4:"path";s:68:"/Users/fgomezav/workspace/bitbucket/transestrella/wp-content/uploads";s:11:"description";s:27:"Ficheros subidos (/uploads)";}, last_one=)
+0003.669 () Descomprimiendo el respaldo... (backup_2026-02-09-1438_Transportadora_Estrella_29f1907b0a0b-uploads.zip, 61.3 MB)
+0003.669 () Unzipping backup_2026-02-09-1438_Transportadora_Estrella_29f1907b0a0b-uploads.zip to /Users/fgomezav/workspace/bitbucket/transestrella/wp-content/upgrade/81e396b7/ using UpdraftPlus_ZipArchive, starting index 0
+0003.826 () Unzip progress: 494 out of 494 files (61.2 MB, uploads/2025/09/seguridad-vial-en-el-transporte-de-carga-2-300x200.jpg)
+0003.826 () Moving old data: filesystem method / updraft_dir is potentially possible
+0003.826 () Moving old data: can potentially use wp_filesystem method / -old
+0003.826 () Quitando de en medio los datos antiguos...
+0003.827 () Moviendo el respaldo desempaquetado a su lugar...
+0003.876 () Limpiando basura...
+0003.878 () Entity: others
+0003.878 () restore_backup(backup_file=backup_2026-02-09-1438_Transportadora_Estrella_29f1907b0a0b-others.zip, type=others, info=a:2:{s:4:"path";s:60:"/Users/fgomezav/workspace/bitbucket/transestrella/wp-content";s:11:"description";s:5:"Otros";}, last_one=1)
+0003.878 () Descomprimiendo el respaldo... (backup_2026-02-09-1438_Transportadora_Estrella_29f1907b0a0b-others.zip, 2.4 MB)
+0003.878 () Unzipping backup_2026-02-09-1438_Transportadora_Estrella_29f1907b0a0b-others.zip to /Users/fgomezav/workspace/bitbucket/transestrella/wp-content/upgrade/a9868fbc/ using UpdraftPlus_ZipArchive, starting index 0
+0003.950 () Unzip progress: 143 out of 143 files (8.7 MB, et-cache/es_CO/modules-page-17698767303864.data)
+0003.952 () Limpiando basura...
+0003.968 () Divi's cache directory exists, and will be emptied (so that it will be automatically regenerated)
+0003.970 () Restore successful!
+0003.970 () Restore successful

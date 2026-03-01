@@ -1,0 +1,6 @@
+0000.016 (R) [notice] Buscando archivo (db), nombre del fichero: backup_2026-02-27-0436_Transportadora_Estrella_f44692231113-db.gz
+0000.016 (R) [notice] Tamaño esperado del archivo: 6062.8 KB: Ok
+0000.017 (R) [notice] Buscando archivo (plugins), nombre del fichero: backup_2026-02-27-0436_Transportadora_Estrella_f44692231113-plugins.zip
+0000.017 (R) [notice] Tamaño esperado del archivo: 26372 KB: Ok
+0000.025 (R) [warning] Error: Existing unremoved folders from a previous restore exist (please use the "Delete old folders" button to delete them before trying again): /Users/fgomezav/workspace/bitbucket/transestrella/wp-content/updraft/plugins-old
+0000.031 (R) [notice] Restore failed...

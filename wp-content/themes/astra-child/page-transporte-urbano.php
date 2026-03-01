@@ -1,0 +1,1919 @@
+<?php
+/**
+ * Template Name: Transporte Urbano
+ */
+
+get_header(); ?>
+
+<style>
+  /* CSS específico de Transporte Urbano */
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    background: var(--ts-blue-deep);
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://transestrella.com/wp-content/uploads/2025/06/camio-urbano-de-transporte.webp');
+    background-size: cover;
+    background-position: center;
+    opacity: .2;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, rgba(8, 50, 102, .97) 0%, rgba(8, 50, 102, .88) 45%, rgba(15, 91, 167, .25) 100%);
+  }
+
+  .hero-line {
+    position: absolute;
+    top: 0;
+    right: 36%;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(245, 166, 35, .12), transparent);
+    transform: rotate(10deg);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 5;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 120px 40px 96px;
+    width: 100%;
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+
+  .breadcrumb a {
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .4);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--ts-gold);
+  }
+
+  .breadcrumb-sep {
+    color: rgba(255, 255, 255, .2);
+    font-size: 12px;
+  }
+
+  .breadcrumb span {
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ts-gold);
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(46px, 6.5vw, 82px);
+    font-weight: 800;
+    line-height: .92;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    letter-spacing: .01em;
+    margin-bottom: 22px;
+    max-width: 740px;
+  }
+
+  .hero h1 em {
+    color: var(--ts-gold);
+    font-style: normal;
+    display: block;
+  }
+
+  .hero-desc {
+    font-size: 17px;
+    line-height: 1.78;
+    color: rgba(255, 255, 255, .65);
+    max-width: 560px;
+    margin-bottom: 38px;
+  }
+
+  .hero-btns {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+
+  .hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 44px;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+  }
+
+  .hero-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 100px;
+    padding: 7px 16px;
+  }
+
+  .hero-pill svg {
+    width: 14px;
+    height: 14px;
+    stroke: var(--ts-gold);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+  }
+
+  .hero-pill span {
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .72);
+  }
+
+  /* ── INTRO 2-COL ── */
+  .intro {
+    padding: 88px 40px;
+    background: #FFFFFF;
+  }
+
+  .intro-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .intro-text .eyebrow {
+    margin-bottom: 16px;
+  }
+
+  .intro-text h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.2vw, 42px);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333333;
+    line-height: 1.0;
+    margin-bottom: 18px;
+  }
+
+  .intro-text h2 span {
+    color: var(--ts-gold);
+  }
+
+  .intro-text p {
+    font-size: 15px;
+    color: #333333;
+    line-height: 1.8;
+    margin-bottom: 14px;
+  }
+
+  .intro-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .intro-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .intro-img {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--ts-gray-line);
+  }
+
+  .intro-img img {
+    width: 100%;
+    display: block;
+    height: 260px;
+    object-fit: cover;
+  }
+
+  /* Key points panel */
+  .intro-keypoints {
+    background: var(--ts-gray-bg);
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid var(--ts-gray-line);
+  }
+
+  .intro-keypoints-title {
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ts-blue);
+    margin-bottom: 14px;
+  }
+
+  .kp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .kp-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #333333;
+  }
+
+  .kp-icon {
+    width: 28px;
+    height: 28px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid var(--ts-gray-line);
+  }
+
+  .kp-icon svg {
+    width: 13px;
+    height: 13px;
+    stroke: var(--ts-gold);
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* ── CIUDADES ── */
+  .cities {
+    padding: 72px 40px;
+    background: var(--ts-gray-bg);
+  }
+
+  .cities-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  .cities-header {
+    text-align: center;
+    max-width: 520px;
+    margin: 0 auto 44px;
+  }
+
+  .cities-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333333;
+    line-height: 1.0;
+    margin-bottom: 10px;
+    margin-top: 12px;
+  }
+
+  .cities-header h2 span {
+    color: var(--ts-gold);
+  }
+
+  .cities-header p {
+    font-size: 16px;
+    color: #333333;
+  }
+
+  .cities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+
+  .city-card {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px 18px;
+    border: 1px solid var(--ts-gray-line);
+    transition: border-color .2s, box-shadow .2s;
+  }
+
+  .city-card:hover {
+    border-color: var(--ts-gold);
+    box-shadow: 0 6px 20px rgba(245, 166, 35, .08);
+  }
+
+  .city-card.main {
+    border-color: var(--ts-gold);
+    background: rgba(245, 166, 35, .03);
+  }
+
+  .city-icon {
+    width: 36px;
+    height: 36px;
+    background: #EEF3FA;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .city-icon svg {
+    width: 16px;
+    height: 16px;
+    stroke: var(--ts-blue);
+    fill: none;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .city-name {
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333333;
+    margin-bottom: 3px;
+  }
+
+  .city-detail {
+    font-size: 12px;
+    color: var(--ts-gray);
+    line-height: 1.5;
+  }
+
+  .city-tag {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--ts-gold);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    margin-top: 5px;
+  }
+
+  /* ── FLOTA ── */
+  .fleet {
+    padding: 88px 40px;
+    background: #FFFFFF;
+  }
+
+  .fleet-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  .fleet-header {
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto 52px;
+  }
+
+  .fleet-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333333;
+    line-height: 1.0;
+    margin-bottom: 12px;
+    margin-top: 12px;
+  }
+
+  .fleet-header h2 span {
+    color: var(--ts-gold);
+  }
+
+  .fleet-header p {
+    font-size: 16px;
+    color: #333333;
+  }
+
+  .fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .fleet-card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--ts-gray-line);
+    transition: box-shadow .22s, transform .22s;
+  }
+
+  .fleet-card:hover {
+    box-shadow: 0 14px 32px rgba(8, 50, 102, .09);
+    transform: translateY(-4px);
+  }
+
+  .fleet-card-img {
+    height: 220px;
+    overflow: hidden;
+    background: var(--ts-blue-deep);
+  }
+
+  .fleet-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .35s;
+  }
+
+  .fleet-card:hover .fleet-card-img img {
+    transform: scale(1.05);
+  }
+
+  .fleet-card-img-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fleet-card-img-placeholder svg {
+    width: 56px;
+    height: 56px;
+    stroke: rgba(255, 255, 255, .2);
+    fill: none;
+    stroke-width: 1.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .fleet-card-body {
+    padding: 22px 24px;
+  }
+
+  .fleet-card-tag {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ts-gold);
+    background: rgba(245, 166, 35, .1);
+    border-radius: 3px;
+    padding: 3px 8px;
+    margin-bottom: 8px;
+  }
+
+  .fleet-card-body h4 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333333;
+    margin-bottom: 8px;
+  }
+
+  .fleet-card-body p {
+    font-size: 14px;
+    color: #333333;
+    line-height: 1.65;
+    margin-bottom: 14px;
+  }
+
+  .fleet-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .fleet-spec {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--ts-blue);
+    background: #EEF3FA;
+    border-radius: 4px;
+    padding: 4px 9px;
+  }
+
+  /* ── MODELO OPERATIVO ── */
+  .model {
+    padding: 88px 40px;
+    background: var(--ts-gray-bg);
+  }
+
+  .model-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+  }
+
+  .model-text .eyebrow {
+    margin-bottom: 16px;
+  }
+
+  .model-text h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.2vw, 42px);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333333;
+    line-height: 1.0;
+    margin-bottom: 18px;
+  }
+
+  .model-text h2 span {
+    color: var(--ts-gold);
+  }
+
+  .model-text p {
+    font-size: 15px;
+    color: #333333;
+    line-height: 1.8;
+    margin-bottom: 28px;
+  }
+
+  .model-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .model-step {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--ts-gray-line);
+  }
+
+  .model-step:last-child {
+    border-bottom: none;
+  }
+
+  .model-step-num {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--ts-gold);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 32px;
+  }
+
+  .model-step-body h5 {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333333;
+    margin-bottom: 4px;
+  }
+
+  .model-step-body p {
+    font-size: 14px;
+    color: #333333;
+    line-height: 1.6;
+  }
+
+  /* Visual side */
+  .model-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .model-stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .model-stat {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 24px 20px;
+    border: 1px solid var(--ts-gray-line);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .model-stat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--ts-gold);
+  }
+
+  .model-stat-num {
+    font-family: var(--font-display);
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--ts-blue);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .model-stat-label {
+    font-size: 12px;
+    color: #333333;
+    line-height: 1.4;
+  }
+
+  .model-img {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--ts-gray-line);
+  }
+
+  .model-img img {
+    width: 100%;
+    display: block;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  /* ── ESTRATEGIAS / VENTAJAS ── */
+  .advantages {
+    padding: 88px 40px;
+    background: var(--ts-blue-deep);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .advantages::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, .025) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .025) 1px, transparent 1px);
+    background-size: 52px 52px;
+  }
+
+  .advantages-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .advantages-header {
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto 52px;
+  }
+
+  .advantages-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    line-height: 1.0;
+    margin-bottom: 12px;
+    margin-top: 12px;
+  }
+
+  .advantages-header h2 span {
+    color: var(--ts-gold);
+  }
+
+  .advantages-header p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, .55);
+  }
+
+  .advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .adv-card {
+    background: rgba(255, 255, 255, .04);
+    padding: 32px 28px;
+    transition: background .2s;
+  }
+
+  .adv-card:hover {
+    background: rgba(255, 255, 255, .07);
+  }
+
+  .adv-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(245, 166, 35, .1);
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    border: 1px solid rgba(245, 166, 35, .2);
+  }
+
+  .adv-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: var(--ts-gold);
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .adv-card h4 {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+    line-height: 1.1;
+  }
+
+  .adv-card p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, .52);
+    line-height: 1.65;
+  }
+
+  /* ── SECTORES ── */
+  .sectors {
+    padding: 88px 40px;
+    background: #FFFFFF;
+  }
+
+  .sectors-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  .sectors-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 20px;
+    margin-bottom: 48px;
+  }
+
+  .sectors-header-left h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333333;
+    line-height: 1.0;
+    margin-bottom: 10px;
+    margin-top: 12px;
+  }
+
+  .sectors-header-left h2 span {
+    color: var(--ts-gold);
+  }
+
+  .sectors-header-left p {
+    font-size: 16px;
+    color: #333333;
+    max-width: 420px;
+  }
+
+  .sectors-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .sector-card {
+    background: var(--ts-gray-bg);
+    border-radius: 10px;
+    padding: 22px 18px;
+    border: 1px solid var(--ts-gray-line);
+    transition: border-color .2s;
+  }
+
+  .sector-card:hover {
+    border-color: var(--ts-blue);
+  }
+
+  .sector-icon {
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    border: 1px solid var(--ts-gray-line);
+  }
+
+  .sector-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--ts-blue);
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .sector-card h4 {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333333;
+    margin-bottom: 5px;
+    line-height: 1.1;
+  }
+
+  .sector-card p {
+    font-size: 12px;
+    color: var(--ts-gray);
+    line-height: 1.5;
+  }
+
+  /* ── OTHER SERVICES ── */
+  .other-services {
+    padding: 72px 40px;
+    background: var(--ts-gray-bg);
+    border-top: 1px solid var(--ts-gray-line);
+  }
+
+  .other-services-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  .other-header {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .other-header h3 {
+    font-family: var(--font-display);
+    font-size: clamp(22px, 2.5vw, 32px);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333333;
+    margin-top: 10px;
+  }
+
+  .other-header p {
+    font-size: 15px;
+    color: var(--ts-gray);
+    margin-top: 6px;
+  }
+
+  .other-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .other-card {
+    border: 1px solid var(--ts-gray-line);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border-color .2s, box-shadow .2s;
+    text-decoration: none;
+    background: #FFFFFF;
+  }
+
+  .other-card:hover {
+    border-color: var(--ts-gold);
+    box-shadow: 0 6px 20px rgba(245, 166, 35, .08);
+  }
+
+  .other-card-img {
+    height: 140px;
+    overflow: hidden;
+  }
+
+  .other-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .3s;
+  }
+
+  .other-card:hover .other-card-img img {
+    transform: scale(1.05);
+  }
+
+  .other-card-body {
+    padding: 16px 18px;
+  }
+
+  .other-tag {
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ts-gold);
+    margin-bottom: 5px;
+  }
+
+  .other-card-body h4 {
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333333;
+    line-height: 1.1;
+    margin-bottom: 5px;
+  }
+
+  .other-card-body p {
+    font-size: 13px;
+    color: var(--ts-gray);
+  }
+
+  .other-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--ts-blue);
+    margin-top: 10px;
+  }
+
+  /* ── CTA FINAL ── */
+  .cta {
+    background: var(--ts-blue-deep);
+    padding: 88px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    left: -8%;
+    width: 55%;
+    height: 180%;
+    background: radial-gradient(ellipse, rgba(15, 91, 167, .2) 0%, transparent 68%);
+  }
+
+  .cta::after {
+    content: '';
+    position: absolute;
+    bottom: -25%;
+    right: -4%;
+    width: 45%;
+    height: 140%;
+    background: radial-gradient(ellipse, rgba(245, 166, 35, .08) 0%, transparent 68%);
+  }
+
+  .cta-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: start;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cta-text h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.5vw, 46px);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    line-height: 1.0;
+    margin-bottom: 14px;
+    margin-top: 12px;
+  }
+
+  .cta-text h2 span {
+    color: var(--ts-gold);
+  }
+
+  .cta-text p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, .58);
+    line-height: 1.75;
+    margin-bottom: 32px;
+  }
+
+  .cta-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .cta-contact {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+  }
+
+  .cta-c-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .cta-c-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--ts-gold);
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .cta-c-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--ts-gray);
+    margin-bottom: 1px;
+  }
+
+  .cta-c-val {
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 700;
+    color: #FFFFFF;
+  }
+
+  .form-box {
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 14px;
+    padding: 32px;
+  }
+
+  .form-box h3 {
+    font-family: var(--font-display);
+    font-size: 21px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+  }
+
+  .form-box-sub {
+    font-size: 14px;
+    color: rgba(255, 255, 255, .45);
+    margin-bottom: 20px;
+    line-height: 1.55;
+  }
+
+  .form-notice {
+    background: rgba(245, 166, 35, .09);
+    border: 1px solid rgba(245, 166, 35, .22);
+    border-radius: 7px;
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .form-notice-icon {
+    width: 20px;
+    height: 20px;
+    stroke: var(--ts-gold);
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .form-notice-title {
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ts-gold);
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    margin-bottom: 2px;
+  }
+
+  .form-notice-text {
+    font-size: 12px;
+    color: rgba(255, 255, 255, .48);
+    line-height: 1.5;
+  }
+
+  .forminator-placeholder {
+    background: rgba(255, 255, 255, .04);
+    border: 2px dashed rgba(255, 255, 255, .15);
+    border-radius: 10px;
+    padding: 36px 24px;
+    text-align: center;
+  }
+
+  .forminator-placeholder svg {
+    width: 36px;
+    height: 36px;
+    stroke: rgba(255, 255, 255, .25);
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    margin: 0 auto 12px;
+    display: block;
+  }
+
+  .forminator-placeholder p {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .3);
+  }
+
+  .forminator-placeholder span {
+    font-size: 13px;
+    color: rgba(255, 255, 255, .2);
+    display: block;
+    margin-top: 4px;
+  }
+
+  .form-wa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 14px;
+    padding: 12px;
+    background: rgba(37, 211, 102, .09);
+    border: 1px solid rgba(37, 211, 102, .2);
+    border-radius: 8px;
+    text-decoration: none;
+  }
+
+  .form-wa svg {
+    width: 18px;
+    height: 18px;
+    fill: #25D366;
+    flex-shrink: 0;
+  }
+
+  .form-wa-text {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 700;
+    color: #25D366;
+    letter-spacing: .04em;
+  }
+</style>
+
+<div class="page-transporte-urbano-wrapper">
+  <!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-line"></div>
+    <div class="hero-content">
+      <div class="breadcrumb">
+        <a href="<?php echo esc_url(home_url('/')); ?>">Inicio</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="<?php echo esc_url(home_url('/servicios/')); ?>">Servicios</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Transporte Urbano</span>
+      </div>
+      <h1>
+        Transporte Urbano de
+        <em>Carga Masiva</em>
+      </h1>
+      <p class="hero-desc">Distribución de mercancías dentro de las principales ciudades de Colombia, adaptada al modelo
+        logístico de cada empresa. Operación coordinada, segura y eficiente con flota propia y seguimiento en tiempo
+        real.</p>
+      <div class="hero-btns">
+        <a href="#cotizar" class="btn-primary">Solicitar Cotización →</a>
+        <a href="#flota" class="btn-outline-white">Ver Nuestra Flota</a>
+      </div>
+      <div class="hero-pills">
+        <div class="hero-pill">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          <span>Cobertura en 8 Ciudades</span>
+        </div>
+        <div class="hero-pill">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="2" y1="12" x2="22" y2="12" />
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          </svg>
+          <span>GPS 24/7</span>
+        </div>
+        <div class="hero-pill">
+          <svg viewBox="0 0 24 24">
+            <rect x="1" y="3" width="15" height="13" rx="1" />
+            <path d="M16 8h4l3 5v4h-7V8z" />
+            <circle cx="5.5" cy="18.5" r="2.5" />
+            <circle cx="18.5" cy="18.5" r="2.5" />
+          </svg>
+          <span>Turbos y Camiones Propios</span>
+        </div>
+        <div class="hero-pill">
+          <svg viewBox="0 0 24 24">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          </svg>
+          <span>Adaptado a su Modelo Logístico</span>
+        </div>
+        <div class="hero-pill">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <polyline points="9 12 11 14 15 10" />
+          </svg>
+          <span>ISO 9001 · BASC</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+     INTRO
+══════════════════════════════════════════ -->
+  <section class="intro">
+    <div class="intro-inner">
+      <div class="intro-text">
+        <div class="eyebrow">El servicio</div>
+        <h2>Distribución Urbana <span>a la Medida de su Empresa</span></h2>
+        <p>El transporte de carga urbano es un eslabón fundamental en la cadena logística de las empresas que operan en
+          las principales ciudades colombianas. Su eficiencia contribuye directamente al comercio local y garantiza el
+          flujo continuo de mercancías en entornos metropolitanos.</p>
+        <p>Transportadora Estrella opera en las ciudades donde tiene sucursales propias, con una flota de turbos y
+          camiones de carga general y refrigerada, adaptándonos al modelo operativo específico de cada cliente. No
+          imponemos un esquema único: diseñamos la operación alrededor de sus necesidades.</p>
+        <p>Con más de 30 años de experiencia y conocimiento profundo del entorno urbano colombiano, garantizamos
+          distribución coordinada, puntual y segura en cada operación.</p>
+      </div>
+      <div class="intro-visual">
+        <div class="intro-img">
+          <img src="https://transestrella.com/wp-content/uploads/2025/06/camio-urbano-de-transporte.webp"
+            alt="Camión urbano de transporte — Transportadora Estrella" loading="lazy">
+        </div>
+        <div class="intro-keypoints">
+          <div class="intro-keypoints-title">Lo que incluye el servicio</div>
+          <div class="kp-list">
+            <div class="kp-item">
+              <div class="kp-icon"><svg viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              Distribución adaptada al modelo logístico del cliente
+            </div>
+            <div class="kp-item">
+              <div class="kp-icon"><svg viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              Cumplimiento de restricciones de circulación urbana
+            </div>
+            <div class="kp-item">
+              <div class="kp-icon"><svg viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              Seguimiento GPS en tiempo real de cada unidad
+            </div>
+            <div class="kp-item">
+              <div class="kp-icon"><svg viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              Comunicación directa con el operador asignado
+            </div>
+            <div class="kp-item">
+              <div class="kp-icon"><svg viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              Documentación completa y trazable de cada entrega
+            </div>
+            <div class="kp-item">
+              <div class="kp-icon"><svg viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              Conductores con capacitación certificada en manejo urbano
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+     CIUDADES CON COBERTURA
+══════════════════════════════════════════ -->
+  <section class="cities">
+    <div class="cities-inner">
+      <div class="cities-header">
+        <div class="eyebrow center">Cobertura urbana</div>
+        <h2>Ciudades donde <span>Operamos</span></h2>
+        <p>Presencia propia con sucursal y equipo local en los principales centros urbanos de Colombia.</p>
+      </div>
+      <div class="cities-grid">
+        <div class="city-card main">
+          <div class="city-icon"><svg viewBox="0 0 24 24">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg></div>
+          <div class="city-name">Medellín</div>
+          <div class="city-detail">Valle de Aburrá y Área Metropolitana</div>
+          <div class="city-tag">★ Sede Principal — (604) 527 3300</div>
+        </div>
+        <div class="city-card">
+          <div class="city-icon"><svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></div>
+          <div class="city-name">Bogotá</div>
+          <div class="city-detail">Bogotá D.C. y Sabana</div>
+          <div class="city-tag">312 826 5078</div>
+        </div>
+        <div class="city-card">
+          <div class="city-icon"><svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></div>
+          <div class="city-name">Cali</div>
+          <div class="city-detail">Santiago de Cali y área de influencia</div>
+          <div class="city-tag">310 369 5787</div>
+        </div>
+        <div class="city-card">
+          <div class="city-icon"><svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></div>
+          <div class="city-name">Barranquilla</div>
+          <div class="city-detail">Barranquilla y Área Metropolitana</div>
+          <div class="city-tag">310 442 7076</div>
+        </div>
+        <div class="city-card">
+          <div class="city-icon"><svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></div>
+          <div class="city-name">Cartagena</div>
+          <div class="city-detail">Ciudad Heroica y zona industrial</div>
+          <div class="city-tag">314 772 8740</div>
+        </div>
+        <div class="city-card">
+          <div class="city-icon"><svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></div>
+          <div class="city-name">Buenaventura</div>
+          <div class="city-detail">Puerto y zona de influencia portuaria</div>
+          <div class="city-tag">313 659 7359</div>
+        </div>
+        <div class="city-card">
+          <div class="city-icon"><svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></div>
+          <div class="city-name">Buga</div>
+          <div class="city-detail">Guadalajara de Buga y área industrial</div>
+          <div class="city-tag">313 655 3232</div>
+        </div>
+        <div class="city-card">
+          <div class="city-icon"><svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></div>
+          <div class="city-name">Manizales</div>
+          <div class="city-detail">Manizales y Eje Cafetero</div>
+          <div class="city-tag">310 369 5787</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+     FLOTA PARA TRANSPORTE URBANO
+══════════════════════════════════════════ -->
+  <section class="fleet" id="flota">
+    <div class="fleet-inner">
+      <div class="fleet-header">
+        <div class="eyebrow center">Vehículos disponibles</div>
+        <h2>Flota para Transporte <span>Urbano de Carga</span></h2>
+        <p>Contamos con distintos tipos de vehículos para adaptarnos a cada tipo de mercancía y a las restricciones de
+          movilidad de cada ciudad.</p>
+      </div>
+      <div class="fleet-grid">
+        <!-- Turbo / Camión ligero -->
+        <div class="fleet-card">
+          <div class="fleet-card-img">
+            <img src="https://transestrella.com/wp-content/uploads/2025/06/camio-urbano-de-transporte.webp"
+              alt="Turbos y camiones de distribución urbana — Transportadora Estrella" loading="lazy">
+          </div>
+          <div class="fleet-card-body">
+            <div class="fleet-card-tag">Distribución urbana</div>
+            <h4>Turbos y Camiones de Carga General</h4>
+            <p>Ideales para distribución de mercancías no perecederas en entorno urbano. Versátiles, con capacidad de
+              adaptarse a diversas dimensiones y pesos de carga.</p>
+            <div class="fleet-specs">
+              <span class="fleet-spec">Carga general</span>
+              <span class="fleet-spec">Semi masiva</span>
+              <span class="fleet-spec">Distribución multiparada</span>
+            </div>
+          </div>
+        </div>
+        <!-- Camión refrigerado -->
+        <div class="fleet-card">
+          <div class="fleet-card-img">
+            <img src="https://transestrella.com/wp-content/uploads/2025/06/camion-refrigerado.webp"
+              alt="Camión refrigerado distribución urbana — Transportadora Estrella" loading="lazy">
+          </div>
+          <div class="fleet-card-body">
+            <div class="fleet-card-tag">Cadena de frío</div>
+            <h4>Camiones Refrigerados</h4>
+            <p>Esenciales para mantener la cadena de frío en el transporte urbano de productos perecederos y
+              agroindustriales. Control de temperatura durante todo el recorrido.</p>
+            <div class="fleet-specs">
+              <span class="fleet-spec">Agroindustria</span>
+              <span class="fleet-spec">Perecederos</span>
+              <span class="fleet-spec">Lácteos</span>
+            </div>
+          </div>
+        </div>
+        <!-- Cisterna -->
+        <div class="fleet-card">
+          <div class="fleet-card-img">
+            <img src="https://transestrella.com/wp-content/uploads/2025/06/camion-cisterna.webp"
+              alt="Camión cisterna transporte urbano líquidos — Transportadora Estrella" loading="lazy">
+          </div>
+          <div class="fleet-card-body">
+            <div class="fleet-card-tag">Líquidos y graneles</div>
+            <h4>Camiones Cisterna</h4>
+            <p>Diseñados para el transporte de líquidos industriales y alimentarios dentro del perímetro urbano.
+              Cisternas reforzadas con protocolos de limpieza certificados.</p>
+            <div class="fleet-specs">
+              <span class="fleet-spec">Aceites industriales</span>
+              <span class="fleet-spec">Líquidos alimentarios</span>
+              <span class="fleet-spec">Productos industriales</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+     MODELO OPERATIVO
+══════════════════════════════════════════ -->
+  <section class="model">
+    <div class="model-inner">
+      <div class="model-text">
+        <div class="eyebrow">Cómo trabajamos</div>
+        <h2>Operación <span>Coordinada y a la Medida</span></h2>
+        <p>Nuestro modelo de operación urbana se diseña alrededor del flujo logístico de cada cliente. No imponemos un
+          esquema estándar: analizamos sus necesidades y construimos la operación que mejor se adapta a su negocio.</p>
+        <div class="model-steps">
+          <div class="model-step">
+            <div class="model-step-num">01</div>
+            <div class="model-step-body">
+              <h5>Análisis del Modelo Logístico</h5>
+              <p>Estudiamos la operación del cliente: puntos de origen y destino, frecuencias, volúmenes, ventanas
+                horarias y restricciones de movilidad urbana.</p>
+            </div>
+          </div>
+          <div class="model-step">
+            <div class="model-step-num">02</div>
+            <div class="model-step-body">
+              <h5>Diseño de la Operación</h5>
+              <p>Definimos rutas, asignamos vehículos y programamos horarios de recolección y entrega ajustados a las
+                necesidades específicas del cliente.</p>
+            </div>
+          </div>
+          <div class="model-step">
+            <div class="model-step-num">03</div>
+            <div class="model-step-body">
+              <h5>Ejecución con Seguimiento</h5>
+              <p>Realizamos las operaciones con monitoreo GPS continuo, comunicación directa con el operador y
+                actualizaciones en tiempo real sobre el estado de cada entrega.</p>
+            </div>
+          </div>
+          <div class="model-step">
+            <div class="model-step-num">04</div>
+            <div class="model-step-body">
+              <h5>Revisión y Mejora Continua</h5>
+              <p>Evaluamos el desempeño de cada operación y ajustamos el modelo para mejorar tiempos, reducir costos y
+                aumentar la eficiencia de la distribución.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="model-visual">
+        <div class="model-stat-grid">
+          <div class="model-stat">
+            <div class="model-stat-num">30+</div>
+            <div class="model-stat-label">Años operando en ciudades colombianas</div>
+          </div>
+          <div class="model-stat">
+            <div class="model-stat-num">8</div>
+            <div class="model-stat-label">Ciudades con sucursal propia y equipo local</div>
+          </div>
+          <div class="model-stat">
+            <div class="model-stat-num">24/7</div>
+            <div class="model-stat-label">Seguimiento GPS en toda la flota urbana</div>
+          </div>
+          <div class="model-stat">
+            <div class="model-stat-num">100%</div>
+            <div class="model-stat-label">Cumplimiento de restricciones de movilidad</div>
+          </div>
+        </div>
+        <div class="model-img">
+          <img src="https://transestrella.com/wp-content/uploads/2025/04/transportadora-estrella-equipo.jpeg"
+            alt="Equipo Transportadora Estrella — atención personalizada" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+     VENTAJAS
+══════════════════════════════════════════ -->
+  <section class="advantages">
+    <div class="advantages-inner">
+      <div class="advantages-header">
+        <div class="eyebrow center">Por qué elegirnos</div>
+        <h2>Ventajas del Transporte <span>Urbano con Estrella</span></h2>
+        <p>Lo que diferencia nuestra operación urbana en las principales ciudades de Colombia.</p>
+      </div>
+      <div class="advantages-grid">
+        <div class="adv-card">
+          <div class="adv-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <h4>Modelo Adaptado al Cliente</h4>
+          <p>Diseñamos la operación de distribución alrededor del modelo logístico del cliente. Sin esquemas rígidos ni
+            procesos que no se ajusten a su realidad operativa.</p>
+        </div>
+        <div class="adv-card">
+          <div class="adv-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+          </div>
+          <h4>Conocimiento Urbano Local</h4>
+          <p>Nuestro personal conoce las particularidades de cada ciudad: restricciones de circulación, zonas de cargue
+            y descargue, horarios permitidos y rutas óptimas.</p>
+        </div>
+        <div class="adv-card">
+          <div class="adv-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="1" y="3" width="15" height="13" rx="1" />
+              <path d="M16 8h4l3 5v4h-7V8z" />
+              <circle cx="5.5" cy="18.5" r="2.5" />
+              <circle cx="18.5" cy="18.5" r="2.5" />
+            </svg>
+          </div>
+          <h4>Flota Diversificada Propia</h4>
+          <p>Turbos, camiones de carga general, refrigerados y cisternas propios. Siempre el vehículo adecuado para el
+            tipo de mercancía y las condiciones de la operación.</p>
+        </div>
+        <div class="adv-card">
+          <div class="adv-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <polyline points="9 12 11 14 15 10" />
+            </svg>
+          </div>
+          <h4>Operación Certificada</h4>
+          <p>ISO 9001 e BASC aseguran que cada proceso de distribución urbana cumple estándares de calidad y seguridad
+            verificados por organismos independientes.</p>
+        </div>
+        <div class="adv-card">
+          <div class="adv-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+          </div>
+          <h4>Comunicación Directa</h4>
+          <p>Canal de contacto directo con el operador asignado a su cuenta. Actualizaciones en tiempo real, alertas
+            ante eventualidades y respuesta ágil a sus consultas.</p>
+        </div>
+        <div class="adv-card">
+          <div class="adv-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+              <line x1="4" y1="22" x2="4" y2="15" />
+            </svg>
+          </div>
+          <h4>Sostenibilidad Urbana</h4>
+          <p>Optimización de rutas para reducir el número de viajes y el consumo de combustible. Técnicas de manejo que
+            minimizan el impacto ambiental en el entorno urbano.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+     SECTORES QUE ATENDEMOS
+══════════════════════════════════════════ -->
+  <section class="sectors">
+    <div class="sectors-inner">
+      <div class="sectors-header">
+        <div class="sectors-header-left">
+          <div class="eyebrow">Industrias que servimos</div>
+          <h2>Sectores que <span>Atendemos en Ciudades</span></h2>
+          <p>Nuestra operación urbana está diseñada para las industrias que distribuyen mercancías de forma regular y en
+            volúmenes significativos dentro de los centros urbanos.</p>
+        </div>
+        <a href="#cotizar" class="btn-outline-blue">Cotizar mi Operación →</a>
+      </div>
+      <div class="sectors-grid">
+        <div class="sector-card">
+          <div class="sector-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 3h18v18H3z M3 9h18 M3 15h18 M9 3v18 M15 3v18" />
+            </svg>
+          </div>
+          <h4>Consumo Masivo</h4>
+          <p>Distribución de productos de consumo a canales de distribución, mayoristas y puntos de venta en toda la
+            ciudad.</p>
+        </div>
+        <div class="sector-card">
+          <div class="sector-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+              <line x1="7" y1="7" x2="7.01" y2="7" />
+            </svg>
+          </div>
+          <h4>Agroindustria</h4>
+          <p>Transporte de insumos agroindustriales, alimentos procesados y materias primas entre plantas, bodegas y
+            puntos de venta.</p>
+        </div>
+        <div class="sector-card">
+          <div class="sector-icon">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16m14 0h2m-2 0H5m-2 0h2 M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <h4>Construcción e Industria</h4>
+          <p>Movimiento de materiales de construcción, insumos industriales y equipos entre bodegas, obras y centros
+            industriales.</p>
+        </div>
+        <div class="sector-card">
+          <div class="sector-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+              <line x1="6" y1="1" x2="6" y2="4" />
+              <line x1="10" y1="1" x2="10" y2="4" />
+              <line x1="14" y1="1" x2="14" y2="4" />
+            </svg>
+          </div>
+          <h4>Alimentos y Bebidas</h4>
+          <p>Distribución de alimentos perecederos y no perecederos con flota refrigerada y de carga general, con cadena
+            de frío garantizada.</p>
+        </div>
+        <div class="sector-card">
+          <div class="sector-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+            </svg>
+          </div>
+          <h4>Salud y Farmacia</h4>
+          <p>Transporte de insumos médicos, productos farmacéuticos y material hospitalario con protocolos de manejo
+            especializado.</p>
+        </div>
+        <div class="sector-card">
+          <div class="sector-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
+          </div>
+          <h4>Tecnología y Electrónica</h4>
+          <p>Distribución de equipos electrónicos, tecnología y mercancía de alto valor con protocolos de seguridad y
+            manejo cuidadoso.</p>
+        </div>
+        <div class="sector-card">
+          <div class="sector-icon">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+            </svg>
+          </div>
+          <h4>Ferretería e Industria</h4>
+          <p>Transporte de materiales ferreteros, herramientas industriales y suministros de manufactura a talleres,
+            industrias y distribuidores.</p>
+        </div>
+        <div class="sector-card">
+          <div class="sector-icon">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+          </div>
+          <h4>Textil y Confecciones</h4>
+          <p>Distribución de materias primas textiles, prendas terminadas e insumos de confección entre plantas,
+            talleres y centros de distribución.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+     OTROS SERVICIOS
+══════════════════════════════════════════ -->
+  <section class="other-services">
+    <div class="other-services-inner">
+      <div class="other-header">
+        <div class="eyebrow center">Portafolio completo</div>
+        <h3>Otros Servicios Disponibles</h3>
+        <p>Explore el resto de nuestra oferta de transporte especializado en Colombia.</p>
+      </div>
+      <div class="other-grid">
+        <a href="<?php echo esc_url(home_url('/servicios/transporte-de-carga-terrestre-nacional/')); ?>"
+          class="other-card">
+          <div class="other-card-img">
+            <img
+              src="https://transestrella.com/wp-content/uploads/2025/04/transportadora-estrella-nuestra-flota-transporte-de-carga-pesada-1.jpeg"
+              alt="Carga nacional — Transportadora Estrella" loading="lazy">
+          </div>
+          <div class="other-card-body">
+            <div class="other-tag">Nacional</div>
+            <h4>Transporte de Carga Nacional</h4>
+            <p>Cobertura total en los 32 departamentos con flota propia.</p>
+            <div class="other-link">Ver servicio →</div>
+          </div>
+        </a>
+        <a href="<?php echo esc_url(home_url('/servicios/transporte-de-carga-peligrosa/')); ?>" class="other-card">
+          <div class="other-card-img">
+            <img src="https://transestrella.com/wp-content/uploads/2025/06/camion-cisterna.webp"
+              alt="Mercancías peligrosas — Transportadora Estrella" loading="lazy">
+          </div>
+          <div class="other-card-body">
+            <div class="other-tag">Especializado</div>
+            <h4>Transporte de Mercancías Peligrosas</h4>
+            <p>Conductores certificados y flota especializada bajo normativa ADR.</p>
+            <div class="other-link">Ver servicio →</div>
+          </div>
+        </a>
+        <a href="<?php echo esc_url(home_url('/servicios/itr/')); ?>" class="other-card">
+          <div class="other-card-img">
+            <img src="https://transestrella.com/wp-content/uploads/2025/08/transporte-de-contenedores.jpg"
+              alt="ITR internacional — Transportadora Estrella" loading="lazy">
+          </div>
+          <div class="other-card-body">
+            <div class="other-tag">Internacional</div>
+            <h4>ITR — Importación y Exportación</h4>
+            <p>Desde los puertos de Buenaventura y Cartagena al mundo.</p>
+            <div class="other-link">Ver servicio →</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+     CTA FINAL + FORMULARIO
+══════════════════════════════════════════ -->
+  <section class="cta" id="cotizar">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <div class="eyebrow">Hablemos hoy</div>
+        <h2>Cotice su <span>Operación de Distribución Urbana</span></h2>
+        <p>Cuéntenos cómo funciona la distribución de su empresa y diseñamos la solución logística urbana ideal. Le
+          respondemos en menos de 24 horas hábiles.</p>
+        <div class="cta-contacts">
+          <div class="cta-contact">
+            <div class="cta-c-icon">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z" />
+              </svg>
+            </div>
+            <div>
+              <div class="cta-c-label">Línea Nacional</div>
+              <div class="cta-c-val">+57 310 4244591</div>
+            </div>
+          </div>
+          <div class="cta-contact">
+            <div class="cta-c-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </div>
+            <div>
+              <div class="cta-c-label">Correo Electrónico</div>
+              <div class="cta-c-val"><a href="mailto:servicioalcliente@transestrella.com"
+                  style="color:inherit;text-decoration:none;">servicioalcliente@transestrella.com</a></div>
+            </div>
+          </div>
+          <div class="cta-contact">
+            <div class="cta-c-icon">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
+            <div>
+              <div class="cta-c-label">Horario de Atención</div>
+              <div class="cta-c-val">Lun–Vie 8am–6pm · Sáb 8am–1pm</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-box">
+        <h3>Cotizar Transporte Urbano</h3>
+        <p class="form-box-sub">Complete el formulario y le respondemos en menos de 24 horas hábiles.</p>
+        <div class="form-notice">
+          <svg class="form-notice-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="8" x2="12" y2="12" />
+            <line x1="12" y1="16" x2="12.01" y2="16" />
+          </svg>
+          <div>
+            <div class="form-notice-title">Solo Carga Masiva y Semi Masiva</div>
+            <div class="form-notice-text">Atendemos operaciones empresariales de alto volumen. No gestionamos paqueteo
+              ni envíos individuales.</div>
+          </div>
+        </div>
+        <div class="forminator-placeholder">
+          <svg viewBox="0 0 24 24">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+          </svg>
+          <p>Formulario Forminator</p>
+          <span>[forminator_form id="XX"]</span>
+        </div>
+        <a href="https://wa.me/576045273300?text=Hola%2C%20necesito%20cotizar%20transporte%20urbano%20de%20carga"
+          target="_blank" class="form-wa">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
+            <path
+              d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.524 5.847L.057 23.992l6.304-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.012-1.375l-.36-.214-3.733.979 1-3.642-.235-.374A9.791 9.791 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z" />
+          </svg>
+          <span class="form-wa-text">¿Necesita respuesta inmediata? WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<?php get_footer(); ?>

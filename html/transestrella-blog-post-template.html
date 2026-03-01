@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Título del artículo — Blog Transportadora Estrella</title>
+<meta name="description" content="">
+<link rel="canonical" href="https://transestrella.com/blog/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Nunito Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ts-blue:#0F5BA7;--ts-blue-dark:#0A4580;--ts-blue-deep:#083266;
+  --ts-gold:#F5A623;--ts-white:#FFFFFF;--ts-gray-bg:#F5F5F5;
+  --ts-gray:#999999;--ts-gray-dark:#333333;--ts-gray-line:#E0E0E0;
+  --font-display:'Barlow Condensed',sans-serif;--font-body:'Nunito Sans',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-font-smoothing:antialiased;}
+body{font-family:var(--font-body);font-size:16px;line-height:1.6;color:#333;background:#fff;}
+
+/* NAV */
+header{position:sticky;top:0;background:rgba(8,50,102,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.07);z-index:100;padding:0 40px;}
+.nav-inner{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px;}
+.nav-logo{font-family:var(--font-display);font-size:21px;font-weight:800;color:#fff;display:flex;align-items:center;gap:9px;letter-spacing:.02em;text-decoration:none;}
+.nav-logo span{color:var(--ts-gold);}
+.nav-star{width:30px;height:30px;background:var(--ts-gold);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
+.nav-links a{font-family:var(--font-display);font-size:13px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.82);text-decoration:none;}
+.nav-links a:hover,.nav-links a.active{color:var(--ts-gold);}
+.nav-cta{background:var(--ts-gold)!important;color:#fff!important;padding:9px 20px;border-radius:4px;}
+
+/* HERO POST */
+.post-hero{background:var(--ts-blue-deep);padding:72px 40px 0;position:relative;overflow:hidden;}
+.post-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:48px 48px;}
+.post-hero-glow{position:absolute;top:-30%;right:-8%;width:55%;height:150%;background:radial-gradient(ellipse,rgba(15,91,167,.22) 0%,transparent 65%);pointer-events:none;}
+.post-hero-inner{max-width:1240px;margin:0 auto;position:relative;z-index:2;}
+.breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:24px;flex-wrap:wrap;}
+.breadcrumb a{font-family:var(--font-display);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);text-decoration:none;}
+.breadcrumb a:hover{color:var(--ts-gold);}
+.breadcrumb-sep{color:rgba(255,255,255,.2);}
+.breadcrumb span{font-family:var(--font-display);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ts-gold);}
+.post-header{max-width:800px;padding-bottom:56px;}
+.post-cat-tag{display:inline-flex;align-items:center;background:rgba(245,166,35,.12);border:1px solid rgba(245,166,35,.28);border-radius:4px;padding:5px 12px;margin-bottom:20px;}
+.post-cat-tag span{font-family:var(--font-display);font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ts-gold);}
+.post-header h1{font-family:var(--font-display);font-size:clamp(36px,5vw,62px);font-weight:800;line-height:.95;text-transform:uppercase;color:#fff;letter-spacing:.01em;margin-bottom:20px;}
+.post-header h1 em{color:var(--ts-gold);font-style:normal;}
+.post-excerpt{font-size:18px;color:rgba(255,255,255,.65);line-height:1.72;margin-bottom:28px;max-width:680px;}
+.post-meta{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);}
+.post-author{display:flex;align-items:center;gap:10px;}
+.author-av{width:36px;height:36px;background:var(--ts-gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:14px;font-weight:800;color:#fff;flex-shrink:0;}
+.author-name{font-family:var(--font-display);font-size:13px;font-weight:700;color:#fff;letter-spacing:.03em;}
+.author-role{font-size:11px;color:rgba(255,255,255,.38);}
+.meta-sep{width:1px;height:28px;background:rgba(255,255,255,.1);}
+.meta-item{display:flex;align-items:center;gap:6px;font-size:12px;color:rgba(255,255,255,.4);}
+.meta-item svg{width:13px;height:13px;stroke:rgba(255,255,255,.35);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+
+/* IMAGEN DESTACADA */
+.post-img-wrap{background:var(--ts-blue-deep);border-top:1px solid rgba(255,255,255,.07);}
+.post-img-inner{max-width:1240px;margin:0 auto;padding:0 40px;}
+.post-img{border-radius:12px 12px 0 0;overflow:hidden;position:relative;}
+.post-img img{width:100%;height:480px;object-fit:cover;display:block;opacity:.85;}
+.post-img-caption{position:absolute;bottom:0;left:0;right:0;padding:12px 20px;background:linear-gradient(to top,rgba(8,50,102,.7),transparent);font-size:11px;color:rgba(255,255,255,.45);font-style:italic;}
+
+/* LAYOUT */
+.post-layout{max-width:1240px;margin:0 auto;padding:64px 40px 88px;display:grid;grid-template-columns:1fr 300px;gap:72px;align-items:start;}
+
+/* CONTENIDO — estilos disponibles para usar libremente */
+.post-content h2{font-family:var(--font-display);font-size:clamp(24px,2.8vw,34px);font-weight:800;text-transform:uppercase;color:#333;line-height:1.05;margin-top:44px;margin-bottom:14px;}
+.post-content h2:first-child{margin-top:0;}
+.post-content h3{font-family:var(--font-display);font-size:clamp(18px,2vw,24px);font-weight:800;text-transform:uppercase;color:var(--ts-blue);line-height:1.1;margin-top:32px;margin-bottom:10px;}
+.post-content p{font-size:16px;color:#333;line-height:1.85;margin-bottom:18px;}
+.post-content strong{font-weight:700;color:#111;}
+.post-content a{color:var(--ts-blue);text-decoration:underline;text-underline-offset:3px;}
+.post-content ul{list-style:none;margin:18px 0 24px;display:flex;flex-direction:column;gap:8px;}
+.post-content ul li{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#333;line-height:1.65;}
+.post-content ul li::before{content:'';width:6px;height:6px;background:var(--ts-gold);border-radius:50%;flex-shrink:0;margin-top:8px;}
+.post-content ol{margin:18px 0 24px;padding-left:22px;display:flex;flex-direction:column;gap:8px;}
+.post-content ol li{font-size:15px;color:#333;line-height:1.65;padding-left:6px;}
+.post-content ol li::marker{font-family:var(--font-display);font-weight:800;color:var(--ts-gold);}
+.post-divider{border:none;border-top:1px solid var(--ts-gray-line);margin:36px 0;}
+
+/* Callout azul */
+.callout{background:#EEF3FA;border-left:4px solid var(--ts-blue);border-radius:0 10px 10px 0;padding:20px 22px;margin:28px 0;}
+.callout-title{font-family:var(--font-display);font-size:14px;font-weight:800;text-transform:uppercase;color:var(--ts-blue);margin-bottom:6px;letter-spacing:.05em;}
+.callout p{font-size:14px;color:#333;line-height:1.7;margin-bottom:0;}
+
+/* Callout dorado */
+.callout-gold{background:rgba(245,166,35,.08);border-left:4px solid var(--ts-gold);border-radius:0 10px 10px 0;padding:20px 22px;margin:28px 0;}
+.callout-gold .callout-title{color:#b37a10;}
+.callout-gold p{font-size:14px;color:#333;line-height:1.7;margin-bottom:0;}
+
+/* Tags + Share */
+.post-tags{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:28px;border-top:1px solid var(--ts-gray-line);margin-top:36px;}
+.post-tags-label{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ts-gray);margin-right:4px;}
+.post-tag{font-family:var(--font-display);font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--ts-blue);background:#EEF3FA;border:1px solid rgba(15,91,167,.15);border-radius:3px;padding:4px 10px;text-decoration:none;}
+.post-tag:hover{background:var(--ts-blue);color:#fff;}
+.post-share{margin-top:20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.share-label{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ts-gray);}
+.share-btn{display:flex;align-items:center;gap:7px;padding:9px 16px;border-radius:5px;font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;}
+.share-wa{background:rgba(37,211,102,.1);color:#128C7E;border:1px solid rgba(37,211,102,.25);}
+.share-li{background:#EEF3FA;color:var(--ts-blue);border:1px solid rgba(15,91,167,.2);}
+.share-btn svg{width:14px;height:14px;fill:currentColor;}
+
+/* SIDEBAR */
+.post-sidebar{position:sticky;top:84px;display:flex;flex-direction:column;gap:20px;}
+.toc-box{background:var(--ts-gray-bg);border-radius:12px;padding:22px 20px;border:1px solid var(--ts-gray-line);}
+.toc-title{font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ts-gray);margin-bottom:14px;}
+.toc-list{list-style:none;display:flex;flex-direction:column;}
+.toc-list li{border-bottom:1px solid var(--ts-gray-line);}
+.toc-list li:last-child{border-bottom:none;}
+.toc-list a{display:block;font-size:13px;font-weight:600;color:#333;text-decoration:none;padding:9px 4px;line-height:1.35;transition:color .15s;}
+.toc-list a:hover{color:var(--ts-blue);}
+.toc-num{font-family:var(--font-display);font-size:11px;font-weight:800;color:var(--ts-gold);margin-right:6px;}
+.sidebar-cta{background:var(--ts-blue-deep);border-radius:12px;padding:24px 20px;}
+.sidebar-cta h3{font-family:var(--font-display);font-size:20px;font-weight:800;text-transform:uppercase;color:#fff;line-height:1.1;margin-bottom:8px;}
+.sidebar-cta h3 span{color:var(--ts-gold);}
+.sidebar-cta p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.6;margin-bottom:18px;}
+.sidebar-cta-items{display:flex;flex-direction:column;gap:8px;margin-bottom:18px;}
+.sci{display:flex;align-items:center;gap:9px;}
+.sci-icon{width:28px;height:28px;background:rgba(255,255,255,.08);border-radius:5px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.sci-icon svg{width:12px;height:12px;stroke:var(--ts-gold);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.sci-val{font-family:var(--font-display);font-size:13px;font-weight:700;color:#fff;}
+.sci-val a{color:#fff;text-decoration:none;}
+.sidebar-cta-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;background:var(--ts-gold);color:#fff;font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;border-radius:5px;text-decoration:none;}
+.cert-badge-box{background:#fff;border-radius:12px;padding:20px;border:1px solid var(--ts-gray-line);text-align:center;}
+.cert-badge-title{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ts-gray);margin-bottom:14px;}
+.cert-badges{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;}
+.cert-b{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ts-blue-deep);border:1.5px solid var(--ts-blue);border-radius:4px;padding:5px 10px;}
+
+/* RELACIONADOS */
+.related{padding:72px 40px;background:var(--ts-gray-bg);}
+.related-inner{max-width:1240px;margin:0 auto;}
+.related-header{margin-bottom:32px;}
+.related-header h2{font-family:var(--font-display);font-size:clamp(24px,2.8vw,36px);font-weight:800;text-transform:uppercase;color:#333;}
+.related-header h2 span{color:var(--ts-gold);}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.rel-card{background:#fff;border-radius:10px;overflow:hidden;border:1px solid var(--ts-gray-line);text-decoration:none;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;}
+.rel-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(8,50,102,.08);}
+.rel-img{height:150px;overflow:hidden;background:var(--ts-blue-deep);position:relative;}
+.rel-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s;}
+.rel-card:hover .rel-img img{transform:scale(1.05);}
+.rel-img-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,50,102,.4),transparent 55%);}
+.rel-cat{position:absolute;bottom:10px;left:10px;font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--ts-blue);border-radius:3px;padding:3px 8px;}
+.rel-body{padding:18px 16px;flex:1;}
+.rel-date{font-size:11px;color:var(--ts-gray);margin-bottom:6px;}
+.rel-body h4{font-family:var(--font-display);font-size:17px;font-weight:800;text-transform:uppercase;color:#333;line-height:1.1;}
+.rel-link{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ts-blue);margin-top:10px;display:inline-flex;align-items:center;gap:4px;}
+
+/* FOOTER */
+footer{background:#041C3D;padding:60px 40px 28px;}
+.footer-inner{max-width:1240px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:28px;}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.38);line-height:1.75;margin-top:12px;max-width:270px;}
+.footer-certs{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
+.footer-cert{font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.38);border:1px solid rgba(255,255,255,.09);padding:3px 8px;border-radius:3px;}
+.footer-col-title{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--ts-gold);margin-bottom:16px;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,.43);text-decoration:none;}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer-copy{font-size:13px;color:rgba(255,255,255,.22);}
+.footer-legal{display:flex;gap:20px;flex-wrap:wrap;}
+.footer-legal a{font-size:13px;color:rgba(255,255,255,.22);text-decoration:none;}
+
+/* WA */
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:999;display:flex;flex-direction:column;align-items:flex-end;gap:9px;}
+.wa-bubble{background:#fff;border-radius:9px;padding:10px 14px;box-shadow:0 4px 18px rgba(0,0,0,.13);font-size:12px;color:#333;max-width:190px;line-height:1.4;position:relative;animation:waIn .4s ease 1.6s both;}
+.wa-bubble strong{display:block;color:#075E54;margin-bottom:1px;font-size:13px;}
+.wa-bubble::after{content:'';position:absolute;bottom:-7px;right:18px;border-left:7px solid transparent;border-top:7px solid #fff;}
+.wa-btn{width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,.38);text-decoration:none;position:relative;animation:waIn .4s ease 1s both;}
+.wa-btn::before{content:'';position:absolute;width:58px;height:58px;border-radius:50%;background:rgba(37,211,102,.28);animation:waPulse 2.2s ease-out infinite;}
+.wa-btn svg{width:28px;height:28px;fill:#fff;position:relative;z-index:1;}
+@keyframes waPulse{0%{transform:scale(1);opacity:.7;}100%{transform:scale(1.75);opacity:0;}}
+@keyframes waIn{from{opacity:0;transform:scale(.7) translateY(10px);}to{opacity:1;transform:scale(1) translateY(0);}}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .post-layout{grid-template-columns:1fr;gap:48px;}
+  .post-sidebar{position:static;}
+  .related-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-top{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+  header{padding:0 16px;}.nav-links{display:none;}
+  .post-hero,.post-img-inner{padding-left:20px;padding-right:20px;}
+  .post-layout,.related{padding-left:20px;padding-right:20px;}
+  .post-header h1{font-size:38px;}
+  .related-grid{grid-template-columns:1fr;}
+  footer{padding:44px 20px 22px;}.footer-top{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;text-align:center;}
+  .wa-float{bottom:14px;right:14px;}
+}
+@media(max-width:480px){
+  .post-header h1{font-size:32px;}
+  .post-excerpt{font-size:16px;}
+  .wa-bubble{display:none;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><div class="nav-star"></div>TRANS<span>ESTRELLA</span></a>
+    <ul class="nav-links">
+      <li><a href="/nosotros/">Nosotros</a></li>
+      <li><a href="/servicios/">Servicios</a></li>
+      <li><a href="/sucursales/">Sucursales</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+      <li><a href="/contactanos/" class="nav-cta">Cotizar Ahora</a></li>
+    </ul>
+  </div>
+</header>
+
+
+<!-- ═══ HERO ═══ -->
+<section class="post-hero">
+  <div class="post-hero-glow"></div>
+  <div class="post-hero-inner">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span class="breadcrumb-sep">›</span>
+      <a href="/blog/">Blog</a><span class="breadcrumb-sep">›</span>
+      <a href="/blog/categoria/.../">Categoría</a><span class="breadcrumb-sep">›</span>
+      <span>Título corto</span>
+    </div>
+    <div class="post-header">
+      <div class="post-cat-tag"><span>Categoría</span></div>
+      <h1>Título del artículo<br><em>Segunda línea en dorado</em></h1>
+      <p class="post-excerpt">Excerpt del artículo. Resumen breve visible en el hero antes de la imagen.</p>
+      <div class="post-meta">
+        <div class="post-author">
+          <div class="author-av">TE</div>
+          <div>
+            <div class="author-name">Transportadora Estrella</div>
+            <div class="author-role">Equipo de Contenidos</div>
+          </div>
+        </div>
+        <div class="meta-sep"></div>
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          DD de mes de AAAA
+        </div>
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          X minutos de lectura
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ IMAGEN DESTACADA ═══ -->
+<div class="post-img-wrap">
+  <div class="post-img-inner">
+    <div class="post-img">
+      <img src="" alt="">
+      <div class="post-img-caption">Pie de foto</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ ARTÍCULO + SIDEBAR ═══ -->
+<div class="post-layout">
+
+  <article class="post-content">
+
+    <!-- El contenido va aquí libremente.
+         Clases disponibles:
+           h2, h3
+           p, strong, a, ul, ol
+           .callout (azul)
+           .callout-gold (dorado)
+           hr.post-divider
+    -->
+
+    <h2 id="seccion-1">Título de sección</h2>
+    <p>Contenido del artículo.</p>
+
+
+    <!-- Tags al final del artículo -->
+    <div class="post-tags">
+      <span class="post-tags-label">Temas:</span>
+      <a href="/blog/categoria/.../" class="post-tag">Categoría</a>
+      <a href="/blog/tag/.../" class="post-tag">Tag</a>
+    </div>
+
+    <!-- Botones de share -->
+    <div class="post-share">
+      <span class="share-label">Compartir:</span>
+      <a href="https://wa.me/?text=Título%20https://transestrella.com/blog/slug/" target="_blank" class="share-btn share-wa">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.524 5.847L.057 23.992l6.304-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.012-1.375l-.36-.214-3.733.979 1-3.642-.235-.374A9.791 9.791 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+        WhatsApp
+      </a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://transestrella.com/blog/slug/" target="_blank" class="share-btn share-li">
+        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+    </div>
+
+  </article>
+
+  <aside class="post-sidebar">
+
+    <!-- Tabla de contenidos — agregar/quitar ítems según el artículo -->
+    <div class="toc-box">
+      <div class="toc-title">En este artículo</div>
+      <ul class="toc-list">
+        <li><a href="#seccion-1"><span class="toc-num">01</span>Título sección 1</a></li>
+        <li><a href="#seccion-2"><span class="toc-num">02</span>Título sección 2</a></li>
+        <li><a href="#seccion-3"><span class="toc-num">03</span>Título sección 3</a></li>
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="sidebar-cta">
+      <h3>¿Necesita <span>Cotizar?</span></h3>
+      <p>Más de 30 años moviendo carga masiva en Colombia. Le respondemos en menos de 24 horas hábiles.</p>
+      <div class="sidebar-cta-items">
+        <div class="sci">
+          <div class="sci-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6z"/></svg></div>
+          <div class="sci-val"><a href="tel:+576045273300">604 527 3300</a></div>
+        </div>
+        <div class="sci">
+          <div class="sci-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="sci-val">8 sucursales en Colombia</div>
+        </div>
+      </div>
+      <a href="/contactanos/" class="sidebar-cta-btn">Solicitar Cotización →</a>
+    </div>
+
+    <!-- Certificaciones -->
+    <div class="cert-badge-box">
+      <div class="cert-badge-title">Nuestras Certificaciones</div>
+      <div class="cert-badges">
+        <div class="cert-b">ISO 9001</div>
+        <div class="cert-b">BASC</div>
+        <div class="cert-b">SuperTransporte</div>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+
+<!-- ═══ ARTÍCULOS RELACIONADOS ═══ -->
+<section class="related">
+  <div class="related-inner">
+    <div class="related-header">
+      <h2>Artículos <span>Relacionados</span></h2>
+    </div>
+    <div class="related-grid">
+
+      <a href="/blog/slug-1/" class="rel-card">
+        <div class="rel-img">
+          <img src="" alt="">
+          <div class="rel-img-ov"></div>
+          <div class="rel-cat">Categoría</div>
+        </div>
+        <div class="rel-body">
+          <div class="rel-date">DD mes AAAA</div>
+          <h4>Título del artículo relacionado</h4>
+          <span class="rel-link">Leer artículo →</span>
+        </div>
+      </a>
+
+      <a href="/blog/slug-2/" class="rel-card">
+        <div class="rel-img">
+          <img src="" alt="">
+          <div class="rel-img-ov"></div>
+          <div class="rel-cat">Categoría</div>
+        </div>
+        <div class="rel-body">
+          <div class="rel-date">DD mes AAAA</div>
+          <h4>Título del artículo relacionado</h4>
+          <span class="rel-link">Leer artículo →</span>
+        </div>
+      </a>
+
+      <a href="/blog/slug-3/" class="rel-card">
+        <div class="rel-img">
+          <img src="" alt="">
+          <div class="rel-img-ov"></div>
+          <div class="rel-cat">Categoría</div>
+        </div>
+        <div class="rel-body">
+          <div class="rel-date">DD mes AAAA</div>
+          <h4>Título del artículo relacionado</h4>
+          <span class="rel-link">Leer artículo →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo"><div class="nav-star"></div>TRANS<span style="color:var(--ts-gold);">ESTRELLA</span></a>
+        <p>Empresa de transporte de carga masiva y semi masiva terrestre en Colombia. Más de 30 años conectando empresas con todo el territorio nacional.</p>
+        <div class="footer-certs">
+          <span class="footer-cert">ISO 9001</span>
+          <span class="footer-cert">BASC</span>
+          <span class="footer-cert">SuperTransporte</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Servicios</div>
+        <ul class="footer-links">
+          <li><a href="/servicios/transporte-de-carga-terrestre-nacional/">Carga Terrestre Nacional</a></li>
+          <li><a href="/servicios/transporte-urbano-de-mercancias/">Transporte Urbano</a></li>
+          <li><a href="/servicios/transporte-de-carga-peligrosa/">Mercancías Peligrosas</a></li>
+          <li><a href="/servicios/itr/">ITR Internacional</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Blog</div>
+        <ul class="footer-links">
+          <li><a href="/blog/categoria/normativa/">Normativa y Regulación</a></li>
+          <li><a href="/blog/categoria/logistica/">Logística Terrestre</a></li>
+          <li><a href="/blog/categoria/comercio-exterior/">Comercio Exterior</a></li>
+          <li><a href="/blog/categoria/flota-seguridad/">Flota y Seguridad</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Empresa</div>
+        <ul class="footer-links">
+          <li><a href="/nosotros/">Nosotros</a></li>
+          <li><a href="/sucursales/">Sucursales</a></li>
+          <li><a href="/contactanos/">Contáctanos</a></li>
+          <li><a href="/preguntas-frecuentes/">Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Transportadora Estrella S.A.S. — Todos los derechos reservados.</div>
+      <div class="footer-legal">
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Tratamiento de Datos</a>
+        <a href="#">Política Integrada</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="wa-float">
+  <div class="wa-bubble">
+    <strong>¿Necesita cotizar?</strong>
+    Escríbanos, respondemos de inmediato.
+  </div>
+  <a href="https://wa.me/576045273300" target="_blank" class="wa-btn">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.524 5.847L.057 23.992l6.304-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.012-1.375l-.36-.214-3.733.979 1-3.642-.235-.374A9.791 9.791 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+  </a>
+</div>
+
+</body>
+</html>

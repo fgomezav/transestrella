@@ -38,10 +38,10 @@
                 <ul class="footer-links">
                     <li><a href="<?php echo esc_url(home_url('/sucursales/sucursal-medellin/')); ?>">Medellín (Sede Principal)</a>
                     </li>
-                    <li><a href="<?php echo esc_url(home_url('/sucursales/bogota/')); ?>">Bogotá</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/sucursales/cali/')); ?>">Cali</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/sucursales/barranquilla/')); ?>">Barranquilla</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/sucursales/cartagena/')); ?>">Cartagena</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/sucursales/sucursal-bogota/')); ?>">Bogotá</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/sucursales/sucursal-cali/')); ?>">Cali</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/sucursales/sucursal-barranquilla/')); ?>">Barranquilla</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/sucursales/sucursal-cartagena/')); ?>">Cartagena</a></li>
                     <li><a href="<?php echo esc_url(home_url('/sucursales/')); ?>">Ver todas →</a></li>
                 </ul>
             </div>

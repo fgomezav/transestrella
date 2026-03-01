@@ -351,6 +351,73 @@ get_header();
     </div>
   </section>
 
+  <!-- SOLUCIONES PERSONALIZADAS -->
+  <section class="solutions">
+    <div class="solutions-inner">
+      <div class="solutions-header">
+        <div class="eyebrow center">Atención a la medida</div>
+        <h2>Soluciones <span>Personalizadas</span> por Cliente</h2>
+        <p>Entendemos que cada negocio tiene necesidades únicas. Adaptamos nuestros servicios a los requerimientos
+          específicos de cada operación.</p>
+      </div>
+      <div class="solutions-grid">
+        <div class="sol-card">
+          <div class="sol-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <div class="sol-body">
+            <h4>Rutas Personalizadas</h4>
+            <p>Adaptamos los trayectos según las necesidades operativas del cliente, incluyendo conexiones con puertos,
+              zonas francas y centros de distribución en todo el país.</p>
+          </div>
+        </div>
+        <div class="sol-card">
+          <div class="sol-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+          </div>
+          <div class="sol-body">
+            <h4>Horarios Flexibles</h4>
+            <p>Flexibilidad en los horarios de recogida y entrega, ajustándonos a las necesidades operativas del negocio
+              del cliente con despacho de carga programado.</p>
+          </div>
+        </div>
+        <div class="sol-card">
+          <div class="sol-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="1" y="3" width="15" height="13" rx="1" />
+              <path d="M16 8h4l3 5v4h-7V8z" />
+              <circle cx="5.5" cy="18.5" r="2.5" />
+              <circle cx="18.5" cy="18.5" r="2.5" />
+            </svg>
+          </div>
+          <div class="sol-body">
+            <h4>Vehículo Específico por Carga</h4>
+            <p>Amplia variedad de vehículos propios adaptados a cada tipo de mercancía: turbos para urbano, camiones
+              para semi masiva, patinetas y tractocamiones para carga masiva.</p>
+          </div>
+        </div>
+        <div class="sol-card">
+          <div class="sol-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+          </div>
+          <div class="sol-body">
+            <h4>Canal de Comunicación Directo</h4>
+            <p>Cada cliente cuenta con un punto de contacto directo para resolver inquietudes y mantenerse informado
+              sobre el estado de su carga durante todo el trayecto.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- COBERTURA -->
   <section class="coverage">
     <div class="coverage-inner">

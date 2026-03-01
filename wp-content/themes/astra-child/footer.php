@@ -36,12 +36,12 @@
             <div>
                 <div class="footer-col-title">Sucursales</div>
                 <ul class="footer-links">
-                    <li><a href="<?php echo esc_url(home_url('/sucursales/')); ?>">Medellín (Sede Principal)</a>
+                    <li><a href="<?php echo esc_url(home_url('/sucursales/sucursal-medellin/')); ?>">Medellín (Sede Principal)</a>
                     </li>
-                    <li><a href="<?php echo esc_url(home_url('/sucursales/')); ?>">Bogotá</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/sucursales/')); ?>">Cali</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/sucursales/')); ?>">Barranquilla</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/sucursales/')); ?>">Cartagena</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/sucursales/bogota/')); ?>">Bogotá</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/sucursales/cali/')); ?>">Cali</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/sucursales/barranquilla/')); ?>">Barranquilla</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/sucursales/cartagena/')); ?>">Cartagena</a></li>
                     <li><a href="<?php echo esc_url(home_url('/sucursales/')); ?>">Ver todas →</a></li>
                 </ul>
             </div>

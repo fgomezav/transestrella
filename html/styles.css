@@ -1,0 +1,1791 @@
+/* =====================================================
+   TRANSESTRELLA — GLOBAL STYLESHEET
+   Compartido por todas las páginas en /html/
+   Versión: 1.0 — 2026
+   ===================================================== */
+
+/* ══════════════════════════════════════════
+   1. VARIABLES DE MARCA
+══════════════════════════════════════════ */
+:root {
+  /* Colores principales */
+  --ts-blue:      #0F5BA7;
+  --ts-blue-dark: #0A4580;
+  --ts-blue-deep: #083266;
+  --ts-gold:      #F5A623;
+  --ts-gold-hov:  #D9911A;
+  --ts-white:     #FFFFFF;
+  --ts-gray-bg:   #F5F5F5;
+  --ts-gray:      #999999;
+  --ts-gray-dark: #333333;
+  --ts-gray-line: #E0E0E0;
+
+  /* Colores de servicio específicos */
+  --ts-red:       #C0392B;   /* Mercancías Peligrosas */
+  --ts-red-soft:  #E74C3C;   /* Mercancías Peligrosas — hover */
+  --ts-teal:      #0D7377;   /* ITR — transporte internacional */
+
+  /* Tipografía */
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body:    'Nunito Sans', sans-serif;
+}
+
+/* ══════════════════════════════════════════
+   2. RESET & BASE
+══════════════════════════════════════════ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  background: #FFFFFF;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+/* ══════════════════════════════════════════
+   3. HEADER & NAVEGACIÓN
+══════════════════════════════════════════ */
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(8, 50, 102, .97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, .07);
+  z-index: 100;
+  padding: 0 40px;
+}
+
+.nav-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 800;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  letter-spacing: .02em;
+  text-decoration: none;
+}
+
+.nav-logo span {
+  color: var(--ts-gold);
+}
+
+/* Ícono estrella (clip-path polygon) */
+.nav-star {
+  width: 30px;
+  height: 30px;
+  background: var(--ts-gold);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  flex-shrink: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .82);
+  text-decoration: none;
+  transition: color .18s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--ts-gold);
+}
+
+/* Botón CTA en la nav */
+.nav-cta {
+  background: var(--ts-gold) !important;
+  color: #fff !important;
+  padding: 9px 20px;
+  border-radius: 4px;
+}
+
+/* ══════════════════════════════════════════
+   4. UTILIDADES GLOBALES
+══════════════════════════════════════════ */
+
+/* --- Eyebrow (etiqueta de sección) --- */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ts-gold);
+}
+
+.eyebrow::before {
+  content: '';
+  width: 34px;
+  height: 2px;
+  background: var(--ts-gold);
+  flex-shrink: 0;
+}
+
+/* Variante centrada (elimina línea izquierda, agrega una a cada lado) */
+.eyebrow.center {
+  justify-content: center;
+}
+
+.eyebrow.center::before {
+  display: none;
+}
+
+.eyebrow.center::after {
+  content: '';
+  width: 34px;
+  height: 2px;
+  background: var(--ts-gold);
+  flex-shrink: 0;
+}
+
+/* --- Breadcrumb --- */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.breadcrumb a {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .4);
+  text-decoration: none;
+  transition: color .18s;
+}
+
+.breadcrumb a:hover {
+  color: var(--ts-gold);
+}
+
+.breadcrumb-sep {
+  color: rgba(255, 255, 255, .2);
+  font-size: 12px;
+}
+
+.breadcrumb span {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ts-gold);
+}
+
+/* ══════════════════════════════════════════
+   5. BOTONES
+══════════════════════════════════════════ */
+
+/* Primario — fondo dorado */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 34px;
+  background: var(--ts-gold);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 2px solid var(--ts-gold);
+  transition: background .18s, border-color .18s;
+}
+
+.btn-primary:hover {
+  background: var(--ts-gold-hov);
+  border-color: var(--ts-gold-hov);
+}
+
+/* Outline blanco — para secciones oscuras */
+.btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 34px;
+  background: transparent;
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, .35);
+  transition: border-color .18s, background .18s;
+}
+
+.btn-outline-white:hover {
+  border-color: rgba(255, 255, 255, .65);
+  background: rgba(255, 255, 255, .06);
+}
+
+/* Outline azul — para secciones claras */
+.btn-outline-blue {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  background: transparent;
+  color: var(--ts-blue);
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 2px solid var(--ts-blue);
+  transition: background .18s, color .18s;
+}
+
+.btn-outline-blue:hover {
+  background: var(--ts-blue);
+  color: #fff;
+}
+
+/* ══════════════════════════════════════════
+   6. HERO — PÁGINA DE SERVICIO (full viewport)
+   Usado en: carga-nacional, transporte-urbano,
+   mercancias-peligrosas, itr, sucursales
+══════════════════════════════════════════ */
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  background: var(--ts-blue-deep);
+  overflow: hidden;
+}
+
+/* Fondo con imagen de flota */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center right;
+  opacity: .22;
+}
+
+/* Degradado direccional sobre el fondo */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, rgba(8, 50, 102, .97) 0%, rgba(8, 50, 102, .88) 45%, rgba(15, 91, 167, .25) 100%);
+}
+
+/* Línea diagonal decorativa */
+.hero-line {
+  position: absolute;
+  top: 0;
+  right: 36%;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(245, 166, 35, .12), transparent);
+  transform: rotate(10deg);
+}
+
+/* Contenido del hero */
+.hero-content {
+  position: relative;
+  z-index: 5;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 120px 40px 96px;
+  width: 100%;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(46px, 6.5vw, 82px);
+  font-weight: 800;
+  line-height: .92;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  letter-spacing: .01em;
+  margin-bottom: 22px;
+  max-width: 740px;
+}
+
+.hero h1 em {
+  color: var(--ts-gold);
+  font-style: normal;
+  display: block;
+}
+
+.hero-desc {
+  font-size: 17px;
+  line-height: 1.78;
+  color: rgba(255, 255, 255, .65);
+  max-width: 560px;
+  margin-bottom: 38px;
+}
+
+.hero-btns {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+/* Pastillas de características bajo los botones CTA */
+.hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 44px;
+  border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+.hero-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 100px;
+  padding: 7px 16px;
+}
+
+.hero-pill svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--ts-gold);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.hero-pill span {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .72);
+}
+
+/* ══════════════════════════════════════════
+   7. HERO — PÁGINA INTERIOR (altura fija ~340px)
+   Usado en: nosotros, servicios, sucursales
+══════════════════════════════════════════ */
+.page-hero {
+  position: relative;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  background: var(--ts-blue-deep);
+  overflow: hidden;
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: .2;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, rgba(8, 50, 102, .97) 0%, rgba(8, 50, 102, .80) 55%, rgba(15, 91, 167, .35) 100%);
+}
+
+.page-hero-line {
+  position: absolute;
+  top: 0;
+  right: 32%;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(245, 166, 35, .12), transparent);
+  transform: rotate(8deg);
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 5;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 100%;
+}
+
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 5vw, 62px);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  line-height: .95;
+  letter-spacing: .01em;
+  margin-bottom: 14px;
+}
+
+.page-hero h1 em {
+  color: var(--ts-gold);
+  font-style: normal;
+}
+
+.page-hero p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, .6);
+  max-width: 520px;
+  line-height: 1.65;
+}
+
+/* ══════════════════════════════════════════
+   8. HERO — SUCURSAL (hero de página de rama)
+   Layout de 2 columnas con tarjeta de contacto
+   Usado en: sucursal-bogota, -medellin, -cali, -barranquilla
+══════════════════════════════════════════ */
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Badge de tipo de sede */
+.sede-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245, 166, 35, .12);
+  border: 1px solid rgba(245, 166, 35, .28);
+  border-radius: 4px;
+  padding: 6px 14px;
+  margin-bottom: 16px;
+}
+
+.sede-tag svg {
+  width: 13px;
+  height: 13px;
+  fill: var(--ts-gold);
+}
+
+.sede-tag span {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ts-gold);
+}
+
+.hero-left h1 {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 6.5vw, 82px);
+  font-weight: 800;
+  line-height: .9;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  letter-spacing: .01em;
+  margin-bottom: 16px;
+}
+
+.hero-left h1 em {
+  color: var(--ts-gold);
+  font-style: normal;
+  display: block;
+}
+
+.hero-left p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, .6);
+  max-width: 480px;
+  line-height: 1.75;
+  margin-top: 14px;
+}
+
+/* Tarjeta de contacto rápido en el hero */
+.hcc {
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 14px;
+  padding: 28px 26px;
+  min-width: 280px;
+  flex-shrink: 0;
+}
+
+.hcc-title {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .4);
+  margin-bottom: 20px;
+}
+
+.hcc-items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.hcc-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.hcc-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(245, 166, 35, .1);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hcc-icon svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--ts-gold);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hcc-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: rgba(255, 255, 255, .35);
+  margin-bottom: 1px;
+}
+
+.hcc-val {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.hcc-val a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.hcc-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hcc-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border-radius: 5px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.hcc-btn-wa {
+  background: #25D366;
+  color: #fff;
+}
+
+.hcc-btn-tel {
+  background: rgba(255, 255, 255, .1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .18);
+}
+
+.hcc-btn svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* ══════════════════════════════════════════
+   9. MAPA DE SUCURSAL
+   Usado en: todas las páginas de sucursal
+══════════════════════════════════════════ */
+.map-section {
+  padding: 0 40px;
+  background: #FFFFFF;
+}
+
+.map-section-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  border-radius: 0 0 16px 16px;
+  overflow: hidden;
+  border: 1px solid var(--ts-gray-line);
+  border-top: none;
+}
+
+/* Área del mapa embebido */
+.map-embed {
+  background: #D6E4F0;
+  min-height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.map-pin-big {
+  width: 64px;
+  height: 64px;
+  background: var(--ts-blue);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  box-shadow: 0 8px 20px rgba(8, 50, 102, .25);
+}
+
+.map-pin-big svg {
+  width: 26px;
+  height: 26px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: rotate(45deg);
+}
+
+.map-embed p {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(8, 50, 102, .4);
+}
+
+.map-embed span {
+  font-size: 12px;
+  color: rgba(8, 50, 102, .3);
+}
+
+.map-note {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 11px;
+  color: rgba(8, 50, 102, .3);
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+/* Panel lateral de información */
+.map-side {
+  padding: 32px 28px;
+  background: #FFFFFF;
+  border-left: 1px solid var(--ts-gray-line);
+}
+
+.map-side-title {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--ts-gray);
+  margin-bottom: 22px;
+}
+
+.map-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.map-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.map-detail-icon {
+  width: 36px;
+  height: 36px;
+  background: #EEF3FA;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.map-detail-icon svg {
+  width: 15px;
+  height: 15px;
+  stroke: var(--ts-blue);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.map-detail-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--ts-gray);
+  margin-bottom: 2px;
+}
+
+.map-detail-val {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: #333333;
+  line-height: 1.2;
+}
+
+.map-detail-val a {
+  color: var(--ts-blue);
+  text-decoration: none;
+}
+
+/* Botones de navegación (Waze / Google Maps / Moovit) */
+.map-nav-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 18px;
+  border-top: 1px solid var(--ts-gray-line);
+}
+
+.map-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 6px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity .18s;
+}
+
+.map-nav-btn:hover {
+  opacity: .88;
+}
+
+.map-nav-btn svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.btn-waze   { background: #33CCFF; color: #fff; }
+.btn-gmaps  { background: #4285F4; color: #fff; }
+.btn-moovit { background: #F7971C; color: #fff; }
+
+/* ══════════════════════════════════════════
+   10. TARJETA DE SERVICIO (svc-card)
+   Usada en páginas de sucursal y servicios
+══════════════════════════════════════════ */
+.svc-card {
+  border: 1px solid var(--ts-gray-line);
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  background: #FFFFFF;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+
+.svc-card:hover {
+  border-color: var(--ts-gold);
+  box-shadow: 0 10px 24px rgba(8, 50, 102, .08);
+  transform: translateY(-3px);
+}
+
+.svc-img {
+  height: 130px;
+  overflow: hidden;
+  position: relative;
+}
+
+.svc-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s;
+}
+
+.svc-card:hover .svc-img img {
+  transform: scale(1.06);
+}
+
+.svc-img-ov {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(8, 50, 102, .5), transparent 55%);
+}
+
+.svc-tag-label {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--ts-gold);
+  border-radius: 3px;
+  padding: 3px 8px;
+}
+
+.svc-body {
+  padding: 16px 18px;
+}
+
+.svc-body h4 {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #333333;
+  line-height: 1.1;
+  margin-bottom: 5px;
+}
+
+.svc-body p {
+  font-size: 12px;
+  color: var(--ts-gray);
+  line-height: 1.5;
+}
+
+.svc-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--ts-blue);
+  margin-top: 10px;
+}
+
+/* ══════════════════════════════════════════
+   11. FLOTA — STRIP OSCURO
+   Usado en páginas de sucursal
+══════════════════════════════════════════ */
+.fleet-strip {
+  padding: 64px 40px;
+  background: var(--ts-blue-deep);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Patrón de grid sutil sobre el fondo */
+.fleet-strip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, .02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, .02) 1px, transparent 1px);
+  background-size: 52px 52px;
+}
+
+.fleet-strip-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.fleet-strip-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.fleet-strip-header h3 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.fleet-strip-header h3 span {
+  color: var(--ts-gold);
+}
+
+.fleet-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.fleet-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 8px;
+  padding: 12px 18px;
+  transition: border-color .2s;
+}
+
+.fleet-chip:hover {
+  border-color: rgba(245, 166, 35, .3);
+}
+
+.fleet-chip svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--ts-gold);
+  fill: none;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.fleet-chip-name {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.fleet-chip-desc {
+  font-size: 11px;
+  color: rgba(255, 255, 255, .4);
+}
+
+/* ══════════════════════════════════════════
+   12. OTRAS SUCURSALES
+   Usado en páginas de sucursal individual
+══════════════════════════════════════════ */
+.other-branches {
+  padding: 72px 40px;
+  background: #FFFFFF;
+  border-top: 1px solid var(--ts-gray-line);
+}
+
+.other-branches-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.other-branches-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.other-branches-header h3 {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.5vw, 30px);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.ob-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.ob-card {
+  padding: 16px 16px 18px;
+  border: 1px solid var(--ts-gray-line);
+  border-radius: 9px;
+  text-decoration: none;
+  background: #FFFFFF;
+  transition: border-color .2s, box-shadow .2s;
+  display: block;
+}
+
+.ob-card:hover {
+  border-color: var(--ts-gold);
+  box-shadow: 0 6px 16px rgba(245, 166, 35, .08);
+}
+
+.ob-city {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #333333;
+  margin-bottom: 2px;
+}
+
+.ob-dept {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ts-blue);
+  margin-bottom: 8px;
+}
+
+.ob-addr {
+  font-size: 12px;
+  color: #333333;
+  line-height: 1.45;
+  margin-bottom: 5px;
+}
+
+.ob-phone {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ts-blue);
+}
+
+/* ══════════════════════════════════════════
+   13. SECCIÓN CTA FINAL
+   Usado en TODAS las páginas
+══════════════════════════════════════════ */
+.cta {
+  background: var(--ts-blue-deep);
+  padding: 88px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Resplandores de fondo */
+.cta::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: -8%;
+  width: 55%;
+  height: 180%;
+  background: radial-gradient(ellipse, rgba(15, 91, 167, .2) 0%, transparent 68%);
+}
+
+.cta::after {
+  content: '';
+  position: absolute;
+  bottom: -25%;
+  right: -4%;
+  width: 45%;
+  height: 140%;
+  background: radial-gradient(ellipse, rgba(245, 166, 35, .08) 0%, transparent 68%);
+}
+
+/* Layout de 2 columnas (texto + formulario) */
+.cta-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: start;
+  position: relative;
+  z-index: 2;
+}
+
+/* Variante centrada (solo texto, sin formulario) */
+.cta-inner.cta-center {
+  max-width: 900px;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.cta-text h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 46px);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  line-height: 1.0;
+  margin-bottom: 14px;
+  margin-top: 12px;
+}
+
+.cta-text h2 span {
+  color: var(--ts-gold);
+}
+
+.cta-text p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, .58);
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+
+/* Ítems de contacto dentro del CTA */
+.cta-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cta-contact {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.cta-c-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cta-c-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--ts-gold);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cta-c-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--ts-gray);
+  margin-bottom: 1px;
+}
+
+.cta-c-val {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.cta-c-val a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* Botones en CTA centrado */
+.cta-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.cta-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ══════════════════════════════════════════
+   14. FORMULARIO DE CONTACTO (Forminator)
+   Usado en páginas de servicio y sucursales
+══════════════════════════════════════════ */
+.form-box {
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 14px;
+  padding: 32px;
+}
+
+.form-box h3 {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+
+.form-box-sub {
+  font-size: 14px;
+  color: rgba(255, 255, 255, .45);
+  margin-bottom: 20px;
+  line-height: 1.55;
+}
+
+/* Aviso informativo dentro del formulario */
+.form-notice {
+  background: rgba(245, 166, 35, .09);
+  border: 1px solid rgba(245, 166, 35, .22);
+  border-radius: 7px;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.form-notice-icon {
+  width: 20px;
+  height: 20px;
+  stroke: var(--ts-gold);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.form-notice-title {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ts-gold);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 2px;
+}
+
+.form-notice-text {
+  font-size: 12px;
+  color: rgba(255, 255, 255, .48);
+  line-height: 1.5;
+}
+
+/* Placeholder mientras se integra Forminator */
+.forminator-placeholder {
+  background: rgba(255, 255, 255, .04);
+  border: 2px dashed rgba(255, 255, 255, .15);
+  border-radius: 10px;
+  padding: 36px 24px;
+  text-align: center;
+}
+
+.forminator-placeholder svg {
+  width: 36px;
+  height: 36px;
+  stroke: rgba(255, 255, 255, .25);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  margin: 0 auto 12px;
+  display: block;
+}
+
+.forminator-placeholder p {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .3);
+}
+
+.forminator-placeholder span {
+  font-size: 13px;
+  color: rgba(255, 255, 255, .2);
+  display: block;
+  margin-top: 4px;
+}
+
+/* CTA de WhatsApp dentro del formulario */
+.form-wa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 12px;
+  background: rgba(37, 211, 102, .09);
+  border: 1px solid rgba(37, 211, 102, .2);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background .18s;
+}
+
+.form-wa:hover {
+  background: rgba(37, 211, 102, .14);
+}
+
+.form-wa svg {
+  width: 18px;
+  height: 18px;
+  fill: #25D366;
+  flex-shrink: 0;
+}
+
+.form-wa-text {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: #25D366;
+  letter-spacing: .04em;
+}
+
+/* ══════════════════════════════════════════
+   15. FOOTER
+   Idéntico en TODAS las páginas
+══════════════════════════════════════════ */
+footer {
+  background: #041C3D;
+  padding: 60px 40px 28px;
+}
+
+.footer-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 44px;
+  padding-bottom: 44px;
+  border-bottom: 1px solid rgba(255, 255, 255, .06);
+  margin-bottom: 28px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, .38);
+  line-height: 1.75;
+  margin-top: 12px;
+  max-width: 270px;
+}
+
+/* Chips de certificaciones en el footer */
+.footer-certs {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-cert {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .38);
+  border: 1px solid rgba(255, 255, 255, .09);
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.footer-col-title {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--ts-gold);
+  margin-bottom: 16px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.footer-links a {
+  font-size: 14px;
+  color: rgba(255, 255, 255, .43);
+  text-decoration: none;
+  transition: color .18s;
+}
+
+.footer-links a:hover {
+  color: rgba(255, 255, 255, .75);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: rgba(255, 255, 255, .22);
+}
+
+.footer-legal {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-legal a {
+  font-size: 13px;
+  color: rgba(255, 255, 255, .22);
+  text-decoration: none;
+  transition: color .18s;
+}
+
+.footer-legal a:hover {
+  color: rgba(255, 255, 255, .5);
+}
+
+/* ══════════════════════════════════════════
+   16. WHATSAPP FLOTANTE
+   Idéntico en TODAS las páginas
+══════════════════════════════════════════ */
+.wa-float {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 9px;
+}
+
+/* Burbuja de texto */
+.wa-bubble {
+  background: #FFFFFF;
+  border-radius: 9px;
+  padding: 10px 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .13);
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: #333333;
+  max-width: 190px;
+  line-height: 1.4;
+  position: relative;
+  animation: waIn .4s ease 1.6s both;
+}
+
+.wa-bubble strong {
+  display: block;
+  color: #075E54;
+  margin-bottom: 1px;
+  font-size: 13px;
+}
+
+/* Cola de la burbuja */
+.wa-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  right: 18px;
+  border-left: 7px solid transparent;
+  border-top: 7px solid #fff;
+}
+
+/* Botón circular verde */
+.wa-btn {
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, .38);
+  text-decoration: none;
+  position: relative;
+  animation: waIn .4s ease 1s both;
+}
+
+/* Anillo de pulso */
+.wa-btn::before {
+  content: '';
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, .28);
+  animation: waPulse 2.2s ease-out infinite;
+}
+
+.wa-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+/* ══════════════════════════════════════════
+   17. KEYFRAMES / ANIMACIONES
+══════════════════════════════════════════ */
+@keyframes waPulse {
+  0%   { transform: scale(1);    opacity: .7; }
+  100% { transform: scale(1.75); opacity: 0;  }
+}
+
+@keyframes waIn {
+  from { opacity: 0; transform: scale(.7) translateY(10px); }
+  to   { opacity: 1; transform: scale(1) translateY(0);      }
+}
+
+/* ══════════════════════════════════════════
+   18. RESPONSIVE — TABLET (≤ 1024px)
+══════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  /* Hero sucursal: columna única */
+  .hero-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hcc {
+    min-width: auto;
+    max-width: 420px;
+  }
+
+  /* Mapa: columna única */
+  .map-section-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .map-side {
+    border-left: none;
+    border-top: 1px solid var(--ts-gray-line);
+  }
+
+  /* CTA: columna única */
+  .cta-inner {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  /* Footer: 2 columnas */
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+  /* Otras sucursales: 2 columnas */
+  .ob-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ══════════════════════════════════════════
+   19. RESPONSIVE — MÓVIL (≤ 768px)
+══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* Header: ocultar nav links */
+  header {
+    padding: 0 16px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  /* Hero servicio */
+  .hero-content {
+    padding: 96px 20px 72px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+  }
+
+  .hero-btns a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Hero interior */
+  .page-hero {
+    height: auto;
+    padding: 80px 0 60px;
+  }
+
+  .page-hero-content {
+    padding: 0 20px;
+  }
+
+  /* Hero sucursal */
+  .hero-content {
+    padding: 80px 20px 60px;
+  }
+
+  .hero-left h1 {
+    font-size: 42px;
+  }
+
+  /* Mapa */
+  .map-section {
+    padding: 0 20px;
+  }
+
+  /* Grids de servicios */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Otras sucursales */
+  .ob-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Flota strip */
+  .fleet-strip {
+    padding: 48px 20px;
+  }
+
+  /* Secciones generales — padding reducido */
+  .cta {
+    padding: 60px 20px;
+  }
+
+  .cta-inner {
+    gap: 36px;
+  }
+
+  .cta-contacts {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cta-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .other-branches {
+    padding: 60px 20px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 44px 20px 22px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* WhatsApp */
+  .wa-float {
+    bottom: 14px;
+    right: 14px;
+  }
+}
+
+/* ══════════════════════════════════════════
+   20. RESPONSIVE — TELÉFONO PEQUEÑO (≤ 480px)
+══════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-left h1 {
+    font-size: 36px;
+  }
+
+  .services-grid,
+  .ob-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Ocultar burbuja de texto de WhatsApp en pantallas muy pequeñas */
+  .wa-bubble {
+    display: none;
+  }
+}

@@ -418,378 +418,275 @@ get_header();
     </div>
   </section>
 
-  <!-- COBERTURA -->
+  <!-- COBERTURA Y CORREDORES -->
   <section class="coverage">
     <div class="coverage-inner">
       <div class="coverage-header">
-        <div class="coverage-header-left">
-          <div class="eyebrow">Presencia</div>
-          <h2>Cobertura <span>Nacional</span></h2>
-          <p>Llegamos a todos los rincones del país con 8 sucursales propias estratégicas.</p>
+        <div>
+          <div class="eyebrow">Presencia nacional</div>
+          <h2>Cobertura en los 32 <span>Departamentos</span></h2>
+          <p>Llegamos a todos los rincones del país con tiempos de tránsito optimizados gracias a nuestra red de 8
+            sucursales propias estratégicamente ubicadas en los principales corredores logísticos de Colombia.</p>
+          <a href="<?php echo esc_url(home_url('/sucursales/')); ?>" class="btn-outline-blue"
+            style="margin-top:20px;">Ver Todas las Sucursales →</a>
         </div>
+        <div>
+          <div class="corridors-grid">
+            <div class="corridor">
+              <div class="corridor-dot"></div>
+              <div class="corridor-body">
+                <div class="corridor-name">Corredor Andino</div>
+                <div class="corridor-cities">Medellín · Bogotá · Manizales · Pereira</div>
+              </div>
+            </div>
+            <div class="corridor">
+              <div class="corridor-dot"></div>
+              <div class="corridor-body">
+                <div class="corridor-name">Corredor Pacífico</div>
+                <div class="corridor-cities">Buenaventura · Cali · Buga · Palmira</div>
+              </div>
+            </div>
+            <div class="corridor">
+              <div class="corridor-dot"></div>
+              <div class="corridor-body">
+                <div class="corridor-name">Corredor Caribe</div>
+                <div class="corridor-cities">Cartagena · Barranquilla · Santa Marta</div>
+              </div>
+            </div>
+            <div class="corridor">
+              <div class="corridor-dot"></div>
+              <div class="corridor-body">
+                <div class="corridor-name">Troncal de Occidente</div>
+                <div class="corridor-cities">Medellín · Cali · Buenaventura</div>
+              </div>
+            </div>
+            <div class="corridor">
+              <div class="corridor-dot"></div>
+              <div class="corridor-body">
+                <div class="corridor-name">Ruta del Sol</div>
+                <div class="corridor-cities">Bogotá · Costa Caribe · Barranquilla</div>
+              </div>
+            </div>
+            <div class="corridor">
+              <div class="corridor-dot"></div>
+              <div class="corridor-body">
+                <div class="corridor-name">Corredor Industrial</div>
+                <div class="corridor-cities">Medellín · Bogotá · Zonas francas</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="coverage-branches">
+        <h3>Nuestras 8 Sucursales</h3>
+        <p class="coverage-branches-sub">Atención local especializada en cada corredor logístico estratégico del país
+        </p>
         <div class="branch-pills">
-          <div class="branch-pill main"><span>Medellín</span></div>
-          <div class="branch-pill"><span>Bogotá</span></div>
-          <div class="branch-pill"><span>Cali</span></div>
-          <div class="branch-pill"><span>Barranquilla</span></div>
+          <a href="<?php echo esc_url(home_url('/sucursales/sucursal-medellin/')); ?>" class="branch-pill main"
+            style="text-decoration:none; color:inherit;">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+            <span>Medellín — Sede Principal</span>
+          </a>
+          <a href="<?php echo esc_url(home_url('/sucursales/sucursal-bogota/')); ?>" class="branch-pill"
+            style="text-decoration:none; color:inherit;">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>Bogotá</span>
+          </a>
+          <a href="<?php echo esc_url(home_url('/sucursales/sucursal-cali/')); ?>" class="branch-pill"
+            style="text-decoration:none; color:inherit;">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>Cali</span>
+          </a>
+          <a href="<?php echo esc_url(home_url('/sucursales/sucursal-barranquilla/')); ?>" class="branch-pill"
+            style="text-decoration:none; color:inherit;">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>Barranquilla</span>
+          </a>
+          <a href="<?php echo esc_url(home_url('/sucursales/sucursal-cartagena/')); ?>" class="branch-pill"
+            style="text-decoration:none; color:inherit;">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>Cartagena</span>
+          </a>
+          <a href="<?php echo esc_url(home_url('/sucursales/sucursal-buenaventura/')); ?>" class="branch-pill"
+            style="text-decoration:none; color:inherit;">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>Buenaventura</span>
+          </a>
+          <a href="<?php echo esc_url(home_url('/sucursales/sucursal-buga/')); ?>" class="branch-pill"
+            style="text-decoration:none; color:inherit;">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>Buga</span>
+          </a>
+          <a href="<?php echo esc_url(home_url('/sucursales/sucursal-manizales/')); ?>" class="branch-pill"
+            style="text-decoration:none; color:inherit;">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>Manizales</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta" id="cotizar">
-    <div class="cta-inner">
-      <div class="cta-text">
-        <h2>Cotice su <span>Carga Nacional</span></h2>
-        <p>Cuéntenos su operación y diseñamos la solución logística ideal.</p>
+
+  <!-- TESTIMONIOS -->
+  <section class="testi">
+    <div class="testi-inner">
+      <div class="testi-header">
+        <div class="eyebrow center">Clientes que confían en nosotros</div>
+        <h2>Lo que dicen <span>Nuestros Clientes</span></h2>
+        <p>Empresas líderes de sus sectores confirman la calidad de nuestro servicio de transporte de carga nacional.
+        </p>
       </div>
-      <div class="form-box">
-        <h3>Cotizar Ahora</h3>
-        <div class="forminator-placeholder">
-          <p>[forminator_form id="XX"]</p>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">
+            <svg viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          </div>
+          <span class="testi-quote-mark">"</span>
+          <p class="testi-text">El equipo de Transportadora Estrella ha sido un proveedor clave en el proceso de
+            internacionalización de Selecta, siempre con su apoyo, adaptabilidad, disposición y servicio.</p>
+          <div class="testi-author">
+            <div class="testi-av">CQ</div>
+            <div>
+              <div class="testi-name">Camila Quirama Mejía</div>
+              <div class="testi-role">Analista de Exportaciones — Selecta</div>
+            </div>
+          </div>
         </div>
-        <a href="https://wa.me/576045273300" target="_blank" class="form-wa">
-          <span class="form-wa-text">WhatsApp</span>
+        <div class="testi-card">
+          <div class="testi-stars">
+            <svg viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          </div>
+          <span class="testi-quote-mark">"</span>
+          <p class="testi-text">Si la materia prima no para, es porque la Transportadora Estrella S.A.S. nunca se
+            detiene.
+            Así se fabrica el éxito en ICOFORMAS. Un aliado logístico de primer nivel.</p>
+          <div class="testi-author">
+            <div class="testi-av">JG</div>
+            <div>
+              <div class="testi-name">Jaime Andrés Giraldo</div>
+              <div class="testi-role">Gerente — ICO FORMAS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OTROS SERVICIOS -->
+  <section class="other-services">
+    <div class="other-services-inner">
+      <div class="other-header">
+        <div class="eyebrow center">Portafolio completo</div>
+        <h3>Otros Servicios Disponibles</h3>
+        <p>Explore el resto de nuestra oferta de transporte especializado en Colombia.</p>
+      </div>
+      <div class="other-grid">
+        <a href="<?php echo esc_url(home_url('/servicios/transporte-urbano-de-mercancias/')); ?>" class="other-card">
+          <div class="other-card-img">
+            <img src="https://transestrella.com/wp-content/uploads/2025/06/camio-urbano-de-transporte.webp"
+              alt="Transporte urbano de mercancías — Transportadora Estrella" loading="lazy">
+          </div>
+          <div class="other-card-body">
+            <div class="other-tag">Urbano</div>
+            <h4>Transporte Urbano de Mercancías</h4>
+            <p>Distribución eficiente dentro de las principales ciudades del país.</p>
+            <div class="other-link">Ver servicio →</div>
+          </div>
+        </a>
+        <a href="<?php echo esc_url(home_url('/servicios/transporte-de-contenedores/')); ?>" class="other-card">
+          <div class="other-card-img">
+            <img
+              src="https://transestrella.com/wp-content/uploads/2025/04/transportadora-estrella-puerto-contenedores-1024x645.webp"
+              alt="Transporte de contenedores — puertos Colombia" loading="lazy">
+          </div>
+          <div class="other-card-body">
+            <div class="other-tag">Puertos DTA/OTM</div>
+            <h4>Transporte de Contenedores</h4>
+            <p>Movimiento seguro desde y hacia los principales puertos de Colombia.</p>
+            <div class="other-link">Ver servicio →</div>
+          </div>
+        </a>
+        <a href="<?php echo esc_url(home_url('/servicios/')); ?>" class="other-card">
+          <div class="other-card-img">
+            <img
+              src="https://transestrella.com/wp-content/uploads/2025/04/transportadora-estrella-nuestra-flota-transporte-de-carga-pesada-1-1024x576.jpeg"
+              alt="Logística y flota de Transportadora Estrella" loading="lazy">
+          </div>
+          <div class="other-card-body">
+            <div class="other-tag">Soluciones</div>
+            <h4>Logística Integral</h4>
+            <p>Conozca todas nuestras soluciones logísticas diseñadas a su medida.</p>
+            <div class="other-link">Ver todos →</div>
+          </div>
         </a>
       </div>
     </div>
   </section>
 </div>
 
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- TESTIMONIOS -->
-<section class="testi">
-  <div class="testi-inner">
-    <div class="testi-header">
-      <div class="eyebrow center">Clientes que confían en nosotros</div>
-      <h2>Lo que dicen <span>Nuestros Clientes</span></h2>
-      <p>Empresas líderes de sus sectores confirman la calidad de nuestro servicio de transporte de carga nacional.</p>
-    </div>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="testi-stars">
-          <svg viewBox="0 0 24 24">
-            <polygon
-              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-          </svg>
-          <svg viewBox="0 0 24 24">
-            <polygon
-              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-          </svg>
-          <svg viewBox="0 0 24 24">
-            <polygon
-              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-          </svg>
-          <svg viewBox="0 0 24 24">
-            <polygon
-              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-          </svg>
-          <svg viewBox="0 0 24 24">
-            <polygon
-              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-          </svg>
-        </div>
-        <span class="testi-quote-mark">"</span>
-        <p class="testi-text">El equipo de Transportadora Estrella ha sido un proveedor clave en el proceso de
-          internacionalización de Selecta, siempre con su apoyo, adaptabilidad, disposición y servicio.</p>
-        <div class="testi-author">
-          <div class="testi-av">CQ</div>
-          <div>
-            <div class="testi-name">Camila Quirama Mejía</div>
-            <div class="testi-role">Analista de Exportaciones — Selecta</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">
-          <svg viewBox="0 0 24 24">
-            <polygon
-              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-          </svg>
-          <svg viewBox="0 0 24 24">
-            <polygon
-              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-          </svg>
-          <svg viewBox="0 0 24 24">
-            <polygon
-              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-          </svg>
-          <svg viewBox="0 0 24 24">
-            <polygon
-              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-          </svg>
-          <svg viewBox="0 0 24 24">
-            <polygon
-              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-          </svg>
-        </div>
-        <span class="testi-quote-mark">"</span>
-        <p class="testi-text">Si la materia prima no para, es porque la Transportadora Estrella S.A.S. nunca se detiene.
-          Así se fabrica el éxito en ICOFORMAS. Un aliado logístico de primer nivel.</p>
-        <div class="testi-author">
-          <div class="testi-av">JG</div>
-          <div>
-            <div class="testi-name">Jaime Andrés Giraldo</div>
-            <div class="testi-role">Gerente — ICO FORMAS</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- OTROS SERVICIOS -->
-<section class="other-services">
-  <div class="other-services-inner">
-    <div class="other-header">
-      <div class="eyebrow center">Portafolio completo</div>
-      <h3>Otros Servicios Disponibles</h3>
-      <p>Explore el resto de nuestra oferta de transporte especializado en Colombia.</p>
-    </div>
-    <div class="other-grid">
-      <a href="<?php echo esc_url(home_url('/servicios/transporte-urbano-de-mercancias/')); ?>" class="other-card">
-        <div class="other-card-img">
-          <img src="https://transestrella.com/wp-content/uploads/2025/06/camio-urbano-de-transporte.webp"
-            alt="Transporte urbano de mercancías — Transportadora Estrella" loading="lazy">
-        </div>
-        <div class="other-card-body">
-          <div class="other-tag">Urbano</div>
-          <h4>Transporte Urbano de Mercancías</h4>
-          <p>Distribución eficiente dentro de las principales ciudades del país.</p>
-          <div class="other-link">Ver servicio →</div>
-        </div>
-      </a>
-      <a href="<?php echo esc_url(home_url('/servicios/transporte-de-contenedores/')); ?>" class="other-card">
-        <div class="other-card-img">
-          <img
-            src="https://transestrella.com/wp-content/uploads/2025/04/transportadora-estrella-puerto-contenedores-1024x645.webp"
-            alt="Transporte de contenedores — puertos Colombia" loading="lazy">
-        </div>
-        <div class="other-card-body">
-          <div class="other-tag">Puertos DTA/OTM</div>
-          <h4>Transporte de Contenedores</h4>
-          <p>Movimiento seguro desde y hacia los principales puertos de Colombia.</p>
-          <div class="other-link">Ver servicio →</div>
-        </div>
-      </a>
-      <a href="<?php echo esc_url(home_url('/servicios/')); ?>" class="other-card">
-        <div class="other-card-img">
-          <img
-            src="https://transestrella.com/wp-content/uploads/2025/04/transportadora-estrella-nuestra-flota-transporte-de-carga-pesada-1-1024x576.jpeg"
-            alt="Logística y flota de Transportadora Estrella" loading="lazy">
-        </div>
-        <div class="other-card-body">
-          <div class="other-tag">Soluciones</div>
-          <h4>Logística Integral</h4>
-          <p>Conozca todas nuestras soluciones logísticas diseñadas a su medida.</p>
-          <div class="other-link">Ver todos →</div>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- CTA FINAL -->
-<section class="cta" id="cotizar">
-  <div class="cta-inner">
-    <div class="cta-text">
-      <div class="eyebrow">Contacto comercial</div>
-      <h2>¿Listo para Mover <span>Su Carga?</span></h2>
-      <p>Déjenos sus datos y los de su operación. Un especialista en logística analizará su requerimiento y le
-        contactará en menos de 2 horas hábiles con una propuesta o para afinar los detalles.</p>
-      <div class="cta-contacts">
-        <div class="cta-contact">
-          <div class="cta-c-icon">
-            <svg viewBox="0 0 24 24">
-              <path
-                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-            </svg>
-          </div>
-          <div>
-            <div class="cta-c-label">Línea Nacional</div>
-            <div class="cta-c-val">317 401 5462</div>
-          </div>
-        </div>
-        <div class="cta-contact">
-          <div class="cta-c-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-              <polyline points="22,6 12,13 2,6" />
-            </svg>
-          </div>
-          <div>
-            <div class="cta-c-label">Email Comercial</div>
-            <div class="cta-c-val">mercadeorepo@transestrella.com.co</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="form-box">
-        <h3>Solicitar Cotización</h3>
-        <p class="form-box-sub">Complete el formulario y cotice su servicio ahora mismo.</p>
-        <div class="form-notice">
-          <svg viewBox="0 0 24 24" class="form-notice-icon">
-            <circle cx="12" cy="12" r="10" />
-            <line x1="12" y1="8" x2="12" y2="12" />
-            <line x1="12" y1="16" x2="12.01" y2="16" />
-          </svg>
-          <div>
-            <div class="form-notice-title">Información Importante</div>
-            <div class="form-notice-text">
-              TransEstrella S.A.S únicamente transporta carga completa en camiones tipo Turbo, Sencillo, Doble Troque,
-              Tracto Camión, etc.<br><br>
-              <strong>No realizamos mudanzas, recolección de paquetes ni envíos que no logren el cupo completo del
-                vehículo.</strong>
-            </div>
-          </div>
-        </div>
-        <?php
-// Intentar cargar el formulario Forminator por defecto "Cotizador Express" u otro si existe.
-// Actualmente ponemos un placeholder claro en caso de que no haya o falle
-$form_shortcode = '[forminator_form id="1272"]'; // Asegúrate de cambiar el ID si no corresponde
-if (shortcode_exists('forminator_form')) {
-  echo do_shortcode($form_shortcode);
-}
-else {
-?>
-        <div class="forminator-placeholder">
-          <svg viewBox="0 0 24 24">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-            <polyline points="14 2 14 8 20 8" />
-            <line x1="16" y1="13" x2="8" y2="13" />
-            <line x1="16" y1="17" x2="8" y2="17" />
-            <polyline points="10 9 9 9 8 9" />
-          </svg>
-          <p>Formulario de Cotización</p>
-          <span>El formulario se cargará aquí vía WP Forminator<br>(Compruebe que el plugin está activo)</span>
-        </div>
-        <?php
-}?>
-        <a href="https://wa.me/576045273300" class="form-wa">
-          <svg viewBox="0 0 24 24">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-          <span class="form-wa-text">Chat Comercial WhatsApp</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-</div> <!-- Cierre page-carga-nacional-content -->
-
-<!-- WHATSAPP FLOTANTE -->
-<div class="wa-float">
-  <div class="wa-bubble">
-    <strong>¿Necesitas cotizar transporte?</strong>
-    Nuestros especialistas están en línea para asesorarte.
-  </div>
-  <a href="https://wa.me/573174015462" class="wa-btn" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24">
-      <path
-        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-    </svg>
-  </a>
-</div>
-
 <?php
 get_footer();
-?> d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94
-1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198
-0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306
-1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719
-2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0
-01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64
-0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0
-0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683
-1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-</svg>
-</a>
-</div>??<div class="form-notice">
-          <svg viewBox="0 0 24 24" class="form-notice-icon">
-            <circle cx="12" cy="12" r="10" />
-            <line x1="12" y1="8" x2="12" y2="12" />
-            <line x1="12" y1="16" x2="12.01" y2="16" />
-          </svg>
-          <div>
-            <div class="form-notice-title">Información Importante</div>
-            <div class="form-notice-text">
-              TransEstrella S.A.S únicamente transporta carga completa en camiones tipo Turbo, Sencillo, Doble Troque,
-              Tracto Camión, etc.<br><br>
-              <strong>No realizamos mudanzas, recolección de paquetes ni envíos que no logren el cupo completo del
-                vehículo.</strong>
-            </div>
-          </div>
-        </div>
-        <?php
-// Intentar cargar el formulario Forminator por defecto "Cotizador Express" u otro si existe.
-// Actualmente ponemos un placeholder claro en caso de que no haya o falle
-$form_shortcode = '[forminator_form id="1272"]'; // Asegúrate de cambiar el ID si no corresponde
-if (shortcode_exists('forminator_form')) {
-  echo do_shortcode($form_shortcode);
-}
-else {
 ?>
-        <div class="forminator-placeholder">
-          <svg viewBox="0 0 24 24">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-            <polyline points="14 2 14 8 20 8" />
-            <line x1="16" y1="13" x2="8" y2="13" />
-            <line x1="16" y1="17" x2="8" y2="17" />
-            <polyline points="10 9 9 9 8 9" />
-          </svg>
-          <p>Formulario de Cotización</p>
-          <span>El formulario se cargará aquí vía WP Forminator<br>(Compruebe que el plugin está activo)</span>
-        </div>
-        <?php
-}?>
-        <a href="https://wa.me/576045273300" class="form-wa">
-          <svg viewBox="0 0 24 24">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-          <span class="form-wa-text">Chat Comercial WhatsApp</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-</div> <!-- Cierre page-carga-nacional-content -->
-
-<!-- WHATSAPP FLOTANTE -->
-<div class="wa-float">
-  <div class="wa-bubble">
-    <strong>¿Necesitas cotizar transporte?</strong>
-    Nuestros especialistas están en línea para asesorarte.
-  </div>
-  <a href="https://wa.me/573174015462" class="wa-btn" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24">
-      <path
-        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-    </svg>
-  </a>
-</div>
-
-<?php
-get_footer();
-?> d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94
-1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198
-0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306
-1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719
-2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0
-01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64
-0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0
-0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683
-1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-</svg>
-</a>
-</div>?>

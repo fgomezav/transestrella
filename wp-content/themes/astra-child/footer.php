@@ -40,7 +40,6 @@
                     </li>
                     <li><a href="<?php echo esc_url(home_url('/sucursales/sucursal-bogota/')); ?>">Bogotá</a></li>
                     <li><a href="<?php echo esc_url(home_url('/sucursales/sucursal-cali/')); ?>">Cali</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/sucursales/sucursal-barranquilla/')); ?>">Barranquilla</a></li>
                     <li><a href="<?php echo esc_url(home_url('/sucursales/sucursal-cartagena/')); ?>">Cartagena</a></li>
                     <li><a href="<?php echo esc_url(home_url('/sucursales/')); ?>">Ver todas →</a></li>
                 </ul>

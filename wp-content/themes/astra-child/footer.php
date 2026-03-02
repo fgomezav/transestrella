@@ -88,6 +88,20 @@
 </div>
 
 <?php wp_footer(); ?>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (navToggle && navLinks) {
+            navToggle.addEventListener('click', function () {
+                navLinks.classList.toggle('nav-active');
+                const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', !isExpanded);
+            });
+        }
+    });
+</script>
 </body>
 
 </html>

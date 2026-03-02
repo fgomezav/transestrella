@@ -26,6 +26,16 @@
                 <img src="https://transestrella.com/wp-content/uploads/2025/07/logo-transportadora-estrella-254x94.png"
                     alt="Transportadora Estrella" style="height: 48px; width: auto;">
             </a>
+
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <svg viewBox="0 0 24 24" width="26" height="26" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
             <?php
 wp_nav_menu(array(
     'theme_location' => 'primary',

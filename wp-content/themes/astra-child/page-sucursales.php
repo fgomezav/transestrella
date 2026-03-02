@@ -112,12 +112,10 @@ get_header(); ?>
           </div>
         </div>
         <div class="main-branch-btns">
-          <a href="https://waze.com/ul?q=Calle+64+%2356-60+Medellin" target="_blank" class="btn-waze">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><circle cx="12" cy="11" r="8"/><path fill="#33CCFF" d="M12 3a8 8 0 1 0 0 16A8 8 0 0 0 12 3z"/><circle cx="9.5" cy="10.5" r="1.5" fill="#333"/><circle cx="14.5" cy="10.5" r="1.5" fill="#333"/><path d="M9 14s1 1.5 3 1.5S15 14 15 14" stroke="#333" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>
-            Abrir en Waze
+          <a href="https://waze.com/ul?q=Calle+64+%2356-60+Medellin" target="_blank" class="branch-map-link bml-waze">
+            Waze
           </a>
-          <a href="https://maps.google.com/?q=Calle+64+%2356-60+Medellin+Colombia" target="_blank" class="btn-gmaps">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <a href="https://maps.google.com/?q=Calle+64+%2356-60+Medellin+Colombia" target="_blank" class="branch-map-link bml-gmaps">
             Google Maps
           </a>
           <a href="https://wa.me/576045273300" target="_blank" class="btn-primary" style="font-size:13px;padding:12px 20px;">
@@ -133,7 +131,7 @@ get_header(); ?>
         </div>
         <div class="map-placeholder-label">Mapa Interactivo</div>
         <div class="map-placeholder-sub">Calle 64 #56-60, La Candelaria, Medellín</div>
-        <div class="map-note">Insertar iframe Google Maps · &lt;iframe src="https://maps.google.com/..." /&gt;</div>
+        <div class="map-note"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63450.90610744188!2d-75.72125740514781!3d6.305493736282244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429539db76447%3A0x219d4984ace8094!2sTransportadora%20Estrella!5e0!3m2!1ses-419!2sco!4v1772459066402!5m2!1ses-419!2sco" width="610" height="490" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
       </div>
     </div>
   </div>

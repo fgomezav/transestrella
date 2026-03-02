@@ -1739,18 +1739,81 @@ footer {
   }
 }
 
+/* Toggle botón hamburguesa (oculto en desktop) */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px;
+}
+
 /* ══════════════════════════════════════════
    19. RESPONSIVE — MÓVIL (≤ 768px)
 ══════════════════════════════════════════ */
 @media (max-width: 768px) {
 
-  /* Header: ocultar nav links */
+  /* Header y Menú Móvil */
   header {
     padding: 0 16px;
   }
 
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .nav-links {
     display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: rgba(8, 50, 102, 0.98);
+    backdrop-filter: blur(12px);
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 20px 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+  }
+
+  .nav-links.nav-active {
+    display: flex;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 14px 0;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .nav-links .sub-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 0;
+    min-width: 100%;
+    padding-left: 14px;
+  }
+
+  .nav-links .sub-menu a {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  .nav-cta {
+    display: inline-block;
+    text-align: center;
+    margin-top: 18px;
   }
 
   /* Hero servicio */

@@ -45,7 +45,7 @@ get_header(); ?>
           </div>
           <div>
             <div class="ch-label">Correo Electrónico</div>
-            <div class="ch-val" style="font-size:15px;"><span class="__cf_email__" data-cfemail="bccfd9cecad5dfd5d3ddd0dfd0d5d9d2c8d9fcc8ceddd2cfd9cfc8ced9d0d0dd92dfd3d1">[email&#160;protected]</span></div>
+            <div class="ch-val" style="font-size:15px;"><span class="__cf_email__" data-cfemail="bccfd9cecad5dfd5d3ddd0dfd0d5d9d2c8d9fcc8ceddd2cfd9cfc8ced9d0d0dd92dfd3d1">servicioalcliente@transestrella.com</span></div>
             <div class="ch-sub">Respuesta en menos de 24 horas hábiles</div>
           </div>
           <div class="ch-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
@@ -140,7 +140,7 @@ get_header(); ?>
           </div>
           <div>
             <div class="ib-label">Correo Electrónico</div>
-            <div class="ib-val"><a href="/cdn-cgi/l/email-protection#55263027233c363c3a343936393c303b2130152127343b2630262127303939347b363a38"><span class="__cf_email__" data-cfemail="2a594f585c434943454b464946434f445e4f6a5e584b44594f595e584f46464b04494547">[email&#160;protected]</span></a></div>
+            <div class="ib-val"><a href="mailto:servicioalcliente@transestrella.com"><span class="__cf_email__" data-cfemail="2a594f585c434943454b464946434f445e4f6a5e584b44594f595e584f46464b04494547">servicioalcliente@transestrella.com</span></a></div>
             <div class="ib-sub">Para cotizaciones, tarifas y consultas comerciales</div>
           </div>
         </div>

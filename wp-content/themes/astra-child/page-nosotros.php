@@ -9,143 +9,774 @@ get_header();
 ?>
 
 <style>
-/* ── HERO — imagen de fondo específica ── */
-.page-hero-bg{background-image:url('https://transestrella.com/wp-content/uploads/2025/04/transportadora-estrella-nuestra-flota-transporte-de-carga-pesada-1.jpeg');}
+  /* ── HERO — imagen de fondo específica ── */
+  .page-hero-bg {
+    background-image: url('https://transestrella.com/wp-content/uploads/2025/04/transportadora-estrella-nuestra-flota-transporte-de-carga-pesada-1.jpeg');
+  }
 
-/* ── QUIÉNES SOMOS ── */
-.about{padding:96px 40px;background:#FFFFFF;}
-.about-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
-.about-text .eyebrow{margin-bottom:18px;}
-.about-text h2{font-family:var(--font-display);font-size:clamp(30px,3.5vw,46px);font-weight:800;text-transform:uppercase;color:#333333;line-height:1.0;margin-bottom:20px;}
-.about-text h2 span{color:var(--ts-gold);}
-.about-text p{font-size:16px;color:#333333;line-height:1.8;margin-bottom:16px;}
-.about-text p:last-of-type{margin-bottom:28px;}
-.about-visual{display:flex;flex-direction:column;gap:16px;}
-.about-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.about-stat{background:var(--ts-gray-bg);border-radius:12px;padding:28px 24px;border:1px solid var(--ts-gray-line);position:relative;overflow:hidden;}
-.about-stat::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--ts-gold);}
-.about-stat-num{font-family:var(--font-display);font-size:44px;font-weight:800;color:var(--ts-blue);line-height:1;margin-bottom:4px;}
-.about-stat-label{font-size:13px;color:#333333;line-height:1.4;}
-.about-highlight{background:var(--ts-blue-deep);border-radius:12px;padding:28px 24px;}
-.about-highlight p{font-family:var(--font-display);font-size:19px;font-weight:600;color:rgba(255,255,255,.8);line-height:1.5;font-style:italic;}
-.about-highlight p span{color:var(--ts-gold);}
+  /* ── QUIÉNES SOMOS ── */
+  .about {
+    padding: 96px 40px;
+    background: #FFFFFF;
+  }
 
-/* ── MISIÓN VISIÓN VALORES ── */
-.mvv{padding:88px 40px;background:var(--ts-gray-bg);}
-.mvv-inner{max-width:1240px;margin:0 auto;}
-.mvv-header{text-align:center;margin-bottom:56px;}
-.mvv-header h2{font-family:var(--font-display);font-size:clamp(28px,3.5vw,44px);font-weight:800;text-transform:uppercase;color:#333333;line-height:1.0;margin-bottom:12px;margin-top:12px;}
-.mvv-header h2 span{color:var(--ts-gold);}
-.mvv-header p{font-size:16px;color:#333333;max-width:480px;margin:0 auto;}
-.mvv-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px;}
-.mvv-card{background:#FFFFFF;border-radius:14px;padding:40px 36px;border:1px solid var(--ts-gray-line);}
-.mvv-card.mision{border-top:4px solid var(--ts-blue);}
-.mvv-card.vision{border-top:4px solid var(--ts-gold);}
-.mvv-card-icon{width:54px;height:54px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
-.mvv-card.mision .mvv-card-icon{background:rgba(15,91,167,.08);}
-.mvv-card.vision .mvv-card-icon{background:rgba(245,166,35,.1);}
-.mvv-card-icon svg{width:26px;height:26px;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
-.mvv-card.mision .mvv-card-icon svg{stroke:var(--ts-blue);}
-.mvv-card.vision .mvv-card-icon svg{stroke:var(--ts-gold);}
-.mvv-card h3{font-family:var(--font-display);font-size:24px;font-weight:800;text-transform:uppercase;color:#333333;margin-bottom:14px;letter-spacing:.02em;}
-.mvv-card p{font-size:15px;color:#333333;line-height:1.8;}
-.valores-card{background:#FFFFFF;border-radius:14px;padding:40px 36px;border:1px solid var(--ts-gray-line);border-top:4px solid #333333;}
-.valores-card h3{font-family:var(--font-display);font-size:24px;font-weight:800;text-transform:uppercase;color:#333333;margin-bottom:28px;letter-spacing:.02em;}
-.valores-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
-.valor-item{display:flex;flex-direction:column;gap:10px;}
-.valor-icon{width:44px;height:44px;background:rgba(15,91,167,.07);border-radius:8px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(15,91,167,.12);}
-.valor-icon svg{width:20px;height:20px;stroke:var(--ts-blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
-.valor-name{font-family:var(--font-display);font-size:15px;font-weight:800;text-transform:uppercase;color:#333333;letter-spacing:.04em;}
-.valor-desc{font-size:13px;color:#333333;line-height:1.6;}
+  .about-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
 
-/* ── FLOTA ── */
-.fleet{padding:88px 40px;background:#FFFFFF;}
-.fleet-inner{max-width:1240px;margin:0 auto;}
-.fleet-header{display:grid;grid-template-columns:1fr auto;align-items:end;gap:20px;margin-bottom:48px;}
-.fleet-header-left h2{font-family:var(--font-display);font-size:clamp(28px,3.5vw,44px);font-weight:800;text-transform:uppercase;color:#333333;line-height:1.0;margin-bottom:10px;margin-top:12px;}
-.fleet-header-left h2 span{color:var(--ts-gold);}
-.fleet-header-left p{font-size:16px;color:#333333;max-width:480px;}
-.fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-.fleet-card{border-radius:12px;overflow:hidden;border:1px solid var(--ts-gray-line);transition:box-shadow .22s,transform .22s;}
-.fleet-card:hover{box-shadow:0 14px 32px rgba(8,50,102,.1);transform:translateY(-4px);}
-.fleet-card-img{height:220px;overflow:hidden;background:#0A3A6E;}
-.fleet-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s;}
-.fleet-card:hover .fleet-card-img img{transform:scale(1.05);}
-.fleet-card-body{padding:22px 24px;}
-.fleet-card-body h4{font-family:var(--font-display);font-size:20px;font-weight:800;text-transform:uppercase;color:#333333;margin-bottom:8px;}
-.fleet-card-body p{font-size:14px;color:#333333;line-height:1.65;}
+  .about-text .eyebrow {
+    margin-bottom: 18px;
+  }
 
-/* ── CERTIFICACIONES ── */
-.certs{padding:88px 40px;background:var(--ts-gray-bg);}
-.certs-inner{max-width:1240px;margin:0 auto;}
-.certs-header{text-align:center;margin-bottom:52px;}
-.certs-header h2{font-family:var(--font-display);font-size:clamp(28px,3.5vw,44px);font-weight:800;text-transform:uppercase;color:#333333;line-height:1.0;margin-bottom:12px;margin-top:12px;}
-.certs-header h2 span{color:var(--ts-gold);}
-.certs-header p{font-size:16px;color:#333333;max-width:520px;margin:0 auto;}
-.certs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:52px;}
-.cert-card{background:#FFFFFF;border-radius:14px;padding:36px 28px;border:1px solid var(--ts-gray-line);display:flex;flex-direction:column;align-items:center;text-align:center;transition:border-color .2s,box-shadow .2s;}
-.cert-card:hover{border-color:var(--ts-gold);box-shadow:0 8px 24px rgba(245,166,35,.1);}
-.cert-logo{height:72px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
-.cert-logo img{max-height:72px;max-width:160px;object-fit:contain;}
-.cert-logo-fallback{width:72px;height:72px;background:#EEF3FA;border-radius:50%;display:flex;align-items:center;justify-content:center;}
-.cert-logo-fallback svg{width:32px;height:32px;stroke:var(--ts-blue);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
-.cert-card h3{font-family:var(--font-display);font-size:21px;font-weight:800;text-transform:uppercase;color:#333333;margin-bottom:8px;}
-.cert-card p{font-size:14px;color:#333333;line-height:1.65;}
-.agrem-section{border-top:1px solid var(--ts-gray-line);padding-top:44px;}
-.agrem-label{font-family:var(--font-display);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ts-gray);text-align:center;margin-bottom:24px;}
-.agrem-logos{display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;}
-.agrem-logo{height:32px;background:#DDE3EC;border-radius:4px;opacity:.65;padding:0 22px;display:flex;align-items:center;font-family:var(--font-display);font-size:13px;font-weight:700;color:#555;white-space:nowrap;}
+  .about-text h2 {
+    font-family: var(--font-display);
+    font-size: clamp(30px, 3.5vw, 46px);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333333;
+    line-height: 1.0;
+    margin-bottom: 20px;
+  }
 
-/* ── ALIADOS ── */
-.partners{padding:72px 40px;background:#FFFFFF;border-top:1px solid var(--ts-gray-line);}
-.partners-inner{max-width:1240px;margin:0 auto;}
-.partners-header{text-align:center;margin-bottom:44px;}
-.partners-header h2{font-family:var(--font-display);font-size:clamp(26px,3vw,38px);font-weight:800;text-transform:uppercase;color:#333333;margin-bottom:10px;margin-top:12px;}
-.partners-header h2 span{color:var(--ts-gold);}
-.partners-header p{font-size:15px;color:#333333;max-width:440px;margin:0 auto;}
-.partners-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
-.partner-card{background:var(--ts-gray-bg);border-radius:10px;padding:24px 16px;border:1px solid var(--ts-gray-line);display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;transition:border-color .2s;}
-.partner-card:hover{border-color:var(--ts-blue);}
-.partner-logo-box{height:52px;display:flex;align-items:center;justify-content:center;}
-.partner-logo-ph{height:36px;background:#DDE3EC;border-radius:4px;padding:0 16px;display:flex;align-items:center;font-family:var(--font-display);font-size:12px;font-weight:700;color:#555;white-space:nowrap;}
-.partner-name{font-family:var(--font-display);font-size:13px;font-weight:700;text-transform:uppercase;color:#333333;letter-spacing:.04em;}
-.partner-type{font-size:12px;color:var(--ts-gray);}
+  .about-text h2 span {
+    color: var(--ts-gold);
+  }
 
-/* ── CTA — CONFÍE SU CARGA (fila única centrada, distinto al layout de 2 columnas de style.css) ── */
-.cta-inner{display:block;max-width:900px;margin:0 auto;text-align:center;position:relative;z-index:2;}
-.cta-inner h2{font-family:var(--font-display);font-size:clamp(30px,4vw,52px);font-weight:800;text-transform:uppercase;color:#FFFFFF;line-height:1.0;margin-bottom:16px;margin-top:12px;}
-.cta-inner h2 span{color:var(--ts-gold);}
-.cta-inner p{font-size:17px;color:rgba(255,255,255,.6);line-height:1.75;max-width:580px;margin:0 auto 40px;}
-.cta-contacts{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:44px;flex-wrap:wrap;padding-top:40px;border-top:1px solid rgba(255,255,255,.09);}
+  .about-text p {
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
 
-/* ── RESPONSIVE ── */
-@media(max-width:1024px){
-  .about-inner{grid-template-columns:1fr;gap:48px;}
-  .about-stat-grid{grid-template-columns:repeat(4,1fr);}
-  .mvv-grid{grid-template-columns:1fr;}
-  .valores-grid{grid-template-columns:repeat(2,1fr);}
-  .partners-grid{grid-template-columns:repeat(3,1fr);}
-}
-@media(max-width:768px){
-  .about{padding:60px 20px;}
-  .about-stat-grid{grid-template-columns:1fr 1fr;}
-  .mvv{padding:60px 20px;}
-  .valores-grid{grid-template-columns:1fr 1fr;}
-  .fleet{padding:60px 20px;}
-  .fleet-header{grid-template-columns:1fr;}
-  .fleet-header a{display:none;}
-  .fleet-grid{grid-template-columns:1fr;}
-  .certs{padding:60px 20px;}
-  .certs-grid{grid-template-columns:1fr;}
-  .partners{padding:60px 20px;}
-  .partners-grid{grid-template-columns:repeat(2,1fr);}
-  .cta-contacts{flex-direction:column;gap:20px;}
-}
-@media(max-width:480px){
-  .about-stat-grid{grid-template-columns:1fr 1fr;}
-  .valores-grid{grid-template-columns:1fr;}
-  .partners-grid{grid-template-columns:1fr 1fr;}
-}
+  .about-text p:last-of-type {
+    margin-bottom: 28px;
+  }
+
+  .about-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .about-stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .about-stat {
+    background: var(--ts-gray-bg);
+    border-radius: 12px;
+    padding: 28px 24px;
+    border: 1px solid var(--ts-gray-line);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-stat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--ts-gold);
+  }
+
+  .about-stat-num {
+    font-family: var(--font-display);
+    font-size: 44px;
+    font-weight: 800;
+    color: var(--ts-blue);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .about-stat-label {
+    font-size: 13px;
+    color: #333333;
+    line-height: 1.4;
+  }
+
+  .about-highlight {
+    background: var(--ts-blue-deep);
+    border-radius: 12px;
+    padding: 28px 24px;
+  }
+
+  .about-highlight p {
+    font-family: var(--font-display);
+    font-size: 19px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, .8);
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  .about-highlight p span {
+    color: var(--ts-gold);
+  }
+
+  /* ── MISIÓN VISIÓN VALORES ── */
+  .mvv {
+    padding: 88px 40px;
+    background: var(--ts-gray-bg);
+  }
+
+  .mvv-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  .mvv-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .mvv-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333333;
+    line-height: 1.0;
+    margin-bottom: 12px;
+    margin-top: 12px;
+  }
+
+  .mvv-header h2 span {
+    color: var(--ts-gold);
+  }
+
+  .mvv-header p {
+    font-size: 16px;
+    color: #333333;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .mvv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .mvv-card {
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 40px 36px;
+    border: 1px solid var(--ts-gray-line);
+  }
+
+  .mvv-card.mision {
+    border-top: 4px solid var(--ts-blue);
+  }
+
+  .mvv-card.vision {
+    border-top: 4px solid var(--ts-gold);
+  }
+
+  .mvv-card-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .mvv-card.mision .mvv-card-icon {
+    background: rgba(15, 91, 167, .08);
+  }
+
+  .mvv-card.vision .mvv-card-icon {
+    background: rgba(245, 166, 35, .1);
+  }
+
+  .mvv-card-icon svg {
+    width: 26px;
+    height: 26px;
+    fill: none;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .mvv-card.mision .mvv-card-icon svg {
+    stroke: var(--ts-blue);
+  }
+
+  .mvv-card.vision .mvv-card-icon svg {
+    stroke: var(--ts-gold);
+  }
+
+  .mvv-card h3 {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333333;
+    margin-bottom: 14px;
+    letter-spacing: .02em;
+  }
+
+  .mvv-card p {
+    font-size: 15px;
+    color: #333333;
+    line-height: 1.8;
+  }
+
+  .valores-card {
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 40px 36px;
+    border: 1px solid var(--ts-gray-line);
+    border-top: 4px solid #333333;
+  }
+
+  .valores-card h3 {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333333;
+    margin-bottom: 28px;
+    letter-spacing: .02em;
+  }
+
+  .valores-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .valor-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .valor-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(15, 91, 167, .07);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(15, 91, 167, .12);
+  }
+
+  .valor-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--ts-blue);
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .valor-name {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333333;
+    letter-spacing: .04em;
+  }
+
+  .valor-desc {
+    font-size: 13px;
+    color: #333333;
+    line-height: 1.6;
+  }
+
+  /* ── FLOTA ── */
+  .fleet {
+    padding: 88px 40px;
+    background: #FFFFFF;
+  }
+
+  .fleet-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  .fleet-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 20px;
+    margin-bottom: 48px;
+  }
+
+  .fleet-header-left h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333333;
+    line-height: 1.0;
+    margin-bottom: 10px;
+    margin-top: 12px;
+  }
+
+  .fleet-header-left h2 span {
+    color: var(--ts-gold);
+  }
+
+  .fleet-header-left p {
+    font-size: 16px;
+    color: #333333;
+    max-width: 480px;
+  }
+
+  .fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .fleet-card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--ts-gray-line);
+    transition: box-shadow .22s, transform .22s;
+  }
+
+  .fleet-card:hover {
+    box-shadow: 0 14px 32px rgba(8, 50, 102, .1);
+    transform: translateY(-4px);
+  }
+
+  .fleet-card-img {
+    height: 220px;
+    overflow: hidden;
+    background: #0A3A6E;
+  }
+
+  .fleet-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .35s;
+  }
+
+  .fleet-card:hover .fleet-card-img img {
+    transform: scale(1.05);
+  }
+
+  .fleet-card-body {
+    padding: 22px 24px;
+  }
+
+  .fleet-card-body h4 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333333;
+    margin-bottom: 8px;
+  }
+
+  .fleet-card-body p {
+    font-size: 14px;
+    color: #333333;
+    line-height: 1.65;
+  }
+
+  /* ── CERTIFICACIONES ── */
+  .certs {
+    padding: 88px 40px;
+    background: var(--ts-gray-bg);
+  }
+
+  .certs-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  .certs-header {
+    text-align: center;
+    margin-bottom: 52px;
+  }
+
+  .certs-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333333;
+    line-height: 1.0;
+    margin-bottom: 12px;
+    margin-top: 12px;
+  }
+
+  .certs-header h2 span {
+    color: var(--ts-gold);
+  }
+
+  .certs-header p {
+    font-size: 16px;
+    color: #333333;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .certs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 52px;
+  }
+
+  .cert-card {
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 36px 28px;
+    border: 1px solid var(--ts-gray-line);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: border-color .2s, box-shadow .2s;
+  }
+
+  .cert-card:hover {
+    border-color: var(--ts-gold);
+    box-shadow: 0 8px 24px rgba(245, 166, 35, .1);
+  }
+
+  .cert-logo {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .cert-logo img {
+    max-height: 72px;
+    max-width: 160px;
+    object-fit: contain;
+  }
+
+  .cert-logo-fallback {
+    width: 72px;
+    height: 72px;
+    background: #EEF3FA;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cert-logo-fallback svg {
+    width: 32px;
+    height: 32px;
+    stroke: var(--ts-blue);
+    fill: none;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .cert-card h3 {
+    font-family: var(--font-display);
+    font-size: 21px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333333;
+    margin-bottom: 8px;
+  }
+
+  .cert-card p {
+    font-size: 14px;
+    color: #333333;
+    line-height: 1.65;
+  }
+
+  .agrem-section {
+    border-top: 1px solid var(--ts-gray-line);
+    padding-top: 44px;
+  }
+
+  .agrem-label {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ts-gray);
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .agrem-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .agrem-logo {
+    height: 32px;
+    background: #DDE3EC;
+    border-radius: 4px;
+    opacity: .65;
+    padding: 0 22px;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 700;
+    color: #555;
+    white-space: nowrap;
+  }
+
+  /* ── ALIADOS ── */
+  .partners {
+    padding: 72px 40px;
+    background: #FFFFFF;
+    border-top: 1px solid var(--ts-gray-line);
+  }
+
+  .partners-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  .partners-header {
+    text-align: center;
+    margin-bottom: 44px;
+  }
+
+  .partners-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(26px, 3vw, 38px);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333333;
+    margin-bottom: 10px;
+    margin-top: 12px;
+  }
+
+  .partners-header h2 span {
+    color: var(--ts-gold);
+  }
+
+  .partners-header p {
+    font-size: 15px;
+    color: #333333;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+
+  .partner-card {
+    background: var(--ts-gray-bg);
+    border-radius: 10px;
+    padding: 24px 16px;
+    border: 1px solid var(--ts-gray-line);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    transition: border-color .2s;
+  }
+
+  .partner-card:hover {
+    border-color: var(--ts-blue);
+  }
+
+  .partner-logo-box {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .partner-logo-ph {
+    height: 36px;
+    background: #DDE3EC;
+    border-radius: 4px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 700;
+    color: #555;
+    white-space: nowrap;
+  }
+
+  .partner-name {
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333333;
+    letter-spacing: .04em;
+  }
+
+  .partner-type {
+    font-size: 12px;
+    color: var(--ts-gray);
+  }
+
+  /* ── CTA — CONFÍE SU CARGA (fila única centrada, distinto al layout de 2 columnas de style.css) ── */
+  .cta-inner {
+    display: block;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cta-inner h2 {
+    font-family: var(--font-display);
+    font-size: clamp(30px, 4vw, 52px);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    line-height: 1.0;
+    margin-bottom: 16px;
+    margin-top: 12px;
+  }
+
+  .cta-inner h2 span {
+    color: var(--ts-gold);
+  }
+
+  .cta-inner p {
+    font-size: 17px;
+    color: rgba(255, 255, 255, .6);
+    line-height: 1.75;
+    max-width: 580px;
+    margin: 0 auto 40px;
+  }
+
+  .cta-contacts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 44px;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, .09);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media(max-width:1024px) {
+    .about-inner {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .about-stat-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .mvv-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .valores-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .partners-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media(max-width:768px) {
+    .about {
+      padding: 60px 20px;
+    }
+
+    .about-stat-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .mvv {
+      padding: 60px 20px;
+    }
+
+    .valores-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .fleet {
+      padding: 60px 20px;
+    }
+
+    .fleet-header {
+      grid-template-columns: 1fr;
+    }
+
+    .fleet-header a {
+      display: none;
+    }
+
+    .fleet-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .certs {
+      padding: 60px 20px;
+    }
+
+    .certs-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .partners {
+      padding: 60px 20px;
+    }
+
+    .partners-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta-contacts {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  @media(max-width:480px) {
+    .about-stat-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .valores-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .partners-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 </style>
 
 <!-- ══════════════════════════════════════════
@@ -162,7 +793,8 @@ get_header();
       <span>Nosotros</span>
     </div>
     <h1>Quiénes <em>Somos</em></h1>
-    <p>Más de 30 años siendo aliados estratégicos en el transporte de carga masiva y semi masiva terrestre en Colombia.</p>
+    <p>Más de 30 años siendo aliados estratégicos en el transporte de carga masiva y semi masiva terrestre en Colombia.
+    </p>
   </div>
 </section>
 
@@ -174,9 +806,15 @@ get_header();
     <div class="about-text">
       <div class="eyebrow">Nuestra empresa</div>
       <h2>30 Años Conectando <span>Colombia</span></h2>
-      <p>Somos una empresa con una trayectoria de más de 30 años dedicada a la prestación del servicio de transporte de carga masiva y semi masiva vía terrestre a nivel nacional, convirtiéndonos en un aliado estratégico para cumplir las exigencias y expectativas de nuestros clientes.</p>
-      <p>Nuestro origen se remonta a 1980, cuando Manuel Ángel Tabares Agudelo inició actividades como transportador independiente. En 2002 la empresa se constituyó como sociedad anónima y adoptó el nombre de <strong>Transportadora Estrella S.A.S.</strong>, iniciando una nueva etapa de crecimiento y modernización basada en la calidad, la seguridad y el mejoramiento continuo.</p>
-      <p>Hoy operamos con flota propia diversificada, sistema de seguimiento vehicular 24/7, y estamos presentes en los 8 corredores logísticos más estratégicos del país.</p>
+      <p>Somos una empresa con una trayectoria de más de 30 años dedicada a la prestación del servicio de transporte de
+        carga masiva y semi masiva vía terrestre a nivel nacional, convirtiéndonos en un aliado estratégico para cumplir
+        las exigencias y expectativas de nuestros clientes.</p>
+      <p>Nuestro origen se remonta a 1980, cuando Manuel Ángel Tabares Agudelo inició actividades como transportador
+        independiente. En 2002 la empresa se constituyó como sociedad anónima y adoptó el nombre de
+        <strong>Transportadora Estrella S.A.S.</strong>, iniciando una nueva etapa de crecimiento y modernización basada
+        en la calidad, la seguridad y el mejoramiento continuo.</p>
+      <p>Hoy operamos con flota propia diversificada, sistema de seguimiento vehicular 24/7, y estamos presentes en los
+        8 corredores logísticos más estratégicos del país.</p>
       <a href="<?php echo home_url('/contactanos/'); ?>" class="btn-primary">Cotizar Carga →</a>
     </div>
     <div class="about-visual">
@@ -199,7 +837,8 @@ get_header();
         </div>
       </div>
       <div class="about-highlight">
-        <p>"Trabajamos con el firme propósito de lograr la <span>satisfacción de nuestros clientes</span> a través de personal competente, proveedores confiables y el mejoramiento continuo de los procesos."</p>
+        <p>"Trabajamos con el firme propósito de lograr la <span>satisfacción de nuestros clientes</span> a través de
+          personal competente, proveedores confiables y el mejoramiento continuo de los procesos."</p>
       </div>
     </div>
   </div>
@@ -219,18 +858,33 @@ get_header();
       <!-- MISIÓN -->
       <div class="mvv-card mision">
         <div class="mvv-card-icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <circle cx="12" cy="12" r="6" />
+            <circle cx="12" cy="12" r="2" />
+          </svg>
         </div>
         <h3>Misión</h3>
-        <p>Transportadora Estrella S.A.S. es una empresa líder en el transporte terrestre de carga a nivel nacional, apoyando a través de sus procesos la cadena de abastecimiento y logística del país, cumpliendo con los estándares de seguridad y calidad aplicados en cada una de nuestras certificaciones, buscando la satisfacción de sus clientes a través de un servicio oportuno y con calidad, cumpliendo con las expectativas de los accionistas y el mejoramiento del nivel de vida de los colaboradores y sus familias.</p>
+        <p>Transportadora Estrella S.A.S. es una empresa líder en el transporte terrestre de carga a nivel nacional,
+          apoyando a través de sus procesos la cadena de abastecimiento y logística del país, cumpliendo con los
+          estándares de seguridad y calidad aplicados en cada una de nuestras certificaciones, buscando la satisfacción
+          de sus clientes a través de un servicio oportuno y con calidad, cumpliendo con las expectativas de los
+          accionistas y el mejoramiento del nivel de vida de los colaboradores y sus familias.</p>
       </div>
       <!-- VISIÓN -->
       <div class="mvv-card vision">
         <div class="mvv-card-icon">
-          <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <svg viewBox="0 0 24 24">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+            <circle cx="12" cy="12" r="3" />
+          </svg>
         </div>
         <h3>Visión</h3>
-        <p>Transportadora Estrella S.A.S. será reconocida a nivel nacional como un aliado estratégico en transporte de carga y en la solución de necesidades logísticas, cubriendo las exigencias y expectativas de nuestros clientes, contribuyendo al fortalecimiento y crecimiento empresarial a través de costos competitivos, seguridad y satisfacción, garantizando un mayor nivel de rentabilidad y beneficios para todos los actores de la cadena de abastecimiento.</p>
+        <p>Transportadora Estrella S.A.S. será reconocida a nivel nacional como un aliado estratégico en transporte de
+          carga y en la solución de necesidades logísticas, cubriendo las exigencias y expectativas de nuestros
+          clientes, contribuyendo al fortalecimiento y crecimiento empresarial a través de costos competitivos,
+          seguridad y satisfacción, garantizando un mayor nivel de rentabilidad y beneficios para todos los actores de
+          la cadena de abastecimiento.</p>
       </div>
     </div>
     <!-- VALORES -->
@@ -239,28 +893,45 @@ get_header();
       <div class="valores-grid">
         <div class="valor-item">
           <div class="valor-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <polyline points="9 12 11 14 15 10" />
+            </svg>
           </div>
           <div class="valor-name">Honestidad</div>
           <div class="valor-desc">Realizamos todas las operaciones de transporte con transparencia.</div>
         </div>
         <div class="valor-item">
           <div class="valor-icon">
-            <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <svg viewBox="0 0 24 24">
+              <rect x="1" y="3" width="15" height="13" rx="1" />
+              <path d="M16 8h4l3 5v4h-7V8z" />
+              <circle cx="5.5" cy="18.5" r="2.5" />
+              <circle cx="18.5" cy="18.5" r="2.5" />
+            </svg>
           </div>
           <div class="valor-name">Responsabilidad</div>
           <div class="valor-desc">Manejamos adecuadamente la mercancía e información de nuestros clientes.</div>
         </div>
         <div class="valor-item">
           <div class="valor-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
           </div>
           <div class="valor-name">Puntualidad</div>
-          <div class="valor-desc">Entregamos a tiempo la mercancía y la información que nuestros clientes necesiten.</div>
+          <div class="valor-desc">Entregamos a tiempo la mercancía y la información que nuestros clientes necesiten.
+          </div>
         </div>
         <div class="valor-item">
           <div class="valor-icon">
-            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
           </div>
           <div class="valor-name">Respeto</div>
           <div class="valor-desc">Escuchamos y entendemos a clientes, proveedores y demás partes interesadas.</div>
@@ -279,36 +950,45 @@ get_header();
       <div class="fleet-header-left">
         <div class="eyebrow">Flota propia certificada</div>
         <h2>Vehículos para <span>Cada Operación</span></h2>
-        <p>Contamos con diferentes tipos de vehículos para cada clase de carga, con mantenimiento preventivo riguroso y seguimiento GPS 24/7.</p>
+        <p>Contamos con diferentes tipos de vehículos para cada clase de carga, con mantenimiento preventivo riguroso y
+          seguimiento GPS 24/7.</p>
       </div>
       <a href="<?php echo home_url('/servicios/'); ?>" class="btn-outline-blue">Ver Servicios →</a>
     </div>
     <div class="fleet-grid">
       <div class="fleet-card">
         <div class="fleet-card-img">
-          <img src="https://transestrella.com/wp-content/uploads/2025/04/transportadora-estrella-nuestra-flota-transporte-de-carga-pesada-1.jpeg" alt="Flota de camiones Transportadora Estrella — carga masiva Colombia" loading="lazy">
+          <img
+            src="https://transestrella.com/wp-content/uploads/2025/04/transportadora-estrella-nuestra-flota-transporte-de-carga-pesada-1.jpeg"
+            alt="Flota de camiones Transportadora Estrella — carga masiva Colombia" loading="lazy">
         </div>
         <div class="fleet-card-body">
           <h4>Turbos y Camiones</h4>
-          <p>Distribución urbana, carga semi masiva y operaciones de carretera. Vehículos con carrocería para protección total de la mercancía.</p>
+          <p>Distribución urbana, carga semi masiva y operaciones de carretera. Vehículos con carrocería para protección
+            total de la mercancía.</p>
         </div>
       </div>
       <div class="fleet-card">
         <div class="fleet-card-img">
-          <img src="https://transestrella.com/wp-content/uploads/2025/04/transportadora-estrella-camion-volco.jpeg" alt="Volcos autodescargables y patinetas Transportadora Estrella" loading="lazy">
+          <img src="https://transestrella.com/wp-content/uploads/2025/04/transportadora-estrella-camion-volco.jpeg"
+            alt="Volcos autodescargables y patinetas Transportadora Estrella" loading="lazy">
         </div>
         <div class="fleet-card-body">
           <h4>Volcos y Patinetas</h4>
-          <p>Volcos autodescargables para carga a granel y patinetas de gran volumen para carga masiva en los principales corredores nacionales.</p>
+          <p>Volcos autodescargables para carga a granel y patinetas de gran volumen para carga masiva en los
+            principales corredores nacionales.</p>
         </div>
       </div>
       <div class="fleet-card">
         <div class="fleet-card-img">
-          <img src="https://transestrella.com/wp-content/uploads/2025/04/transportadora-estrella-transporte-de-carga-nacioanl-1.jpeg" alt="Tractocamiones transporte nacional ITR Transportadora Estrella" loading="lazy">
+          <img
+            src="https://transestrella.com/wp-content/uploads/2025/04/transportadora-estrella-transporte-de-carga-nacioanl-1.jpeg"
+            alt="Tractocamiones transporte nacional ITR Transportadora Estrella" loading="lazy">
         </div>
         <div class="fleet-card-body">
           <h4>Tractocamiones</h4>
-          <p>Máxima capacidad de carga para operaciones nacionales e internacionales ITR. También operamos con contenedores y carrocerías especializadas.</p>
+          <p>Máxima capacidad de carga para operaciones nacionales e internacionales ITR. También operamos con
+            contenedores y carrocerías especializadas.</p>
         </div>
       </div>
     </div>
@@ -323,34 +1003,43 @@ get_header();
     <div class="certs-header">
       <div class="eyebrow center">Respaldo y credenciales</div>
       <h2>Certificados y <span>Reconocidos</span> en el Sector</h2>
-      <p>Operamos bajo estándares internacionales de calidad y seguridad, respaldados por los organismos más exigentes del sector logístico colombiano.</p>
+      <p>Operamos bajo estándares internacionales de calidad y seguridad, respaldados por los organismos más exigentes
+        del sector logístico colombiano.</p>
     </div>
     <div class="certs-grid">
       <!-- ISO 9001 -->
       <div class="cert-card">
         <div class="cert-logo">
-          <img src="https://transestrella.com/wp-content/uploads/2025/11/icontec_iso_9001.png" alt="Certificado ISO 9001 ICONTEC — Transportadora Estrella" loading="lazy">
+          <img src="https://transestrella.com/wp-content/uploads/2025/11/icontec_iso_9001.png"
+            alt="Certificado ISO 9001 ICONTEC — Transportadora Estrella" loading="lazy">
         </div>
         <h3>ISO 9001 — ICONTEC</h3>
-        <p>Certificado SC6003-1. Sistema de gestión de calidad que garantiza el mejoramiento continuo de nuestros procesos logísticos y la satisfacción total de cada cliente.</p>
+        <p>Certificado SC6003-1. Sistema de gestión de calidad que garantiza el mejoramiento continuo de nuestros
+          procesos logísticos y la satisfacción total de cada cliente.</p>
       </div>
       <!-- BASC -->
       <div class="cert-card">
         <div class="cert-logo">
-          <img src="https://transestrella.com/wp-content/uploads/2025/06/logo-basc.png" alt="Certificación BASC Business Alliance for Secure Commerce — Transportadora Estrella" loading="lazy">
+          <img src="https://transestrella.com/wp-content/uploads/2025/06/logo-basc.png"
+            alt="Certificación BASC Business Alliance for Secure Commerce — Transportadora Estrella" loading="lazy">
         </div>
         <h3>Certificación BASC</h3>
-        <p>Business Alliance for Secure Commerce. Garantiza operaciones de comercio exterior seguras y libres de actividades ilícitas bajo los más exigentes estándares internacionales.</p>
+        <p>Business Alliance for Secure Commerce. Garantiza operaciones de comercio exterior seguras y libres de
+          actividades ilícitas bajo los más exigentes estándares internacionales.</p>
       </div>
       <!-- SuperTransporte -->
       <div class="cert-card">
         <div class="cert-logo">
           <div class="cert-logo-fallback">
-            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <polyline points="9 12 11 14 15 10" />
+            </svg>
           </div>
         </div>
         <h3>Vigilado SuperTransporte</h3>
-        <p>Empresa habilitada e inspeccionada por la Superintendencia de Transporte de Colombia. Operación 100% legal, transparente y regulada en todo el territorio nacional.</p>
+        <p>Empresa habilitada e inspeccionada por la Superintendencia de Transporte de Colombia. Operación 100% legal,
+          transparente y regulada en todo el territorio nacional.</p>
       </div>
     </div>
     <!-- Agremiaciones -->
@@ -378,27 +1067,37 @@ get_header();
     </div>
     <div class="partners-grid">
       <div class="partner-card">
-        <div class="partner-logo-box"><div class="partner-logo-ph">Cargovolco</div></div>
+        <div class="partner-logo-box">
+          <div class="partner-logo-ph">Cargovolco</div>
+        </div>
         <div class="partner-name">Cargovolco</div>
         <div class="partner-type">Transporte de Carga</div>
       </div>
       <div class="partner-card">
-        <div class="partner-logo-box"><div class="partner-logo-ph">Grupo WTG</div></div>
+        <div class="partner-logo-box">
+          <div class="partner-logo-ph">Grupo WTG</div>
+        </div>
         <div class="partner-name">Grupo WTG</div>
         <div class="partner-type">Transportes y Repuestos</div>
       </div>
       <div class="partner-card">
-        <div class="partner-logo-box"><div class="partner-logo-ph">Voltruck</div></div>
+        <div class="partner-logo-box">
+          <div class="partner-logo-ph">Voltruck</div>
+        </div>
         <div class="partner-name">Voltruck</div>
         <div class="partner-type">Carrocerías</div>
       </div>
       <div class="partner-card">
-        <div class="partner-logo-box"><div class="partner-logo-ph">Logistik</div></div>
+        <div class="partner-logo-box">
+          <div class="partner-logo-ph">Logistik</div>
+        </div>
         <div class="partner-name">Logistik Soluciones</div>
         <div class="partner-type">Almacenaje y Transporte</div>
       </div>
       <div class="partner-card">
-        <div class="partner-logo-box"><div class="partner-logo-ph">Entregamos</div></div>
+        <div class="partner-logo-box">
+          <div class="partner-logo-ph">Entregamos</div>
+        </div>
         <div class="partner-name">Entregamos Estrella</div>
         <div class="partner-type">Logística Última Milla</div>
       </div>
@@ -413,7 +1112,8 @@ get_header();
   <div class="cta-inner">
     <div class="eyebrow center">Hablemos hoy</div>
     <h2>Confíe su Carga a <span>30 Años de Experiencia</span></h2>
-    <p>Estamos listos para gestionar sus operaciones de carga masiva y semi masiva en todo el territorio colombiano. Diseñamos la solución logística ideal para su empresa.</p>
+    <p>Estamos listos para gestionar sus operaciones de carga masiva y semi masiva en todo el territorio colombiano.
+      Diseñamos la solución logística ideal para su empresa.</p>
     <div class="cta-btns">
       <a href="<?php echo home_url('/contactanos/'); ?>" class="btn-primary">Solicitar Cotización →</a>
       <a href="<?php echo home_url('/servicios/'); ?>" class="btn-outline-white">Ver Nuestros Servicios</a>
@@ -421,7 +1121,10 @@ get_header();
     <div class="cta-contacts">
       <div class="cta-contact">
         <div class="cta-c-icon">
-          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z" />
+          </svg>
         </div>
         <div>
           <div class="cta-c-label">Línea Nacional</div>
@@ -430,16 +1133,23 @@ get_header();
       </div>
       <div class="cta-contact">
         <div class="cta-c-icon">
-          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <svg viewBox="0 0 24 24">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
         </div>
         <div>
           <div class="cta-c-label">Correo Electrónico</div>
-          <div class="cta-c-val">servicioalcliente@transestrella.com</div>
+          <div class="cta-c-val"><a href="mailto:servicioalcliente@transestrella.com"
+              style="color:inherit;text-decoration:none;">servicioalcliente@transestrella.com</a></div>
         </div>
       </div>
       <div class="cta-contact">
         <div class="cta-c-icon">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <svg viewBox="0 0 24 24">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
         </div>
         <div>
           <div class="cta-c-label">Sede Principal</div>

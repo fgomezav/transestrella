@@ -112,6 +112,9 @@ get_header(); ?>
           </div>
         </div>
         <div class="main-branch-btns">
+          <a href="<?php echo esc_url(home_url('/sucursales/sucursal-medellin/')); ?>" class="btn-primary" style="font-size:13px;padding:12px 20px;">
+            Ver Sucursal →
+          </a>
           <a href="https://waze.com/ul?q=Calle+64+%2356-60+Medellin" target="_blank" class="branch-map-link bml-waze">
             Waze
           </a>
@@ -174,6 +177,7 @@ get_header(); ?>
               </div>
             </div>
             <div class="branch-map-links">
+              <a href="<?php echo esc_url(home_url('/sucursales/sucursal-bogota/')); ?>" class="branch-map-link" style="background:var(--ts-blue);color:#fff;border-color:var(--ts-blue);">Ver Sucursal →</a>
               <a href="https://waze.com/ul?q=Av+Troncal+de+Occidente+18-76+Bogota" target="_blank" class="branch-map-link bml-waze">Waze</a>
               <a href="https://maps.google.com/?q=Av+Troncal+de+Occidente+18-76+Bogota" target="_blank" class="branch-map-link bml-gmaps">Google Maps</a>
             </div>
@@ -201,6 +205,7 @@ get_header(); ?>
               </div>
             </div>
             <div class="branch-map-links">
+              <a href="<?php echo esc_url(home_url('/sucursales/sucursal-buga/')); ?>" class="branch-map-link" style="background:var(--ts-blue);color:#fff;border-color:var(--ts-blue);">Ver Sucursal →</a>
               <a href="https://waze.com/ul?q=Carrera+12A+6Sur-94+Buga+Colombia" target="_blank" class="branch-map-link bml-waze">Waze</a>
               <a href="https://maps.google.com/?q=Cra+12A+6Sur-94+Buga+Colombia" target="_blank" class="branch-map-link bml-gmaps">Google Maps</a>
             </div>
@@ -241,6 +246,7 @@ get_header(); ?>
               </div>
             </div>
             <div class="branch-map-links">
+              <a href="<?php echo esc_url(home_url('/sucursales/sucursal-cali/')); ?>" class="branch-map-link" style="background:var(--ts-blue);color:#fff;border-color:var(--ts-blue);">Ver Sucursal →</a>
               <a href="https://waze.com/ul?q=Cencar+Cali+Colombia" target="_blank" class="branch-map-link bml-waze">Waze</a>
               <a href="https://maps.google.com/?q=Cencar+Bloque+A3+Cali+Colombia" target="_blank" class="branch-map-link bml-gmaps">Google Maps</a>
             </div>
@@ -268,6 +274,7 @@ get_header(); ?>
               </div>
             </div>
             <div class="branch-map-links">
+              <a href="<?php echo esc_url(home_url('/sucursales/sucursal-buenaventura/')); ?>" class="branch-map-link" style="background:var(--ts-blue);color:#fff;border-color:var(--ts-blue);">Ver Sucursal →</a>
               <a href="https://waze.com/ul?q=Calle+7B+4-52+Buenaventura+Colombia" target="_blank" class="branch-map-link bml-waze">Waze</a>
               <a href="https://maps.google.com/?q=Calle+7B+4-52+Buenaventura+Colombia" target="_blank" class="branch-map-link bml-gmaps">Google Maps</a>
             </div>
@@ -308,6 +315,7 @@ get_header(); ?>
               </div>
             </div>
             <div class="branch-map-links">
+              <a href="<?php echo esc_url(home_url('/sucursales/sucursal-barranquilla/')); ?>" class="branch-map-link" style="background:var(--ts-blue);color:#fff;border-color:var(--ts-blue);">Ver Sucursal →</a>
               <a href="https://waze.com/ul?q=Carrera+28+38-345+Barranquilla" target="_blank" class="branch-map-link bml-waze">Waze</a>
               <a href="https://maps.google.com/?q=Cra+28+38-345+Barranquilla+Colombia" target="_blank" class="branch-map-link bml-gmaps">Google Maps</a>
             </div>
@@ -335,6 +343,7 @@ get_header(); ?>
               </div>
             </div>
             <div class="branch-map-links">
+              <a href="<?php echo esc_url(home_url('/sucursales/sucursal-cartagena/')); ?>" class="branch-map-link" style="background:var(--ts-blue);color:#fff;border-color:var(--ts-blue);">Ver Sucursal →</a>
               <a href="https://waze.com/ul?q=Diagonal+21+45A-11+Cartagena" target="_blank" class="branch-map-link bml-waze">Waze</a>
               <a href="https://maps.google.com/?q=Diagonal+21+45A-11+Cartagena+Colombia" target="_blank" class="branch-map-link bml-gmaps">Google Maps</a>
             </div>
@@ -375,6 +384,7 @@ get_header(); ?>
               </div>
             </div>
             <div class="branch-map-links">
+              <a href="<?php echo esc_url(home_url('/sucursales/sucursal-manizales/')); ?>" class="branch-map-link" style="background:var(--ts-blue);color:#fff;border-color:var(--ts-blue);">Ver Sucursal →</a>
               <a href="https://waze.com/ul?q=Calle+110+34A-75+Manizales+Colombia" target="_blank" class="branch-map-link bml-waze">Waze</a>
               <a href="https://maps.google.com/?q=Calle+110+34A-75+Manizales+Colombia" target="_blank" class="branch-map-link bml-gmaps">Google Maps</a>
             </div>

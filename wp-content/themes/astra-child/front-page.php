@@ -213,8 +213,8 @@ get_header();
         24/7, flota propia certificada y 8 sucursales en los principales corredores logísticos del país.
       </p>
       <div class="hero-btns">
-        <a href="#" class="btn-primary">Solicitar Cotización &nbsp;→</a>
-        <a href="#" class="btn-outline">Ver Nuestros Servicios</a>
+        <a href="#cotizacion" class="btn-primary">Solicitar Cotización &nbsp;→</a>
+        <a href="#servicios" class="btn-outline">Ver Nuestros Servicios</a>
       </div>
       <div class="hero-stats">
         <div>
@@ -251,12 +251,10 @@ get_header();
       <span class="trustbar-label">Nos confían su carga:</span>
       <div class="trustbar-divider"></div>
       <div class="trustbar-logos">
-        <div class="logo-ph" style="width:80px;"></div>
-        <div class="logo-ph" style="width:90px;"></div>
-        <div class="logo-ph" style="width:70px;"></div>
-        <div class="logo-ph" style="width:85px;"></div>
-        <div class="logo-ph" style="width:75px;"></div>
-        <div class="logo-ph" style="width:88px;"></div>
+        <div class="logo-ph" style="width:80px;"><img src="https://transestrella.com/wp-content/uploads/2025/06/logo-sura.png" alt="Sura"></div>
+        <div class="logo-ph" style="width:90px;"><img src="https://transestrella.com/wp-content/uploads/2025/06/logo-grupo-e2s.png" alt="Grupo E2S"></div>
+        <div class="logo-ph" style="width:70px;"><img src="https://transestrella.com/wp-content/uploads/2025/06/logo-Defencarga.jpeg" alt="Defencarga"></div>
+        <div class="logo-ph" style="width:85px;"><img src="https://transestrella.com/wp-content/uploads/2025/06/Logo-Colfecar.jpg" alt="Colfecar"></div>
       </div>
     </div>
   </section>
@@ -264,7 +262,7 @@ get_header();
   <!-- ══════════════════════════════════════════
      SECCIÓN 3 — SERVICIOS (fotos reales)
 ══════════════════════════════════════════ -->
-  <section class="services">
+  <section class="services" id="servicios">
     <div class="services-inner">
       <div class="sec-header">
         <div class="sec-header-left">
@@ -549,10 +547,7 @@ get_header();
         <div class="cert-card">
           <div class="cert-icon-box">
             <!-- Award icon -->
-            <svg viewBox="0 0 24 24" stroke="#0F5BA7">
-              <circle cx="12" cy="8" r="6" />
-              <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
-            </svg>
+            <img src="https://transestrella.com/wp-content/uploads/2025/11/icontec_iso_9001.png" alt="Certificado ISO 9001 ICONTEC — Transportadora Estrella" loading="lazy" style="width:50%;">
           </div>
           <h3>ISO 9001 — ICONTEC</h3>
           <p>Certificado SC6003-1. Sistema de gestión de calidad que garantiza el mejoramiento continuo de nuestros
@@ -560,11 +555,8 @@ get_header();
         </div>
         <div class="cert-card">
           <div class="cert-icon-box">
-            <!-- Lock icon -->
-            <svg viewBox="0 0 24 24" stroke="#0F5BA7">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-            </svg>
+            <!-- Lock icon --><img src="https://transestrella.com/wp-content/uploads/2025/06/logo-basc.png" alt="Certificación BASC Business Alliance for Secure Commerce — Transportadora Estrella" loading="lazy">
+            
           </div>
           <h3>Certificación BASC</h3>
           <p>Business Alliance for Secure Commerce. Garantiza operaciones de comercio exterior seguras, libres de
@@ -823,7 +815,7 @@ get_header();
   <!-- ══════════════════════════════════════════
      SECCIÓN 9 — CTA FINAL + FORMULARIO FORMINATOR
 ══════════════════════════════════════════ -->
-  <section class="cta">
+  <section class="cta" id="cotizacion">
     <div class="cta-inner">
       <div class="cta-text">
         <div class="eyebrow">Hablemos hoy</div>

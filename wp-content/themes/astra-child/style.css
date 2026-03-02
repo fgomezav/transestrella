@@ -143,6 +143,63 @@ header {
   border-radius: 4px;
 }
 
+/* ── DROPDOWN MENU FIXES PARA WP_NAV_MENU ── */
+.nav-links li {
+  position: relative;
+}
+
+.nav-links .sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 240px;
+  background: rgba(8, 50, 102, .98);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, .1);
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.nav-links li:hover>.sub-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-links .sub-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links .sub-menu a {
+  display: block;
+  padding: 12px 24px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, .85);
+  text-transform: none;
+  /* Mejor lectura para sub-items */
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(255, 255, 255, .05);
+  height: auto;
+}
+
+.nav-links .sub-menu li:last-child a {
+  border-bottom: none;
+}
+
+.nav-links .sub-menu a:hover {
+  background: rgba(255, 255, 255, .05);
+  color: var(--ts-gold);
+}
+
 /* ══════════════════════════════════════════
    4. UTILIDADES GLOBALES
 ══════════════════════════════════════════ */

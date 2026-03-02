@@ -148,6 +148,12 @@ header {
   position: relative;
 }
 
+/* Ocultar iconos de flechas insertados por defecto en Astra y botón de toggle */
+.dropdown-menu-toggle.ast-header-navigation-arrow,
+.ast-menu-toggle {
+  display: none !important;
+}
+
 .nav-links .sub-menu {
   position: absolute;
   top: 100%;

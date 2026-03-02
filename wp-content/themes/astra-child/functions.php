@@ -5,7 +5,12 @@
 
 function astra_child_enqueue_styles()
 {
-    wp_enqueue_style('astra-child-style', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), '1.0.0', 'all');
+    // Deshabilitar el CSS principal del tema Astra (main.min.css)
+    wp_dequeue_style('astra-theme-css');
+    wp_deregister_style('astra-theme-css');
+
+    // Cargar CSS del Child Theme sin dependencia del padre
+    wp_enqueue_style('astra-child-style', get_stylesheet_directory_uri() . '/style.css', array(), '1.0.0', 'all');
 }
 add_action('wp_enqueue_scripts', 'astra_child_enqueue_styles', 99);
 

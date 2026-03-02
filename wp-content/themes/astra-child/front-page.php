@@ -36,8 +36,11 @@ get_header();
 .trustbar-inner{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:28px;}
 .trustbar-label{font-family:var(--font-display);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#999999;white-space:nowrap;flex-shrink:0;}
 .trustbar-divider{width:1px;height:28px;background:var(--ts-gray-line);flex-shrink:0;}
-.trustbar-logos{display:flex;align-items:center;gap:32px;flex:1;}
-.logo-ph{height:26px;background:#E2E8F0;border-radius:3px;opacity:.7;}
+.trustbar-logos{display:flex;align-items:center;gap:36px;flex:1;flex-wrap:wrap;}
+.logo-ph{height:36px;display:flex;align-items:center;justify-content:center;opacity:.65;transition:all .25s;}
+.logo-ph:hover{opacity:1;}
+.logo-ph img{max-width:100%;max-height:100%;object-fit:contain;mix-blend-mode:multiply;filter:grayscale(100%);transition:all .25s;}
+.logo-ph:hover img{filter:grayscale(0%);}
 
 /* ── SERVICIOS ── */
 .services{background:var(--ts-gray-bg);padding:88px 40px;}

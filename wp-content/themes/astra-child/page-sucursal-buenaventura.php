@@ -716,11 +716,6 @@ get_header(); ?>
       <h3>Solicitar Cotización — Buenaventura</h3>
       <p class="form-box-sub">Le respondemos desde nuestra sucursal en Buenaventura — con horario ampliado desde las 7am.</p>
       <div class="forminator-placeholder">
-        <svg viewBox="0 0 24 24">
-          <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
-          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-        </svg>
-        <p>Formulario Forminator</p>
         <span><?php echo do_shortcode('[forminator_form id="536"]'); ?></span>
       </div>
       <a href="https://wa.me/573136597359?text=Hola%2C%20quiero%20cotizar%20transporte%20de%20carga%20desde%20el%20Puerto%20de%20Buenaventura" target="_blank" class="form-wa">

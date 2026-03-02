@@ -814,8 +814,6 @@ get_header(); ?>
         </div>
       </div>
       <div class="forminator-placeholder">
-        <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-        <p>Formulario Forminator</p>
         <span><?php echo do_shortcode('[forminator_form id="536"]'); ?></span>
       </div>
       <a href="https://wa.me/576045273300?text=Hola%2C%20necesito%20cotizar%20transporte%20de%20mercancias%20peligrosas" target="_blank" class="form-wa">

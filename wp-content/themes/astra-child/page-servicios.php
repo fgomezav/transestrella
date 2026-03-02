@@ -156,6 +156,7 @@ get_header(); ?>
         border-radius: 14px;
         overflow: hidden;
         border: 1px solid var(--ts-gray-line);
+        align-items: stretch;
     }
 
     .svc-row:last-child {
@@ -175,6 +176,9 @@ get_header(); ?>
         overflow: hidden;
         background: var(--ts-blue-deep);
         min-height: 360px;
+        display: flex;
+        align-items: stretch;
+        height: 100%;
     }
 
     .svc-img img {
@@ -183,6 +187,8 @@ get_header(); ?>
         object-fit: cover;
         display: block;
         transition: transform .5s;
+        flex: 1;
+        min-height: 100%;
     }
 
     .svc-row:hover .svc-img img {

@@ -1424,7 +1424,7 @@ get_header(); ?>
                     </div>
                     <div>
                         <div class="cta-c-label">Línea Nacional</div>
-                        <div class="cta-c-val">+57 310 4244591</div>
+                        <div class="cta-c-val">+57 604 527 3300</div>
                     </div>
                 </div>
                 <div class="cta-contact">

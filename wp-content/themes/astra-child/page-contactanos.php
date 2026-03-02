@@ -39,7 +39,7 @@ get_header(); ?>
           </div>
           <div class="ch-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
         </a>
-        <a href="/cdn-cgi/l/email-protection#3b485e494d525852545a575857525e554f5e7b4f495a55485e484f495e57575a15585456" class="channel-card">
+        <a href="mailto:servicioalcliente@transestrella.com" class="channel-card">
           <div class="ch-icon ch-icon-blue">
             <svg class="stroke-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </div>
@@ -50,13 +50,13 @@ get_header(); ?>
           </div>
           <div class="ch-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
         </a>
-        <a href="https://wa.me/576045273300?text=Hola%2C%20quiero%20cotizar%20transporte%20de%20carga%20masiva%20en%20Colombia" target="_blank" class="channel-card wa">
+        <a href="https://wa.me/573104244591?text=Hola%2C%20quiero%20cotizar%20transporte%20de%20carga%20masiva%20en%20Colombia" target="_blank" class="channel-card wa">
           <div class="ch-icon ch-icon-wa">
             <svg class="fill-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.524 5.847L.057 23.992l6.304-1.654A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.012-1.375l-.36-.214-3.733.979 1-3.642-.235-.374A9.791 9.791 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
           </div>
           <div>
             <div class="ch-label">WhatsApp — Respuesta Inmediata</div>
-            <div class="ch-val">+57 604 527 3300</div>
+            <div class="ch-val">+57 310 424 4591</div>
             <div class="ch-sub">Disponible durante horario de oficina</div>
           </div>
           <div class="ch-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>

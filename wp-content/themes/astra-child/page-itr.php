@@ -2108,8 +2108,8 @@ get_header(); ?>
             </div>
             <div>
               <div class="cta-c-label">Correo Electrónico</div>
-              <div class="cta-c-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
-                  data-cfemail="83f0e6f1f5eae0eaece2efe0efeae6edf7e6c3f7f1e2edf0e6f0f7f1e6efefe2ade0ecee">[email&#160;protected]</a>
+              <div class="cta-c-val"><a href="mailto:servicioalcliente@transestrella.com"
+                  style="color:inherit;text-decoration:none;">servicioalcliente@transestrella.com</a>
               </div>
             </div>
           </div>

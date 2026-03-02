@@ -36,7 +36,8 @@
             <div>
                 <div class="footer-col-title">Sucursales</div>
                 <ul class="footer-links">
-                    <li><a href="<?php echo esc_url(home_url('/sucursales/sucursal-medellin/')); ?>">Medellín (Sede Principal)</a>
+                    <li><a href="<?php echo esc_url(home_url('/sucursales/sucursal-medellin/')); ?>">Medellín (Sede
+                            Principal)</a>
                     </li>
                     <li><a href="<?php echo esc_url(home_url('/sucursales/sucursal-bogota/')); ?>">Bogotá</a></li>
                     <li><a href="<?php echo esc_url(home_url('/sucursales/sucursal-cali/')); ?>">Cali</a></li>
@@ -49,9 +50,10 @@
                 <ul class="footer-links">
                     <li><a href="<?php echo esc_url(home_url('/nosotros/')); ?>">Nosotros</a></li>
                     <li><a href="<?php echo esc_url(home_url('/blog/')); ?>">Blog</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/comunicados/')); ?>">Comunicados</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/blog/category/comunicados/')); ?>">Comunicados</a></li>
                     <li><a href="<?php echo esc_url(home_url('/contactanos/')); ?>">Contáctanos</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/faqs/')); ?>">Preguntas Frecuentes</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/preguntas-frecuentes/')); ?>">Preguntas Frecuentes</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -60,8 +62,8 @@
                 <?php echo date('Y'); ?> Transportadora Estrella S.A.S. — Todos los derechos reservados.
             </div>
             <div class="footer-legal">
-                <a href="<?php echo esc_url(home_url('/politica-de-privacidad/')); ?>">Política de Privacidad</a>
-                <a href="<?php echo esc_url(home_url('/tratamiento-de-datos/')); ?>">Tratamiento de Datos</a>
+                <a href="<?php echo esc_url(home_url('/politica-privacidad/')); ?>">Política de Privacidad</a>
+                <a href="<?php echo esc_url(home_url('/politica-tratamiento-datos/')); ?>">Tratamiento de Datos</a>
                 <a href="<?php echo esc_url(home_url('/politica-integrada/')); ?>">Política Integrada</a>
             </div>
         </div>

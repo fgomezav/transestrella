@@ -830,7 +830,7 @@ get_header();
             <div class="other-link">Ver servicio →</div>
           </div>
         </a>
-        <a href="<?php echo esc_url(home_url('/servicios/')); ?>" class="other-card">
+        <a href="<?php echo esc_url(home_url('/servicios/itr')); ?>" class="other-card">
           <div class="other-card-img">
             <img src="https://transestrella.com/wp-content/uploads/2025/08/transporte-de-contenedores.jpg"
               alt="ITR transporte internacional — Transportadora Estrella" loading="lazy">

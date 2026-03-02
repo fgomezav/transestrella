@@ -1749,6 +1749,11 @@ footer {
   padding: 8px;
 }
 
+.sub-menu-toggle {
+  display: none;
+  /* Oculto en desktop */
+}
+
 /* ══════════════════════════════════════════
    19. RESPONSIVE — MÓVIL (≤ 768px)
 ══════════════════════════════════════════ */
@@ -1763,6 +1768,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1001;
+    /* Ensure it's clickable */
   }
 
   .nav-links {
@@ -1781,18 +1788,47 @@ footer {
     z-index: 1000;
   }
 
+  /* Astra themes sometimes have high specificity rules, adding !important ensures it opens */
   .nav-links.nav-active {
-    display: flex;
+    display: flex !important;
+  }
+
+  .nav-links li {
+    position: relative;
   }
 
   .nav-links a {
     display: block;
-    padding: 14px 0;
+    padding: 14px 48px;
+    /* Extra padding on sides to keep content centered correctly with the toggle button */
     font-size: 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    text-align: center;
+  }
+
+  /* Submenu toggle button */
+  .sub-menu-toggle {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    border-left: 1px solid rgba(255, 255, 255, 0.07);
+    z-index: 10;
+  }
+
+  .sub-menu-toggle svg {
+    transition: transform 0.3s ease;
   }
 
   .nav-links .sub-menu {
+    display: none;
+    /* Oculto por defecto en móvil */
     position: static;
     opacity: 1;
     visibility: visible;
@@ -1802,12 +1838,19 @@ footer {
     background: rgba(255, 255, 255, 0.05);
     margin: 0;
     min-width: 100%;
-    padding-left: 14px;
+    padding-left: 0;
+  }
+
+  .nav-links .sub-menu.sub-menu-active {
+    display: flex;
+    flex-direction: column;
   }
 
   .nav-links .sub-menu a {
     padding: 12px 14px;
     font-size: 13px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 
   .nav-cta {

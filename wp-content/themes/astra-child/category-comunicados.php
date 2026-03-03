@@ -14,7 +14,7 @@ get_header(); ?>
   Estilos de comunicados cargados desde /wp-content/themes/astra-child/comunicados.css.
 */
   <?php echo file_get_contents(get_stylesheet_directory() . '/comunicados.css');
-  ?>
+?>
 </style>
 
 <!-- HERO -->
@@ -271,9 +271,9 @@ endif; ?>
     <div class="sub-form">
       <h3>Suscribirse a Comunicados</h3>
       <p>Sin spam. Solo alertas cuando hay novedades que impactan su operación.</p>
-      <div class="forminator-ph">
-        <?php echo do_shortcode('[forminator_form id="536"]'); ?>
-      </div>
+
+      <?php echo do_shortcode('[forminator_form id="1758"]'); ?>
+
     </div>
   </div>
 </section>

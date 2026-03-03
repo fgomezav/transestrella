@@ -8,7 +8,7 @@ get_header();
 ?>
 <style>
   <?php echo file_get_contents(get_stylesheet_directory() . '/sucursal.css');
-  ?>
+?>
 </style>
 
 <!-- HERO -->
@@ -672,12 +672,9 @@ get_header();
     <div class="form-box">
       <h3>Solicitar Cotización — Bogotá</h3>
       <p class="form-box-sub">Le respondemos desde nuestra sucursal en Bogotá en menos de 24 horas hábiles.</p>
-      <div class="forminator-placeholder">
 
-        <span>
-          <?php echo do_shortcode('[forminator_form id="536"]'); ?>
-        </span>
-      </div>
+      <?php echo do_shortcode('[forminator_form id="536"]'); ?>
+
       <a href="https://wa.me/573128265078?text=Hola%2C%20quiero%20cotizar%20transporte%20de%20carga%20en%20Bogot%C3%A1"
         target="_blank" class="form-wa">
         <svg viewBox="0 0 24 24">
@@ -690,4 +687,5 @@ get_header();
       </a>
     </div>
   </div>
-</section><?php get_footer(); ?>
+</section>
+<?php get_footer(); ?>

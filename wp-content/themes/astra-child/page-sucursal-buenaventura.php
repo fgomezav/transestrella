@@ -178,7 +178,7 @@ get_header(); ?>
         <p>Mapa Google Maps</p>
         <span>Calle 7B N.° 4–52 Piso 2, Buenaventura</span>
       </div>
-      <div class="map-note">Insertar iframe Google Maps · Divi Code Module</div>
+      <div class="map-note"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.624939102947!2d-77.07674622411339!3d3.8902913960834793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e37238bda6a996f%3A0x1e9d4f176ae210db!2sCl%207B%20%23%204-52%20Piso%202%2C%20Buenaventura%2C%20Valle%20del%20Cauca!5e0!3m2!1ses!2sco!4v1772541923840!5m2!1ses!2sco" width="850" height="540" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
     <div class="map-side">
       <div class="map-side-title">Información de Contacto</div>
@@ -715,9 +715,7 @@ get_header(); ?>
     <div class="form-box">
       <h3>Solicitar Cotización — Buenaventura</h3>
       <p class="form-box-sub">Le respondemos desde nuestra sucursal en Buenaventura — con horario ampliado desde las 7am.</p>
-      <div class="forminator-placeholder">
-        <span><?php echo do_shortcode('[forminator_form id="536"]'); ?></span>
-      </div>
+      <?php echo do_shortcode('[forminator_form id="536"]'); ?>
       <a href="https://wa.me/573136597359?text=Hola%2C%20quiero%20cotizar%20transporte%20de%20carga%20desde%20el%20Puerto%20de%20Buenaventura" target="_blank" class="form-wa">
         <svg viewBox="0 0 24 24">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />

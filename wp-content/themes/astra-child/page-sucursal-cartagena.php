@@ -107,7 +107,10 @@ get_header();
         <p>Mapa Google Maps</p>
         <span>Diagonal 21 N.° 45A–11, Av. El Bosque, Cartagena</span>
       </div>
-      <div class="map-note">Insertar iframe Google Maps · Divi Code Module</div>
+      <div class="map-note"><iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.306617546716!2d-75.52397872496344!3d10.397203889729427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef625c952318b3f%3A0xd91e6590bbbe0584!2sTransportadora%20de%20Carga%20Estrella%20-%20Sucursal%20Cartagena!5e0!3m2!1ses!2sco!4v1772541689627!5m2!1ses!2sco"
+          width="850" height="540" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
     <div class="map-side">
       <div class="map-side-title">Información de Contacto</div>
@@ -682,11 +685,9 @@ get_header();
     <div class="form-box">
       <h3>Solicitar Cotización — Cartagena</h3>
       <p class="form-box-sub">Le respondemos desde nuestra sucursal en Cartagena en menos de 24 horas hábiles.</p>
-      <div class="forminator-placeholder">
-        <span>
-          <?php echo do_shortcode('[forminator_form id="536"]'); ?>
-        </span>
-      </div>
+
+      <?php echo do_shortcode('[forminator_form id="536"]'); ?>
+
       <a href="https://wa.me/573147728740?text=Hola%2C%20quiero%20cotizar%20transporte%20de%20carga%20en%20Cartagena"
         target="_blank" class="form-wa">
         <svg viewBox="0 0 24 24">

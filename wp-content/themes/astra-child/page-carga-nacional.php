@@ -1639,7 +1639,7 @@ get_header();
             <div class="other-link">Ver servicio →</div>
           </div>
         </a>
-        <a href="<?php echo esc_url(home_url('/servicios/transporte-de-contenedores/')); ?>" class="other-card">
+        <a href="<?php echo esc_url(home_url('/servicios/transporte-de-carga-peligrosa/')); ?>" class="other-card">
           <div class="other-card-img">
             <img src="https://transestrella.com/wp-content/uploads/2025/06/camion-cisterna.webp"
               alt="Transporte mercancías peligrosas — Transportadora Estrella" loading="lazy">
@@ -1731,11 +1731,9 @@ get_header();
               ni envíos individuales.</div>
           </div>
         </div>
-        <div class="forminator-placeholder">
-          <span>
-            <?php echo do_shortcode('[forminator_form id="536"]'); ?>
-          </span>
-        </div>
+
+        <?php echo do_shortcode('[forminator_form id="536"]'); ?>
+
         <a href="https://wa.me/576045273300?text=Hola%2C%20necesito%20cotizar%20transporte%20de%20carga%20nacional"
           target="_blank" class="form-wa">
           <svg viewBox="0 0 24 24">

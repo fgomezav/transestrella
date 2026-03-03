@@ -107,7 +107,10 @@ get_header();
         <p>Mapa Google Maps</p>
         <span>Cra. 28 #38-345 Av. Circunvalar, Barranquilla</span>
       </div>
-      <div class="map-note">Insertar iframe Google Maps · Divi Code Module</div>
+      <div class="map-note"><iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31338.48979329663!2d-74.81142019088055!3d10.939846610001398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef5d34f0ebd7195%3A0x6137d3386d702df2!2sTransportadora%20de%20Carga%20Estrella%20-%20Sucursal%20Barranquilla!5e0!3m2!1ses!2sco!4v1772541653666!5m2!1ses!2sco"
+          width="850" height="540" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
     <div class="map-side">
       <div class="map-side-title">Información de Contacto</div>
@@ -678,11 +681,9 @@ get_header();
     <div class="form-box">
       <h3>Solicitar Cotización — Barranquilla</h3>
       <p class="form-box-sub">Le respondemos desde nuestra sucursal en Barranquilla en menos de 24 horas hábiles.</p>
-      <div class="forminator-placeholder">
-        <span>
-          <?php echo do_shortcode('[forminator_form id="536"]'); ?>
-        </span>
-      </div>
+
+      <?php echo do_shortcode('[forminator_form id="536"]'); ?>
+
       <a href="https://wa.me/573104427076?text=Hola%2C%20quiero%20cotizar%20transporte%20de%20carga%20en%20Barranquilla"
         target="_blank" class="form-wa">
         <svg viewBox="0 0 24 24">

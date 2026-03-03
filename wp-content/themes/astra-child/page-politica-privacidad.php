@@ -70,7 +70,7 @@ get_header(); ?>
         <div class="legal-pill-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <span>Política de Privacidad</span>
       </a>
-      <a href="/politica-de-tratamiento-de-datos/" class="legal-pill">
+      <a href="/politica-tratamiento-datos/" class="legal-pill">
         <div class="legal-pill-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
         <span>Política de Tratamiento de Datos</span>
       </a>
@@ -182,7 +182,7 @@ get_header(); ?>
           <div class="cc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
           <div>
             <div class="cc-label">Sitio web</div>
-            <div class="cc-val"><a href="/politica-de-tratamiento-de-datos/">transestrella.com/politica-de-tratamiento-de-datos/</a></div>
+            <div class="cc-val"><a href="/politica-tratamiento-datos/">transestrella.com/politica-tratamiento-datos/</a></div>
           </div>
         </div>
       </div>

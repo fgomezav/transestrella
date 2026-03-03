@@ -108,7 +108,10 @@ get_header();
         <p>Mapa Google Maps</p>
         <span>Cra. 12A N.° 6Sur–94, Guadalajara de Buga</span>
       </div>
-      <div class="map-note">Insertar iframe Google Maps · Divi Code Module</div>
+      <div class="map-note"><iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.6289795278703!2d-76.3043436250254!3d3.889436096084352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e39e77b21d78069%3A0x3292b4e574cebd5d!2sTransportadora%20Estrella%20-%20Sucursal%20Buga!5e0!3m2!1ses!2sco!4v1772541733269!5m2!1ses!2sco"
+          width="850" height="540" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
     <div class="map-side">
       <div class="map-side-title">Información de Contacto</div>
@@ -673,11 +676,9 @@ get_header();
     <div class="form-box">
       <h3>Solicitar Cotización — Buga</h3>
       <p class="form-box-sub">Le respondemos desde nuestra sucursal en Buga en menos de 24 horas hábiles.</p>
-      <div class="forminator-placeholder">
-        <span>
-          <?php echo do_shortcode('[forminator_form id="536"]'); ?>
-        </span>
-      </div>
+
+      <?php echo do_shortcode('[forminator_form id="536"]'); ?>
+
       <a href="https://wa.me/573136553232?text=Hola%2C%20quiero%20cotizar%20transporte%20de%20carga%20en%20Buga%20Valle%20del%20Cauca"
         target="_blank" class="form-wa">
         <svg viewBox="0 0 24 24">

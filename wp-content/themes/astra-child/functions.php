@@ -11,6 +11,9 @@ function astra_child_enqueue_styles()
 
     // Cargar CSS del Child Theme sin dependencia del padre
     wp_enqueue_style('astra-child-style', get_stylesheet_directory_uri() . '/style.css', array(), '1.0.0', 'all');
+
+    // Cargar CSS personalizado de Forminator globalmente
+    wp_enqueue_style('forminator-custom-css', get_stylesheet_directory_uri() . '/forminator.css', array(), '1.0.0', 'all');
 }
 add_action('wp_enqueue_scripts', 'astra_child_enqueue_styles', 99);
 

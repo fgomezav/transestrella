@@ -8,7 +8,7 @@ get_header();
 ?>
 <style>
   <?php echo file_get_contents(get_stylesheet_directory() . '/sucursal.css');
-  ?>
+?>
 </style>
 
 <section class="hero">
@@ -692,11 +692,9 @@ get_header();
     <div class="form-box">
       <h3>Solicitar Cotización — Medellín</h3>
       <p class="form-box-sub">Le respondemos desde nuestra sede principal en menos de 24 horas hábiles.</p>
-      <div class="forminator-placeholder">
-        <span>
-          <?php echo do_shortcode('[forminator_form id="536"]'); ?>
-        </span>
-      </div>
+
+      <?php echo do_shortcode('[forminator_form id="536"]'); ?>
+
       <a href="https://wa.me/576045273300?text=Hola%2C%20quiero%20cotizar%20transporte%20de%20carga%20en%20Medell%C3%ADn"
         target="_blank" class="form-wa">
         <svg viewBox="0 0 24 24">

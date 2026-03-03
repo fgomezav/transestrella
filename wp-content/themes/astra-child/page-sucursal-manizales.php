@@ -90,7 +90,7 @@ get_header(); ?>
         <p>Mapa Google Maps</p>
         <span>Calle 110 N.° 34A–75, Manizales</span>
       </div>
-      <div class="map-note">Insertar iframe Google Maps · Divi Code Module</div>
+      <div class="map-note"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.459356632602!2d-75.45651852501858!3d5.0289977949475455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e476561bef0e97d%3A0x65362bb4f7a13bff!2sTransportadora%20De%20Carga%20Estrella%20-%20Manizales!5e0!3m2!1ses!2sco!4v1772541588384!5m2!1ses!2sco" width="850" height="540" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
     <div class="map-side">
       <div class="map-side-title">Información de Contacto</div>

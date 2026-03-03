@@ -1470,11 +1470,9 @@ get_header(); ?>
                         paqueteo ni envíos individuales.</div>
                 </div>
             </div>
-            <div class="forminator-placeholder">
-                <span>
-                    <?php echo do_shortcode('[forminator_form id="536"]'); ?>
-                </span>
-            </div>
+
+            <?php echo do_shortcode('[forminator_form id="536"]'); ?>
+
             <a href="https://wa.me/573104244591?text=Hola%2C%20necesito%20cotizar%20transporte%20de%20carga%20masiva"
                 target="_blank" class="form-wa">
                 <svg viewBox="0 0 24 24">

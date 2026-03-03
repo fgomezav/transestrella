@@ -116,7 +116,7 @@ get_header(); ?>
           </div>
           <div class="faq-a">
             <p>Sí. A través de nuestro servicio de <a href="/servicios/itr/" class="internal">ITR — Importación y Exportación</a>, movilizamos carga desde y hacia los puertos de <strong>Buenaventura</strong> y <strong>Cartagena</strong>, los dos principales puertos marítimos de Colombia.</p>
-            <p>Contamos con presencia directa en ambas ciudades. Nuestra <a href="/sucursales/sucursal-buenaventura/" class="internal">sucursal de Buenaventura</a> (Calle 7B N.° 4–52) y nuestra <a href="/sucursales/cartagena/" class="internal">sucursal de Cartagena</a> (Diagonal 21 N.° 45A–11) coordinan directamente las operaciones portuarias con aliados estratégicos certificados BASC.</p>
+            <p>Contamos con presencia directa en ambas ciudades. Nuestra <a href="/sucursales/sucursal-buenaventura/" class="internal">sucursal de Buenaventura</a> (Calle 7B N.° 4–52) y nuestra <a href="/sucursales/sucursal-cartagena/" class="internal">sucursal de Cartagena</a> (Diagonal 21 N.° 45A–11) coordinan directamente las operaciones portuarias con aliados estratégicos certificados BASC.</p>
             <div class="faq-note"><strong>Nota:</strong> Para operaciones de comercio exterior, la certificación BASC de nuestra flota es obligatoria para el acceso a las terminales portuarias. <a href="/blog/que-es-certificacion-basc/" class="internal">Conozca qué es BASC y por qué es clave para su operación.</a></div>
           </div>
         </div>

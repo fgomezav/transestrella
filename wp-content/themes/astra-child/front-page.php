@@ -378,7 +378,7 @@ get_header();
       <div class="fleet-grid">
         <div class="fleet-item">
           <div class="fleet-item-img">
-            <img src="https://transestrella.com/wp-content/uploads/2025/06/camio-urbano-de-transporte.webp"
+            <img src="https://transestrella.com/wp-content/uploads/2026/03/transportadora-estrella-turbo.png"
               alt="Turbos transporte urbano carga" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <div class="fleet-item-body">
@@ -389,7 +389,7 @@ get_header();
         <div class="fleet-item">
           <div class="fleet-item-img">
             <img
-              src="https://transestrella.com/wp-content/uploads/2025/04/transportadora-estrella-nuestra-flota-transporte-de-carga-pesada-1.jpeg"
+              src="https://transestrella.com/wp-content/uploads/2026/03/transportadora-estrella-camion.png"
               alt="Camiones transporte carga nacional" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <div class="fleet-item-body">
@@ -398,15 +398,10 @@ get_header();
           </div>
         </div>
         <div class="fleet-item">
-          <div class="fleet-item-img"
-            style="background:#0A3A6E;display:flex;align-items:center;justify-content:center;">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)"
-              stroke-width="1.2" stroke-linecap="round">
-              <rect x="1" y="3" width="15" height="13" rx="1" />
-              <path d="M16 8h4l3 5v4h-7V8z" />
-              <circle cx="5.5" cy="18.5" r="2.5" />
-              <circle cx="18.5" cy="18.5" r="2.5" />
-            </svg>
+          <div class="fleet-item-img">
+            <img
+              src="https://transestrella.com/wp-content/uploads/2026/03/transportadora-estrella-volcos.png"
+              alt="Volcos transporte carga nacional" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <div class="fleet-item-body">
             <div class="fleet-name">Volcos</div>
@@ -415,7 +410,7 @@ get_header();
         </div>
         <div class="fleet-item">
           <div class="fleet-item-img">
-            <img src="https://transestrella.com/wp-content/uploads/2025/08/transporte-de-contenedores.jpg"
+            <img src="https://transestrella.com/wp-content/uploads/2026/03/transportadora-estrella-patineta.png"
               alt="Patinetas transporte carga masiva" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <div class="fleet-item-body">
@@ -425,7 +420,7 @@ get_header();
         </div>
         <div class="fleet-item">
           <div class="fleet-item-img">
-            <img src="https://transestrella.com/wp-content/uploads/2025/06/camion-cisterna.webp"
+            <img src="https://transestrella.com/wp-content/uploads/2026/03/transportadora-estrella-tractocamion.png"
               alt="Tractocamiones transporte nacional" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <div class="fleet-item-body">
@@ -882,9 +877,7 @@ get_header();
           </div>
         </div>
         <!-- Forminator form placeholder -->
-        <div class="forminator-placeholder">
-          <span><?php echo do_shortcode('[forminator_form id="536"]'); ?></span>
-        </div>
+        <?php echo do_shortcode('[forminator_form id="536"]'); ?>
         <a href="https://wa.me/573104244591?text=Hola%2C%20necesito%20cotizar%20transporte%20de%20carga%20masiva"
           target="_blank" class="form-wa">
           <svg viewBox="0 0 24 24">

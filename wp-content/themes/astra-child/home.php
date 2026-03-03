@@ -250,7 +250,7 @@ endif;
       <h2>Categorías del <span>Blog</span></h2>
     </div>
     <div class="topics-grid">
-      <a href="/blog/categoria/normativa/" class="topic-card">
+      <a href="/blog/category/normativa/" class="topic-card">
         <div class="topic-icon"><svg viewBox="0 0 24 24">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
             <polyline points="14 2 14 8 20 8" />
@@ -263,7 +263,7 @@ endif;
         <div class="topic-desc">Decreto 1609, ISO 9001, BASC, SuperTransporte, regulación de carga peligrosa y normativa
           de comercio exterior vigente en Colombia.</div>
       </a>
-      <a href="/blog/categoria/logistica/" class="topic-card">
+      <a href="/blog/category/logistica/" class="topic-card">
         <div class="topic-icon"><svg viewBox="0 0 24 24">
             <rect x="1" y="3" width="15" height="13" rx="1" />
             <path d="M16 8h4l3 5v4h-7V8z" />
@@ -275,7 +275,7 @@ endif;
         <div class="topic-desc">Corredores viales de Colombia, tiempos de tránsito, carga masiva vs semi masiva,
           planificación de rutas y buenas prácticas operativas.</div>
       </a>
-      <a href="/blog/categoria/comercio-exterior/" class="topic-card">
+      <a href="/blog/category/comercio-exterior/" class="topic-card">
         <div class="topic-icon"><svg viewBox="0 0 24 24">
             <circle cx="12" cy="12" r="10" />
             <line x1="2" y1="12" x2="22" y2="12" />
@@ -286,7 +286,7 @@ endif;
         <div class="topic-desc">Operaciones ITR, terminales portuarios, documentación aduanera, DIAN, agentes de carga y
           la conexión terrestre con los puertos colombianos.</div>
       </a>
-      <a href="/blog/categoria/flota-seguridad/" class="topic-card">
+      <a href="/blog/category/flota-seguridad/" class="topic-card">
         <div class="topic-icon"><svg viewBox="0 0 24 24">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
             <polyline points="9 12 11 14 15 10" />

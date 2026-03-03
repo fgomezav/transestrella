@@ -107,7 +107,10 @@ get_header();
         <p>Mapa Google Maps</p>
         <span>Cencar Bloque A3 Of. 104, Cali</span>
       </div>
-      <div class="map-note">Insertar iframe Google Maps · Divi Code Module</div>
+      <div class="map-note"><iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4051645.4701944026!2d-77.99275804414414!3d7.389147972999243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a999ebf8c697%3A0xfbbbb0b6932c5b3f!2sCencar!5e0!3m2!1ses-419!2sco!4v1772542315836!5m2!1ses-419!2sco"
+          width="850" height="540" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
     <div class="map-side">
       <div class="map-side-title">Información de Contacto</div>

@@ -107,7 +107,10 @@ get_header();
         <p>Mapa Google Maps</p>
         <span>Av. Troncal de Occidente No. 18-76 Of. 301, Bogotá</span>
       </div>
-      <div class="map-note">Insertar iframe Google Maps · Divi Code Module</div>
+      <div class="map-note"><iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2030591.0094483155!2d-76.88979141779005!3d6.263983156995745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f781903658ccb%3A0x701c41f8ecbdff20!2sIndustrial%20Park%20Santo%20Domingo!5e0!3m2!1sen!2sco!4v1772542468951!5m2!1sen!2sco"
+          width="850" height="540" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
     <div class="map-side">
       <div class="map-side-title">Información de Contacto</div>

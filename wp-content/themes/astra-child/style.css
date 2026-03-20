@@ -1999,3 +1999,6 @@ footer {
     display: none;
   }
 }
+
+
+.forminator-ui#forminator-module-1775.forminator-design--default .forminator-title{display:flex;align-items:center;gap:8px;font-family:var(--font-display);font-size:11px !important;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ts-gray);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--ts-gray-line);}

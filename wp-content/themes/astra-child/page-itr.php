@@ -1498,8 +1498,7 @@ get_header(); ?>
         <p>El servicio ITR (Inland Transport Route) es la solución de transporte terrestre especializada que conecta los
           centros de producción, distribución y consumo del interior del país con los principales puertos de Colombia,
           habilitando así las operaciones de importación y exportación.</p>
-        <p>Transportadora Estrella moviliza su carga desde cualquier ciudad del país hasta los puertos de Buenaventura y
-          Cartagena —y viceversa— trabajando en coordinación estrecha con aliados estratégicos especializados en
+        <p>Transportadora Estrella moviliza su carga desde cualquier ciudad del país hasta los puertos de Colombia —y viceversa— trabajando en coordinación estrecha con aliados estratégicos especializados en
           trámites aduaneros, operación portuaria y logística de comercio exterior.</p>
         <p>Esta integración nos permite ofrecer a su empresa una solución end-to-end: desde la planta o bodega de origen
           hasta el costado del buque, o desde el puerto de llegada hasta el destino final en cualquier punto de
@@ -1853,7 +1852,7 @@ get_header(); ?>
               </svg>
             </div>
             <div class="why-item-body">
-              <h5>Sucursales Propias en los Dos Puertos</h5>
+              <h5>Sucursales Propias en Dos Puertos</h5>
               <p>Equipos locales en Buenaventura y Cartagena con contacto directo con los terminales portuarios, agentes
                 navieros y operadores de patio.</p>
             </div>

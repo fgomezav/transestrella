@@ -345,14 +345,15 @@ get_header();
               alt="Transporte internacional ITR importación exportación Colombia - Transportadora Estrella"
               loading="lazy">
             <div class="svc-img-overlay"></div>
-            <div class="svc-tag">Internacional</div>
+            <div class="svc-tag">Puertos</div>
           </div>
           <div class="svc-body">
             <h3>ITR — Importación y Exportación</h3>
             <p>Movilizamos carga desde y hacia los puertos de Colombia con aliados estratégicos especializados en
               operaciones de comercio exterior.</p>
             <ul class="svc-features">
-              <li><span class="svc-feat-dot"></span>Puertos Buenaventura y Cartagena</li>
+              <li><span class="svc-feat-dot"></span>Todos los Puertos de Colombia</li>
+              <li><span class="svc-feat-dot"></span>Sedes en Buenaventura, Barranquilla y Cartagena</li>
               <li><span class="svc-feat-dot"></span>Aliados estratégicos certificados</li>
               <li><span class="svc-feat-dot"></span>Trámites aduaneros coordinados</li>
             </ul>

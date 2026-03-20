@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auditoría Digital 2026 — Transportadora Estrella</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #0F5BA7;
+    --blue-dark: #0A4580;
+    --gold: #F5A623;
+    --gold-light: #FDF3E0;
+    --gray-bg: #F5F5F5;
+    --gray-border: #E2E8F0;
+    --gray-text: #64748B;
+    --text: #1A2A3A;
+    --white: #FFFFFF;
+    --red: #DC2626;
+    --red-light: #FEF2F2;
+    --orange: #D97706;
+    --orange-light: #FFFBEB;
+    --green: #16A34A;
+    --green-light: #F0FDF4;
+    --risk-high: #DC2626;
+    --risk-mid: #D97706;
+    --risk-low: #2563EB;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 15px;
+    color: var(--text);
+    background: var(--gray-bg);
+    line-height: 1.65;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--blue-dark);
+    border-bottom: 3px solid var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 0 32px;
+    height: 52px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  nav::-webkit-scrollbar { display: none; }
+  .nav-brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    margin-right: 28px;
+    flex-shrink: 0;
+  }
+  nav a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 0 14px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+    flex-shrink: 0;
+    margin-bottom: -3px;
+  }
+  nav a:hover { color: #fff; border-bottom-color: var(--gold); }
+
+  /* ── LAYOUT ── */
+  .page-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* ── HEADER ── */
+  .report-header {
+    background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 60%, #1A6FC4 100%);
+    border-radius: 16px;
+    padding: 48px 56px;
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .report-header::before {
+    content: '';
+    position: absolute;
+    right: -60px;
+    top: -60px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: rgba(245,166,35,0.12);
+  }
+  .report-header::after {
+    content: '';
+    position: absolute;
+    right: 80px;
+    bottom: -80px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+  }
+  .header-tag {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--blue-dark);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+  .header-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 52px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.05;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+  .header-title span { color: var(--gold); }
+  .header-sub {
+    color: rgba(255,255,255,0.65);
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .header-meta {
+    display: flex;
+    gap: 32px;
+    margin-top: 28px;
+  }
+  .header-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .header-meta-item .label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    font-weight: 600;
+  }
+  .header-meta-item .value {
+    font-size: 15px;
+    color: rgba(255,255,255,0.92);
+    font-weight: 600;
+  }
+
+  /* ── METRIC CARDS ── */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .metric-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid var(--gray-border);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(15,91,167,0.1);
+  }
+  .metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--blue);
+  }
+  .metric-card.gold::before { background: var(--gold); }
+  .metric-card.red::before { background: var(--red); }
+  .metric-card.green::before { background: var(--green); }
+  .metric-number {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--blue);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .metric-card.gold .metric-number { color: var(--orange); }
+  .metric-card.red .metric-number { color: var(--red); }
+  .metric-card.green .metric-number { color: var(--green); }
+  .metric-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+  .metric-sub {
+    font-size: 12px;
+    color: var(--gray-text);
+  }
+
+  /* ── SECTION ── */
+  .section {
+    background: var(--white);
+    border-radius: 14px;
+    border: 1px solid var(--gray-border);
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  .section-header {
+    padding: 20px 28px;
+    border-bottom: 1px solid var(--gray-border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-icon {
+    width: 38px;
+    height: 38px;
+    background: var(--blue);
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    flex-shrink: 0;
+  }
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.2px;
+  }
+  .section-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--gray-text);
+    text-transform: uppercase;
+    margin-left: auto;
+  }
+  .section-body { padding: 28px; }
+
+  /* ── PRESENCE TABLE ── */
+  .presence-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .presence-table tr {
+    border-bottom: 1px solid var(--gray-border);
+    transition: background 0.15s;
+  }
+  .presence-table tr:last-child { border-bottom: none; }
+  .presence-table tr:hover { background: var(--gray-bg); }
+  .presence-table td {
+    padding: 12px 4px;
+    font-size: 14px;
+  }
+  .presence-table td:first-child {
+    font-weight: 600;
+    color: var(--text);
+    width: 35%;
+    padding-right: 16px;
+  }
+  .status-ok {
+    color: var(--green);
+    font-size: 13px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .status-ok::before { content: '✓'; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .status-fail {
+    color: var(--red);
+    font-size: 13px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-weight: 600;
+  }
+  .status-fail::before { content: '✗'; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+  /* ── ISSUE CARDS ── */
+  .issues-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .issue-card {
+    border-radius: 10px;
+    padding: 18px 20px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    border: 1px solid;
+  }
+  .issue-card.critical {
+    background: var(--red-light);
+    border-color: #FECACA;
+  }
+  .issue-card.medium {
+    background: var(--orange-light);
+    border-color: #FDE68A;
+  }
+  .issue-number {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--gray-text);
+    opacity: 0.4;
+    min-width: 24px;
+    line-height: 1;
+    padding-top: 2px;
+  }
+  .issue-content { flex: 1; }
+  .issue-title {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .issue-desc {
+    font-size: 13.5px;
+    color: #374151;
+    margin-bottom: 6px;
+    line-height: 1.55;
+  }
+  .issue-fix {
+    font-size: 12.5px;
+    color: var(--gray-text);
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    line-height: 1.5;
+  }
+  .issue-fix strong { color: var(--text); white-space: nowrap; flex-shrink: 0; }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .badge-critical { background: var(--red); color: #fff; }
+  .badge-medium { background: var(--orange); color: #fff; }
+  .badge-high { background: var(--red); color: #fff; }
+  .badge-low { background: var(--blue); color: #fff; }
+
+  /* ── OPPORTUNITIES ── */
+  .opp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .opp-card {
+    background: linear-gradient(135deg, #EFF6FF, #DBEAFE);
+    border: 1px solid #BFDBFE;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .opp-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(15,91,167,0.12);
+  }
+  .opp-card.featured {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, var(--gold-light), #FEF9EC);
+    border-color: #FCD34D;
+  }
+  .opp-icon {
+    font-size: 26px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .opp-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .opp-desc {
+    font-size: 13.5px;
+    color: #374151;
+    line-height: 1.55;
+  }
+  .opp-tag {
+    display: inline-block;
+    background: var(--blue);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+  .opp-card.featured .opp-tag { background: var(--gold); color: var(--blue-dark); }
+
+  /* ── RISK TABLE ── */
+  .risk-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .risk-table thead tr {
+    background: var(--gray-bg);
+  }
+  .risk-table th {
+    padding: 12px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--gray-text);
+    text-align: left;
+    border-bottom: 2px solid var(--gray-border);
+  }
+  .risk-table tbody tr {
+    border-bottom: 1px solid var(--gray-border);
+    transition: background 0.15s;
+  }
+  .risk-table tbody tr:last-child { border-bottom: none; }
+  .risk-table tbody tr:hover { background: var(--gray-bg); }
+  .risk-table td {
+    padding: 14px 16px;
+    font-size: 14px;
+    vertical-align: middle;
+  }
+  .risk-table td:first-child { font-weight: 600; }
+  .risk-meter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .risk-bar {
+    height: 6px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+  .risk-high .risk-bar { width: 60px; background: var(--red); }
+  .risk-mid .risk-bar { width: 40px; background: var(--orange); }
+  .risk-low-b .risk-bar { width: 20px; background: var(--blue); }
+
+  /* ── ACTION PLAN ── */
+  .plan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .plan-col {
+    border-radius: 12px;
+    padding: 22px;
+    border: 1px solid;
+  }
+  .plan-col.week {
+    background: linear-gradient(145deg, #F0FDF4, #DCFCE7);
+    border-color: #BBF7D0;
+  }
+  .plan-col.month {
+    background: linear-gradient(145deg, #EFF6FF, #DBEAFE);
+    border-color: #BFDBFE;
+  }
+  .plan-col.quarter {
+    background: linear-gradient(145deg, var(--gold-light), #FEF3C7);
+    border-color: #FDE68A;
+  }
+  .plan-col-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .plan-col.week .plan-col-title { color: #15803D; border-color: #86EFAC; }
+  .plan-col.month .plan-col-title { color: var(--blue-dark); border-color: #93C5FD; }
+  .plan-col.quarter .plan-col-title { color: #92400E; border-color: #FCD34D; }
+  .plan-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    font-size: 13.5px;
+    line-height: 1.5;
+  }
+  .plan-item:last-child { border-bottom: none; }
+  .plan-check {
+    width: 18px;
+    height: 18px;
+    border: 2px solid;
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .plan-col.week .plan-check { border-color: #22C55E; }
+  .plan-col.month .plan-check { border-color: var(--blue); }
+  .plan-col.quarter .plan-check { border-color: var(--gold); }
+
+  /* ── MARKET SECTION ── */
+  .market-callout {
+    background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .market-callout::before {
+    content: '"';
+    position: absolute;
+    right: 24px;
+    top: -16px;
+    font-size: 160px;
+    font-family: Georgia, serif;
+    color: rgba(255,255,255,0.06);
+    line-height: 1;
+  }
+  .market-callout p {
+    color: rgba(255,255,255,0.9);
+    font-size: 15.5px;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+  .market-callout strong { color: var(--gold); font-weight: 700; }
+  .market-stats {
+    display: flex;
+    gap: 32px;
+    margin-top: 20px;
+  }
+  .market-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .market-stat .num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .market-stat .lbl {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .comp-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 4px;
+  }
+  .comp-table thead tr { background: var(--gray-bg); }
+  .comp-table th {
+    padding: 11px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--gray-text);
+    text-align: left;
+    border-bottom: 2px solid var(--gray-border);
+  }
+  .comp-table tbody tr {
+    border-bottom: 1px solid var(--gray-border);
+    transition: background 0.15s;
+  }
+  .comp-table tbody tr:last-child { border-bottom: none; }
+  .comp-table tbody tr:hover { background: var(--gray-bg); }
+  .comp-table td {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+  .comp-table td:first-child { font-weight: 700; color: var(--blue-dark); }
+  .comp-highlight {
+    background: linear-gradient(135deg, #FFF7ED, #FEF3C7) !important;
+    font-style: italic;
+    color: var(--gray-text) !important;
+    font-size: 13px !important;
+  }
+
+  /* ── FOOTER ── */
+  .report-footer {
+    text-align: center;
+    padding: 32px 0 0;
+    color: var(--gray-text);
+    font-size: 13px;
+    border-top: 1px solid var(--gray-border);
+    margin-top: 8px;
+  }
+  .report-footer strong { color: var(--text); }
+
+  /* ── PRINT ── */
+  @media print {
+    nav { display: none; }
+    .report-header { background: #fff !important; border: 2px solid var(--blue); }
+    .header-title, .header-sub, .header-meta-item .label, .header-meta-item .value { color: var(--text) !important; }
+    .header-tag { background: var(--gold); color: var(--blue-dark) !important; -webkit-print-color-adjust: exact; }
+    .metric-card, .section, .opp-card, .plan-col { break-inside: avoid; }
+    body { background: #fff; }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .report-header { padding: 32px 24px; }
+    .header-title { font-size: 36px; }
+    .header-meta { flex-wrap: wrap; gap: 16px; }
+    .metrics-grid { grid-template-columns: 1fr 1fr; }
+    .opp-grid { grid-template-columns: 1fr; }
+    .opp-card.featured { grid-column: auto; }
+    .plan-grid { grid-template-columns: 1fr; }
+    .section-body { padding: 20px; }
+  }
+
+  @media (max-width: 480px) {
+    .metrics-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .metric-number { font-size: 36px; }
+    nav { padding: 0 16px; }
+    .nav-brand { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- STICKY NAV -->
+<nav>
+  <span class="nav-brand">★ TRANSESTRELLA</span>
+  <a href="#presencia">Presencia</a>
+  <a href="#problemas">Problemas</a>
+  <a href="#oportunidades">Oportunidades</a>
+  <a href="#riesgos">Riesgos</a>
+  <a href="#plan">Plan de Acción</a>
+  <a href="#mercado">Mercado</a>
+</nav>
+
+<div class="page-wrap">
+
+  <!-- HEADER -->
+  <header class="report-header">
+    <div class="header-tag">AUDITORÍA DIGITAL</div>
+    <h1 class="header-title">Transportadora<br><span>Estrella</span></h1>
+    <p class="header-sub">Informe de presencia digital, SEO técnico y oportunidades de crecimiento</p>
+    <div class="header-meta">
+      <div class="header-meta-item">
+        <span class="label">Sitio web</span>
+        <span class="value">transestrella.com</span>
+      </div>
+      <div class="header-meta-item">
+        <span class="label">Fecha</span>
+        <span class="value">14 de marzo de 2026</span>
+      </div>
+      <div class="header-meta-item">
+        <span class="label">Plataforma</span>
+        <span class="value">WordPress 6.9+ · Astra v4.12.1</span>
+      </div>
+      <div class="header-meta-item">
+        <span class="label">Alcance</span>
+        <span class="value">Técnico · SEO · Contenido · Mercado</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- METRICS -->
+  <div class="metrics-grid">
+    <div class="metric-card green">
+      <div class="metric-number">28</div>
+      <div class="metric-label">Posts en el blog</div>
+      <div class="metric-sub">Activo desde 2025</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-number">23</div>
+      <div class="metric-label">Páginas indexadas</div>
+      <div class="metric-sub">+ sitemap correcto</div>
+    </div>
+    <div class="metric-card gold">
+      <div class="metric-number">8</div>
+      <div class="metric-label">Sucursales sin GBP</div>
+      <div class="metric-sub">Oportunidad local perdida</div>
+    </div>
+    <div class="metric-card red">
+      <div class="metric-number">5</div>
+      <div class="metric-label">Problemas críticos</div>
+      <div class="metric-sub">Corregibles rápidamente</div>
+    </div>
+  </div>
+
+  <!-- SECTION 1: PRESENCIA -->
+  <div class="section" id="presencia">
+    <div class="section-header">
+      <div class="section-icon">📡</div>
+      <div>
+        <div class="section-title">Presencia Digital Actual</div>
+      </div>
+      <span class="section-num">01</span>
+    </div>
+    <div class="section-body">
+      <table class="presence-table">
+        <tbody>
+          <tr>
+            <td>Sitio WordPress</td>
+            <td><span class="status-ok">Activo — 23 páginas + 28 posts en blog</span></td>
+          </tr>
+          <tr>
+            <td>Google Tag Manager</td>
+            <td><span class="status-ok">Instalado — GTM-KCQGC2LJ</span></td>
+          </tr>
+          <tr>
+            <td>Blog logístico</td>
+            <td><span class="status-ok">28 posts activos con frecuencia sostenida desde 2025</span></td>
+          </tr>
+          <tr>
+            <td>Formulario de cotización</td>
+            <td><span class="status-ok">Presente en todas las páginas clave (Forminator)</span></td>
+          </tr>
+          <tr>
+            <td>Certificaciones publicadas</td>
+            <td><span class="status-ok">ISO 9001 ICONTEC + BASC — diferenciadores clave</span></td>
+          </tr>
+          <tr>
+            <td>Schema.org básico</td>
+            <td><span class="status-ok">Organization, WebPage, BreadcrumbList via Yoast SEO</span></td>
+          </tr>
+          <tr>
+            <td>Sitemap + robots.txt</td>
+            <td><span class="status-ok">Bien estructurados — índice + 2 sitemaps hijos</span></td>
+          </tr>
+          <tr>
+            <td>Canonical URLs</td>
+            <td><span class="status-ok">Implementadas correctamente en todas las páginas auditadas</span></td>
+          </tr>
+          <tr>
+            <td>Google Business Profile</td>
+            <td><span class="status-fail">No verificado — 8 sucursales físicas sin presencia en Maps</span></td>
+          </tr>
+          <tr>
+            <td>LinkedIn empresarial</td>
+            <td><span class="status-fail">No detectado — canal crítico para audiencia B2B</span></td>
+          </tr>
+          <tr>
+            <td>Facebook</td>
+            <td><span class="status-fail">No detectado en Schema ni footer del sitio</span></td>
+          </tr>
+          <tr>
+            <td>Reseñas externas B2B</td>
+            <td><span class="status-fail">Sin perfil verificado en Google, Trustpilot ni plataformas B2B</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 2: PROBLEMAS -->
+  <div class="section" id="problemas">
+    <div class="section-header">
+      <div class="section-icon">⚠️</div>
+      <div>
+        <div class="section-title">Problemas Detectados</div>
+      </div>
+      <span class="section-num">02</span>
+    </div>
+    <div class="section-body">
+      <div class="issues-grid">
+
+        <div class="issue-card critical">
+          <div class="issue-number">1</div>
+          <div class="issue-content">
+            <span class="badge badge-critical">Crítico</span>
+            <div class="issue-title">Doble H1 en Homepage</div>
+            <div class="issue-desc">Hay dos etiquetas <code>&lt;h1&gt;</code> en la página de inicio. Google puede ignorar ambas o reducir la relevancia de la keyword principal.</div>
+            <div class="issue-fix"><strong>Fix →</strong> Dejar solo <em>"Transporte de Carga Masiva Terrestre Nacional"</em>; convertir el segundo H1 en H2.</div>
+          </div>
+        </div>
+
+        <div class="issue-card critical">
+          <div class="issue-number">2</div>
+          <div class="issue-content">
+            <span class="badge badge-critical">Crítico</span>
+            <div class="issue-title">Sin Google Business Profile verificado</div>
+            <div class="issue-desc">Con 8 sucursales físicas y sin fichas GBP verificadas, se pierde el 100% del tráfico de búsqueda local ("transporte de carga Medellín", "empresa carga Bogotá").</div>
+            <div class="issue-fix"><strong>Fix →</strong> Crear y verificar 8 fichas GBP, una por sucursal, con fotos, horarios y enlace a la página de sucursal del sitio.</div>
+          </div>
+        </div>
+
+        <div class="issue-card critical">
+          <div class="issue-number">3</div>
+          <div class="issue-content">
+            <span class="badge badge-critical">Crítico</span>
+            <div class="issue-title">AdsBot bloqueado en robots.txt</div>
+            <div class="issue-desc">La regla <code>User-agent: AdsBot / Disallow: /</code> impide que Google audite las landing pages para Google Ads, lo que baja el Quality Score.</div>
+            <div class="issue-fix"><strong>Fix →</strong> Eliminar las 2 líneas de AdsBot del archivo robots.txt.</div>
+          </div>
+        </div>
+
+        <div class="issue-card critical">
+          <div class="issue-number">4</div>
+          <div class="issue-content">
+            <span class="badge badge-critical">Crítico</span>
+            <div class="issue-title">Sin FAQPage Schema en /servicios/</div>
+            <div class="issue-desc">Hay un FAQ con 6 preguntas visibles pero sin marcado estructurado. Google podría mostrar fragmentos enriquecidos en la SERP (rich snippets).</div>
+            <div class="issue-fix"><strong>Fix →</strong> Agregar <code>"@type": "FAQPage"</code> en el JSON-LD de la página /servicios/.</div>
+          </div>
+        </div>
+
+        <div class="issue-card critical">
+          <div class="issue-number">5</div>
+          <div class="issue-content">
+            <span class="badge badge-critical">Crítico</span>
+            <div class="issue-title">LocalBusiness Schema ausente</div>
+            <div class="issue-desc">Existe Schema de <code>Organization</code> pero no de <code>LocalBusiness</code>. Sin teléfono, dirección postal, horarios ni geolocalización en el marcado estructurado.</div>
+            <div class="issue-fix"><strong>Fix →</strong> Ampliar el JSON-LD con <code>LocalBusiness</code>, <code>PostalAddress</code>, <code>openingHoursSpecification</code> y coordenadas <code>geo</code>.</div>
+          </div>
+        </div>
+
+        <div class="issue-card medium">
+          <div class="issue-number">6</div>
+          <div class="issue-content">
+            <span class="badge badge-medium">Medio</span>
+            <div class="issue-title">Inconsistencia en años de experiencia</div>
+            <div class="issue-desc">Homepage dice <em>"30 años"</em>, /nosotros/ dice <em>"fundados en 1980"</em> (= 46 años en 2026), y alguna meta description dice <em>"+40 años"</em>. Tres versiones distintas erosionan la credibilidad.</div>
+            <div class="issue-fix"><strong>Fix →</strong> Usar "fundada en 1980" como referencia universal y actualizar todos los textos del sitio.</div>
+          </div>
+        </div>
+
+        <div class="issue-card medium">
+          <div class="issue-number">7</div>
+          <div class="issue-content">
+            <span class="badge badge-medium">Medio</span>
+            <div class="issue-title">Organization Schema incompleto</div>
+            <div class="issue-desc">Falta <code>telephone</code>, <code>address (PostalAddress)</code>, <code>openingHoursSpecification</code>, <code>foundingDate</code>. El <code>sameAs</code> solo lista Instagram.</div>
+            <div class="issue-fix"><strong>Fix →</strong> Completar el Schema con los datos de contacto ya disponibles en la página /contactanos/.</div>
+          </div>
+        </div>
+
+        <div class="issue-card medium">
+          <div class="issue-number">8</div>
+          <div class="issue-content">
+            <span class="badge badge-medium">Medio</span>
+            <div class="issue-title">Sin Twitter Cards</div>
+            <div class="issue-desc">Las meta tags de Open Graph están implementadas pero faltan las etiquetas de Twitter Card. Los links compartidos en X/Twitter no se previsualizar correctamente.</div>
+            <div class="issue-fix"><strong>Fix →</strong> Agregar <code>&lt;meta name="twitter:card" content="summary_large_image"&gt;</code> y las demás twitter: tags.</div>
+          </div>
+        </div>
+
+        <div class="issue-card medium">
+          <div class="issue-number">9</div>
+          <div class="issue-content">
+            <span class="badge badge-medium">Medio</span>
+            <div class="issue-title">Páginas huérfanas en el sitemap</div>
+            <div class="issue-desc"><code>/servicios/transporte-de-importacion-y-exportacion/</code> y <code>/servicios/transporte-de-carga-refrigerada/</code> están en el sitemap pero no tienen enlace desde ningún menú.</div>
+            <div class="issue-fix"><strong>Fix →</strong> Decidir: enlazar desde el menú de servicios, o agregar <code>noindex</code> para evitar thin content indexado.</div>
+          </div>
+        </div>
+
+        <div class="issue-card medium">
+          <div class="issue-number">10</div>
+          <div class="issue-content">
+            <span class="badge badge-medium">Medio</span>
+            <div class="issue-title">Typos en nombres de archivos de imagen + alt faltantes</div>
+            <div class="issue-desc"><code>transporte-de-carga-nacioanl.jpeg</code> y <code>camio-urbano-de-transporte.webp</code> tienen errores tipográficos. Varias imágenes hero no tienen atributo <code>alt</code>.</div>
+            <div class="issue-fix"><strong>Fix →</strong> Renombrar los archivos, actualizar las URLs en el CMS, y completar los alt texts descriptivos en todas las imágenes.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: OPORTUNIDADES -->
+  <div class="section" id="oportunidades">
+    <div class="section-header">
+      <div class="section-icon">🚀</div>
+      <div>
+        <div class="section-title">Oportunidades de Crecimiento</div>
+      </div>
+      <span class="section-num">03</span>
+    </div>
+    <div class="section-body">
+      <div class="opp-grid">
+
+        <div class="opp-card featured">
+          <span class="opp-icon">📍</span>
+          <div class="opp-tag">Mayor Oportunidad</div>
+          <div class="opp-title">SEO Local — 8 Sucursales, 0 Fichas GBP</div>
+          <div class="opp-desc">Con sucursales en Medellín, Bogotá, Cali, Barranquilla, Cartagena, Buenaventura, Buga y Manizales, verificar 8 fichas en Google Business Profile puede generar aparición en el <strong>Maps Pack</strong> para búsquedas locales de alto volumen y alta intención comercial. Es el cambio con mayor retorno potencial inmediato.</div>
+        </div>
+
+        <div class="opp-card">
+          <span class="opp-icon">✍️</span>
+          <div class="opp-tag">Contenido</div>
+          <div class="opp-title">Blog con potencial de tráfico informacional</div>
+          <div class="opp-desc">Los 28 posts existentes cubren normativa colombiana y logística. Añadir artículos de rutas específicas ("transporte carga Medellín–Bogotá"), calculadoras de flete y guías de cumplimiento RNDC puede capturar tráfico de cola larga con alta intención.</div>
+        </div>
+
+        <div class="opp-card">
+          <span class="opp-icon">💼</span>
+          <div class="opp-tag">B2B</div>
+          <div class="opp-title">LinkedIn — Canal sin explotar</div>
+          <div class="opp-desc">El cliente objetivo (gerente logístico, jefe de compras) está activo en LinkedIn. Un perfil de empresa con casos de éxito y contenido normativo puede generar leads directos de empresas que buscan proveedor de transporte masivo.</div>
+        </div>
+
+        <div class="opp-card">
+          <span class="opp-icon">☣️</span>
+          <div class="opp-tag">Nichos Especializados</div>
+          <div class="opp-title">Mercancías Peligrosas y Carga Refrigerada</div>
+          <div class="opp-desc">Son servicios que pocas empresas en Colombia atienden con estándares BASC. Las páginas actuales tienen buen contenido; falta linkbuilding desde industrias objetivo (química, farmacéutica, alimentos) y casos de uso específicos por tipo de mercancía.</div>
+        </div>
+
+        <div class="opp-card">
+          <span class="opp-icon">🏢</span>
+          <div class="opp-tag">Conversión Local</div>
+          <div class="opp-title">Páginas de sucursales como landing pages</div>
+          <div class="opp-desc">Las 8 páginas de sucursales existen pero probablemente son thin content. Enriquecerlas con rutas principales de cada ciudad, mapa embebido y formulario de cotización local las convierte en landing pages de alta conversión para Google Ads y tráfico orgánico local.</div>
+        </div>
+
+        <div class="opp-card">
+          <span class="opp-icon">⭐</span>
+          <div class="opp-tag">SERP</div>
+          <div class="opp-title">Rich Snippets con FAQPage Schema</div>
+          <div class="opp-desc">El FAQ ya existe en /servicios/ con 6 preguntas. Agregar FAQPage Schema puede duplicar el espacio visual en los resultados de búsqueda sin esfuerzo adicional de contenido, mejorando el CTR orgánico directamente.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: RIESGOS -->
+  <div class="section" id="riesgos">
+    <div class="section-header">
+      <div class="section-icon">🛡️</div>
+      <div>
+        <div class="section-title">Riesgos Identificados</div>
+      </div>
+      <span class="section-num">04</span>
+    </div>
+    <div class="section-body">
+      <table class="risk-table">
+        <thead>
+          <tr>
+            <th>Riesgo</th>
+            <th>Descripción</th>
+            <th>Nivel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="risk-high">
+            <td>Google Ads sin AdsBot</td>
+            <td style="font-size:13.5px; color:#374151;">El bloqueo de AdsBot impide que Google audite las landing pages y puede bajar el Quality Score de campañas activas o futuras.</td>
+            <td>
+              <div class="risk-meter">
+                <div class="risk-bar"></div>
+                <span class="badge badge-critical">Alto</span>
+              </div>
+            </td>
+          </tr>
+          <tr class="risk-high">
+            <td>Credenciales en wp-config.php</td>
+            <td style="font-size:13.5px; color:#374151;">Salts de autenticación y credenciales de base de datos están en el repositorio. En producción, esto representa un riesgo de seguridad grave.</td>
+            <td>
+              <div class="risk-meter">
+                <div class="risk-bar"></div>
+                <span class="badge badge-critical">Alto</span>
+              </div>
+            </td>
+          </tr>
+          <tr class="risk-mid">
+            <td>Sin .gitignore para backups</td>
+            <td style="font-size:13.5px; color:#374151;"><code>wp-content/updraft/</code> acumula backups que no deben estar en el repositorio. Archivos sensibles sin protección.</td>
+            <td>
+              <div class="risk-meter">
+                <div class="risk-bar"></div>
+                <span class="badge badge-medium">Medio</span>
+              </div>
+            </td>
+          </tr>
+          <tr class="risk-mid">
+            <td>Dominio .com.co sin confirmar</td>
+            <td style="font-size:13.5px; color:#374151;">Si <code>transestrella.com.co</code> no redirige con 301 permanente a <code>transestrella.com</code>, se pierde la autoridad de dominio acumulada en backlinks históricos.</td>
+            <td>
+              <div class="risk-meter">
+                <div class="risk-bar"></div>
+                <span class="badge badge-medium">Medio</span>
+              </div>
+            </td>
+          </tr>
+          <tr class="risk-mid">
+            <td>WordPress sin child theme</td>
+            <td style="font-size:13.5px; color:#374151;">Las personalizaciones directas al tema Astra serán sobreescritas en la próxima actualización de tema. Riesgo latente ante cualquier update.</td>
+            <td>
+              <div class="risk-meter">
+                <div class="risk-bar"></div>
+                <span class="badge badge-medium">Medio</span>
+              </div>
+            </td>
+          </tr>
+          <tr class="risk-mid">
+            <td>Canal único de conversión</td>
+            <td style="font-size:13.5px; color:#374151;">Todo el lead capture pasa por el formulario Forminator. No se detectó email marketing, retargeting ni integración con CRM. Si el formulario falla, se pierden todos los leads.</td>
+            <td>
+              <div class="risk-meter">
+                <div class="risk-bar"></div>
+                <span class="badge badge-medium">Medio</span>
+              </div>
+            </td>
+          </tr>
+          <tr class="risk-low-b">
+            <td>Datos de empresa inconsistentes</td>
+            <td style="font-size:13.5px; color:#374151;">Tres versiones de años de experiencia (30, 40+ y 46) en distintas páginas pueden generar desconfianza en clientes B2B que investigan antes de contratar.</td>
+            <td>
+              <div class="risk-meter">
+                <div class="risk-bar"></div>
+                <span class="badge badge-low">Bajo</span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 5: PLAN -->
+  <div class="section" id="plan">
+    <div class="section-header">
+      <div class="section-icon">📋</div>
+      <div>
+        <div class="section-title">Plan de Acción Priorizado</div>
+      </div>
+      <span class="section-num">05</span>
+    </div>
+    <div class="section-body">
+      <div class="plan-grid">
+
+        <div class="plan-col week">
+          <div class="plan-col-title">⚡ Esta Semana</div>
+          <div class="plan-item">
+            <div class="plan-check"></div>
+            <span>Corregir el doble H1 en la homepage</span>
+          </div>
+          <div class="plan-item">
+            <div class="plan-check"></div>
+            <span>Eliminar bloqueo de AdsBot en robots.txt</span>
+          </div>
+          <div class="plan-item">
+            <div class="plan-check"></div>
+            <span>Unificar mensaje de años de experiencia (usar "fundada en 1980")</span>
+          </div>
+          <div class="plan-item">
+            <div class="plan-check"></div>
+            <span>Agregar Twitter Card meta tags al head del sitio</span>
+          </div>
+          <div class="plan-item">
+            <div class="plan-check"></div>
+            <span>Completar atributos alt en imágenes sin texto alternativo</span>
+          </div>
+        </div>
+
+        <div class="plan-col month">
+          <div class="plan-col-title">📅 Este Mes</div>
+          <div class="plan-item">
+            <div class="plan-check"></div>
+            <span>Crear y verificar 8 fichas en Google Business Profile</span>
+          </div>
+          <div class="plan-item">
+            <div class="plan-check"></div>
+            <span>Agregar FAQPage Schema en /servicios/</span>
+          </div>
+          <div class="plan-item">
+            <div class="plan-check"></div>
+            <span>Completar LocalBusiness Schema con teléfono, dirección y horarios</span>
+          </div>
+          <div class="plan-item">
+            <div class="plan-check"></div>
+            <span>Auditar páginas huérfanas del sitemap y enlazar o desindexar</span>
+          </div>
+          <div class="plan-item">
+            <div class="plan-check"></div>
+            <span>Verificar redirección 301 de .com.co → .com</span>
+          </div>
+        </div>
+
+        <div class="plan-col quarter">
+          <div class="plan-col-title">🗓️ Próximo Trimestre</div>
+          <div class="plan-item">
+            <div class="plan-check"></div>
+            <span>Enriquecer 8 páginas de sucursales con mapa, rutas y formulario local</span>
+          </div>
+          <div class="plan-item">
+            <div class="plan-check"></div>
+            <span>Crear perfil de empresa en LinkedIn y activar publicación regular</span>
+          </div>
+          <div class="plan-item">
+            <div class="plan-check"></div>
+            <span>Iniciar linkbuilding: COLFECAR, gremios de industria química y alimentos</span>
+          </div>
+          <div class="plan-item">
+            <div class="plan-check"></div>
+            <span>Auditar Core Web Vitals con PageSpeed Insights y atacar LCP</span>
+          </div>
+          <div class="plan-item">
+            <div class="plan-check"></div>
+            <span>Integrar Forminator con CRM básico (HubSpot Free o Zoho Free)</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 6: MERCADO -->
+  <div class="section" id="mercado">
+    <div class="section-header">
+      <div class="section-icon">🌎</div>
+      <div>
+        <div class="section-title">Contexto de Mercado</div>
+      </div>
+      <span class="section-num">06</span>
+    </div>
+    <div class="section-body">
+
+      <div class="market-callout">
+        <p>El mercado de transporte terrestre de carga en Colombia vale <strong>~USD 11.6 billones en 2026</strong> con crecimiento proyectado del <strong>5.9% anual (CAGR)</strong> hasta alcanzar USD 15.4 billones en 2031. Transportadora Estrella tiene una propuesta diferenciada — ISO 9001 ICONTEC, BASC, 8 sucursales estratégicas, y expertise en mercancías peligrosas — pero su <strong>presencia digital está subexplotada</strong> frente al tamaño real de la operación y la oportunidad del mercado.</p>
+        <div class="market-stats">
+          <div class="market-stat">
+            <span class="num">$11.6B</span>
+            <span class="lbl">Mercado 2026 (USD)</span>
+          </div>
+          <div class="market-stat">
+            <span class="num">5.9%</span>
+            <span class="lbl">CAGR hasta 2031</span>
+          </div>
+          <div class="market-stat">
+            <span class="num">$15.4B</span>
+            <span class="lbl">Proyección 2031</span>
+          </div>
+          <div class="market-stat">
+            <span class="num">1980</span>
+            <span class="lbl">Fundación</span>
+          </div>
+        </div>
+      </div>
+
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Competidor</th>
+            <th>Posicionamiento</th>
+            <th>Observación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Coltanques</td>
+            <td>Líder absoluto en Colombia</td>
+            <td style="font-size:13px; color:#64748B;">Presencia digital y presupuesto marketing consolidados</td>
+          </tr>
+          <tr>
+            <td>Botero Soto</td>
+            <td>75+ años, carga masiva a puertos</td>
+            <td style="font-size:13px; color:#64748B;">Competidor directo en corredores Medellín–Buenaventura</td>
+          </tr>
+          <tr>
+            <td>Coordinadora Mercantil</td>
+            <td>Paqueteo + masiva, automatización</td>
+            <td style="font-size:13px; color:#64748B;">Fuerte en cobertura nacional y tecnología</td>
+          </tr>
+          <tr>
+            <td>TCC</td>
+            <td>Fundada 1968, paqueteo + aéreo</td>
+            <td style="font-size:13px; color:#64748B;">Cobertura multimodal, ventaja en B2B corporate</td>
+          </tr>
+          <tr>
+            <td>Servientrega</td>
+            <td>Masivo consumer + corporativo</td>
+            <td style="font-size:13px; color:#64748B;">Alta presencia de marca, más paqueteo que masivo</td>
+          </tr>
+          <tr>
+            <td style="color: var(--blue-dark); font-weight: 800;">Transportadora Estrella</td>
+            <td class="comp-highlight">ISO 9001 + BASC + 8 sucursales + mercancías peligrosas</td>
+            <td class="comp-highlight">Propuesta diferenciada — digital subexplotada</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="report-footer">
+    <p>Auditoría generada el <strong>14 de marzo de 2026</strong> · <strong>Transportadora Estrella SAS</strong> · transestrella.com</p>
+    <p style="margin-top:6px; font-size:12px;">Fundada en 1980 · Medellín, Colombia · ISO 9001 ICONTEC · BASC</p>
+  </div>
+
+</div>
+
+</body>
+</html>
